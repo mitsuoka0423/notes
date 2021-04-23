@@ -22,7 +22,7 @@ https://qiita.com/tmitsuoka0423/private/b7b448d98121925c2a68
 
 [![Image from Gyazo](https://i.gyazo.com/40d9aa37f61706eb4222f27e7268eef4.png)](https://gyazo.com/40d9aa37f61706eb4222f27e7268eef4)
 
-興味がある方はこちらをご覧ください。
+プロトアウトスタジオに興味をお持ちの方はこちらをご覧ください。
 
 https://protoout.studio/
 
@@ -33,5 +33,21 @@ https://protoout.studio/
 # 講師陣
 
 [![Image from Gyazo](https://i.gyazo.com/aab9875d7d78aa8fddd3e40387f1125c.png)](https://gyazo.com/aab9875d7d78aa8fddd3e40387f1125c)
+
+# 今日作るもののイメージ
+
+以下のようなLINE上で動作するLINE Botを作成していきます。
+
+## 前半戦：オウム返しBot
+
+[![Image from Gyazo](https://i.gyazo.com/94e5bda2678dcf5bbc7a0154eeac8b07.gif)](https://gyazo.com/94e5bda2678dcf5bbc7a0154eeac8b07)
+
+## 後半戦：顔検出＆起きてる/寝てる判定Bot
+
+[![Image from Gyazo](https://i.gyazo.com/9b7a5bff129e46b7c3da41d050f902a6.gif)](https://gyazo.com/9b7a5bff129e46b7c3da41d050f902a6)
+
+# 周知事項
+
+[![Image from Gyazo](https://i.gyazo.com/09ab6bbfef636a90e5741bda0c03313a.png)](https://gyazo.com/09ab6bbfef636a90e5741bda0c03313a)
 
 # それではハンズオンの内容に入っていきましょう！
