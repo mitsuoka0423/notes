@@ -59,17 +59,16 @@ https://lineapiusecase.com/ja/top.html
 
 ### 1.2.2.1.オウム返しBotのシステム概要図
 
-`1. オウム返しBotを作ろう`では、LINEアプリから送信した文字列をサーバーで受け取り、LINEアプリにそのまま返すオウム返しBotを作成します。
+`オウム返しBotを作ろう`では、LINEアプリから送信した文字列をサーバーで受け取り、LINEアプリにそのまま返すオウム返しBotを作成します。
 
 [![Image from Gyazo](https://i.gyazo.com/ef380d63c53fba3e41b79216fb7f0070.png)](https://i.gyazo.com/ef380d63c53fba3e41b79216fb7f0070)
 
 ### 1.2.2.2.感情分析AI+LINE Botのシステム概要図
 
-`2. 感情分析AIと組み合わせよう`では、LINEアプリから送信した画像を、Azure Face APIに送信し感情分析します。  
+`画像分析AIと組み合わせよう`では、LINEアプリから送信した画像を、Azure Face APIに送信し顔検出を行います。  
 その結果をサーバーで変換して、LINEアプリに結果を表示します。
 
-[![Image from Gyazo](https://i.gyazo.com/221d9176e00f46fb5923f0c4944e6274.png)](https://i.gyazo.com/221d9176e00f46fb5923f0c4944e6274)
-
+[![Image from Gyazo](https://i.gyazo.com/ed3534a28c900c0e87fd4b4593ae90bd.png)](https://gyazo.com/ed3534a28c900c0e87fd4b4593ae90bd)
 # 1.3.手を動かすタイム
 
 [![Image from Gyazo](https://i.gyazo.com/3600fb35b96dcd212cc0d4b6f3240e74.png)](https://i.gyazo.com/3600fb35b96dcd212cc0d4b6f3240e74)

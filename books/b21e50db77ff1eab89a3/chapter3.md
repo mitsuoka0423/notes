@@ -12,9 +12,9 @@ title: "画像分析AI(顔検出)と組み合わせよう"
 
 ## 2.1.2.システム概要図
 
-![https://i.gyazo.com/221d9176e00f46fb5923f0c4944e6274.png](https://i.gyazo.com/221d9176e00f46fb5923f0c4944e6274.png)
+[![Image from Gyazo](https://i.gyazo.com/ed3534a28c900c0e87fd4b4593ae90bd.png)](https://gyazo.com/ed3534a28c900c0e87fd4b4593ae90bd)
 
-# 2.2.ここからは話を聞くタイム
+# 2.2.話を聞くタイム
 
 ![https://i.gyazo.com/6529781dd996c64228080c383aa4a325.png](https://i.gyazo.com/6529781dd996c64228080c383aa4a325.png)
 
@@ -69,7 +69,7 @@ title: "画像分析AI(顔検出)と組み合わせよう"
 - AzureのAI・機械学習系のサービスの1つとして、**顔検出AI**が提供されている。
 - 顔検出AIは**API**として提供されているので、簡単にプロダクトに組み込める。
 
-# 2.3.ここからは手を動かすタイム
+# 2.3.手を動かすタイム
 
 ![https://i.gyazo.com/3600fb35b96dcd212cc0d4b6f3240e74.png](https://i.gyazo.com/3600fb35b96dcd212cc0d4b6f3240e74.png)
 
@@ -172,7 +172,7 @@ Expressが起動していることを確認します。
 ## 2.3.3.顔検出Botを動かしてみよう
 
 Botに人の顔が写っている写真を送信してみましょう。  
-感情が分析されて返ってきます。
+起きている/寝ているが判定されて返ってきます。（精度は少し低いです。）
 
 [![Image from Gyazo](https://i.gyazo.com/9b7a5bff129e46b7c3da41d050f902a6.gif)](https://gyazo.com/9b7a5bff129e46b7c3da41d050f902a6)
 
