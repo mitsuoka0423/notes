@@ -4,11 +4,11 @@ title: "画像分析AI(顔検出)と組み合わせよう"
 
 # 2.1.この章のゴール
 
-- LINE BotとAzure Face APIを組み合わせて、感情分析Botを作成する
+- LINE BotとAzure Face APIを組み合わせて、顔検出Botを作成する
 
 ## 2.1.1.完成イメージ
 
-<iframe width="414" height="736" src="https://www.youtube.com/embed/5tFfPfBr-HU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[![Image from Gyazo](https://i.gyazo.com/9b7a5bff129e46b7c3da41d050f902a6.gif)](https://gyazo.com/9b7a5bff129e46b7c3da41d050f902a6)
 
 ## 2.1.2.システム概要図
 
@@ -66,8 +66,8 @@ title: "画像分析AI(顔検出)と組み合わせよう"
 ## 2.2.3.ここまでのまとめ
 
 - Azureとは、Microsoftが提供しているクラウドサービスのこと。
-- AzureのAI・機械学習系のサービスの1つとして、**感情分析AI**が提供されている。
-- 感情分析AIは**API**として提供されているので、簡単にプロダクトに組み込める。
+- AzureのAI・機械学習系のサービスの1つとして、**顔検出AI**が提供されている。
+- 顔検出AIは**API**として提供されているので、簡単にプロダクトに組み込める。
 
 # 2.3.ここからは手を動かすタイム
 
@@ -167,18 +167,22 @@ Expressが起動していることを確認します。
 
 ![https://i.gyazo.com/b50a862bf882e03edcf0fe5501d1e676.png](https://i.gyazo.com/b50a862bf882e03edcf0fe5501d1e676.png)
 
-以上で、感情分析Botの設定は終わりです。
+以上で、顔検出Botの設定は終わりです。
 
-## 2.3.3.感情分析Botを動かしてみよう
+## 2.3.3.顔検出Botを動かしてみよう
 
 Botに人の顔が写っている写真を送信してみましょう。  
 感情が分析されて返ってきます。
 
-<iframe width="414" height="736" src="https://www.youtube.com/embed/5tFfPfBr-HU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[![Image from Gyazo](https://i.gyazo.com/9b7a5bff129e46b7c3da41d050f902a6.gif)](https://gyazo.com/9b7a5bff129e46b7c3da41d050f902a6)
 
-以上で感情分析Botの作成はおしまいです！
+以上で顔検出Botの作成はおしまいです！
+
+## 2.3.4.(オプション)ウインク判定を入れてみよう
+
+起きている/寝ている判定に加え、ウインク（片目を閉じている）判定を加えてみましょう。
 
 # 2.4.まとめ
 
 - Azureが提供しているAI・機械学習系サービスであるFace APIを利用するため、Azure上でリソースを作成しました。
-- LINE BotとFace API組み合わせて、送った写真の感情分析を行うBotを作成しました。
+- LINE BotとFace API組み合わせて、送った写真の顔検出を行うBotを作成しました。
