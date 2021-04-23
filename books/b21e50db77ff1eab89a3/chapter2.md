@@ -1,227 +1,263 @@
 ---
-title: "画像分析AI(顔検出)と組み合わせよう"
+title: "オウム返しBotを作ろう"
 ---
 
-# 2.1.この章のゴール
+# 1.1.この章のゴール
 
-- LINE BotとAzure Face APIを組み合わせて、感情分析Botを作成する
+- 送信した文字をそのまま返す`オウム返しBot`を作成する
 
-## 2.1.1.完成イメージ
+## 1.1.1.完成イメージ
 
-<iframe width="414" height="736" src="https://www.youtube.com/embed/5tFfPfBr-HU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[![Image from Gyazo](https://i.gyazo.com/94e5bda2678dcf5bbc7a0154eeac8b07.gif)](https://gyazo.com/94e5bda2678dcf5bbc7a0154eeac8b07)
 
-## 2.1.2.システム概要図
+# 1.2.ここからは話を聞くタイム
 
-![https://i.gyazo.com/221d9176e00f46fb5923f0c4944e6274.png](https://i.gyazo.com/221d9176e00f46fb5923f0c4944e6274.png)
+[![Image from Gyazo](https://i.gyazo.com/6529781dd996c64228080c383aa4a325.png)](https://i.gyazo.com/6529781dd996c64228080c383aa4a325)
 
-# 2.2.ここからは話を聞くタイム
+## 1.2.1.LINE Botとは？
 
-![https://i.gyazo.com/6529781dd996c64228080c383aa4a325.png](https://i.gyazo.com/6529781dd996c64228080c383aa4a325.png)
+最近では、チャットボットやツイートボットなど`Bot`と名前が付いているものがあります。
 
-## 2.2.1.Microsoft Azure とは？
+LINE Botも上記のBotの仲間で、プログラムが自動で返信してくれるLINEアカウントのことを指します。
+LINEアプリとプログラムの連携には、LINEが提供している`Messaging API`を利用します。
 
-> 公式サイトはこちら：https://azure.microsoft.com/ja-jp/
+### 1.2.1.2.有名なLINE Bot
 
-ざっくり説明します。
+#### ユーザーから操作可能なタイプ
 
-- Microsoftが提供しているクラウドサービスのこと
-- 200以上のサービスが提供されている
-- AI・機械学習系のサービスも充実している
+- JR東日本 Chat Bot（[https://info.jreast-chat.com/](https://info.jreast-chat.com/)）
+- ヤマト運輸（[https://www.kuronekoyamato.co.jp/ytc/campaign/renkei/LINE/](https://www.kuronekoyamato.co.jp/ytc/campaign/renkei/LINE/)）
 
-今日はAzureのサービスの内、AIを提供しているサービスである`Cognitive Service`の`Face API`を利用します。
+#### 広告プッシュタイプ
 
-## 2.2.2.Face APIの紹介
+- ユニクロ・GU（[http://official-blog.line.me/ja/archives/28533966.html](http://official-blog.line.me/ja/archives/28533966.html)）
+- 楽天（[http://official-blog.line.me/ja/archives/24736939.html](http://official-blog.line.me/ja/archives/24736939.html)）
 
-> 公式ドキュメントはこちら：https://azure.microsoft.com/ja-jp/services/cognitive-services/face/
+また最近、LINE Botのユースケースが発表されました。LINE Botを作る際に参考にしてみると良いと思います。
 
-`Face API`には大きく分けて3つの機能が提供されています。
+https://lineapiusecase.com/ja/top.html
 
-- 顔検出
-- 顔認証
-- 感情認識
+### 1.2.1.3.なぜLINE Botを作るのか
 
-それぞれについて簡単に説明します。
+#### 一般的なメリット
 
-### 2.2.2.1.顔検出
+- ユーザーに利用してもらうときにアプリのインストールが不要。（友達登録だけでOK！簡単！）
+- ユーザーへのプッシュ通知を簡単に送ることができる。（量が多いとお金がかかる）
 
-![https://i.gyazo.com/96883a0d6cec3835d1dd226f2787122f.png](https://i.gyazo.com/96883a0d6cec3835d1dd226f2787122f.png)
+#### プロトタイピング観点でのメリット
 
-> 1人以上の人間の顔と各種の属性(年齢、感情、ポーズ、笑顔、顔ひげなど)を検出できます。  
-> また、画像内の顔ごとに27個の特徴点が抽出されます。
+- LINEのチャット画面を利用するのでUIを最初から考える必要がなく、プロトタイプの価値の創造に注力できる。
+  - 必要に応じて、凝ったUIも実現できる。（[FlexMessage](https://developers.line.biz/ja/docs/messaging-api/using-flex-messages/)や[LIFF](https://developers.line.biz/ja/docs/liff/overview/)を利用）
+- Node.jsのSDKが公式に用意されており、UIからサーバーまでをJavaScriptで書くことで、最小限の学習で作ることができる。
 
-### 2.2.2.2.顔認証
+## 1.2.2.システム概要図
 
-![https://i.gyazo.com/b95cfdb0061bed0eb926aa9340247015.png](https://i.gyazo.com/b95cfdb0061bed0eb926aa9340247015.png)
+本ハンズオンでの登場人物は以下の3つです。  
+主に、サーバーの部分のプログラムを編集していきます。
 
-> 2つの顔が同一人物のものである可能性を検証し、信頼度スコアを取得します。
+[![Image from Gyazo](https://i.gyazo.com/1ceade2f10b784b68f3bed71efcf83e3.png)](https://i.gyazo.com/1ceade2f10b784b68f3bed71efcf83e3)
 
-### 2.2.2.3.感情認識
+### 1.2.2.1.オウム返しBotのシステム概要図
 
-![https://i.gyazo.com/94e6036245e1a74871c1720903da2455.png](https://i.gyazo.com/94e6036245e1a74871c1720903da2455.png)
+`1. オウム返しBotを作ろう`では、LINEアプリから送信した文字列をサーバーで受け取り、LINEアプリにそのまま返すオウム返しBotを作成します。
 
-> 怒り、軽蔑、嫌悪感、恐怖、喜び、中立、悲しみ、驚きなど、認識された表情を検出します。
+[![Image from Gyazo](https://i.gyazo.com/ef380d63c53fba3e41b79216fb7f0070.png)](https://i.gyazo.com/ef380d63c53fba3e41b79216fb7f0070)
 
-`Face API`は、複雑なプログラミングをせずに利用できる**API**として提供されています。
+### 1.2.2.2.感情分析AI+LINE Botのシステム概要図
 
-## 2.2.3.ここまでのまとめ
+`2. 感情分析AIと組み合わせよう`では、LINEアプリから送信した画像を、Azure Face APIに送信し感情分析します。  
+その結果をサーバーで変換して、LINEアプリに結果を表示します。
 
-- Azureとは、Microsoftが提供しているクラウドサービスのこと。
-- AzureのAI・機械学習系のサービスの1つとして、**感情分析AI**が提供されている。
-- 感情分析AIは**API**として提供されているので、簡単にプロダクトに組み込める。
+[![Image from Gyazo](https://i.gyazo.com/221d9176e00f46fb5923f0c4944e6274.png)](https://i.gyazo.com/221d9176e00f46fb5923f0c4944e6274)
 
-# 2.3.ここからは手を動かすタイム
+# 1.3.ここからは手を動かすタイム
 
-![https://i.gyazo.com/3600fb35b96dcd212cc0d4b6f3240e74.png](https://i.gyazo.com/3600fb35b96dcd212cc0d4b6f3240e74.png)
+[![Image from Gyazo](https://i.gyazo.com/3600fb35b96dcd212cc0d4b6f3240e74.png)](https://i.gyazo.com/3600fb35b96dcd212cc0d4b6f3240e74)
 
-## 2.3.1.Face APIを使ってみよう
+## 1.3.1.LINE Botを登録しよう
 
-### 2.3.1.1.Azureポータルにログインする
+LINE DevelopersからLINE Botを登録できます。
 
-Azureポータルを開きます。  
-https://portal.azure.com/
+LINE Developersを開き、ログインします。
+https://developers.line.biz/ja/
 
-ログインし、以下のようなページが表示されればOKです。
+> ※LINE Developersはハンズオン中に何度も利用するので、開きっぱなしにしておきましょう。
 
-![https://i.gyazo.com/9c41bc6e713573818c8a2086a6e204be.png](https://i.gyazo.com/9c41bc6e713573818c8a2086a6e204be.png)
+[![Image from Gyazo](https://i.gyazo.com/55926be4e43791a4d30a2c4fa35b77c1.png)](https://i.gyazo.com/55926be4e43791a4d30a2c4fa35b77c1)
 
-Face APIのリソースを作成します。
+[![Image from Gyazo](https://i.gyazo.com/6921026259dc0cacb200097e82340289.png)](https://i.gyazo.com/6921026259dc0cacb200097e82340289)
 
-![https://i.gyazo.com/506f1466fe43354518e43cc5a3bd24fa.png](https://i.gyazo.com/506f1466fe43354518e43cc5a3bd24fa.png)
+ログインできたら、プロバイダーの`作成`をクリックします。
 
-![https://i.gyazo.com/5201c4d4037788c001d79f1cdfef8725.png](https://i.gyazo.com/5201c4d4037788c001d79f1cdfef8725.png)
+[![Image from Gyazo](https://i.gyazo.com/ef306d3ca442a7a8df95cce418778b57.png)](https://i.gyazo.com/ef306d3ca442a7a8df95cce418778b57)
 
-### 2.3.1.2.リソースグループを作成する
+プロバイダー名を入力し、`作成`をクリックします。（名前は好きなものでOKです。）
 
-> 既にリソースグループを作成している方は作成不要です
+[![Image from Gyazo](https://i.gyazo.com/718446885e86eb2f547379fb63fbbd59.png)](https://i.gyazo.com/718446885e86eb2f547379fb63fbbd59)
 
-リソースグループの`新規作成`をクリックし、リソースグループ名`handson-20210320`を入力します。
+Messaging APIを作成します。
 
-![https://i.gyazo.com/cd8c999ccca54a34eba230c44e926a48.png](https://i.gyazo.com/cd8c999ccca54a34eba230c44e926a48.png)
+[![Image from Gyazo](https://i.gyazo.com/ca20e71a634a089a5ce80aeda3dd065a.png)](https://i.gyazo.com/ca20e71a634a089a5ce80aeda3dd065a)
 
-![https://i.gyazo.com/199465814a832fa28eb3c97955c9eb48.png](https://i.gyazo.com/199465814a832fa28eb3c97955c9eb48.png)
+必要な項目を入力し、`作成`をクリックします。
 
-リソースグループが作成されました。
-
-![https://i.gyazo.com/c9cb77de2d96a1974c24eaed0b967e9c.png](https://i.gyazo.com/c9cb77de2d96a1974c24eaed0b967e9c.png)
-
-### 2.3.1.3.Face APIのリソースを作成する
-
-残りの項目を埋めて、`確認および作成`をクリックします。
-
-| 項目 | 値 | 備考 |
+| 項目 | 内容 | 備考 |
 | -- | -- | -- |
-| リージョン | 東日本 | 一番近い`東日本`を選択します。 |
-| 名前 | `handson-{名前}-20210320` | ユニークな名前をつける必要があります。今日は名字を入れましょう。 |
-| 価格レベル | `Free F0` | 無料のものを選択します |
+| プロバイダー | 先程作成したものを選択 | -- |
+| チャネル名 | 好きな名前 | Bot名になります。`LINE`という文字は入れられないので注意。 |
+| チャネル説明 | チャネルの説明 | -- |
+| 大業種 | 適当に選択 | -- |
+| 小業種 | 適当に選択 | -- |
 
-> 同じサブスクリプションでは、無料のFace APIは一つしか作成できません。  
-> 既に作成済みの場合はそちらを利用しましょう。  
-> サブスクリプションを新しく作成してもOKです。
+[![Image from Gyazo](https://i.gyazo.com/6a8e7227b84a5433e3d1f5a5c673c5ed.png)](https://i.gyazo.com/6a8e7227b84a5433e3d1f5a5c673c5ed)
 
-![https://i.gyazo.com/f574fe4dc34f2111a5993def294400e5.png](https://i.gyazo.com/f574fe4dc34f2111a5993def294400e5.png)
+[![Image from Gyazo](https://i.gyazo.com/378b1d61ba94943527c9af268b1ec0d6.png)](https://i.gyazo.com/378b1d61ba94943527c9af268b1ec0d6)
 
-![https://i.gyazo.com/0a4485f141306087f5bc4f6273f04eb8.png](https://i.gyazo.com/0a4485f141306087f5bc4f6273f04eb8.png)
+[![Image from Gyazo](https://i.gyazo.com/7b46e4c918db445c98c876a175c975d4.png)](https://i.gyazo.com/7b46e4c918db445c98c876a175c975d4)
 
-デプロイが完了したら、`リソースに移動`をクリックします。
+[![Image from Gyazo](https://i.gyazo.com/ce7837928b7b873d9ec2d48e4a5fa9cc.png)](https://i.gyazo.com/ce7837928b7b873d9ec2d48e4a5fa9cc)
 
-![https://i.gyazo.com/bd110a382065d4c69ea82a7b41a9dc0c.png](https://i.gyazo.com/bd110a382065d4c69ea82a7b41a9dc0c.png)
+こんな画面が表示されれば登録完了です。
 
-`キー1`と`エンドポイント`をコピーします。
+[![Image from Gyazo](https://i.gyazo.com/331c4e70599ed34ffb735ea0c9b5a772.png)](https://i.gyazo.com/331c4e70599ed34ffb735ea0c9b5a772)
 
-![https://i.gyazo.com/199c26da328160a466584e4f420b3f69.png](https://i.gyazo.com/199c26da328160a466584e4f420b3f69.png)
+QRコードをLINEアプリで読み取り、友達登録しましょう。
 
-## 2.3.2.Face APIとLINE Botを組み合わせよう
+[![Image from Gyazo](https://i.gyazo.com/a59294c0b4135a4bfb2a3f40fc5d6f9b.png)](https://i.gyazo.com/a59294c0b4135a4bfb2a3f40fc5d6f9b)
 
-### 2.3.2.1.コードにFace APIのキー・エンドポイントを記入する
+[![Image from Gyazo](https://i.gyazo.com/1e6049acab5fcc1a83f73000949701f6.png)](https://i.gyazo.com/1e6049acab5fcc1a83f73000949701f6)
 
-Gitpodのタブを開きます。
+## 1.3.2.Gitpodを開こう
 
-> Gitpodを一度閉じてしまった人は、[ここ](https://gitpod.io/#https://github.com/tmitsuoka0423/line-bot-azure-face-api-handson)をクリックして再度開きましょう。  
-> その際、LINE Developerコンソールから、`チャネルシークレット`と`チャネルアクセストークン`を再びコピーしてくる必要があります。
+Gitpodはオンライン利用できるエディタです。
 
-24行目あたりにある、`faceKey`・`faceEndPoint`にそれぞれ、先程コピーした`キー1`・`エンドポイント`をペーストします。
+> `Note`
+> GitHubのリポジトリのコードをVSCodeライクなエディタで手軽に編集・実行することができます。
+> 月50時間まで無料で利用することができます。
 
-![https://i.gyazo.com/80f298f713ff96a00375a670ce6e6b5d.png](https://i.gyazo.com/80f298f713ff96a00375a670ce6e6b5d.png)
+以下のURLを開きましょう。  
+https://gitpod.io/#https://github.com/tmitsuoka0423/line-bot-azure-face-api-face-detection-handson
 
-こんな感じになればOKです。
+GitHubアカウントでログインします。
 
-> `キー1`・`エンドポイント`の内容は人によって変わるので注意。
+[![Image from Gyazo](https://i.gyazo.com/14aca92f43ed9cfa88f3484178124d0d.png)](https://i.gyazo.com/14aca92f43ed9cfa88f3484178124d0d)
 
-![https://i.gyazo.com/aa93ee89377d1cd8d9ac5bb68cfa88bb.png](https://i.gyazo.com/aa93ee89377d1cd8d9ac5bb68cfa88bb.png)
+[![Image from Gyazo](https://i.gyazo.com/21ef753c6e49040badfcc0442fcc1298.png)](https://i.gyazo.com/21ef753c6e49040badfcc0442fcc1298)
 
-### 2.3.2.2.Expressを再起動する
+このような画面が表示されます。(起動に数十秒～数分ほどかかります。)
 
-ターミナルをクリックし、`Ctrl + C`を押して、Expressを一度停止させます。
+[![Image from Gyazo](https://i.gyazo.com/9066b86f112bfd7715b2223aeb4b1eb9.png)](https://gyazo.com/9066b86f112bfd7715b2223aeb4b1eb9)
 
-![https://i.gyazo.com/8357e06087a090b6d7eba35bc7b52b09.png](https://i.gyazo.com/8357e06087a090b6d7eba35bc7b52b09.png)
+画面は
 
-`^C`が出ていれば停止できています。
+- サイドバー
+- エディター
+- ターミナル
 
-![https://i.gyazo.com/2b7b172dea88a6999a4e8600ca427ea4.png](https://i.gyazo.com/2b7b172dea88a6999a4e8600ca427ea4.png)
+の3エリアに分割されています。ハンズオンではこれらの名前で呼ぶので覚えておきましょう。
+
+[![Image from Gyazo](https://i.gyazo.com/56daffaac5af416d1908f7c002510aad.png)](https://gyazo.com/56daffaac5af416d1908f7c002510aad)
+
+Gitpodの準備はこれでOKです。  
+続いてオウム返しBotを動かす準備を進めていきましょう！
+
+## 1.3.3.コードを編集しよう
+
+Gitpod上でコードを編集しましょう。  
+LINE Botの設定を追記する必要があるので編集していきます。
+
+サイドバーから`index.js`を開き、`チャネルシークレット`・`チャネルアクセストークン`の設定箇所までスクロールします。
+
+[![Image from Gyazo](https://i.gyazo.com/54036709b6af66f45ac166a2862b4345.png)](https://i.gyazo.com/54036709b6af66f45ac166a2862b4345)
+
+`チャネルシークレット`・`チャネルアクセストークン`は[LINE Developers](https://developers.line.biz/ja/)のサイトから取得することができます。
+
+先程作成したチャネルを開き、`Basic settings`タブ・`Messaging API`タブからそれぞれ、`チャネルシークレット`・`チャネルアクセストークン`をコピーしてきます。
+
+[![Image from Gyazo](https://i.gyazo.com/f1660c511e41f7ec87132b5d30e70f8e.png)](https://i.gyazo.com/f1660c511e41f7ec87132b5d30e70f8e)
+
+[![Image from Gyazo](https://i.gyazo.com/16624ba230246f77b31fccb6ae650061.png)](https://i.gyazo.com/16624ba230246f77b31fccb6ae650061)
+
+入力するとこのようになります。  
+(シークレットキーとアクセストークンの値は人によって異なります)
+
+> `注意！`  
+> シークレットキーとアクセストークンは公開しないようにしましょう。  
+> Botを悪用されるリスクがあります。
+
+[![Image from Gyazo](https://i.gyazo.com/1ad95b14a073bb15cb2e3b687cf9bb8a.png)](https://gyazo.com/1ad95b14a073bb15cb2e3b687cf9bb8a)
 
 ターミナルに`node index.js`と入力して、`Enter`を押します。
 
-![https://i.gyazo.com/0cd665b2856038452f724002cad15e24.png](https://i.gyazo.com/0cd665b2856038452f724002cad15e24.png)
+[![Image from Gyazo](https://i.gyazo.com/0cd665b2856038452f724002cad15e24.png)](https://i.gyazo.com/0cd665b2856038452f724002cad15e24)
 
-Expressが起動していることを確認します。
+ポップアップが出てくるので、`Make Public`をクリックします。
 
-![https://i.gyazo.com/b50a862bf882e03edcf0fe5501d1e676.png](https://i.gyazo.com/b50a862bf882e03edcf0fe5501d1e676.png)
+[![Image from Gyazo](https://i.gyazo.com/c4ef4785b2d3f857aa1bce0fe523b640.png)](https://i.gyazo.com/c4ef4785b2d3f857aa1bce0fe523b640)
 
-以上で、感情分析Botの設定は終わりです。
+ターミナルの`Open Ports`タブの`Open Browwer`をクリックします。
 
-## 2.3.3.感情分析Botを動かしてみよう
+[![Image from Gyazo](https://i.gyazo.com/4fc6b6d4917879ba10e28f129e7d2cd4.png)](https://i.gyazo.com/4fc6b6d4917879ba10e28f129e7d2cd4)
 
-Botに人の顔が写っている写真を送信してみましょう。  
-感情が分析されて返ってきます。
+新しいタブが開くので、そのページのURLをコピーし、Botチャネルの`Webhook URL`にペーストします。
 
-<iframe width="414" height="736" src="https://www.youtube.com/embed/5tFfPfBr-HU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[![Image from Gyazo](https://i.gyazo.com/afa573e55291365780c8ee43b88682b6.png)](https://i.gyazo.com/afa573e55291365780c8ee43b88682b6)
 
-以上で感情分析Botの作成はおしまいです！
+`User webhook`を忘れずにONにしましょう。
 
-# 2.4.まとめ
+[![Image from Gyazo](https://i.gyazo.com/7f768ed71a0a23c0e2814a5afc20ca45.png)](https://gyazo.com/7f768ed71a0a23c0e2814a5afc20ca45)
 
-- Azureが提供しているAI・機械学習系サービスであるFace APIを利用するため、Azure上でリソースを作成しました。
-- LINE BotとFace API組み合わせて、送った写真の感情分析を行うBotを作成しました。
+接続確認します。  
+`Verify`をクリックして、`Success`と表示されればOKです。
 
-# 3. 後片付け
+[![Image from Gyazo](https://i.gyazo.com/a8a87743e1d9b02fdd7b1936070d13c0.png)](https://i.gyazo.com/a8a87743e1d9b02fdd7b1936070d13c0)
 
-本ハンズオンで作成したリソースの削除方法を記載します。
+[![Image from Gyazo](https://i.gyazo.com/084611d55d08bb89b44ba163097932bf.png)](https://i.gyazo.com/084611d55d08bb89b44ba163097932bf)
 
-# 3.1.LINE Botを削除する
+## 1.3.4.(オプション)自動応答メッセージをオフにするしよう
 
-[LINE Developersコンソール](https://developers.line.biz/ja/)で削除を行います。
-削除したいLINE Botを選択し、`チャネル基本設定 > チャネルの削除`から削除を行います。
-![https://i.gyazo.com/ad032c6c9d489de7048155b4933cc5fa.png](https://i.gyazo.com/ad032c6c9d489de7048155b4933cc5fa.png)
+LINE Botはデフォルトでは、`あいさつメッセージ`と`応答メッセージ`がオンになっています。  
+この設定を変更しましょう。
 
-![https://i.gyazo.com/609188aec9f1f6ae7a59bcb3ee83aee7.png](https://i.gyazo.com/609188aec9f1f6ae7a59bcb3ee83aee7.png)
+Messaging API設定タブ > 応答メッセージ > `編集`をクリックし、LINE公式アカウント設定画面を開きます。
 
-![https://i.gyazo.com/e6d7db454249fc2ae6356fd3242a28c6.png](https://i.gyazo.com/e6d7db454249fc2ae6356fd3242a28c6.png)
+[![Image from Gyazo](https://i.gyazo.com/b9ba1653be88c67ff0661251c545ba8f.png)](https://i.gyazo.com/b9ba1653be88c67ff0661251c545ba8f)
 
-![https://i.gyazo.com/0ebff3d78fd4b77753bb8d8fe16a0f32.png](https://i.gyazo.com/0ebff3d78fd4b77753bb8d8fe16a0f32.png)
-これでLINE Botを削除できました。
+不要なメッセージをオフにします。
 
-# 3.2.Face APIのリソースを削除する
+[![Image from Gyazo](https://i.gyazo.com/bd8567c7e1c492642e61e31fef9390b2.png)](https://i.gyazo.com/bd8567c7e1c492642e61e31fef9390b2)
 
-Azureポータルから削除を行います。
+これでオウム返しだけが返ってくるようになります。
 
-![https://i.gyazo.com/00388c8dbccb154480632633d8d1e6b0.png](https://i.gyazo.com/00388c8dbccb154480632633d8d1e6b0.png)
+## 1.3.5.動作確認してしよう
 
-![https://i.gyazo.com/9d8bf2b2b83945674bdf064fb88f170e.png](https://i.gyazo.com/9d8bf2b2b83945674bdf064fb88f170e.png)
-今回作成した以外のものが**含まれていない**ことを確認し、`リソースグループの削除`をクリックします。
-![https://i.gyazo.com/6432d7e7eca5c80e9545e8b4e41a8e3e.png](https://i.gyazo.com/6432d7e7eca5c80e9545e8b4e41a8e3e.png)
-リソースグループ名を入力し、`削除`をクリックします。
-![https://i.gyazo.com/21b71105bd3d6ac20ef5fa6b640d67f2.png](https://i.gyazo.com/21b71105bd3d6ac20ef5fa6b640d67f2.png)
-削除処理が行われます。（数分かかります。）
-![https://i.gyazo.com/3f14d7f4872b1a6e28bd7edeb2a21e84.png](https://i.gyazo.com/3f14d7f4872b1a6e28bd7edeb2a21e84.png)
+Botページに表示されているQRコードを読み取り、Botと友達になってから、適当に文字を送ってみましょう。
 
-![https://i.gyazo.com/dd549bea8c5537a3c5a3e3f40559b807.png](https://i.gyazo.com/dd549bea8c5537a3c5a3e3f40559b807.png)
-リソースグループが削除されたことを確認して完了です。
+[![Image from Gyazo](https://i.gyazo.com/94e5bda2678dcf5bbc7a0154eeac8b07.gif)](https://gyazo.com/94e5bda2678dcf5bbc7a0154eeac8b07)
 
-# 4.アンケート回答
+オウム返しBotの作成は以上で完了です！  
 
-次回のハンズオンイベントの改善のため、アンケートにご協力ください。(3分ほどで回答できます)
-https://forms.gle/d2V4YxXbHvSrf66p9
 
-提出頂いた方から、QA用Google Meetに移動 or 解散とします。
+## 1.3.6.(オプション)オウム2倍返しBOTを作ってみよう
 
-## ハンズオンへのご参加ありがとうございました！
+完成イメージ
+
+[![Image from Gyazo](https://i.gyazo.com/472f5b31bf7d3ab224ffdece712b05b1.png)](https://i.gyazo.com/472f5b31bf7d3ab224ffdece712b05b1)
+
+## 1.3.7.(オプション)オウム返しBotにキャラ付けしよう
+
+NARUTO風
+
+[![Image from Gyazo](https://i.gyazo.com/ed3c6c6db6dc37f429d698aa1c6b41de.png)](https://i.gyazo.com/ed3c6c6db6dc37f429d698aa1c6b41de)
+
+# 1.4.まとめ
+
+- LINE DevelopersからLINE Botのチャンネルを作成し、友達登録しました。
+- LINEアプリ⇔Expressサーバーでオウム返しBotを作成しました。
+
+[![Image from Gyazo](https://i.gyazo.com/ef380d63c53fba3e41b79216fb7f0070.png)](https://i.gyazo.com/ef380d63c53fba3e41b79216fb7f0070)
+
+次はAIのサービスの一つである`Face API`と組み合わせていきます。
+
+> `Note`  
+> 後で使うので、Gitpodのタブは**閉じない**ようにしましょう！
