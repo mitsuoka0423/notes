@@ -83,6 +83,8 @@ LINE DevelopersからLINE Botを登録できます。
 LINE Developersを開き、ログインします。
 https://developers.line.biz/ja/
 
+> ※LINE Developersはハンズオン中に何度も利用するので、開きっぱなしにしておきましょう。
+
 [![Image from Gyazo](https://i.gyazo.com/55926be4e43791a4d30a2c4fa35b77c1.png)](https://i.gyazo.com/55926be4e43791a4d30a2c4fa35b77c1)
 
 [![Image from Gyazo](https://i.gyazo.com/6921026259dc0cacb200097e82340289.png)](https://i.gyazo.com/6921026259dc0cacb200097e82340289)
@@ -130,6 +132,8 @@ QRコードをLINEアプリで読み取り、友達登録しましょう。
 ### 1.3.2.Gitpodを開こう
 
 Gitpodは、オンライン利用できるエディタです。
+GitHubのリポジトリのコードを、VSCodeライクなエディタで手軽に編集・実行することができます。
+月50時間まで無料で利用することができます。
 
 以下のURLを開きましょう。  
 https://gitpod.io/#https://github.com/tmitsuoka0423/line-bot-azure-face-api-face-detection-handson
@@ -181,17 +185,17 @@ LINE Botの設定を追記する必要があるので編集していきます。
 > シークレットキーとアクセストークンは公開しないようにしましょう。  
 > Botを悪用されるリスクがあります。
 
-<a href="https://gyazo.com/1ad95b14a073bb15cb2e3b687cf9bb8a"><img src="https://i.gyazo.com/1ad95b14a073bb15cb2e3b687cf9bb8a.png" alt="Image from Gyazo" width="1122.68"/></a>
+[![Image from Gyazo](https://i.gyazo.com/1ad95b14a073bb15cb2e3b687cf9bb8a.png)](https://gyazo.com/1ad95b14a073bb15cb2e3b687cf9bb8a)
 
 ターミナルに`node index.js`と入力して、`Enter`を押します。
 
 [![Image from Gyazo](https://i.gyazo.com/0cd665b2856038452f724002cad15e24.png)](https://i.gyazo.com/0cd665b2856038452f724002cad15e24)
 
-`Make Public`をクリックします。
+ポップアップが出てくるので、`Make Public`をクリックします。
 
 [![Image from Gyazo](https://i.gyazo.com/c4ef4785b2d3f857aa1bce0fe523b640.png)](https://i.gyazo.com/c4ef4785b2d3f857aa1bce0fe523b640)
 
-`Open Ports`タブの`Open Browwer`をクリックします。
+ターミナルの`Open Ports`タブの`Open Browwer`をクリックします。
 
 [![Image from Gyazo](https://i.gyazo.com/4fc6b6d4917879ba10e28f129e7d2cd4.png)](https://i.gyazo.com/4fc6b6d4917879ba10e28f129e7d2cd4)
 
@@ -199,21 +203,18 @@ LINE Botの設定を追記する必要があるので編集していきます。
 
 [![Image from Gyazo](https://i.gyazo.com/afa573e55291365780c8ee43b88682b6.png)](https://i.gyazo.com/afa573e55291365780c8ee43b88682b6)
 
-接続確認をします。  
+`User webhook`を忘れずにONにしましょう。
+
+[![Image from Gyazo](https://i.gyazo.com/7f768ed71a0a23c0e2814a5afc20ca45.png)](https://gyazo.com/7f768ed71a0a23c0e2814a5afc20ca45)
+
+接続確認します。  
 `Verify`をクリックして、`Success`と表示されればOKです。
 
 [![Image from Gyazo](https://i.gyazo.com/a8a87743e1d9b02fdd7b1936070d13c0.png)](https://i.gyazo.com/a8a87743e1d9b02fdd7b1936070d13c0)
 
 [![Image from Gyazo](https://i.gyazo.com/084611d55d08bb89b44ba163097932bf.png)](https://i.gyazo.com/084611d55d08bb89b44ba163097932bf)
 
-実際にLINEで動作確認してみましょう。  
-Botページに表示されているQRコードを読み取り、Botと友達になってから、適当に文字を送ってみましょう。
-
-<iframe width="414" height="736" src="https://www.youtube.com/embed/BIkEuLy2tAs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-オウム返しBotの作成は以上で完了です！  
-
-### 1.3.4.(任意)自動応答メッセージをオフにする
+### 1.3.4.自動応答メッセージをオフにする
 
 LINE Botはデフォルトでは、`あいさつメッセージ`と`応答メッセージ`がオンになっています。  
 この設定を変更しましょう。
@@ -227,6 +228,14 @@ Messaging API設定タブ > 応答メッセージ > `編集`をクリックし�
 [![Image from Gyazo](https://i.gyazo.com/bd8567c7e1c492642e61e31fef9390b2.png)](https://i.gyazo.com/bd8567c7e1c492642e61e31fef9390b2)
 
 これでオウム返しだけが返ってくるようになりました。
+
+実際にLINEで動作確認してみましょう。  
+Botページに表示されているQRコードを読み取り、Botと友達になってから、適当に文字を送ってみましょう。
+
+[![Image from Gyazo](https://i.gyazo.com/94e5bda2678dcf5bbc7a0154eeac8b07.gif)](https://gyazo.com/94e5bda2678dcf5bbc7a0154eeac8b07)
+
+オウム返しBotの作成は以上で完了です！  
+
 
 ### 1.3.5.(課題)オウム2倍返しBOTを作ってみよう
 
