@@ -37,7 +37,7 @@ LINEアプリとプログラムの連携には、LINEが提供している`Messa
 
 また最近、LINE Botのユースケースが発表されました。LINE Botを作る際に参考にしてみると良いと思います。
 
-> LINE API UseCase - ビジネスの悩みをLINEを使って解決：https://lineapiusecase.com/ja/top.html
+https://lineapiusecase.com/ja/top.html
 
 #### 1.2.1.3.なぜLINE Botを作るのか
 
@@ -131,9 +131,11 @@ QRコードをLINEアプリで読み取り、友達登録しましょう。
 
 ### 1.3.2.Gitpodを開こう
 
-Gitpodは、オンライン利用できるエディタです。
-GitHubのリポジトリのコードを、VSCodeライクなエディタで手軽に編集・実行することができます。
-月50時間まで無料で利用することができます。
+Gitpodはオンライン利用できるエディタです。
+
+> `Note`
+> GitHubのリポジトリのコードをVSCodeライクなエディタで手軽に編集・実行することができます。
+> 月50時間まで無料で利用することができます。
 
 以下のURLを開きましょう。  
 https://gitpod.io/#https://github.com/tmitsuoka0423/line-bot-azure-face-api-face-detection-handson
@@ -227,9 +229,9 @@ Messaging API設定タブ > 応答メッセージ > `編集`をクリックし�
 
 [![Image from Gyazo](https://i.gyazo.com/bd8567c7e1c492642e61e31fef9390b2.png)](https://i.gyazo.com/bd8567c7e1c492642e61e31fef9390b2)
 
-これでオウム返しだけが返ってくるようになりました。
+これでオウム返しだけが返ってくるようになります。
 
-実際にLINEで動作確認してみましょう。  
+### 1.3.5.動作確認してみましょう。  
 Botページに表示されているQRコードを読み取り、Botと友達になってから、適当に文字を送ってみましょう。
 
 [![Image from Gyazo](https://i.gyazo.com/94e5bda2678dcf5bbc7a0154eeac8b07.gif)](https://gyazo.com/94e5bda2678dcf5bbc7a0154eeac8b07)
@@ -237,13 +239,13 @@ Botページに表示されているQRコードを読み取り、Botと友達に
 オウム返しBotの作成は以上で完了です！  
 
 
-### 1.3.5.(課題)オウム2倍返しBOTを作ってみよう
+### 1.3.6.(課題)オウム2倍返しBOTを作ってみよう
 
 完成イメージ
 
 [![Image from Gyazo](https://i.gyazo.com/472f5b31bf7d3ab224ffdece712b05b1.png)](https://i.gyazo.com/472f5b31bf7d3ab224ffdece712b05b1)
 
-### 1.3.6.(課題)オウム返しBotにキャラ付けしよう
+### 1.3.7.(課題)オウム返しBotにキャラ付けしよう
 
 NARUTO風
 
@@ -258,5 +260,5 @@ NARUTO風
 
 次はAIのサービスの一つである`Face API`と組み合わせていきます。
 
-> ！！注意！！  
+> `Note`  
 > 後で使うので、Gitpodのタブは**閉じない**ようにしましょう！
