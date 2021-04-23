@@ -2,18 +2,36 @@
 title: "イントロダクション"
 ---
 
-[![Image from Gyazo](https://i.gyazo.com/9a5a34034258fead923b4813cede6da6.png)](https://gyazo.com/9a5a34034258fead923b4813cede6da6)
+# 本記事について
 
-[![Image from Gyazo](https://i.gyazo.com/69d77c31ac0f22b1727b77c6bb725e23.png)](https://gyazo.com/69d77c31ac0f22b1727b77c6bb725e23)
+本記事は、ハンズオンイベント「[画像分析AIを使ったLINE Botを1時間で作ってみよう（顔検出編）～プロトアウト体験会～](https://protoout.connpass.com/event/208886/)」の説明資料です。
 
-[![Image from Gyazo](https://i.gyazo.com/5e6b0b117869f3b480145fde9aba9ca4.png)](https://gyazo.com/5e6b0b117869f3b480145fde9aba9ca4)
+https://protoout.connpass.com/event/208886/
+
+# （事前準備がまだ終わっていない方は...）
+
+↓記事の手順を参考に、オープニングの間にコソッと進めておいてください！
+
+https://qiita.com/tmitsuoka0423/private/b7b448d98121925c2a68
+
+# ハンズオンにご参加いただきありがとうございます！
+
+[![Image from Gyazo](https://i.gyazo.com/a5cfc3719be3c26b3d613dc9d200656d.png)](https://gyazo.com/a5cfc3719be3c26b3d613dc9d200656d)
+
+# ハンズオン主催：プロトアウトスタジオ
+
+[![Image from Gyazo](https://i.gyazo.com/40d9aa37f61706eb4222f27e7268eef4.png)](https://gyazo.com/40d9aa37f61706eb4222f27e7268eef4)
+
+興味がある方はこちらをご覧ください。
+
+https://protoout.studio/
 
 # スケジュール
 
-[![Image from Gyazo](https://i.gyazo.com/2dfff7276fcc55db4605f7d4534e40ee.png)](https://gyazo.com/2dfff7276fcc55db4605f7d4534e40ee)
+[![Image from Gyazo](https://i.gyazo.com/c05577b0ffbd44ae2f1b8983203c82bf.png)](https://gyazo.com/c05577b0ffbd44ae2f1b8983203c82bf)
 
 # 講師陣
 
-[![Image from Gyazo](https://i.gyazo.com/dd306200852a82b878963f90a2220370.png)](https://gyazo.com/dd306200852a82b878963f90a2220370)
+[![Image from Gyazo](https://i.gyazo.com/aab9875d7d78aa8fddd3e40387f1125c.png)](https://gyazo.com/aab9875d7d78aa8fddd3e40387f1125c)
 
-それでは次のページに進みましょう！
+それではハンズオンの内容に入っていきましょう！
