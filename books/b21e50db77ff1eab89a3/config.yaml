@@ -1,0 +1,9 @@
+title: "【ハンズオン】画像分析AIを使ったLINE Botを1時間で作ってみよう（顔検出編）～プロトアウト体験会～"
+summary: ""
+topics: []
+published: false
+price: 0 # 有料の場合200〜5000
+# 本に含めるチャプターを順番に並べましょう
+chapters:
+  - example1
+  - example2
