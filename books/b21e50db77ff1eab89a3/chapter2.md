@@ -10,7 +10,7 @@ title: "オウム返しBotを作ろう"
 
 [![Image from Gyazo](https://i.gyazo.com/94e5bda2678dcf5bbc7a0154eeac8b07.gif)](https://gyazo.com/94e5bda2678dcf5bbc7a0154eeac8b07)
 
-# 1.2.ここからは話を聞くタイム
+# 1.2.話を聞くタイム
 
 [![Image from Gyazo](https://i.gyazo.com/6529781dd996c64228080c383aa4a325.png)](https://i.gyazo.com/6529781dd996c64228080c383aa4a325)
 
@@ -70,7 +70,7 @@ https://lineapiusecase.com/ja/top.html
 
 [![Image from Gyazo](https://i.gyazo.com/221d9176e00f46fb5923f0c4944e6274.png)](https://i.gyazo.com/221d9176e00f46fb5923f0c4944e6274)
 
-# 1.3.ここからは手を動かすタイム
+# 1.3.手を動かすタイム
 
 [![Image from Gyazo](https://i.gyazo.com/3600fb35b96dcd212cc0d4b6f3240e74.png)](https://i.gyazo.com/3600fb35b96dcd212cc0d4b6f3240e74)
 
@@ -229,9 +229,9 @@ Messaging API設定タブ > 応答メッセージ > `編集`をクリックし�
 
 これでオウム返しだけが返ってくるようになります。
 
-## 1.3.5.動作確認してしよう
+## 1.3.5.動作確認しよう
 
-Botページに表示されているQRコードを読み取り、Botと友達になってから、適当に文字を送ってみましょう。
+Botに適当な文字を送ってみましょう。
 
 [![Image from Gyazo](https://i.gyazo.com/94e5bda2678dcf5bbc7a0154eeac8b07.gif)](https://gyazo.com/94e5bda2678dcf5bbc7a0154eeac8b07)
 
