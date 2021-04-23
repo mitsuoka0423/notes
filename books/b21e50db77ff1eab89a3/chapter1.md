@@ -10,11 +10,11 @@ title: "オウム返しBotを作ろう"
 
 ### 1.1.1.完成イメージ
 
-<iframe width="414" height="736" src="https://www.youtube.com/embed/BIkEuLy2tAs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+[![Image from Gyazo](https://i.gyazo.com/94e5bda2678dcf5bbc7a0154eeac8b07.gif)](https://gyazo.com/94e5bda2678dcf5bbc7a0154eeac8b07)
 
 ## 1.2.ここからは話を聞くタイム
 
-![https://i.gyazo.com/6529781dd996c64228080c383aa4a325.png](https://i.gyazo.com/6529781dd996c64228080c383aa4a325.png)
+[![Image from Gyazo](https://i.gyazo.com/6529781dd996c64228080c383aa4a325.png)](https://i.gyazo.com/6529781dd996c64228080c383aa4a325)
 
 ### 1.2.1.LINE Botとは？
 
@@ -57,47 +57,47 @@ LINEアプリとプログラムの連携には、LINEが提供している`Messa
 本ハンズオンでの登場人物は以下の3つです。  
 主に、サーバーの部分のプログラムを編集していきます。
 
-![https://i.gyazo.com/1ceade2f10b784b68f3bed71efcf83e3.png](https://i.gyazo.com/1ceade2f10b784b68f3bed71efcf83e3.png)
+[![Image from Gyazo](https://i.gyazo.com/1ceade2f10b784b68f3bed71efcf83e3.png)](https://i.gyazo.com/1ceade2f10b784b68f3bed71efcf83e3)
 
 #### 1.2.2.1.オウム返しBotのシステム概要図
 
 `1. オウム返しBotを作ろう`では、LINEアプリから送信した文字列をサーバーで受け取り、LINEアプリにそのまま返すオウム返しBotを作成します。
 
-![https://i.gyazo.com/ef380d63c53fba3e41b79216fb7f0070.png](https://i.gyazo.com/ef380d63c53fba3e41b79216fb7f0070.png)
+[![Image from Gyazo](https://i.gyazo.com/ef380d63c53fba3e41b79216fb7f0070.png)](https://i.gyazo.com/ef380d63c53fba3e41b79216fb7f0070)
 
 #### 1.2.2.2.感情分析AI+LINE Botのシステム概要図
 
 `2. 感情分析AIと組み合わせよう`では、LINEアプリから送信した画像を、Azure Face APIに送信し感情分析します。  
 その結果をサーバーで変換して、LINEアプリに結果を表示します。
 
-![https://i.gyazo.com/221d9176e00f46fb5923f0c4944e6274.png](https://i.gyazo.com/221d9176e00f46fb5923f0c4944e6274.png)
+[![Image from Gyazo](https://i.gyazo.com/221d9176e00f46fb5923f0c4944e6274.png)](https://i.gyazo.com/221d9176e00f46fb5923f0c4944e6274)
 
 ## 1.3.ここからは手を動かすタイム
 
-![https://i.gyazo.com/3600fb35b96dcd212cc0d4b6f3240e74.png](https://i.gyazo.com/3600fb35b96dcd212cc0d4b6f3240e74.png)
+[![Image from Gyazo](https://i.gyazo.com/3600fb35b96dcd212cc0d4b6f3240e74.png)](https://i.gyazo.com/3600fb35b96dcd212cc0d4b6f3240e74)
 
 ### 1.3.1.LINE Botを登録しよう
 
-LINE Developersと呼ばれるサイトからLINE Botを登録できるので作業していきます。
+LINE DevelopersからLINE Botを登録できます。
 
 LINE Developersを開き、ログインします。
-→ https://developers.line.biz/ja/
+https://developers.line.biz/ja/
 
-![https://i.gyazo.com/55926be4e43791a4d30a2c4fa35b77c1.png](https://i.gyazo.com/55926be4e43791a4d30a2c4fa35b77c1.png)
+[![Image from Gyazo](https://i.gyazo.com/55926be4e43791a4d30a2c4fa35b77c1.png)](https://i.gyazo.com/55926be4e43791a4d30a2c4fa35b77c1)
 
-![https://i.gyazo.com/6921026259dc0cacb200097e82340289.png](https://i.gyazo.com/6921026259dc0cacb200097e82340289.png)
+[![Image from Gyazo](https://i.gyazo.com/6921026259dc0cacb200097e82340289.png)](https://i.gyazo.com/6921026259dc0cacb200097e82340289)
 
 ログインできたら、プロバイダーの`作成`をクリックします。
 
-![https://i.gyazo.com/ef306d3ca442a7a8df95cce418778b57.png](https://i.gyazo.com/ef306d3ca442a7a8df95cce418778b57.png)
+[![Image from Gyazo](https://i.gyazo.com/ef306d3ca442a7a8df95cce418778b57.png)](https://i.gyazo.com/ef306d3ca442a7a8df95cce418778b57)
 
 プロバイダー名を入力し、`作成`をクリックします。（名前は好きなものでOKです。）
 
-![https://i.gyazo.com/718446885e86eb2f547379fb63fbbd59.png](https://i.gyazo.com/718446885e86eb2f547379fb63fbbd59.png)
+[![Image from Gyazo](https://i.gyazo.com/718446885e86eb2f547379fb63fbbd59.png)](https://i.gyazo.com/718446885e86eb2f547379fb63fbbd59)
 
 Messaging APIを作成します。
 
-![https://i.gyazo.com/ca20e71a634a089a5ce80aeda3dd065a.png](https://i.gyazo.com/ca20e71a634a089a5ce80aeda3dd065a.png)
+[![Image from Gyazo](https://i.gyazo.com/ca20e71a634a089a5ce80aeda3dd065a.png)](https://i.gyazo.com/ca20e71a634a089a5ce80aeda3dd065a)
 
 必要な項目を入力し、`作成`をクリックします。
 
@@ -109,43 +109,53 @@ Messaging APIを作成します。
 | 大業種 | 適当に選択 | -- |
 | 小業種 | 適当に選択 | -- |
 
-![https://i.gyazo.com/6a8e7227b84a5433e3d1f5a5c673c5ed.png](https://i.gyazo.com/6a8e7227b84a5433e3d1f5a5c673c5ed.png)
+[![Image from Gyazo](https://i.gyazo.com/6a8e7227b84a5433e3d1f5a5c673c5ed.png)](https://i.gyazo.com/6a8e7227b84a5433e3d1f5a5c673c5ed)
 
-![https://i.gyazo.com/378b1d61ba94943527c9af268b1ec0d6.png](https://i.gyazo.com/378b1d61ba94943527c9af268b1ec0d6.png)
+[![Image from Gyazo](https://i.gyazo.com/378b1d61ba94943527c9af268b1ec0d6.png)](https://i.gyazo.com/378b1d61ba94943527c9af268b1ec0d6)
 
-![https://i.gyazo.com/7b46e4c918db445c98c876a175c975d4.png](https://i.gyazo.com/7b46e4c918db445c98c876a175c975d4.png)
+[![Image from Gyazo](https://i.gyazo.com/7b46e4c918db445c98c876a175c975d4.png)](https://i.gyazo.com/7b46e4c918db445c98c876a175c975d4)
 
-![https://i.gyazo.com/ce7837928b7b873d9ec2d48e4a5fa9cc.png](https://i.gyazo.com/ce7837928b7b873d9ec2d48e4a5fa9cc.png)
+[![Image from Gyazo](https://i.gyazo.com/ce7837928b7b873d9ec2d48e4a5fa9cc.png)](https://i.gyazo.com/ce7837928b7b873d9ec2d48e4a5fa9cc)
 
 こんな画面が表示されれば登録完了です。
 
-![https://i.gyazo.com/331c4e70599ed34ffb735ea0c9b5a772.png](https://i.gyazo.com/331c4e70599ed34ffb735ea0c9b5a772.png)
+[![Image from Gyazo](https://i.gyazo.com/331c4e70599ed34ffb735ea0c9b5a772.png)](https://i.gyazo.com/331c4e70599ed34ffb735ea0c9b5a772)
 
 QRコードをLINEアプリで読み取り、友達登録しましょう。
 
-![https://i.gyazo.com/a59294c0b4135a4bfb2a3f40fc5d6f9b.png](https://i.gyazo.com/a59294c0b4135a4bfb2a3f40fc5d6f9b.png)
+[![Image from Gyazo](https://i.gyazo.com/a59294c0b4135a4bfb2a3f40fc5d6f9b.png)](https://i.gyazo.com/a59294c0b4135a4bfb2a3f40fc5d6f9b)
 
-![https://i.gyazo.com/1e6049acab5fcc1a83f73000949701f6.png](https://i.gyazo.com/1e6049acab5fcc1a83f73000949701f6.png)
+[![Image from Gyazo](https://i.gyazo.com/1e6049acab5fcc1a83f73000949701f6.png)](https://i.gyazo.com/1e6049acab5fcc1a83f73000949701f6)
 
 ### 1.3.2.Gitpodを開こう
 
 Gitpodは、オンライン利用できるエディタです。
 
 以下のURLを開きましょう。  
-https://gitpod.io/#https://github.com/tmitsuoka0423/line-bot-azure-face-api-handson
+https://gitpod.io/#https://github.com/tmitsuoka0423/line-bot-azure-face-api-face-detection-handson
 
 GitHubアカウントでログインします。
 
-![https://i.gyazo.com/14aca92f43ed9cfa88f3484178124d0d.png](https://i.gyazo.com/14aca92f43ed9cfa88f3484178124d0d.png)
+[![Image from Gyazo](https://i.gyazo.com/14aca92f43ed9cfa88f3484178124d0d.png)](https://i.gyazo.com/14aca92f43ed9cfa88f3484178124d0d)
 
-![https://i.gyazo.com/21ef753c6e49040badfcc0442fcc1298.png](https://i.gyazo.com/21ef753c6e49040badfcc0442fcc1298.png)
+[![Image from Gyazo](https://i.gyazo.com/21ef753c6e49040badfcc0442fcc1298.png)](https://i.gyazo.com/21ef753c6e49040badfcc0442fcc1298)
 
-このような画面が表示されます。
+このような画面が表示されます。(起動に数十秒～数分ほどかかります。)
 
-![https://i.gyazo.com/d8ef262a41e320c525d51762be79a8b6.png](https://i.gyazo.com/d8ef262a41e320c525d51762be79a8b6.png)
+[![Image from Gyazo](https://i.gyazo.com/9066b86f112bfd7715b2223aeb4b1eb9.png)](https://gyazo.com/9066b86f112bfd7715b2223aeb4b1eb9)
+
+画面は
+
+- サイドバー
+- エディター
+- ターミナル
+
+の3エリアに分割されています。ハンズオンではこれらの名前で呼ぶので覚えておきましょう。
+
+[![Image from Gyazo](https://i.gyazo.com/56daffaac5af416d1908f7c002510aad.png)](https://gyazo.com/56daffaac5af416d1908f7c002510aad)
 
 Gitpodの準備はこれでOKです。  
-オウム返しBotを動かす準備を進めていきましょう！
+続いてオウム返しBotを動かす準備を進めていきましょう！
 
 ### 1.3.3.オウム返しBotを動かしてみよう
 
@@ -154,15 +164,15 @@ LINE Botの設定を追記する必要があるので編集していきます。
 
 サイドバーから`index.js`を開き、`チャネルシークレット`・`チャネルアクセストークン`の設定箇所までスクロールします。
 
-![https://i.gyazo.com/54036709b6af66f45ac166a2862b4345.png](https://i.gyazo.com/54036709b6af66f45ac166a2862b4345.png)
+[![Image from Gyazo](https://i.gyazo.com/54036709b6af66f45ac166a2862b4345.png)](https://i.gyazo.com/54036709b6af66f45ac166a2862b4345)
 
 `チャネルシークレット`・`チャネルアクセストークン`は[LINE Developers](https://developers.line.biz/ja/)のサイトから取得することができます。
 
 先程作成したチャネルを開き、`Basic settings`タブ・`Messaging API`タブからそれぞれ、`チャネルシークレット`・`チャネルアクセストークン`をコピーしてきます。
 
-![https://i.gyazo.com/f1660c511e41f7ec87132b5d30e70f8e.png](https://i.gyazo.com/f1660c511e41f7ec87132b5d30e70f8e.png)
+[![Image from Gyazo](https://i.gyazo.com/f1660c511e41f7ec87132b5d30e70f8e.png)](https://i.gyazo.com/f1660c511e41f7ec87132b5d30e70f8e)
 
-![https://i.gyazo.com/16624ba230246f77b31fccb6ae650061.png](https://i.gyazo.com/16624ba230246f77b31fccb6ae650061.png)
+[![Image from Gyazo](https://i.gyazo.com/16624ba230246f77b31fccb6ae650061.png)](https://i.gyazo.com/16624ba230246f77b31fccb6ae650061)
 
 入力するとこのようになります。  
 (シークレットキーとアクセストークンの値は人によって異なります)
@@ -175,26 +185,26 @@ LINE Botの設定を追記する必要があるので編集していきます。
 
 ターミナルに`node index.js`と入力して、`Enter`を押します。
 
-![https://i.gyazo.com/0cd665b2856038452f724002cad15e24.png](https://i.gyazo.com/0cd665b2856038452f724002cad15e24.png)
+[![Image from Gyazo](https://i.gyazo.com/0cd665b2856038452f724002cad15e24.png)](https://i.gyazo.com/0cd665b2856038452f724002cad15e24)
 
 `Make Public`をクリックします。
 
-![https://i.gyazo.com/c4ef4785b2d3f857aa1bce0fe523b640.png](https://i.gyazo.com/c4ef4785b2d3f857aa1bce0fe523b640.png)
+[![Image from Gyazo](https://i.gyazo.com/c4ef4785b2d3f857aa1bce0fe523b640.png)](https://i.gyazo.com/c4ef4785b2d3f857aa1bce0fe523b640)
 
 `Open Ports`タブの`Open Browwer`をクリックします。
 
-![https://i.gyazo.com/4fc6b6d4917879ba10e28f129e7d2cd4.png](https://i.gyazo.com/4fc6b6d4917879ba10e28f129e7d2cd4.png)
+[![Image from Gyazo](https://i.gyazo.com/4fc6b6d4917879ba10e28f129e7d2cd4.png)](https://i.gyazo.com/4fc6b6d4917879ba10e28f129e7d2cd4)
 
 新しいタブが開くので、そのページのURLをコピーし、Botチャネルの`Webhook URL`にペーストします。
 
-![https://i.gyazo.com/afa573e55291365780c8ee43b88682b6.png](https://i.gyazo.com/afa573e55291365780c8ee43b88682b6.png)
+[![Image from Gyazo](https://i.gyazo.com/afa573e55291365780c8ee43b88682b6.png)](https://i.gyazo.com/afa573e55291365780c8ee43b88682b6)
 
 接続確認をします。  
 `Verify`をクリックして、`Success`と表示されればOKです。
 
-![https://i.gyazo.com/a8a87743e1d9b02fdd7b1936070d13c0.png](https://i.gyazo.com/a8a87743e1d9b02fdd7b1936070d13c0.png)
+[![Image from Gyazo](https://i.gyazo.com/a8a87743e1d9b02fdd7b1936070d13c0.png)](https://i.gyazo.com/a8a87743e1d9b02fdd7b1936070d13c0)
 
-![https://i.gyazo.com/084611d55d08bb89b44ba163097932bf.png](https://i.gyazo.com/084611d55d08bb89b44ba163097932bf.png)
+[![Image from Gyazo](https://i.gyazo.com/084611d55d08bb89b44ba163097932bf.png)](https://i.gyazo.com/084611d55d08bb89b44ba163097932bf)
 
 実際にLINEで動作確認してみましょう。  
 Botページに表示されているQRコードを読み取り、Botと友達になってから、適当に文字を送ってみましょう。
@@ -210,11 +220,11 @@ LINE Botはデフォルトでは、`あいさつメッセージ`と`応答メッ
 
 Messaging API設定タブ > 応答メッセージ > `編集`をクリックし、LINE公式アカウント設定画面を開きます。
 
-![https://i.gyazo.com/b9ba1653be88c67ff0661251c545ba8f.png](https://i.gyazo.com/b9ba1653be88c67ff0661251c545ba8f.png)
+[![Image from Gyazo](https://i.gyazo.com/b9ba1653be88c67ff0661251c545ba8f.png)](https://i.gyazo.com/b9ba1653be88c67ff0661251c545ba8f)
 
 不要なメッセージをオフにします。
 
-![https://i.gyazo.com/bd8567c7e1c492642e61e31fef9390b2.png](https://i.gyazo.com/bd8567c7e1c492642e61e31fef9390b2.png)
+[![Image from Gyazo](https://i.gyazo.com/bd8567c7e1c492642e61e31fef9390b2.png)](https://i.gyazo.com/bd8567c7e1c492642e61e31fef9390b2)
 
 これでオウム返しだけが返ってくるようになりました。
 
@@ -222,20 +232,20 @@ Messaging API設定タブ > 応答メッセージ > `編集`をクリックし�
 
 完成イメージ
 
-![https://i.gyazo.com/472f5b31bf7d3ab224ffdece712b05b1.png](https://i.gyazo.com/472f5b31bf7d3ab224ffdece712b05b1.png)
+[![Image from Gyazo](https://i.gyazo.com/472f5b31bf7d3ab224ffdece712b05b1.png)](https://i.gyazo.com/472f5b31bf7d3ab224ffdece712b05b1)
 
 ### 1.3.6.(課題)オウム返しBotにキャラ付けしよう
 
 NARUTO風
 
-![https://i.gyazo.com/ed3c6c6db6dc37f429d698aa1c6b41de.png](https://i.gyazo.com/ed3c6c6db6dc37f429d698aa1c6b41de.png)
+[![Image from Gyazo](https://i.gyazo.com/ed3c6c6db6dc37f429d698aa1c6b41de.png)](https://i.gyazo.com/ed3c6c6db6dc37f429d698aa1c6b41de)
 
 ## 1.4.まとめ
 
 - LINE DevelopersからLINE Botのチャンネルを作成し、友達登録しました。
 - LINEアプリ⇔Expressサーバーでオウム返しBotを作成しました。
 
-![https://i.gyazo.com/ef380d63c53fba3e41b79216fb7f0070.png](https://i.gyazo.com/ef380d63c53fba3e41b79216fb7f0070.png)
+[![Image from Gyazo](https://i.gyazo.com/ef380d63c53fba3e41b79216fb7f0070.png)](https://i.gyazo.com/ef380d63c53fba3e41b79216fb7f0070)
 
 次はAIのサービスの一つである`Face API`と組み合わせていきます。
 
