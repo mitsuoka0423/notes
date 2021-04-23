@@ -2,23 +2,25 @@
 title: "画像分析AI(顔検出)と組み合わせよう"
 ---
 
-# 2.1.この章のゴール
+# 画像分析AI(顔検出)と組み合わせよう
+
+## 2.1.この章のゴール
 
 - LINE BotとAzure Face APIを組み合わせて、感情分析Botを作成する
 
-## 2.1.1.完成イメージ
+### 2.1.1.完成イメージ
 
 <iframe width="414" height="736" src="https://www.youtube.com/embed/5tFfPfBr-HU" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-## 2.1.2.システム概要図
+### 2.1.2.システム概要図
 
 ![https://i.gyazo.com/221d9176e00f46fb5923f0c4944e6274.png](https://i.gyazo.com/221d9176e00f46fb5923f0c4944e6274.png)
 
-# 2.2.ここからは話を聞くタイム
+## 2.2.ここからは話を聞くタイム
 
 ![https://i.gyazo.com/6529781dd996c64228080c383aa4a325.png](https://i.gyazo.com/6529781dd996c64228080c383aa4a325.png)
 
-## 2.2.1.Microsoft Azure とは？
+### 2.2.1.Microsoft Azure とは？
 
 > 公式サイトはこちら：https://azure.microsoft.com/ja-jp/
 
@@ -30,7 +32,7 @@ title: "画像分析AI(顔検出)と組み合わせよう"
 
 今日はAzureのサービスの内、AIを提供しているサービスである`Cognitive Service`の`Face API`を利用します。
 
-## 2.2.2.Face APIの紹介
+### 2.2.2.Face APIの紹介
 
 > 公式ドキュメントはこちら：https://azure.microsoft.com/ja-jp/services/cognitive-services/face/
 
@@ -42,20 +44,20 @@ title: "画像分析AI(顔検出)と組み合わせよう"
 
 それぞれについて簡単に説明します。
 
-## 2.2.2.1.顔検出
+#### 2.2.2.1.顔検出
 
 ![https://i.gyazo.com/96883a0d6cec3835d1dd226f2787122f.png](https://i.gyazo.com/96883a0d6cec3835d1dd226f2787122f.png)
 
 > 1人以上の人間の顔と各種の属性(年齢、感情、ポーズ、笑顔、顔ひげなど)を検出できます。  
 > また、画像内の顔ごとに27個の特徴点が抽出されます。
 
-## 2.2.2.2.顔認証
+#### 2.2.2.2.顔認証
 
 ![https://i.gyazo.com/b95cfdb0061bed0eb926aa9340247015.png](https://i.gyazo.com/b95cfdb0061bed0eb926aa9340247015.png)
 
 > 2つの顔が同一人物のものである可能性を検証し、信頼度スコアを取得します。
 
-## 2.2.2.3.感情認識
+#### 2.2.2.3.感情認識
 
 ![https://i.gyazo.com/94e6036245e1a74871c1720903da2455.png](https://i.gyazo.com/94e6036245e1a74871c1720903da2455.png)
 
@@ -63,19 +65,19 @@ title: "画像分析AI(顔検出)と組み合わせよう"
 
 `Face API`は、複雑なプログラミングをせずに利用できる**API**として提供されています。
 
-## 2.2.3.ここまでのまとめ
+### 2.2.3.ここまでのまとめ
 
 - Azureとは、Microsoftが提供しているクラウドサービスのこと。
 - AzureのAI・機械学習系のサービスの1つとして、**感情分析AI**が提供されている。
 - 感情分析AIは**API**として提供されているので、簡単にプロダクトに組み込める。
 
-# 2.3.ここからは手を動かすタイム
+## 2.3.ここからは手を動かすタイム
 
 ![https://i.gyazo.com/3600fb35b96dcd212cc0d4b6f3240e74.png](https://i.gyazo.com/3600fb35b96dcd212cc0d4b6f3240e74.png)
 
-## 2.3.1.Face APIを使ってみよう
+### 2.3.1.Face APIを使ってみよう
 
-## 2.3.1.1.Azureポータルにログインする
+#### 2.3.1.1.Azureポータルにログインする
 
 Azureポータルを開きます。  
 https://portal.azure.com/
@@ -90,7 +92,7 @@ Face APIのリソースを作成します。
 
 ![https://i.gyazo.com/5201c4d4037788c001d79f1cdfef8725.png](https://i.gyazo.com/5201c4d4037788c001d79f1cdfef8725.png)
 
-## 2.3.1.2.リソースグループを作成する
+#### 2.3.1.2.リソースグループを作成する
 
 > 既にリソースグループを作成している方は作成不要です
 
@@ -104,7 +106,7 @@ Face APIのリソースを作成します。
 
 ![https://i.gyazo.com/c9cb77de2d96a1974c24eaed0b967e9c.png](https://i.gyazo.com/c9cb77de2d96a1974c24eaed0b967e9c.png)
 
-## 2.3.1.3.Face APIのリソースを作成する
+#### 2.3.1.3.Face APIのリソースを作成する
 
 残りの項目を埋めて、`確認および作成`をクリックします。
 
@@ -130,9 +132,9 @@ Face APIのリソースを作成します。
 
 ![https://i.gyazo.com/199c26da328160a466584e4f420b3f69.png](https://i.gyazo.com/199c26da328160a466584e4f420b3f69.png)
 
-## 2.3.2.Face APIとLINE Botを組み合わせよう
+### 2.3.2.Face APIとLINE Botを組み合わせよう
 
-## 2.3.2.1.コードにFace APIのキー・エンドポイントを記入する
+#### 2.3.2.1.コードにFace APIのキー・エンドポイントを記入する
 
 Gitpodのタブを開きます。
 
@@ -149,7 +151,7 @@ Gitpodのタブを開きます。
 
 ![https://i.gyazo.com/aa93ee89377d1cd8d9ac5bb68cfa88bb.png](https://i.gyazo.com/aa93ee89377d1cd8d9ac5bb68cfa88bb.png)
 
-## 2.3.2.2.Expressを再起動する
+#### 2.3.2.2.Expressを再起動する
 
 ターミナルをクリックし、`Ctrl + C`を押して、Expressを一度停止させます。
 
@@ -169,7 +171,7 @@ Expressが起動していることを確認します。
 
 以上で、感情分析Botの設定は終わりです。
 
-## 2.3.3.感情分析Botを動かしてみよう
+### 2.3.3.感情分析Botを動かしてみよう
 
 Botに人の顔が写っている写真を送信してみましょう。  
 感情が分析されて返ってきます。
@@ -178,7 +180,7 @@ Botに人の顔が写っている写真を送信してみましょう。
 
 以上で感情分析Botの作成はおしまいです！
 
-# 2.4.まとめ
+## 2.4.まとめ
 
 - Azureが提供しているAI・機械学習系サービスであるFace APIを利用するため、Azure上でリソースを作成しました。
 - LINE BotとFace API組み合わせて、送った写真の感情分析を行うBotを作成しました。
@@ -187,7 +189,7 @@ Botに人の顔が写っている写真を送信してみましょう。
 
 本ハンズオンで作成したリソースの削除方法を記載します。
 
-# 3.1.LINE Botを削除する
+## 3.1.LINE Botを削除する
 
 [LINE Developersコンソール](https://developers.line.biz/ja/)で削除を行います。
 削除したいLINE Botを選択し、`チャネル基本設定 > チャネルの削除`から削除を行います。
@@ -200,7 +202,7 @@ Botに人の顔が写っている写真を送信してみましょう。
 ![https://i.gyazo.com/0ebff3d78fd4b77753bb8d8fe16a0f32.png](https://i.gyazo.com/0ebff3d78fd4b77753bb8d8fe16a0f32.png)
 これでLINE Botを削除できました。
 
-# 3.2.Face APIのリソースを削除する
+## 3.2.Face APIのリソースを削除する
 
 Azureポータルから削除を行います。
 
@@ -224,4 +226,4 @@ https://forms.gle/d2V4YxXbHvSrf66p9
 
 提出頂いた方から、QA用Google Meetに移動 or 解散とします。
 
-## ハンズオンへのご参加ありがとうございました！
+### ハンズオンへのご参加ありがとうございました！
