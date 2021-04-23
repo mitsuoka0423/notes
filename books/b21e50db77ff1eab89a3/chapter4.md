@@ -40,11 +40,11 @@ Azureポータルから削除を行います。
 
 次回のハンズオンイベントの改善のため、アンケートにご協力ください。(3分ほどで回答できます)
 
-// URL TODO
+https://forms.gle/nL9cLwsjGyVtUSC58
 
 提出頂いた方から、QA用Google Meetに移動 or 解散とします。
 
-// URL TODO
+https://meet.google.com/ghp-twkc-fyg
 
 # ハンズオンへのご参加ありがとうございました！
 

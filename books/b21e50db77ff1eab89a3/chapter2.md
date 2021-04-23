@@ -243,6 +243,11 @@ Botに適当な文字を送ってみましょう。
 
 [![Image from Gyazo](https://i.gyazo.com/472f5b31bf7d3ab224ffdece712b05b1.png)](https://i.gyazo.com/472f5b31bf7d3ab224ffdece712b05b1)
 
+> `Note`
+> コードを変更した場合、プログラムを再実行する必要があります。
+> ターミナルをクリックした状態で`Ctrl + C`(Macの方は`^C`)を入力し、プロクラムを停止します。
+> 再度`node index.js`を実行すればOKです。
+
 ## 1.3.7.(オプション)オウム返しBotにキャラ付けしよう
 
 NARUTO風

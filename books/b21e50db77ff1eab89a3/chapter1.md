@@ -34,6 +34,15 @@ https://protoout.studio/
 
 [![Image from Gyazo](https://i.gyazo.com/aab9875d7d78aa8fddd3e40387f1125c.png)](https://gyazo.com/aab9875d7d78aa8fddd3e40387f1125c)
 
+質問はこちらのスプレッドシートを通してやりとりします。
+
+https://docs.google.com/spreadsheets/d/1Aa3ULKhLpjs2vlNnNPLWofyFpH0pjqafMqNJFyXXRxA/edit?usp=sharing
+
+- 手順がわからなくなってしまった
+- 手順通りにやったらエラーになってしまった
+
+などありましたら、質問シートにご記入ください。TAが順次回答していきます。
+
 # 今日作るもののイメージ
 
 以下のようなLINE上で動作するLINE Botを作成していきます。
