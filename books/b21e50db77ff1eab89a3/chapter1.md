@@ -8,6 +8,10 @@ title: "イントロダクション"
 
 https://protoout.connpass.com/event/208886/
 
+ソースコードはこちらで公開しています。
+
+https://github.com/tmitsuoka0423/line-bot-azure-face-api-face-detection-handson
+
 # （事前準備がまだ終わっていない方は...）
 
 ↓記事の手順を参考に、オープニングの間にコソッと進めておいてください！
