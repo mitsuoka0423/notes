@@ -136,7 +136,7 @@ Face APIのリソースを作成します。
 
 Gitpodのタブを開きます。
 
-> Gitpodを一度閉じてしまった人は、[ここ](https://gitpod.io/#https://github.com/tmitsuoka0423/line-bot-azure-face-api-handson)をクリックして再度開きましょう。  
+> Gitpodを一度閉じてしまった人は、[ここ](https://gitpod.io/#https://github.com/tmitsuoka0423/line-bot-azure-face-api-face-detection-handson)をクリックして再度開きましょう。  
 > その際、LINE Developerコンソールから、`チャネルシークレット`と`チャネルアクセストークン`を再びコピーしてくる必要があります。
 
 24行目あたりにある、`faceKey`・`faceEndPoint`にそれぞれ、先程コピーした`キー1`・`エンドポイント`をペーストします。

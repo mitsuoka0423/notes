@@ -1,5 +1,5 @@
 ---
-title: "後片付け・アンケート"
+title: "後片付け"
 ---
 
 # 3. 後片付け
@@ -35,16 +35,6 @@ Azureポータルから削除を行います。
 
 ![https://i.gyazo.com/dd549bea8c5537a3c5a3e3f40559b807.png](https://i.gyazo.com/dd549bea8c5537a3c5a3e3f40559b807.png)
 リソースグループが削除されたことを確認して完了です。
-
-# 4.アンケート回答
-
-次回のハンズオンイベントの改善のため、アンケートにご協力ください。(3分ほどで回答できます)
-
-https://forms.gle/nL9cLwsjGyVtUSC58
-
-提出頂いた方から、QA用Google Meetに移動 or 解散とします。
-
-https://meet.google.com/ghp-twkc-fyg
 
 # ハンズオンへのご参加ありがとうございました！
 
