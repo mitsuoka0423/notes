@@ -2,6 +2,10 @@
 title: "イントロダクション"
 ---
 
+# ハンズオン動画を公開しました！
+
+https://www.youtube.com/watch?v=xyeYJfa0bFQ
+
 # 本記事について
 
 本記事は、ハンズオンイベント「[画像分析AIを使ったLINE Botを1時間で作ってみよう（顔検出編）～プロトアウト体験会～](https://protoout.connpass.com/event/208886/)」の説明資料です。
@@ -37,15 +41,6 @@ https://protoout.studio/
 # 講師陣
 
 [![Image from Gyazo](https://i.gyazo.com/aab9875d7d78aa8fddd3e40387f1125c.png)](https://gyazo.com/aab9875d7d78aa8fddd3e40387f1125c)
-
-質問はこちらのスプレッドシートを通してやりとりします。
-
-https://docs.google.com/spreadsheets/d/1Aa3ULKhLpjs2vlNnNPLWofyFpH0pjqafMqNJFyXXRxA/edit?usp=sharing
-
-- 手順がわからなくなってしまった
-- 手順通りにやったらエラーになってしまった
-
-などありましたら、質問シートにご記入ください。TAが順次回答していきます。
 
 # 今日作るもののイメージ
 
