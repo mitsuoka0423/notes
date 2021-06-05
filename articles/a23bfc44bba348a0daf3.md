@@ -3,7 +3,7 @@ title: "Azure Face APIで顔認識してみる"
 emoji: "😺"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["AI", "Azure", "CognitiveServices", "Face"]
-published: false
+published: true
 ---
 
 ## はじめに
