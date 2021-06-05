@@ -1,5 +1,5 @@
 ---
-title: "Azure Face APIで顔認識してみる"
+title: "Azure Face APIを使って2つの顔が同一人物か判定する"
 emoji: "😺"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["AI", "Azure", "CognitiveServices", "Face"]
