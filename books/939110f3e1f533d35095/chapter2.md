@@ -63,12 +63,12 @@ https://lineapiusecase.com/ja/top.html
 
 [![Image from Gyazo](https://i.gyazo.com/ef380d63c53fba3e41b79216fb7f0070.png)](https://i.gyazo.com/ef380d63c53fba3e41b79216fb7f0070)
 
-### 1.2.2.2.感情分析AI+LINE Botのシステム概要図
+### 1.2.2.2.画像分析AI+LINE Botのシステム概要図
 
-`画像分析AIと組み合わせよう`では、LINEアプリから送信した画像を、Azure Face APIに送信し顔検出を行います。  
+`画像分析AIと組み合わせよう`では、LINEアプリから送信した画像をAzure Face APIに送信し、顔の画像分析を行います。  
 その結果をサーバーで変換して、LINEアプリに結果を表示します。
 
-[![Image from Gyazo](https://i.gyazo.com/ed3534a28c900c0e87fd4b4593ae90bd.png)](https://gyazo.com/ed3534a28c900c0e87fd4b4593ae90bd)
+[![Image from Gyazo](https://i.gyazo.com/c1c3f0924ddb6a5ec989de33a1fda3ca.png)](https://gyazo.com/c1c3f0924ddb6a5ec989de33a1fda3ca)
 # 1.3.手を動かすタイム
 
 [![Image from Gyazo](https://i.gyazo.com/3600fb35b96dcd212cc0d4b6f3240e74.png)](https://i.gyazo.com/3600fb35b96dcd212cc0d4b6f3240e74)
@@ -135,7 +135,7 @@ Gitpodはオンライン利用できるエディタです。
 > 月50時間まで無料で利用することができます。
 
 以下のURLを開きましょう。  
-https://gitpod.io/#https://github.com/tmitsuoka0423/line-bot-azure-face-api-face-detection-handson
+https://gitpod.io/#https://github.com/tmitsuoka0423/line-bot-azure-face-api-face-verification-handson
 
 GitHubアカウントでログインします。
 
