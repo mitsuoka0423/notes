@@ -4,9 +4,9 @@ title: "イントロダクション"
 
 # 本記事について
 
-本記事は、ハンズオンイベント「[画像分析AIを使ったLINE Botを1時間で作ってみよう（顔検出編）～プロトアウト体験会～](https://protoout.connpass.com/event/208886/)」の説明資料です。
+本記事は、ハンズオンイベント「[画像分析AIを使ったLINE Botを1時間で作ってみよう（顔認証編）～プロトアウト体験会～](https://protoout.connpass.com/event/213633/)」の説明資料です。
 
-https://protoout.connpass.com/event/208886/
+https://protoout.connpass.com/event/213633/
 
 ソースコードはこちらで公開しています。
 
