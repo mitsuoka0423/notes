@@ -67,4 +67,6 @@ try {
 node index.js
 ```
 
-<a href="https://gyazo.com/887241bf833faa98ebef0dff1822f34e"><img src="https://i.gyazo.com/887241bf833faa98ebef0dff1822f34e.jpg" alt="Image from Gyazo" width="900.8"/></a>
+[![Image from Gyazo](https://i.gyazo.com/887241bf833faa98ebef0dff1822f34e.jpg)](https://gyazo.com/887241bf833faa98ebef0dff1822f34e)
+
+顔検出できました。
