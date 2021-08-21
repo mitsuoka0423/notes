@@ -3,7 +3,7 @@ title: "opencv4nodejsでbase64エンコードされた画像を読み込むメ�
 emoji: "📷"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["nodejs", "opencv", "opencv4nodejs"]
-published: false
+published: true
 ---
 
 ## コード

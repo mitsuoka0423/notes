@@ -3,7 +3,7 @@ title: "opencv4nodejsで画像ファイルから顔検出するメモ"
 emoji: "🐈"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["顔検出", "detection", "nodejs", "opencv", "opencv4nodejs"]
-published: false
+published: true
 ---
 
 # はじめに
