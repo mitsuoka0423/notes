@@ -22,9 +22,9 @@ https://docs.microsoft.com/ja-jp/azure/iot-hub/iot-hub-python-python-file-upload
 
 ## Storageアカウントを作成する
 
-<a href="https://gyazo.com/90436cf4931ba16a3d469e7cab89c977"><img src="https://i.gyazo.com/90436cf4931ba16a3d469e7cab89c977.png" alt="Image from Gyazo" width="1407"/></a>
+![](https://i.gyazo.com/90436cf4931ba16a3d469e7cab89c977.png)
 
-<a href="https://gyazo.com/955ca147a76bce0987cb8af6b0f3d720"><img src="https://i.gyazo.com/955ca147a76bce0987cb8af6b0f3d720.png" alt="Image from Gyazo" width="299"/></a>
+![](https://i.gyazo.com/955ca147a76bce0987cb8af6b0f3d720.png)
 
 項目を入力する。
 
@@ -41,27 +41,27 @@ https://docs.microsoft.com/ja-jp/azure/iot-hub/iot-hub-python-python-file-upload
 - TLSの最小バージョン
   - そのまま
 
-<a href="https://gyazo.com/a3088cba9cf9dd7ff7385d81a33466b2"><img src="https://i.gyazo.com/a3088cba9cf9dd7ff7385d81a33466b2.png" alt="Image from Gyazo" width="1396"/></a>
+![](https://i.gyazo.com/a3088cba9cf9dd7ff7385d81a33466b2.png)
 
 入力できたら、左下のOKボタンをクリック。
 
 続いてコンテナの作成。
 
-<a href="https://gyazo.com/b2d7ca64529012859f9311179a6f61ec"><img src="https://i.gyazo.com/b2d7ca64529012859f9311179a6f61ec.png" alt="Image from Gyazo" width="267"/></a>
+![](https://i.gyazo.com/b2d7ca64529012859f9311179a6f61ec.png)
 
-<a href="https://gyazo.com/5b11350bb09fbe216096e27ca0a089be"><img src="https://i.gyazo.com/5b11350bb09fbe216096e27ca0a089be.png" alt="Image from Gyazo" width="296"/></a>
+![](https://i.gyazo.com/5b11350bb09fbe216096e27ca0a089be.png)
 
-<a href="https://gyazo.com/3cfc5897fd0b3f46e244708d22aa3427"><img src="https://i.gyazo.com/3cfc5897fd0b3f46e244708d22aa3427.png" alt="Image from Gyazo" width="1398"/></a>
+![](https://i.gyazo.com/3cfc5897fd0b3f46e244708d22aa3427.png)
 
 できました。
 
 ## IoT HubにStorageアカウントを紐付ける
 
-<a href="https://gyazo.com/dfd6ce5151e48adcf051826d3e8b32cc"><img src="https://i.gyazo.com/dfd6ce5151e48adcf051826d3e8b32cc.png" alt="Image from Gyazo" width="922"/></a>
+![](https://i.gyazo.com/dfd6ce5151e48adcf051826d3e8b32cc.png)
 
-<a href="https://gyazo.com/f52dfe51513c69441ef6605d450a853d"><img src="https://i.gyazo.com/f52dfe51513c69441ef6605d450a853d.png" alt="Image from Gyazo" width="635"/></a>
+![](https://i.gyazo.com/f52dfe51513c69441ef6605d450a853d.png)
 
-<a href="https://gyazo.com/f43f97174d70a72ce52a5eadacaa7e2e"><img src="https://i.gyazo.com/f43f97174d70a72ce52a5eadacaa7e2e.png" alt="Image from Gyazo" width="677"/></a>
+![](https://i.gyazo.com/f43f97174d70a72ce52a5eadacaa7e2e.png)
 
 できました。
 
@@ -180,8 +180,8 @@ if __name__ == "__main__":
 
 > IoT Hubデバイスの接続文字列の取得方法
 >
-> <a href="https://gyazo.com/4ae564dad6ac835f43ccb3ff33b7db26"><img src="https://i.gyazo.com/4ae564dad6ac835f43ccb3ff33b7db26.png" alt="Image from Gyazo" width="1025"/></a>
-> <a href="https://gyazo.com/75e73ccd3d34e98222651944ecc55110"><img src="https://i.gyazo.com/75e73ccd3d34e98222651944ecc55110.png" alt="Image from Gyazo" width="908"/></a>
+> ![](https://i.gyazo.com/4ae564dad6ac835f43ccb3ff33b7db26.png)
+> ![](https://i.gyazo.com/75e73ccd3d34e98222651944ecc55110.png)
 
 # 実行
 
@@ -204,11 +204,11 @@ Upload succeeded. Result is:
 成功したようです。
 アップロードされてるかコンテナを確認します。
 
-<a href="https://gyazo.com/5702a0451bed8ed6388abc7945b9c36b"><img src="https://i.gyazo.com/5702a0451bed8ed6388abc7945b9c36b.png" alt="Image from Gyazo" width="1106"/></a>
+![](https://i.gyazo.com/5702a0451bed8ed6388abc7945b9c36b.png)
 
-<a href="https://gyazo.com/e83d92afb19ef33fe8178f3132d4a0b3"><img src="https://i.gyazo.com/e83d92afb19ef33fe8178f3132d4a0b3.png" alt="Image from Gyazo" width="599"/></a>
+![](https://i.gyazo.com/e83d92afb19ef33fe8178f3132d4a0b3.png)
 
-<a href="https://gyazo.com/6955c78453b354b3debed5f862d63646"><img src="https://i.gyazo.com/6955c78453b354b3debed5f862d63646.png" alt="Image from Gyazo" width="561"/></a>
+![](https://i.gyazo.com/6955c78453b354b3debed5f862d63646.png)
 
 ありました！
 
