@@ -12,6 +12,10 @@ https://docs.microsoft.com/ja-jp/azure/iot-hub/iot-hub-python-python-file-upload
 
 を参考に手順をメモします。
 
+コードはこちらにアップしています。
+
+https://github.com/tmitsuoka0423/iothub-file-upload-sample-python
+
 # IoT Hubを作成する
 
 下記手順の通り。
