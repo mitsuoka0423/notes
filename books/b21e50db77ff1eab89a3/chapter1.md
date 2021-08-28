@@ -22,7 +22,7 @@ https://github.com/tmitsuoka0423/line-bot-azure-face-api-face-detection-handson
 
 https://qiita.com/tmitsuoka0423/private/b7b448d98121925c2a68
 
-# ハンズオンにご参加いただきありがとうございます！
+# ハンズオンにご参加いただきりがとうございます！
 
 [![Image from Gyazo](https://i.gyazo.com/a5cfc3719be3c26b3d613dc9d200656d.png)](https://gyazo.com/a5cfc3719be3c26b3d613dc9d200656d)
 
@@ -36,21 +36,49 @@ https://protoout.studio/
 
 # スケジュール
 
-[![Image from Gyazo](https://i.gyazo.com/c05577b0ffbd44ae2f1b8983203c82bf.png)](https://gyazo.com/c05577b0ffbd44ae2f1b8983203c82bf)
+| スタート | エンド | 内容 |
+|--|--|--|
+|08:00|08:10|オープニング|
+|08:10|08:40|ハンズオン前半戦|
+|08:40|08:50|休憩|
+|08:50|09:20|ハンズオン後半戦|
+|09:20|09:30|クロージング・アンケート回答|
+|09:30|10:00|QA・サポートタイム|
 
-# 講師陣
+## 講師陣
 
-[![Image from Gyazo](https://i.gyazo.com/aab9875d7d78aa8fddd3e40387f1125c.png)](https://gyazo.com/aab9875d7d78aa8fddd3e40387f1125c)
+### 講師: **光岡高宏**
+
+<a href="https://gyazo.com/8651c98b1d98c0e634dda8bdf4a02af7"><img src="https://i.gyazo.com/8651c98b1d98c0e634dda8bdf4a02af7.jpg" alt="Image from Gyazo" width="150"/></a>
+
+電子書籍サービスを開発する現役エンジニア。 LINE BOOT AWARDS 2018 オムロン賞受賞。  
+"より多くの人にモノづくりの楽しさを知ってもらいたい"という想いから、ハンズオンイベントを開催している。
+
+寝ることが好きで、より快適な睡眠を実現するため、スマホで布団温度を調節できるIoTデバイス"mouful"を開発中。  
+プロトアウトスタジオ2期卒業生。
+
+### TA: **私市瑞希**
+
+<a href="https://gyazo.com/8e44d9b681f4ca8409d6e0692a6e230f"><img src="https://i.gyazo.com/8e44d9b681f4ca8409d6e0692a6e230f.jpg" alt="Image from Gyazo" width="150"/></a>
+
+大学卒業後、デザイン制作会社に入社しWEBデザイナーとしてウェブサイトやアプリケーションのUIデザインの経験を積んだ後、同社の新規事業開発部にてUXデザイナーとして新しいサービスやプロダクトの企画・UI/UXデザイン・プロトタイピング、開発のディレクションに携わる。
+
+その後、海外のデザインファームのプロトタイピングツール「Noodl」ローカライズ事業に携わり、Noodlエバンジェリストとして講師やNoodlを活用したプロトタイプドリブンのデザインコンサルティングを行い大手車メーカーやエレクトロニクス会社の新規開発を支援。
+
+現在はフリーランスとして活動中。
+
+Twitter: <a href="https://twitter.com/hedgehog_noodl">@hedgehog_noodl</a>  
+Qiita: <a href="https://qiita.com/kisaichi07">@kisaichi07</a>
 
 # 今日作るもののイメージ
 
-以下のようなLINE上で動作するLINE Botを作成していきます。
+以下のようなLINE Botを作成していきます。
 
-## 前半戦：オウム返しBot
+## 前半戦：オウム返し
 
 [![Image from Gyazo](https://i.gyazo.com/94e5bda2678dcf5bbc7a0154eeac8b07.gif)](https://gyazo.com/94e5bda2678dcf5bbc7a0154eeac8b07)
 
-## 後半戦：顔検出＆起きてる/寝てる判定Bot
+## 後半戦：顔検出＆起きてる/寝てる判定
 
 [![Image from Gyazo](https://i.gyazo.com/9b7a5bff129e46b7c3da41d050f902a6.gif)](https://gyazo.com/9b7a5bff129e46b7c3da41d050f902a6)
 

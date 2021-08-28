@@ -21,23 +21,20 @@ title: "オウム返しBotを作ろう"
 LINE Botも上記のBotの仲間で、プログラムが自動で返信してくれるLINEアカウントのことを指します。
 LINEアプリとプログラムの連携には、LINEが提供している`Messaging API`を利用します。
 
-### 1.2.1.2.有名なLINE Bot
+### 1.2.1.2.LINE Bot事例
 
-#### ユーザーから操作可能なタイプ
+#### 企業
 
 - JR東日本 Chat Bot（[https://info.jreast-chat.com/](https://info.jreast-chat.com/)）
 - ヤマト運輸（[https://www.kuronekoyamato.co.jp/ytc/campaign/renkei/LINE/](https://www.kuronekoyamato.co.jp/ytc/campaign/renkei/LINE/)）
-
-#### 広告プッシュタイプ
-
 - ユニクロ・GU（[http://official-blog.line.me/ja/archives/28533966.html](http://official-blog.line.me/ja/archives/28533966.html)）
-- 楽天（[http://official-blog.line.me/ja/archives/24736939.html](http://official-blog.line.me/ja/archives/24736939.html)）
+- 楽天（[http://official-blog.line.me/ja/archives/24736939.html](http://official-blog.line.me/ja/archives/24736939.html)） など
 
-また最近、LINE Botのユースケースが発表されました。LINE Botを作る際に参考にしてみると良いと思います。
+#### 行政
 
-https://lineapiusecase.com/ja/top.html
+https://linecorp.com/ja/csr/activity/government
 
-### 1.2.1.3.なぜLINE Botを作るのか
+### 1.2.1.3.LINE Botを作るのか
 
 #### 一般的なメリット
 
