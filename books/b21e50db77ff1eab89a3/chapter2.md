@@ -187,19 +187,25 @@ LINE Botの設定を追記する必要があるので編集していきます。
 
 [![Image from Gyazo](https://i.gyazo.com/0cd665b2856038452f724002cad15e24.png)](https://i.gyazo.com/0cd665b2856038452f724002cad15e24)
 
-ポップアップが出てくるので、`Make Public`をクリックします。
+`ポート3000番でExpressサーバーを実行中です…`と表示されればOKです。
 
-[![Image from Gyazo](https://i.gyazo.com/c4ef4785b2d3f857aa1bce0fe523b640.png)](https://i.gyazo.com/c4ef4785b2d3f857aa1bce0fe523b640)
+[![Image from Gyazo](https://i.gyazo.com/3660e674978dc82b583c0726ea622746.png)](https://gyazo.com/3660e674978dc82b583c0726ea622746)
 
-ターミナルの`Open Ports`タブの`Open Browwer`をクリックします。
+もう一つターミナルを立ち上げ、`npx ngrok http 3000`と入力し、`Enter`を押します。
 
-[![Image from Gyazo](https://i.gyazo.com/4fc6b6d4917879ba10e28f129e7d2cd4.png)](https://i.gyazo.com/4fc6b6d4917879ba10e28f129e7d2cd4)
+[![Image from Gyazo](https://i.gyazo.com/ebfba60ff83a415835a9fbdb58f3da65.png)](https://gyazo.com/ebfba60ff83a415835a9fbdb58f3da65)
 
-新しいタブが開くので、そのページのURLをコピーし、Botチャネルの`Webhook URL`にペーストします。
+[![Image from Gyazo](https://i.gyazo.com/16a6f3d205c186230b210aab5c392306.png)](https://gyazo.com/16a6f3d205c186230b210aab5c392306)
+
+`Forwarding`の2つ目のURLをコピーします。(httpsから始まるもの)
+
+[![Image from Gyazo](https://i.gyazo.com/1f64151dc0aaada6654e83d28bf24bee.png)](https://gyazo.com/1f64151dc0aaada6654e83d28bf24bee)
+
+Botチャネルの`Webhook URL`にペーストします。
 
 [![Image from Gyazo](https://i.gyazo.com/afa573e55291365780c8ee43b88682b6.png)](https://i.gyazo.com/afa573e55291365780c8ee43b88682b6)
 
-`User webhook`を忘れずにONにしましょう。
+`Use webhook`を忘れずにONにしましょう。
 
 [![Image from Gyazo](https://i.gyazo.com/7f768ed71a0a23c0e2814a5afc20ca45.png)](https://gyazo.com/7f768ed71a0a23c0e2814a5afc20ca45)
 
