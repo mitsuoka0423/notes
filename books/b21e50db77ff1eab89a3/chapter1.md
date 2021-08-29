@@ -22,7 +22,7 @@ https://github.com/tmitsuoka0423/line-bot-azure-face-api-face-detection-handson
 
 https://qiita.com/tmitsuoka0423/private/b7b448d98121925c2a68
 
-# ハンズオンにご参加いただきりがとうございます！
+# ハンズオンにご参加いただきありがとうございます！
 
 [![Image from Gyazo](https://i.gyazo.com/a5cfc3719be3c26b3d613dc9d200656d.png)](https://gyazo.com/a5cfc3719be3c26b3d613dc9d200656d)
 
@@ -49,7 +49,7 @@ https://protoout.studio/
 
 ### 講師: **光岡高宏**
 
-<a href="https://gyazo.com/8651c98b1d98c0e634dda8bdf4a02af7"><img src="https://i.gyazo.com/8651c98b1d98c0e634dda8bdf4a02af7.jpg" alt="Image from Gyazo" width="150"/></a>
+[![Image from Gyazo](https://i.gyazo.com/8651c98b1d98c0e634dda8bdf4a02af7.jpg)](https://gyazo.com/8651c98b1d98c0e634dda8bdf4a02af7)
 
 電子書籍サービスを開発する現役エンジニア。 LINE BOOT AWARDS 2018 オムロン賞受賞。  
 "より多くの人にモノづくりの楽しさを知ってもらいたい"という想いから、ハンズオンイベントを開催している。
@@ -59,7 +59,7 @@ https://protoout.studio/
 
 ### TA: **私市瑞希**
 
-<a href="https://gyazo.com/8e44d9b681f4ca8409d6e0692a6e230f"><img src="https://i.gyazo.com/8e44d9b681f4ca8409d6e0692a6e230f.jpg" alt="Image from Gyazo" width="150"/></a>
+[![Image from Gyazo](https://i.gyazo.com/8e44d9b681f4ca8409d6e0692a6e230f.jpg)](https://gyazo.com/8e44d9b681f4ca8409d6e0692a6e230f)
 
 大学卒業後、デザイン制作会社に入社しWEBデザイナーとしてウェブサイトやアプリケーションのUIデザインの経験を積んだ後、同社の新規事業開発部にてUXデザイナーとして新しいサービスやプロダクトの企画・UI/UXデザイン・プロトタイピング、開発のディレクションに携わる。
 
