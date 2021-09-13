@@ -24,6 +24,11 @@ $ sudo apt install nodejs npm
 
 [公式サイト](https://gyazo.com/c676aae41dc2411e22a7242a9d4e941d)にラズパイで動作するバイナリが公開されているので、そちらを利用する手順をまとめます。
 
+# 環境
+
+- [Raspberry Pi 4 Model B 8GB](https://www.switch-science.com/catalog/6370/)
+- Raspberry Pi OS 32bit
+
 # セットアップ手順
 
 ## Node.jsをダウンロードする
