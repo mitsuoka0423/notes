@@ -85,7 +85,7 @@ https://azure.microsoft.com/ja-jp/services/cognitive-services/face/#demo
 
 ### (応用)APIをプレイグラウンドで使ってみる(時間がある人のみ)
 
-[Azure Face APIを使って2つの顔が同一人物か判定する](https://zenn.dev/tmitsuoka0423/articles/a23bfc44bba348a0daf3)
+https://zenn.dev/tmitsuoka0423/articles/a23bfc44bba348a0daf3
 
 Face APIのキーとエンドポイントは以下を利用してください。
 
