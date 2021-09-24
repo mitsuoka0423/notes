@@ -120,13 +120,17 @@ const cognitiveServiceCredentials = new CognitiveServicesCredentials(faceKey);
 const faceClient = new FaceClient(cognitiveServiceCredentials, faceEndPoint);
 ```
 
-> :warning:注意:warning:
->
-> 1. キーとエンドポイントはハンズオンにおいてのみ利用できるものとしています。
->    - 他の人には教えてないでください。
-> 2. こちらのキーは本日のハンズオン終了後に無効化します。
->    - 自身でもキーとエンドポイントを発行できます。発行方法はこちらをご覧ください。(無料枠で利用できます)
->    - [(補足資料)Face APIのキーとエンドポイントを発行する](https://zenn.dev/tmitsuoka0423/books/939110f3e1f533d35095/viewer/03_faceapi_issue_key)
+:::message alert
+キーとエンドポイントはハンズオンにおいてのみ利用できるものとしています。
+他の人には教えてないでください。
+:::
+
+:::message
+こちらのキーは本日のハンズオン終了後に無効化します。
+
+- 自身でもキーとエンドポイントを発行できます。発行方法はこちらをご覧ください。(無料枠で利用できます)
+- [(補足資料)Face APIのキーとエンドポイントを発行する](https://zenn.dev/tmitsuoka0423/books/939110f3e1f533d35095/viewer/03_faceapi_issue_key)
+:::
 
 ### Expressを再起動する
 
