@@ -88,7 +88,6 @@ https://azure.microsoft.com/ja-jp/services/cognitive-services/face/#demo
 https://zenn.dev/tmitsuoka0423/articles/a23bfc44bba348a0daf3
 
 > Face APIのキーとエンドポイントは以下を利用してください。
->
 > - キー: `a0a4ce1df69541fbb82b5008b06bad83`
 > - エンドポイント: `https://test20210619.cognitiveservices.azure.com/`
 
