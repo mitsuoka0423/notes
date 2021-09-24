@@ -107,7 +107,17 @@ Gitpodのタブを開きます。
 
 24行目あたりにある、`faceKey`・`faceEndPoint`にそれぞれ、先程コピーした`キー1`・`エンドポイント`をペーストします。
 
-![https://i.gyazo.com/80f298f713ff96a00375a670ce6e6b5d.png](https://i.gyazo.com/80f298f713ff96a00375a670ce6e6b5d.png)
+```diff:index.js
+// Face APIパラメータ
+// 2. AIと組み合わせよう で設定します。
+- const faceKey = "キー1を記入する";
++ const faceKey = "a0a4ce1df69541fbb82b5008b06bad83";
+- const faceEndPoint = "エンドポイントを記入する";
++ const faceEndPoint = "https://test20210619.cognitiveservices.azure.com/";
+
+const cognitiveServiceCredentials = new CognitiveServicesCredentials(faceKey);
+const faceClient = new FaceClient(cognitiveServiceCredentials, faceEndPoint);
+```
 
 こんな感じになればOKです。
 
