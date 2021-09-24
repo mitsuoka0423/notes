@@ -87,15 +87,19 @@ https://azure.microsoft.com/ja-jp/services/cognitive-services/face/#demo
 
 https://zenn.dev/tmitsuoka0423/articles/a23bfc44bba348a0daf3
 
-> Face APIのキーとエンドポイントは以下を利用してください。
->
-> - キー: `a0a4ce1df69541fbb82b5008b06bad83`
-> - エンドポイント: `https://test20210619.cognitiveservices.azure.com/`
+:::message
+Face APIのキーとエンドポイントは以下を利用してください。
 
-> 上記のキーは本日のハンズオン終了後に無効化します。
-> 自身でもキーとエンドポイントを発行できます。発行方法はこちらをご覧ください。(無料枠で利用できます)
-> [(補足資料)Face APIのキーとエンドポイントを発行する](https://zenn.dev/tmitsuoka0423/books/939110f3e1f533d35095/viewer/03_faceapi_issue_key)
+- キー: `a0a4ce1df69541fbb82b5008b06bad83`
+- エンドポイント: `https://test20210619.cognitiveservices.azure.com/`
+:::
 
+:::message
+こちらのキーは本日のハンズオン終了後に無効化します。
+
+- 自身でもキーとエンドポイントを発行できます。発行方法はこちらをご覧ください。(無料枠で利用できます)
+- [(補足資料)Face APIのキーとエンドポイントを発行する](https://zenn.dev/tmitsuoka0423/books/939110f3e1f533d35095/viewer/03_faceapi_issue_key)
+:::
 ## Face APIとLINE Botを組み合わせよう
 
 ### コードにFace APIのキー・エンドポイントを記入する
