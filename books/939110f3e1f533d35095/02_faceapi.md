@@ -106,6 +106,7 @@ Gitpodのタブを開きます。
 > その際、LINE Developerコンソールから、`チャネルシークレット`と`チャネルアクセストークン`を再びコピーしてくる必要があります。
 
 24行目あたりにある、`faceKey`・`faceEndPoint`にそれぞれ、先程コピーした`キー1`・`エンドポイント`をペーストします。
+緑色の内容をコピペしてください。
 
 ```diff:index.js
 // Face APIパラメータ
@@ -119,8 +120,8 @@ const cognitiveServiceCredentials = new CognitiveServicesCredentials(faceKey);
 const faceClient = new FaceClient(cognitiveServiceCredentials, faceEndPoint);
 ```
 
-こんな感じになればOKです。
-
+> :warning:注意:warning:
+>
 > 1. キーとエンドポイントはハンズオンにおいてのみ利用できるものとしています。
 >    - 他の人には教えてないでください。
 > 2. こちらのキーは本日のハンズオン終了後に無効化します。
