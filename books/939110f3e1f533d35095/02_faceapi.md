@@ -92,8 +92,8 @@ Face APIのキーとエンドポイントは以下を利用してください。
 - キー: `a0a4ce1df69541fbb82b5008b06bad83`
 - エンドポイント: `https://test20210619.cognitiveservices.azure.com/`
 
-> キーとエンドポイントの発行方法はこちらを参照してください。無料でできます。
-> 
+> キーとエンドポイントの発行方法はこちらを参照してください。無料枠を利用できます。
+> [(補足資料)Face APIのキーとエンドポイントを発行する](https://zenn.dev/tmitsuoka0423/books/939110f3e1f533d35095/viewer/03_faceapi_issue_key)
 
 ## Face APIとLINE Botを組み合わせよう
 
