@@ -111,8 +111,8 @@ Gitpodのタブを開きます。
 // Face APIパラメータ
 // 2. AIと組み合わせよう で設定します。
 - const faceKey = "キー1を記入する";
-+ const faceKey = "a0a4ce1df69541fbb82b5008b06bad83";
 - const faceEndPoint = "エンドポイントを記入する";
++ const faceKey = "a0a4ce1df69541fbb82b5008b06bad83";
 + const faceEndPoint = "https://test20210619.cognitiveservices.azure.com/";
 
 const cognitiveServiceCredentials = new CognitiveServicesCredentials(faceKey);
@@ -121,9 +121,11 @@ const faceClient = new FaceClient(cognitiveServiceCredentials, faceEndPoint);
 
 こんな感じになればOKです。
 
-> `キー1`・`エンドポイント`の内容は人によって変わるので注意。
-
-![https://i.gyazo.com/aa93ee89377d1cd8d9ac5bb68cfa88bb.png](https://i.gyazo.com/aa93ee89377d1cd8d9ac5bb68cfa88bb.png)
+> 1. キーとエンドポイントはハンズオンにおいてのみ利用できるものとしています。
+>    - 他の人には教えてないでください。
+> 2. こちらのキーは本日のハンズオン終了後に無効化します。
+>    - 自身でもキーとエンドポイントを発行できます。発行方法はこちらをご覧ください。(無料枠で利用できます)
+>    - [(補足資料)Face APIのキーとエンドポイントを発行する](https://zenn.dev/tmitsuoka0423/books/939110f3e1f533d35095/viewer/03_faceapi_issue_key)
 
 ### Expressを再起動する
 
