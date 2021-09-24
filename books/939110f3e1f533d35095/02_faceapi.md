@@ -105,8 +105,7 @@ Gitpodのタブを開きます。
 > Gitpodを一度閉じてしまった人は、[ここ](https://gitpod.io/#https://github.com/tmitsuoka0423/line-bot-azure-face-api-face-verification-handson)をクリックして再度開きましょう。  
 > その際、LINE Developerコンソールから、`チャネルシークレット`と`チャネルアクセストークン`を再びコピーしてくる必要があります。
 
-24行目あたりにある、`faceKey`・`faceEndPoint`にそれぞれ、先程コピーした`キー1`・`エンドポイント`をペーストします。
-緑色の内容をコピペしてください。
+24行目あたりにある、`faceKey`・`faceEndPoint`の行を、下記緑色の内容で上書きしてください。
 
 ```diff:index.js
 // Face APIパラメータ
