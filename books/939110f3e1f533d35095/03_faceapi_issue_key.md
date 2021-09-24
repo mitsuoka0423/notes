@@ -5,7 +5,10 @@ title: "(補足資料)Face APIのキーとエンドポイントを発行する"
 Face APIは登録した人しか使えないため、キーとなる情報を発行する必要があります。
 以下のその手順を記載します。
 
-Azureポータルを開きます。  
+# Azureポータルにログインする
+
+Azureポータルを開きます。
+
 https://portal.azure.com/
 
 ログインし、以下のようなページが表示されればOKです。
@@ -18,11 +21,11 @@ Face APIのリソースを作成します。
 
 ![https://i.gyazo.com/5201c4d4037788c001d79f1cdfef8725.png](https://i.gyazo.com/5201c4d4037788c001d79f1cdfef8725.png)
 
-### リソースグループを作成する
+# リソースグループを作成する
 
 > 既にリソースグループを作成している方は作成不要です
 
-リソースグループの`新規作成`をクリックし、リソースグループ名`handson-20210619`を入力します。
+リソースグループの`新規作成`をクリックし、リソースグループ名`handson-(今日の年月日)`を入力します。
 
 ![https://i.gyazo.com/cd8c999ccca54a34eba230c44e926a48.png](https://i.gyazo.com/cd8c999ccca54a34eba230c44e926a48.png)
 
@@ -32,7 +35,7 @@ Face APIのリソースを作成します。
 
 ![https://i.gyazo.com/c9cb77de2d96a1974c24eaed0b967e9c.png](https://i.gyazo.com/c9cb77de2d96a1974c24eaed0b967e9c.png)
 
-### Face APIのリソースを作成する
+# Face APIのリソースを作成する
 
 残りの項目を埋めて、`確認および作成`をクリックします。
 
@@ -57,3 +60,5 @@ Face APIのリソースを作成します。
 `キー1`と`エンドポイント`をコピーします。
 
 ![https://i.gyazo.com/199c26da328160a466584e4f420b3f69.png](https://i.gyazo.com/199c26da328160a466584e4f420b3f69.png)
+
+これでキーとエンドポイントを発行することができました。
