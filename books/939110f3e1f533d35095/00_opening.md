@@ -4,9 +4,9 @@ title: "イントロダクション"
 
 # 本記事について
 
-本記事は、ハンズオンイベント「[画像分析AIを使ったLINE Botを1時間で作ってみよう（顔認証編）～プロトアウト体験会～](https://protoout.connpass.com/event/213633/)」の説明資料です。
+本記事は、ハンズオンイベント「AIを使ったLINE Botを1時間で作ってみよう～プロトアウト体験会～」の説明資料です。
 
-https://protoout.connpass.com/event/213633/
+https://protoout.connpass.com/event/223612/
 
 ソースコードはこちらで公開しています。
 
@@ -32,21 +32,32 @@ https://protoout.studio/
 
 # スケジュール
 
-[![Image from Gyazo](https://i.gyazo.com/c05577b0ffbd44ae2f1b8983203c82bf.png)](https://gyazo.com/c05577b0ffbd44ae2f1b8983203c82bf)
+| スタート | エンド | 内容 |
+|--|--|--|
+|08:00|08:10|オープニング|
+|08:10|08:40|ハンズオン前半戦|
+|08:40|08:50|休憩|
+|08:50|09:20|ハンズオン後半戦|
+|09:20|09:30|クロージング・アンケート回答|
+|09:30|10:00|QA・サポートタイム|
+# 講師: **光岡高宏**
 
-# 講師陣
+[![Image from Gyazo](https://i.gyazo.com/8651c98b1d98c0e634dda8bdf4a02af7.jpg)](https://gyazo.com/8651c98b1d98c0e634dda8bdf4a02af7)
 
-[![Image from Gyazo](https://i.gyazo.com/244a7298563d01b301740889f52f386c.png)](https://gyazo.com/244a7298563d01b301740889f52f386c)
+電子書籍サービスを開発する現役エンジニア。 LINE BOOT AWARDS 2018 オムロン賞受賞。  
+"より多くの人にモノづくりの楽しさを知ってもらいたい"という想いから、ハンズオンイベントを開催している。
 
+寝ることが好きで、より快適な睡眠を実現するため、スマホで布団温度を調節できるIoTデバイス"mouful"を開発中。  
+プロトアウトスタジオ2期卒業生。
 # 今日作るもののイメージ
 
-以下のようなLINE上で動作するLINE Botを作成していきます。
+以下のようなLINE Botを作成していきます。
 
 ## 前半戦：オウム返しBot
 
 [![Image from Gyazo](https://i.gyazo.com/94e5bda2678dcf5bbc7a0154eeac8b07.gif)](https://gyazo.com/94e5bda2678dcf5bbc7a0154eeac8b07)
 
-## 後半戦：顔認証Bot
+## 後半戦：顔検証Bot
 
 [![Image from Gyazo](https://i.gyazo.com/d59567d7e01a7f1ec2b6e134a474bbfe.gif)](https://gyazo.com/d59567d7e01a7f1ec2b6e134a474bbfe)
 
