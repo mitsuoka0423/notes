@@ -1,4 +1,4 @@
-title: "画像分析AIを使ったLINE Botを1時間で作ってみよう（顔認証編）～プロトアウト体験会～"
+title: "画像分析AIを使ったLINE Botを1時間で作ってみよう（顔検証編）～プロトアウト体験会～"
 summary: "画像分析AIであるAzure Face API を組み合わせた LINE Bot を作成し、LINE Bot + Azure Face API 開発の一連の流れを実際に体験いただきます。"
 topics: ["ハンズオン", "nodejs", "JavaScript", "LINE", "Azure"]
 published: true

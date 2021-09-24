@@ -2,26 +2,26 @@
 title: "オウム返しBotを作ろう"
 ---
 
-# 1.1.この章のゴール
+# この章のゴール
 
 - 送信した文字をそのまま返す`オウム返しBot`を作成する
 
-## 1.1.1.完成イメージ
+## 完成イメージ
 
 [![Image from Gyazo](https://i.gyazo.com/94e5bda2678dcf5bbc7a0154eeac8b07.gif)](https://gyazo.com/94e5bda2678dcf5bbc7a0154eeac8b07)
 
-# 1.2.話を聞くタイム
+# 話を聞くタイム
 
 [![Image from Gyazo](https://i.gyazo.com/6529781dd996c64228080c383aa4a325.png)](https://i.gyazo.com/6529781dd996c64228080c383aa4a325)
 
-## 1.2.1.LINE Botとは？
+## LINE Botとは？
 
 最近では、チャットボットやツイートボットなど`Bot`と名前が付いているものがあります。
 
 LINE Botも上記のBotの仲間で、プログラムが自動で返信してくれるLINEアカウントのことを指します。
 LINEアプリとプログラムの連携には、LINEが提供している`Messaging API`を利用します。
 
-### 1.2.1.2.有名なLINE Bot
+### 有名なLINE Bot
 
 #### ユーザーから操作可能なタイプ
 
@@ -37,7 +37,7 @@ LINEアプリとプログラムの連携には、LINEが提供している`Messa
 
 https://lineapiusecase.com/ja/top.html
 
-### 1.2.1.3.なぜLINE Botを作るのか
+### なぜLINE Botを作るのか
 
 #### 一般的なメリット
 
@@ -50,30 +50,30 @@ https://lineapiusecase.com/ja/top.html
   - 必要に応じて、凝ったUIも実現できる。（[FlexMessage](https://developers.line.biz/ja/docs/messaging-api/using-flex-messages/)や[LIFF](https://developers.line.biz/ja/docs/liff/overview/)を利用）
 - Node.jsのSDKが公式に用意されており、UIからサーバーまでをJavaScriptで書くことで、最小限の学習で作ることができる。
 
-## 1.2.2.システム概要図
+## システム概要図
 
 本ハンズオンでの登場人物は以下の3つです。  
 主に、サーバーの部分のプログラムを編集していきます。
 
 [![Image from Gyazo](https://i.gyazo.com/1ceade2f10b784b68f3bed71efcf83e3.png)](https://i.gyazo.com/1ceade2f10b784b68f3bed71efcf83e3)
 
-### 1.2.2.1.オウム返しBotのシステム概要図
+### オウム返しBotのシステム概要図
 
 `オウム返しBotを作ろう`では、LINEアプリから送信した文字列をサーバーで受け取り、LINEアプリにそのまま返すオウム返しBotを作成します。
 
 [![Image from Gyazo](https://i.gyazo.com/ef380d63c53fba3e41b79216fb7f0070.png)](https://i.gyazo.com/ef380d63c53fba3e41b79216fb7f0070)
 
-### 1.2.2.2.画像分析AI+LINE Botのシステム概要図
+### 画像分析AI+LINE Botのシステム概要図
 
 `画像分析AIと組み合わせよう`では、LINEアプリから送信した画像をAzure Face APIに送信し、顔の画像分析を行います。  
 その結果をサーバーで変換して、LINEアプリに結果を表示します。
 
 [![Image from Gyazo](https://i.gyazo.com/c1c3f0924ddb6a5ec989de33a1fda3ca.png)](https://gyazo.com/c1c3f0924ddb6a5ec989de33a1fda3ca)
-# 1.3.手を動かすタイム
+# 手を動かすタイム
 
 [![Image from Gyazo](https://i.gyazo.com/3600fb35b96dcd212cc0d4b6f3240e74.png)](https://i.gyazo.com/3600fb35b96dcd212cc0d4b6f3240e74)
 
-## 1.3.1.LINE Botを登録しよう
+## LINE Botを登録しよう
 
 LINE DevelopersからLINE Botを登録できます。
 
@@ -126,7 +126,7 @@ QRコードをLINEアプリで読み取り、友達登録しましょう。
 
 [![Image from Gyazo](https://i.gyazo.com/1e6049acab5fcc1a83f73000949701f6.png)](https://i.gyazo.com/1e6049acab5fcc1a83f73000949701f6)
 
-## 1.3.2.Gitpodを開こう
+## Gitpodを開こう
 
 Gitpodはオンライン利用できるエディタです。
 
@@ -164,7 +164,7 @@ GitHubアカウントでログインします。
 Gitpodの準備はこれでOKです。  
 続いてオウム返しBotを動かす準備を進めていきましょう！
 
-## 1.3.3.コードを編集しよう
+## コードを編集しよう
 
 Gitpod上でコードを編集しましょう。  
 LINE Botの設定を追記する必要があるので編集していきます。
@@ -217,7 +217,7 @@ LINE Botの設定を追記する必要があるので編集していきます。
 
 [![Image from Gyazo](https://i.gyazo.com/084611d55d08bb89b44ba163097932bf.png)](https://i.gyazo.com/084611d55d08bb89b44ba163097932bf)
 
-## 1.3.4.(オプション)自動応答メッセージをオフにしよう
+## (オプション)自動応答メッセージをオフにしよう
 
 LINE Botはデフォルトでは、`あいさつメッセージ`と`応答メッセージ`がオンになっています。  
 この設定を変更しましょう。
@@ -232,7 +232,7 @@ Messaging API設定タブ > 応答メッセージ > `編集`をクリックし�
 
 これでオウム返しだけが返ってくるようになります。
 
-## 1.3.5.動作確認しよう
+## 動作確認しよう
 
 Botに適当な文字を送ってみましょう。
 
@@ -241,7 +241,7 @@ Botに適当な文字を送ってみましょう。
 オウム返しBotの作成は以上で完了です！  
 
 
-## 1.3.6.(オプション)オウム2倍返しBOTを作ってみよう
+## (オプション)オウム2倍返しBOTを作ってみよう
 
 完成イメージ
 
@@ -252,13 +252,13 @@ Botに適当な文字を送ってみましょう。
 > ターミナルをクリックした状態で`Ctrl + C`(Macの方は`^C`)を入力し、プロクラムを停止します。
 > 再度`node index.js`を実行すればOKです。
 
-## 1.3.7.(オプション)オウム返しBotにキャラ付けしよう
+## (オプション)オウム返しBotにキャラ付けしよう
 
 NARUTO風
 
 [![Image from Gyazo](https://i.gyazo.com/ed3c6c6db6dc37f429d698aa1c6b41de.png)](https://i.gyazo.com/ed3c6c6db6dc37f429d698aa1c6b41de)
 
-# 1.4.まとめ
+# まとめ
 
 - LINE DevelopersからLINE Botのチャンネルを作成し、友達登録しました。
 - LINEアプリ⇔Expressサーバーでオウム返しBotを作成しました。

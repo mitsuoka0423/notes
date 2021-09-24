@@ -2,11 +2,11 @@
 title: "後片付け"
 ---
 
-# 3. 後片付け
+# 後片付け
 
 本ハンズオンで作成したリソースの削除方法を記載します。
 
-## 3.1.LINE Botを削除する
+## LINE Botを削除する
 
 [LINE Developersコンソール](https://developers.line.biz/ja/)で削除を行います。
 削除したいLINE Botを選択し、`チャネル基本設定 > チャネルの削除`から削除を行います。
@@ -19,7 +19,7 @@ title: "後片付け"
 ![https://i.gyazo.com/0ebff3d78fd4b77753bb8d8fe16a0f32.png](https://i.gyazo.com/0ebff3d78fd4b77753bb8d8fe16a0f32.png)
 これでLINE Botを削除できました。
 
-## 3.2.Face APIのリソースを削除する
+## Face APIのリソースを削除する
 
 Azureポータルから削除を行います。
 
