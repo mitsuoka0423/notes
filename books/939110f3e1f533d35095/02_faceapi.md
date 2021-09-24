@@ -123,11 +123,6 @@ const cognitiveServiceCredentials = new CognitiveServicesCredentials(faceKey);
 const faceClient = new FaceClient(cognitiveServiceCredentials, faceEndPoint);
 ```
 
-:::message alert
-キーとエンドポイントはハンズオンにおいてのみ利用できるものとしています。
-他の人には教えてないでください。
-:::
-
 :::message
 こちらのキーは本日のハンズオン終了後に無効化します。
 
