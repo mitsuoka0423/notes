@@ -1,5 +1,5 @@
 ---
-title: "ゲーミング電気毛布を作る #mouful"
+title: "2時間で作るゲーミング電気毛布 #mouful"
 emoji: "🛏"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["m5stack", "m5stickc", "iot", "uIflow", "電気毛布"]
@@ -22,7 +22,7 @@ published: true
 
 ## できたものはこちら
 
-TODO: 動画
+https://youtu.be/ZNpoQY3Hzgs
 
 ## ゲーミング電気毛布の作り方
 
@@ -49,7 +49,7 @@ https://zenn.dev/tmitsuoka0423/scraps/411dda94799d3f
 
 これを電気毛布の上に置いて完成です！
 
-TODO: 動画
+https://youtu.be/ZNpoQY3Hzgs
 
 ## まとめ
 
