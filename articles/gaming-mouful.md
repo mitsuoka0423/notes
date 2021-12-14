@@ -8,7 +8,7 @@ published: true
 
 この記事は[プロトアウトスタジオアドベントカレンダー 15日目](https://qiita.com/advent-calendar/2021/protoout)の記事です。
 
-昨日の記事は、[Teachable Machineを使って、ゆでたまごの気持ちをツンデレ風に表現してみた](https://qiita.com/tanakahiroki/items/9124b89a1e9c61572be1)でした。
+昨日の記事は、[ひろき (@wFnv1kzN7erqHyg)](https://twitter.com/wFnv1kzN7erqHyg)さんの[Teachable Machineを使って、ゆでたまごの気持ちをツンデレ風に表現してみた](https://qiita.com/tanakahiroki/items/9124b89a1e9c61572be1)でした。
 
 ## 電気毛布をめっちゃ光らせたい
 
