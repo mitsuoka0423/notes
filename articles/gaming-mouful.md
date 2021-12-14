@@ -51,12 +51,6 @@ https://zenn.dev/tmitsuoka0423/scraps/411dda94799d3f
 
 TODO: 動画
 
-## これまでのmouful開発
-
-https://twitter.com/mitsuoka0423/status/1415365718346854401?s=20
-
-https://qiita.com/mitsuoka0423/items/582ff0c303abe8570ee5
-
 ## まとめ
 
 UIFlowを使って、さくっとゲーミング電気毛布を作成しました。
