@@ -18,7 +18,7 @@ published: true
 我が家では毎年電気毛布を使っており、今年も昨日から使い始めました。
 電気毛布を使い始めるのと同時に、IoT電気毛布`mouful`の開発が始まります。
 
-今年は、ゲーミング電気毛布を開発するところからスタートしようと思います。
+今年は、ゲーミング電気毛布を開発するところからスタートしていきます。
 
 ## できたものはこちら
 
@@ -43,9 +43,15 @@ https://zenn.dev/tmitsuoka0423/scraps/411dda94799d3f
 
 [![Image from Gyazo](https://i.gyazo.com/41b53a5c8bfd2f6e0cd21532de366f78.png)](https://gyazo.com/41b53a5c8bfd2f6e0cd21532de366f78)
 
+実際動かしてみるとこんな感じです。
+
 [![Image from Gyazo](https://i.gyazo.com/c388c76aa0f03dba48ad13e5ef984c28.gif)](https://gyazo.com/c388c76aa0f03dba48ad13e5ef984c28)
 
-## よければこれまでのmouful開発もご覧ください
+これを電気毛布の上に置いて完成です！
+
+TODO: 動画
+
+## これまでのmouful開発
 
 https://twitter.com/mitsuoka0423/status/1415365718346854401?s=20
 
@@ -54,6 +60,7 @@ https://qiita.com/mitsuoka0423/items/582ff0c303abe8570ee5
 ## まとめ
 
 UIFlowを使って、さくっとゲーミング電気毛布を作成しました。
-電気毛布の温度によって色を変えたりすると面白くできそうですね。
+UIFlowは初めて使いましたが、直感的にブロックを組み合わせるだけで処理を組み立てることができ、とても使いやすかったです。
+温度センサーと組み合わせて、電気毛布の温度によって色を変えたりすると応用できそうです。
 
 明日の担当は、[@okinakamasayos1](https://twitter.com/okinakamasayos1)さんです！
