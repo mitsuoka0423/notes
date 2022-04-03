@@ -23,7 +23,7 @@ https://cloud.google.com/vision/docs/before-you-begin?hl=ja
 
 https://cloud.google.com/?hl=ja
 
-<a href="https://gyazo.com/e210b3a45385cb7a6ee6ef3e01816cf8"><img src="https://i.gyazo.com/e210b3a45385cb7a6ee6ef3e01816cf8.png" alt="Image from Gyazo" width="1620"/></a>
+<img src="https://i.gyazo.com/e210b3a45385cb7a6ee6ef3e01816cf8.png" alt="Image from Gyazo" width="1620"/>
 
 右上の`無料で開始`ボタンをクリックします。
 
