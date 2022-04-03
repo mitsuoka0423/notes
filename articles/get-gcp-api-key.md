@@ -106,7 +106,7 @@ API Keyが発行されるので、こちらをコピーして利用しましょ�
 
 ![](https://i.gyazo.com/882c1d0965f354f042c044312d3cd771.png)
 
-## 動作確認
+## （参考）Make（Integormat）のGoogle Cloud Visionモジュール設定
 
 MakeのGoogle Cloud Visionモジュールに設定してみます。
 
@@ -115,8 +115,6 @@ MakeのGoogle Cloud Visionモジュールに設定してみます。
 ![](https://i.gyazo.com/8acf487a9de0ea71a0ada10931a87c2a.png)
 
 ![](https://i.gyazo.com/514b93f82e76f94f2dd367c1486c365c.png)
-
-
 
 ## まとめ
 
