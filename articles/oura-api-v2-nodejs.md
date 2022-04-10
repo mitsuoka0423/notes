@@ -1,5 +1,5 @@
 ---
-title: "Node.jsでOura API V2を触ってみたメモ #oura #nodejs #api"
+title: "Node.jsでOura API V2を叩いてみた #oura #nodejs #api"
 emoji: ""
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["nodejs", "oura", "ouraring", "api"]
