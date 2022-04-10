@@ -1,5 +1,5 @@
 ---
-title: "curlでOura API V2を触ってみたメモ #oura #api"
+title: "curlでOura API V2を叩いてみたメモ #oura #api"
 emoji: "👻"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["curl", "oura", "ouraring", "api"]
