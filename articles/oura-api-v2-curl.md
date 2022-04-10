@@ -12,13 +12,11 @@ published: true
 
 https://twitter.com/mitsuoka0423/status/1512748389498503173?s=20&t=iGk02lptPdq4yctcSlXX6g
 
-ドキュメントを見ていると、Oura API V2があったので触ってみようと思います。
+ドキュメントを見ていると、APIがあったので触ってみようと思います。
 
 https://cloud.ouraring.com/v2/docs
 
-ちなみにV1のドキュメントはこちらです。
-
-https://cloud.ouraring.com/docs/
+今回は2022年1月に公開されたV2を触っていきます。
 
 ## アクセストークンを取得する
 
