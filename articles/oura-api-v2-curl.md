@@ -13,10 +13,28 @@ published: true
 https://twitter.com/mitsuoka0423/status/1512748389498503173?s=20&t=iGk02lptPdq4yctcSlXX6g
 
 ドキュメントを見ていると、APIがあったので触ってみようと思います。
+今回は2022年1月に公開されたV2を触っていきます。
+
+## ドキュメント
 
 https://cloud.ouraring.com/v2/docs
 
 今回は2022年1月に公開されたV2を触っていきます。
+
+V2では、以下のデータも取得できるようになっているようです。
+
+- 心拍数
+- セッション
+- タグ
+- ワークアウト
+
+また、V1のときに取得できた以下のデータは今後公開予定とのことです。
+
+- コンディション
+- 睡眠
+- 就寝時間
+
+https://support.ouraring.com/hc/ja/articles/4415266939155-Oura-API-v2
 
 ## アクセストークンを取得する
 
