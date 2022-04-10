@@ -89,7 +89,7 @@ main();
 }
 ```
 
-### Daily Activityを取得してみる
+### 心拍数を取得してみる
 
 > `3LGP...`の部分は`アクセストークンを取得する章`の手順で取得したアクセストークンに置き換えてください。
 
@@ -97,7 +97,7 @@ main();
 const axios = require('axios');
 
 const main = async () => {
-  const response = await axios.get('https://api.ouraring.com/v2/usercollection/daily_activity', {
+  const response = await axios.get('https://api.ouraring.com/v2/usercollection/heartrate', {
     headers: {
       Authorization: `Bearer 3LGP...`,
     }
@@ -110,35 +110,72 @@ main();
 
 こちらもデータ取得できました。
 
+> timestampはUTCが表示されます。日本時間にするには+9時間してください。
+
 ```js
 {
   data: [
     {
-      class_5_min: '111111111111111111111111111111111111111111111111111111111123323232222222222222',
-      score: 94,
-      active_calories: 10,
-      average_met_minutes: 1.09375,
-      contributors: [Object],
-      equivalent_walking_distance: 64,
-      high_activity_met_minutes: 0,
-      high_activity_time: 0,
-      inactivity_alerts: 0,
-      low_activity_met_minutes: 7,
-      low_activity_time: 1020,
-      medium_activity_met_minutes: 0,
-      medium_activity_time: 0,
-      met: [Object],
-      meters_to_target: 11600,
-      non_wear_time: 0,
-      resting_time: 17700,
-      sedentary_met_minutes: 4,
-      sedentary_time: 4800,
-      steps: 282,
-      target_calories: 500,
-      target_meters: 12000,
-      total_calories: 1510,
-      day: '2022-04-10',
-      timestamp: '2022-04-10T04:00:00+09:00'
+      bpm: 76,
+      source: 'live',
+      timestamp: '2022-04-09T11:20:05.160000+00:00'
+    },
+    {
+      bpm: 72,
+      source: 'awake',
+      timestamp: '2022-04-09T11:28:12+00:00'
+    },
+    〜略〜
+    {
+      bpm: 58,
+      source: 'awake',
+      timestamp: '2022-04-10T00:50:29+00:00'
+    }
+  ],
+  next_token: null
+}
+```
+
+取得期間を指定する場合は、URLの後ろにパラメータをつけます。
+パラメータはタイムスタンプで指定します。
+
+```js
+const axios = require('axios');
+
+const main = async () => {
+  const now = new Date().getTime();
+  const twoHourAgo = now - (2 * 60 * 60 * 1000); 
+  const response2 = await axios.get(`https://api.ouraring.com/v2/usercollection/heartrate?start_datetime=${twoHourAgo}&end_datetime=${now}`, {
+    headers: {
+      Authorization: `Bearer 3LGP...`,
+    }
+  });
+  console.log(response2.data);
+};
+
+main();
+```
+
+指定した期間のデータのみが返ってくるようになりました。
+
+```js
+{
+  data: [
+    {
+      bpm: 62,
+      source: 'awake',
+      timestamp: '2022-04-10T00:09:16+00:00'
+    },
+    {
+      bpm: 64,
+      source: 'awake',
+      timestamp: '2022-04-10T00:09:22+00:00'
+    },
+    〜略〜
+    {
+      bpm: 58,
+      source: 'awake',
+      timestamp: '2022-04-10T00:50:29+00:00'
     }
   ],
   next_token: null
