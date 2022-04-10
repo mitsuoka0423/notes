@@ -66,7 +66,7 @@ https://github.com/mitsuoka0423/oura-api-v2-nodejs-sample
 const axios = require('axios');
 
 const main = async () => {
-  const response = await axios.get('https://api.ouraring.com/v2/usercollection/daily_activity', {
+  const response = await axios.get('https://api.ouraring.com/v2/usercollection/personal_info', {
     headers: {
       Authorization: `Bearer 3LGP...`,
     }
