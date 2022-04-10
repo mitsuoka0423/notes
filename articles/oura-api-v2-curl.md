@@ -8,7 +8,7 @@ published: true
 
 ## はじめに
 
-最近、Oura Ring Gen3を買いました。
+昨日Oura Ring Gen3が届きました。
 
 https://twitter.com/mitsuoka0423/status/1512748389498503173?s=20&t=iGk02lptPdq4yctcSlXX6g
 
