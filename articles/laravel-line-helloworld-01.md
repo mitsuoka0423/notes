@@ -1,5 +1,5 @@
 ---
-title: "LaravelでLINE Botを作る（開発準備編） #laravel #messagingapi #php"
+title: "Laravelで超シンプルにLINE Botを作る（開発準備編） #laravel #messagingapi #php"
 emoji: "💬"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["PHP", "Laravel", "MessagingAPI", "LINE", "Docker"]
