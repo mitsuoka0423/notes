@@ -14,6 +14,9 @@ http://laravel.jp/
 
 https://developers.line.biz/ja/services/messaging-api/
 
+- Laravelで超シンプルにLINE Botを作る（開発準備編）
+- [Laravelで超シンプルにLINE Botを作る（Webhookエンドポイント作成編）](./laravel-line-helloworld-02.md)
+
 ## 環境
 
 - MacBook Air (M1, 2020)
