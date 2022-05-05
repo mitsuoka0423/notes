@@ -43,25 +43,14 @@ Docker version 20.10.14, build a224086
 
 https://ngrok.com/
 
-ngrokをダウンロードします。
+画面に表示される通りにコマンドを実行します。
 
-[![Image from Gyazo](https://i.gyazo.com/f2ec72dfdc4b7f5aba2871fd02c7d0d8.png)](https://gyazo.com/f2ec72dfdc4b7f5aba2871fd02c7d0d8)
+[![Image from Gyazo](https://i.gyazo.com/0ce5fabdca02498ba1e3e05b8d5f7024.png)](https://gyazo.com/0ce5fabdca02498ba1e3e05b8d5f7024)
 
-解凍して適当なフォルダに移動させます。
-(今回は`/tmp`に入れました)
-
-以下のコマンドを実行します。
-
-[![Image from Gyazo](https://i.gyazo.com/f2ec72dfdc4b7f5aba2871fd02c7d0d8.png)](https://gyazo.com/f2ec72dfdc4b7f5aba2871fd02c7d0d8)
+`3. Fire it up`に書いてあるコマンドを実行し、以下のような表示になればOKです。
 
 ```bash
-$ /tmp/ngrok config add-authtoken <トークン>
-```
-
-続いて、以下のコマンドを実行します。
-
-```bash
-$ /tmp/ngrok http 80
+$ ngrok http 80
 ```
 
 ```log
@@ -72,32 +61,12 @@ Region                        Japan (jp)
 Latency                       20.696375ms                                                                    
 Web Interface                 http://127.0.0.1:4040                                                          
 Forwarding                    https://0f6a-2409-10-d320-1c00-9dbe-82dd-d54b-c67b.jp.ngrok.io -> http://localhost:80
-                                                                                                             
+
 Connections                   ttl     opn     rt1     rt5     p50     p90                                    
                               0       0       0.00    0.00    0.00    0.00   
 ```
 
-`Forwarding`に表示されるURLをコピーし、LINE Developersコンソールの`Webhook URL`に設定します。
-
-> `/tmp/ngrok http 80`を実行するごとにURLが変わるので注意してください。
-> URLの末尾に`/api/webhook`を追加してください。
-
-[![Image from Gyazo](https://i.gyazo.com/20d3bd89290b676b0ceb9d328061473f.png)](https://gyazo.com/20d3bd89290b676b0ceb9d328061473f)
-
-`検証`をクリックします。
-`成功`と表示されればOKです。
-
-> エラーになった場合は、以下を見直しましょう
-> - ngrokで発行されたURLが古いものになっていないか
-> - URL末尾に`/api/webhook`を追加しているか
-
-[![Image from Gyazo](https://i.gyazo.com/329731a8134a257ab773389f0c8d08e6.png)](https://gyazo.com/329731a8134a257ab773389f0c8d08e6)
-
-`Webhookの利用`をONにします。
-
-[![Image from Gyazo](https://i.gyazo.com/c1ea5a57919a80d157533882e5b4df8f.png)](https://gyazo.com/c1ea5a57919a80d157533882e5b4df8f)
-
-以上でngrokの設定は終わりです、
+以上でngrokの設定は終わりです。
 
 ## おわりに
 
