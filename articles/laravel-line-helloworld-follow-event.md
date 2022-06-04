@@ -105,3 +105,40 @@ Route::post('/webhook', function (Request $request) use ($bot) {
 
 - フォローイベントのときの条件分岐を追加。
 - 友達登録されたら〇〇したい、みたいな処理はこの中に書けばOK。
+
+## 署名検証で少しハマったメモ
+
+[line-bot-sdk-php/Route.php at master · line/line-bot-sdk-php](https://github.com/line/line-bot-sdk-php/blob/master/examples/EchoBot/src/LINEBot/EchoBot/Route.php#L44)
+を参考に実装してたら少しハマったのでメモ。（ハマった原因は僕です）
+
+最初、サンプルを参考にこんなコードを書いていました。
+
+```php
+    $signature = $request->header(HTTPHeader::LINE_SIGNATURE);
+    if (empty($signature)) {
+        return abort(400, 'Bad Request');
+    }
+
+    $events = $bot->parseEventRequest($request->getContent(), $signature[0]);
+```
+
+すると、`Invalid signature has given`と怒られます。
+
+```log
+[2022-06-04 02:33:11] local.ERROR: Invalid signature has given {"exception":"[object] (LINE\\LINEBot\\Exception\\InvalidSignatureException(code: 0): Invalid signature has given at /Users/mitsu/ghq/github.com/mitsuoka0423/laravel-line-members-card/backend/vendor/linecorp/line-bot-sdk/src/LINEBot/Event/Parser/EventRequestParser.php:71)
+```
+
+原因は、`$signature[0]`の`[0]`で、Laravelでは不要でした。
+
+> 公式のサンプルが利用している[Slim Framework - Slim Framework](https://www.slimframework.com/)では必要なようです。
+
+```php
+    $signature = $request->header(HTTPHeader::LINE_SIGNATURE);
+    if (empty($signature)) {
+        return abort(400, 'Bad Request');
+    }
+
+    $events = $bot->parseEventRequest($request->getContent(), $signature);
+```
+
+で無事動きました。
