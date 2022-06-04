@@ -139,6 +139,13 @@ https://zenn.dev/protoout/articles/16-line-bot-setup
 `routes/app.php`
 
 ```diff php
+<?php
+
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Route;
++ use LINE\LINEBot\HTTPClient\CurlHTTPClient;
++ use LINE\LINEBot;
+
 (略)
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
