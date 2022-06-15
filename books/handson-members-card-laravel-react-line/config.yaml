@@ -1,0 +1,16 @@
+title: "PHP Laravel x React ！！ LINEで動く会員証ライブコーディング vol.1"
+summary: "イベント「PHP Laravel x React ！！ LINEで動く会員証ライブコーディング vol.1」の資料です。"
+topics: ["php", "laravel", "react", "typescript", "line"]
+published: false
+price: 0 # 有料の場合200〜5000
+# 本に含めるチャプターを順番に並べましょう
+chapters:
+  - introduction
+  - preparing
+  - keywords
+  - system
+  - liff-react
+  - laravel
+  - integration
+  - deploy
+
