@@ -87,11 +87,8 @@ http://localhost:3000/ にアクセスして、下記のような画面が表示
 
 [![Image from Gyazo](https://i.gyazo.com/8c0445bcae717f2c3dbac403a96922bc.png)](https://gyazo.com/8c0445bcae717f2c3dbac403a96922bc)
 
-
-
-### 環境変数にLIFF IDを設定する
-
-
+以上でフロントエンドの準備は終わりです。
+バックエンドの実装に進みましょう。
 
 ### [WIP] (オプション)フロントエンド実装手順
 
