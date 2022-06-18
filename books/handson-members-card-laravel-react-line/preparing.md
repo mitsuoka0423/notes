@@ -87,6 +87,49 @@ https://www.airtable.com/
 
 [![Image from Gyazo](https://i.gyazo.com/fec2236bbacd86c9eb74eb16018da6b7.png)](https://gyazo.com/fec2236bbacd86c9eb74eb16018da6b7)
 
+### Airtableでテーブルを作成
+
+`Add a base`をクリックしてベースを作成します。
+
+[![Image from Gyazo](https://i.gyazo.com/4aa7d2c12a5fc64160cfebb1e806bf7b.png)](https://gyazo.com/4aa7d2c12a5fc64160cfebb1e806bf7b)
+
+- ベース名を`Members Card`に変更します。
+- テーブル名を`Members`に変更します。
+
+[![Image from Gyazo](https://i.gyazo.com/7519989ec2a33d1eb7ca1c86a0e97d33.png)](https://gyazo.com/7519989ec2a33d1eb7ca1c86a0e97d33)
+
+フィールド名とタイプを下記の通り変更します。
+
+| 名前 | タイプ |
+| -- | -- |
+| `UserId` | `Single line text` |
+| `Name` | `Single line text` |
+| `Memberid` | `Single line text` |
+
+下記の画像の通りになればOKです。
+
+[![Image from Gyazo](https://i.gyazo.com/f1c442d1699f43ac605083a1e1e7f46d.png)](https://gyazo.com/f1c442d1699f43ac605083a1e1e7f46d)
+
+### Airtableのbase IDを取得
+
+`Members Card`ベースのURLの`app***********`をコピーしておきます。
+
+[![Image from Gyazo](https://i.gyazo.com/f01a5de2812822c57ecb922639ae7eb3.png)](https://gyazo.com/f01a5de2812822c57ecb922639ae7eb3)
+
+### AirtableのAPI Keyを取得
+
+下記URLにアクセスします。
+
+https://airtable.com/account
+
+`Generate API Key`をクリックし、API Keyを生成します。
+
+[![Image from Gyazo](https://i.gyazo.com/25f2b5395ed36143aa2ad2bb5dfb1c41.png)](https://gyazo.com/25f2b5395ed36143aa2ad2bb5dfb1c41)
+
+紫背景の箇所をクリックすると、キーが表示されるのでコピーしておきます。
+
+[![Image from Gyazo](https://i.gyazo.com/9972a23a9493da3bf29135da56894ea0.png)](https://gyazo.com/9972a23a9493da3bf29135da56894ea0)
+
 ### (デプロイされる方のみ)Netlifyへログイン
 
 下記ページの右上にある`Log in`からログインします。
