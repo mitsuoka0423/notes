@@ -2,8 +2,6 @@
 title: "LaravelでAPI作成"
 ---
 
-## LaravelでAPI作成
-
 ### Laravelプロジェクトを作成する
 
 ### ライブラリをインストールする
