@@ -14,14 +14,16 @@ TODO: 動画が公開され次第更新します。
 
 ### 著者
 
+#### 光岡高宏/MITSUOKA Takahiro ([@mitsuoka0423](https://twitter.com/mitsuoka0423))
+
 [![Image from Gyazo](https://i.gyazo.com/25ab3c97aff9ac1835bf82e0dc35e997.jpg)](https://gyazo.com/25ab3c97aff9ac1835bf82e0dc35e997)
 
-光岡高宏/MITSUOKA Takahiro ([@mitsuoka0423](https://twitter.com/mitsuoka0423))
-
+```
 電子書籍サービスを開発するエンジニア。
 エンジニアではない人がモノづくり・制作を行い、現場を変えていく姿を見たいとの想いから「プロトアウトジム」立ち上げ。
 毎週もくもく会やセミナーなどのをイベントを開催している。プロトアウトスタジオ5期＆7期講師。
 フリーランスとしてAzure IoT Hubを利用した高齢者見守りIoTデバイス・AIカメラの開発も行う。
+```
 
 ### 本資料の方針
 
