@@ -37,6 +37,12 @@ https://github.com/mitsuoka0423/line-members-card-react-frontend
 yarn
 ```
 
+以下のように表示されればOKです。
+
+```log
+✨  Done in 3.66s.
+```
+
 ### 環境変数を設定する
 
 ターミナルで下記を実行します。
