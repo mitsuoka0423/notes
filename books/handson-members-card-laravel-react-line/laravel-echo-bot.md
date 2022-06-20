@@ -150,7 +150,9 @@ b7b3704c411571.lhrtunnel.link tunneled with tls termination, https://b7b3704c411
 
 #### LINE DevelopersでWebhook URLを設定する
 
+:::message
 ここからは、[LINE Developersコンソール](https://developers.line.biz/ja/)での作業です。
+:::
 
 LINE Developersコンソール > 作成したMessaging APIのチャネル > Messaging API設定タブ > Webhook設定
 
@@ -160,7 +162,9 @@ LINE Developersコンソール > 作成したMessaging APIのチャネル > Mess
 
 > 今回は`https://b7b3704c411571.lhrtunnel.link/api/webhook`となります
 
-:::message `/api/webhook`を忘れないように気をつけてください。:::
+:::message alert
+`/api/webhook`を忘れないように気をつけてください。
+:::
 
 また、`Webhookの利用`をオンにします。
 
