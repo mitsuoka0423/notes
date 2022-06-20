@@ -11,8 +11,8 @@ https://github.com/mitsuoka0423/line-members-card-laravel-backend
 ターミナルで以下を実行します。
 
 ```bash
-composer create-project laravel/laravel example-app
-cd example-app
+composer create-project laravel/laravel laravel-echo-bot
+cd laravel-echo-bot
 php artisan serve
 ```
 
