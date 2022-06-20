@@ -1,7 +1,7 @@
 title: "[WIP]PHP Laravel x React ！！ LINEで動く会員証ライブコーディング vol.1"
-summary: "イベント「PHP Laravel x React ！！ LINEで動く会員証ライブコーディング vol.1」の資料です。"
+summary: "イベント「PHP Laravel x React ！！ LINEで動く会員証ライブコーディング vol.1」(https://linedevelopercommunity.connpass.com/event/250999/)の資料です。"
 topics: ["php", "laravel", "react", "typescript", "line"]
-published: false
+published: true
 price: 0 # 有料の場合200〜5000
 # 本に含めるチャプターを順番に並べましょう
 chapters:
