@@ -8,11 +8,11 @@ https://github.com/mitsuoka0423/laravel-line-echo-bot
 
 > 途中で詰まってしまった方はこちらのコードを利用してください。
 
-### この章の完成イメージ
+## この章の完成イメージ
 
 [![Image from Gyazo](https://i.gyazo.com/6e68f98011666e860b9524b82f8921b3.gif)](https://gyazo.com/6e68f98011666e860b9524b82f8921b3)
 
-### Laravelプロジェクトを作成する
+## Laravelプロジェクトを作成する
 
 ターミナルで以下を実行します。
 
@@ -35,7 +35,7 @@ Starting Laravel development server: http://127.0.0.1:8000
 
 [![Image from Gyazo](https://i.gyazo.com/03691d8e49b043b4417ddfd567220841.png)](https://gyazo.com/03691d8e49b043b4417ddfd567220841)
 
-### ライブラリをインストールする
+## ライブラリをインストールする
 
 以下のライブラリを利用します。
 
@@ -47,7 +47,7 @@ https://github.com/line/line-bot-sdk-php
 composer require linecorp/line-bot-sdk
 ```
 
-### LINE Webhook用処理を作成する
+## LINE Webhook用処理を作成する
 
 LINEのイベントをフックしたときに実行される処理を書いていきます。
 
@@ -124,9 +124,9 @@ MIX_PUSHER_APP_CLUSTER="${PUSHER_APP_CLUSTER}"
 ブラウザの自動翻訳はオフにしてください。
 :::
 
-### 動作確認する
+## 動作確認する
 
-#### 開発用サーバーを起動する&外部公開する
+### 開発用サーバーを起動する&外部公開する
 
 ローカルで開発用サーバーを起動し、LINEのイベントをフックできるようにlocalhost.runを利用して外部公開します。
 
@@ -148,7 +148,7 @@ ssh -R 80:localhost:8000 ssh.localhost.run
 b7b3704c411571.lhrtunnel.link tunneled with tls termination, https://b7b3704c411571.lhrtunnel.link
 ```
 
-#### LINE DevelopersでWebhook URLを設定する
+### LINE DevelopersでWebhook URLを設定する
 
 :::message
 ここからは、[LINE Developersコンソール](https://developers.line.biz/ja/)での作業です。
@@ -175,7 +175,7 @@ LINE Developersコンソール > 作成したMessaging APIのチャネル > Mess
 
 [![Image from Gyazo](https://i.gyazo.com/f5cd7acb933681700ea5ae54f52c75b3.png)](https://gyazo.com/f5cd7acb933681700ea5ae54f52c75b3)
 
-#### 動作確認する
+### 動作確認する
 
 `検証`をクリックします。
 
@@ -185,7 +185,7 @@ LINE Developersコンソール > 作成したMessaging APIのチャネル > Mess
 
 [![Image from Gyazo](https://i.gyazo.com/96d7dbe23fe2044405dd5d1df173339b.png)](https://gyazo.com/96d7dbe23fe2044405dd5d1df173339b)
 
-#### LINEで話しかけてみる
+### LINEで話しかけてみる
 
 作ったLINE Botと友達になり、メッセージを送ってみましょう。
 そのまま返却されるようになりました！
