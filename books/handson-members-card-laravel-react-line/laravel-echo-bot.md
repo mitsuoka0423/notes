@@ -154,9 +154,12 @@ b7b3704c411571.lhrtunnel.link tunneled with tls termination, https://b7b3704c411
 ここからは、[LINE Developersコンソール](https://developers.line.biz/ja/)での作業です。
 :::
 
+Messaging APIのチャネル設定画面から`Webhook URL`を設定します。
+
+場所はこちらです。
 LINE Developersコンソール > 作成したMessaging APIのチャネル > Messaging API設定タブ > Webhook設定
 
-から`Webhook URL`を設定します。
+[![Image from Gyazo](https://i.gyazo.com/77c6998967d5628366d3f570abfbb351.gif)](https://gyazo.com/77c6998967d5628366d3f570abfbb351)
 
 上記手順でコピーしたURL(`https://xxxxxxxxxxx.lhrtunnel.link`)の末尾に`/api/webhook`をつけます。
 
@@ -166,9 +169,11 @@ LINE Developersコンソール > 作成したMessaging APIのチャネル > Mess
 `/api/webhook`を忘れないように気をつけてください。
 :::
 
+[![Image from Gyazo](https://i.gyazo.com/72fba354ec26794294469eec27b01826.png)](https://gyazo.com/72fba354ec26794294469eec27b01826)
+
 また、`Webhookの利用`をオンにします。
 
-[![Image from Gyazo](https://i.gyazo.com/d50ef02aa64a49faaadcaa5af323fab3.png)](https://gyazo.com/d50ef02aa64a49faaadcaa5af323fab3)
+[![Image from Gyazo](https://i.gyazo.com/f5cd7acb933681700ea5ae54f52c75b3.png)](https://gyazo.com/f5cd7acb933681700ea5ae54f52c75b3)
 
 #### 動作確認する
 
@@ -186,3 +191,5 @@ LINE Developersコンソール > 作成したMessaging APIのチャネル > Mess
 そのまま返却されるようになりました！
 
 [![Image from Gyazo](https://i.gyazo.com/6e68f98011666e860b9524b82f8921b3.gif)](https://gyazo.com/6e68f98011666e860b9524b82f8921b3)
+
+次のステップで、会員バーコードを表示する処理を追加します。
