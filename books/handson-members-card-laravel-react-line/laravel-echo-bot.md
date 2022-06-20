@@ -116,8 +116,8 @@ MIX_PUSHER_APP_CLUSTER="${PUSHER_APP_CLUSTER}"
 
 | 名前                       | 設定する値 |
 | ------------------------- | -- |
-| LINE_CHANNEL_ACCESS_TOKEN | [事前準備](./preparing) > LINE Developersへログイン & 2つのキーを取得する で取得したアクセストークン |
-| LINE_CHANNEL_SECRET       | [事前準備](./preparing) > LINE Developersへログイン & 2つのキーを取得する で取得したチャネルシークレット |
+| LINE_CHANNEL_ACCESS_TOKEN | [LINE公式アカウントの作成 / LINE Botの初め方](https://zenn.dev/protoout/articles/16-line-bot-setup)で取得したアクセストークン |
+| LINE_CHANNEL_SECRET       | [LINE公式アカウントの作成 / LINE Botの初め方](https://zenn.dev/protoout/articles/16-line-bot-setup)で取得したチャネルシークレット |
 
 :::message alert
 ブラウザで自動翻訳をオンにしていると、アクセストークンやチャネルシークレットをきちんとコピーできないケースがあります。
