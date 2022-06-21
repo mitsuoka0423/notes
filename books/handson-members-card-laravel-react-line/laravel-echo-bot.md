@@ -4,7 +4,7 @@ title: "Laravelでオウム返しするLINE Botを作る"
 
 コードはこちらのリポジトリで公開しています。
 
-https://github.com/mitsuoka0423/laravel-line-echo-bot
+https://github.com/mitsuoka0423/laravel-line-menbers-card/tree/feature/echo-bot (ブランチ: `feature/echo-bot`)
 
 > 途中で詰まってしまった方はこちらのコードを利用してください。
 
