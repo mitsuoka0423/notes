@@ -306,6 +306,6 @@ php artisan storage:link
 
 ### 動作確認する
 
-ここまで変更して、LINEで`会員カード`とメッセージを送るとバーコードが表示されるようになりました！
+ここまで変更して、LINEで`会員カード`とメッセージを送るとバーコードが表示されるようになります！
 
 [![Image from Gyazo](https://i.gyazo.com/78d8f4c0d45f66204d7b0052aa26d7ff.gif)](https://gyazo.com/78d8f4c0d45f66204d7b0052aa26d7ff)
