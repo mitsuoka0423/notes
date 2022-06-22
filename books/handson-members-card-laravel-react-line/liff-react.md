@@ -1,5 +1,5 @@
 ---
-title: "LINE LIFF + Reactで会員カードUI作成"
+title: "LINE LIFF + Reactで会員カードUIを作成する"
 ---
 
 コードはこちらのリポジトリで公開しています。
