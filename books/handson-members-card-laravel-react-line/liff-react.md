@@ -2,14 +2,24 @@
 title: "LINE LIFF + Reactで会員カードUI作成"
 ---
 
-### チャネル(LINEログイン)を作成する
+コードはこちらのリポジトリで公開しています。
+
+https://github.com/mitsuoka0423/line-members-card-react-frontend
+
+## この章の完成イメージ
+
+会員カードをLINE内ブラウザで表示します。
+
+TODO
+
+<!-- ## チャネル(LINEログイン)を作成する
 
 下記手順を参考にチャネルを作成します。
 チャネルタイプは`LINEログイン`を選択します。
 
 https://developers.line.biz/ja/docs/liff/getting-started/
 
-### LIFFアプリを追加する
+## LIFFアプリを追加する
 
 下記手順を参考に、さきほど作成したチャネルにLIFFアプリを追加します。
 
@@ -17,9 +27,9 @@ https://developers.line.biz/ja/docs/liff/registering-liff-apps/
 
 表示される`LIFF ID`をコピーしておきます。
 
-[![Image from Gyazo](https://i.gyazo.com/1981211fd6b768133002cad45730f50a.png)](https://gyazo.com/1981211fd6b768133002cad45730f50a)
+[![Image from Gyazo](https://i.gyazo.com/1981211fd6b768133002cad45730f50a.png)](https://gyazo.com/1981211fd6b768133002cad45730f50a) -->
 
-### サンプルコードをダウンロードする
+## サンプルコードをダウンロードする
 
 コードはこちらのリポジトリで公開しています。
 
@@ -29,7 +39,7 @@ https://github.com/mitsuoka0423/line-members-card-react-frontend
 
 [![Image from Gyazo](https://i.gyazo.com/fabb3b1b77c007f07b0afe8585bbc4d7.png)](https://gyazo.com/fabb3b1b77c007f07b0afe8585bbc4d7)
 
-### ライブラリをインストールする
+## ライブラリをインストールする
 
 ターミナルでさきほど解凍したフォルダーに移動し、下記を実行します。
 
@@ -43,7 +53,7 @@ yarn
 ✨  Done in 3.66s.
 ```
 
-### 環境変数を設定する
+## 環境変数を設定する
 
 ターミナルで下記を実行します。
 
@@ -51,7 +61,9 @@ yarn
 cp .env.sample .env
 ```
 
-`.env`ファイルが作成されるので、`VITE_LIFF_ID`に[LIFFアプリを追加する](#liffアプリを追加する)でコピーしたLIFF IDをペーストします。
+`.env`ファイルの中身は変更なしでOKです。
+
+<!-- `.env`ファイルが作成されるので、`VITE_LIFF_ID`に[LIFFアプリを追加する](#liffアプリを追加する)でコピーしたLIFF IDをペーストします。
 その他の項目は変更しなくてOKです。
 
 変更後のイメージは以下のようになります。
@@ -61,14 +73,14 @@ cp .env.sample .env
 ```diff
 + VITE_LIFF_ID=1657187467-JglvQA3a
 VITE_LIFF_MOCK_MODE=true # true | false
-VITE_LIFF_REDIRECT_URI=https://localhost:3000
-VITE_LIFF_API_ENDPOINT=http://localhost:8000
+VITE_LIFF_REDIRECT_URI=
+VITE_LIFF_API_ENDPOINT=
 VITE_LIFF_CODE_TYPE=barcode # barcode | qrcode
-```
+``` -->
 
-### 実行する
+## 動かしてみる
 
-ターミナルで書きを実行します。
+ターミナルで下記を実行します。
 
 ```bash
 yarn dev
@@ -87,14 +99,149 @@ ready in 225ms.
 
 http://localhost:3000/ にアクセスして、下記のような画面が表示されればOKです。
 
-[![Image from Gyazo](https://i.gyazo.com/8c0445bcae717f2c3dbac403a96922bc.png)](https://gyazo.com/8c0445bcae717f2c3dbac403a96922bc)
+[![Image from Gyazo](https://i.gyazo.com/2a0b8df06c5a372d2f3aa258920803e8.png)](https://gyazo.com/2a0b8df06c5a372d2f3aa258920803e8)
 
-以上でフロントエンドの準備は終わりです。
-バックエンドの実装に進みましょう。
+## Airtableから会員IDを取得する
 
-### [WIP] (オプション)フロントエンド実装手順
+ここからはLaravelのコードを変更します。
 
-### LIFFプロジェクトを作成する
+`routes/api.php`に以下のコードを追加します。
+
+```php
+Route::get('/members/{memberId}', function ($memberId) {
+    // モックモードの場合、テストデータを返却する
+    if ($memberId === '123456789') {
+        return [
+            'UserId' => '123456789',
+            'Name' => 'テストデータ',
+            'MemberId' => '9381274411',
+        ];
+    }
+
+    // Airtableからデータを取得する
+    $member = Airtable::where('UserId', $memberId)->get();
+
+    if (empty($member)) {
+        return abort(404);
+    }
+
+    return $member;
+});
+```
+
+:::details api.phpの全量はこちら
+```diff php
+<?php
+
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Route;
+use LINE\LINEBot;
+use LINE\LINEBot\Constant\HTTPHeader;
+use LINE\LINEBot\Event\MessageEvent\TextMessage;
+use LINE\LINEBot\HTTPClient\CurlHTTPClient;
+use LINE\LINEBot\MessageBuilder\ImageMessageBuilder;
+use Tapp\Airtable\Facades\AirtableFacade;
+use Picqer\Barcode\BarcodeGeneratorPNG;
+
+/*
+|--------------------------------------------------------------------------
+| API Routes
+|--------------------------------------------------------------------------
+|
+| Here is where you can register API routes for your application. These
+| routes are loaded by the RouteServiceProvider within a group which
+| is assigned the "api" middleware group. Enjoy building your API!
+|
+*/
+
+Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
+    return $request->user();
+});
+
+$httpClient = new CurlHTTPClient($_ENV['LINE_CHANNEL_ACCESS_TOKEN']);
+$bot = new LINEBot($httpClient, ['channelSecret' => $_ENV['LINE_CHANNEL_SECRET']]);
+
+$barcodeGenerator = new BarcodeGeneratorPNG();
+
+Route::post('/webhook', function (Request $request) use ($bot, $barcodeGenerator) {
+    Log::debug($request);
+
+    $signature = $request->header(HTTPHeader::LINE_SIGNATURE);
+    if (empty($signature)) {
+        return abort(400);
+    }
+
+    $events = $bot->parseEventRequest($request->getContent(), $signature);
+    Log::debug(['$events' => $events]);
+
+    collect($events)->each(function ($event) use ($bot, $barcodeGenerator) {
+        if ($event instanceof TextMessage) {
+            if ($event instanceof TextMessage) {
+                if ($event->getText() === '会員カード') {
+                    // 会員登録済みか確認するため、Airtableからデータを取得する
+                    $member = Airtable::where('UserId', $event->getUserId())->get();
+
+                    if ($member->isEmpty()) {
+                        // Airtableに会員データがなければ、生成して登録する
+                        $memberId = strval(rand(1000000000, 9999999999));
+                        $member = Airtable::firstOrCreate([
+                            'UserId' => $event->getUserId(),
+                            'Name' => $bot->getProfile($event->getUserId())->getJSONDecodedBody()['displayName'],
+                            'MemberId' => $memberId,
+                        ]);
+                        Log::debug('Member is created.');
+                    } else {
+                        // Airtableにデータがあれば、取得したデータを利用する
+                        $memberId = $member->first()['fields']['MemberId'];
+                    }
+
+                    $barcodeFileName = "{$memberId}.png";
+                    $barcodeFilePath = "public/{$barcodeFileName}";
+                    if (!Storage::exists($barcodeFilePath)) {
+                        $barcodeImage = $barcodeGenerator->getBarcode($memberId, $barcodeGenerator::TYPE_CODE_128);
+                        Storage::put($barcodeFilePath, $barcodeImage);
+                    } else {
+                        $barcodeImage = Storage::get($barcodeFilePath);
+                    }
+
+                    $imageUrl = Config::get('app.url') . '/storage/' . $barcodeFileName;
+                    $imageMessageBuilder = new ImageMessageBuilder($imageUrl, $imageUrl);
+                    return $bot->replyMessage($event->getReplyToken(), $imageMessageBuilder);
+                } else {
+                    return $bot->replyText($event->getReplyToken(), $event->getText());
+                }
+            }
+        }
+    });
+
+    return 'ok!';
+});
+
++Route::get('/members/{memberId}', function ($memberId) {
++    // モックモードの場合、テストデータを返却する
++    if ($memberId === '123456789') {
++        return [
++            'UserId' => '123456789',
++            'Name' => 'テストデータ',
++            'MemberId' => '9381274411',
++        ];
++    }
++
++    // Airtableからデータを取得する
++    $member = Airtable::where('UserId', $memberId)->get();
++
++    if (empty($member)) {
++        return abort(404);
++    }
++
++    return $member;
++});
+```
+:::
+
+<!-- ## [WIP] (オプション)フロントエンド実装手順
+
+## LIFFプロジェクトを作成する
 
 Create LIFF Appを利用してプロジェクトを作成します。
 今回は`React`と`TypeScript`を使います。
@@ -134,7 +281,7 @@ Done! Now run:
   yarn dev
 ```
 
-### 動作確認する
+## 動作確認する
 
 以下を実行し、ローカルで開発用サーバーを立ち上げます。
 
@@ -156,7 +303,7 @@ http://localhost:3000/ にアクセスして、下記のような画面が表示
 
 [![Image from Gyazo](https://i.gyazo.com/d028c91d37c16468f2c9b9c22226561e.png)](https://gyazo.com/d028c91d37c16468f2c9b9c22226561e)
 
-### ライブラリをインストールする
+## ライブラリをインストールする
 
 ターミナルで下記を実行します。
 
@@ -167,9 +314,9 @@ yarn add -D @line/liff-mock
 
 > Chakra UI v2を利用するとなぜかエラーが発生するので、v1を利用しています。
 
-### 会員カードUIを作成する
+## 会員カードUIを作成する
 
-#### `liff.d.ts`を作成する
+### `liff.d.ts`を作成する
 
 `my-app/src/liff.d.ts`を作成し、以下をコピペします。
 
@@ -184,7 +331,7 @@ declare module '@line/liff' {
 }
 ```
 
-#### `App.tsx`を変更する
+### `App.tsx`を変更する
 
 `my-app/src/App.tsx`を開き、以下をコピペします。
 
@@ -222,7 +369,7 @@ function App() {
 export default App;
 ```
 
-### 動作確認する
+## 動作確認する
 
 ターミナルで以下を実行します。
 
@@ -235,4 +382,4 @@ http://localhost:3000/ にアクセスして、下記のような画面が表示
 [![Image from Gyazo](https://i.gyazo.com/8c0445bcae717f2c3dbac403a96922bc.png)](https://gyazo.com/8c0445bcae717f2c3dbac403a96922bc)
 
 以上でフロントエンドの実装は終わりです。
-バックエンドの実装に進みましょう。
+バックエンドの実装に進みましょう。 -->
