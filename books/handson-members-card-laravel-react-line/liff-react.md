@@ -12,24 +12,9 @@ https://github.com/mitsuoka0423/line-members-card-react-frontend
 
 TODO
 
-<!-- ## チャネル(LINEログイン)を作成する
+## サンプルコードを動かしてみる
 
-下記手順を参考にチャネルを作成します。
-チャネルタイプは`LINEログイン`を選択します。
-
-https://developers.line.biz/ja/docs/liff/getting-started/
-
-## LIFFアプリを追加する
-
-下記手順を参考に、さきほど作成したチャネルにLIFFアプリを追加します。
-
-https://developers.line.biz/ja/docs/liff/registering-liff-apps/
-
-表示される`LIFF ID`をコピーしておきます。
-
-[![Image from Gyazo](https://i.gyazo.com/1981211fd6b768133002cad45730f50a.png)](https://gyazo.com/1981211fd6b768133002cad45730f50a) -->
-
-## サンプルコードをダウンロードする
+### サンプルコードをダウンロードする
 
 コードはこちらのリポジトリで公開しています。
 
@@ -39,7 +24,7 @@ https://github.com/mitsuoka0423/line-members-card-react-frontend
 
 [![Image from Gyazo](https://i.gyazo.com/fabb3b1b77c007f07b0afe8585bbc4d7.png)](https://gyazo.com/fabb3b1b77c007f07b0afe8585bbc4d7)
 
-## ライブラリをインストールする
+### ライブラリをインストールする
 
 ターミナルでさきほど解凍したフォルダーに移動し、下記を実行します。
 
@@ -53,7 +38,7 @@ yarn
 ✨  Done in 3.66s.
 ```
 
-## 環境変数を設定する
+### 環境変数を設定する
 
 ターミナルで下記を実行します。
 
@@ -63,22 +48,7 @@ cp .env.sample .env
 
 `.env`ファイルの中身は変更なしでOKです。
 
-<!-- `.env`ファイルが作成されるので、`VITE_LIFF_ID`に[LIFFアプリを追加する](#liffアプリを追加する)でコピーしたLIFF IDをペーストします。
-その他の項目は変更しなくてOKです。
-
-変更後のイメージは以下のようになります。
-
-> ※LIFF IDの値は自身のものを使用してください。
-
-```diff
-+ VITE_LIFF_ID=1657187467-JglvQA3a
-VITE_LIFF_MOCK_MODE=true # true | false
-VITE_LIFF_REDIRECT_URI=
-VITE_LIFF_API_ENDPOINT=
-VITE_LIFF_CODE_TYPE=barcode # barcode | qrcode
-``` -->
-
-## 動かしてみる
+### 動作確認する
 
 ターミナルで下記を実行します。
 
@@ -103,6 +73,10 @@ http://localhost:3000/ にアクセスして、下記のような画面が表示
 
 ## Airtableから会員IDを取得する
 
+フロントエンドからAPIを叩いて、会員IDを取得し、フロントエンドでバーコードを生成します。
+
+### バックエンドの変更
+
 ここからはLaravelのコードを変更します。
 
 `routes/api.php`に以下のコードを追加します。
@@ -121,11 +95,11 @@ Route::get('/members/{memberId}', function ($memberId) {
     // Airtableからデータを取得する
     $member = Airtable::where('UserId', $memberId)->get();
 
-    if (empty($member)) {
+    if ($member->isEmpty()) {
         return abort(404);
     }
 
-    return $member;
+    return $member->first()['fields'];
 });
 ```
 
@@ -230,156 +204,137 @@ Route::post('/webhook', function (Request $request) use ($bot, $barcodeGenerator
 +    // Airtableからデータを取得する
 +    $member = Airtable::where('UserId', $memberId)->get();
 +
-+    if (empty($member)) {
++    if ($member->isEmpty()) {
 +        return abort(404);
 +    }
 +
-+    return $member;
++    return $member->first()['fields'];
 +});
 ```
 :::
 
-<!-- ## [WIP] (オプション)フロントエンド実装手順
+### フロントエンドの変更
 
-## LIFFプロジェクトを作成する
+ここからはReactのコードを変更します。
 
-Create LIFF Appを利用してプロジェクトを作成します。
-今回は`React`と`TypeScript`を使います。
+`.env`の`VITE_LIFF_API_ENDPOINT`を以下の通り変更します。
 
-https://developers.line.biz/ja/docs/liff/cli-tool-create-liff-app/
-
-ターミナルで以下を実行します。
-
-```bash
-npx @line/create-liff-app
+```diff
+VITE_LIFF_ID=LIFF_ID_HERE
+VITE_LIFF_MOCK_MODE=true # true | false
+VITE_LIFF_REDIRECT_URI=
++VITE_LIFF_API_ENDPOINT=http://localhost:8000
+VITE_LIFF_CODE_TYPE=barcode # barcode | qrcode
 ```
 
-いくつか質問されるので、回答します。
+### 動作確認する
 
-> ? Enter your project name:  my-app
-`my-app`にします。（好きなプロジェクト名に変更してOKです）
+http://localhost:3000/ にアクセスします。
 
-> ? Which template do you want to use? react
-`react`を選択します。
+> バックエンド、フロントエンド両方の開発用サーバーを起動しておく必要があります。
+> ターミナルで`php artisan serve`および`yarn dev`を実行した状態にしてください。
 
-> ? JavaScript or TypeScript? TypeScript
-`TypeScript`を選択します。
+下記のように、バーコードのIDがAPIから取得したものになっていればOKです。
 
-> ? Please enter your LIFF ID: 
-Don't you have LIFF ID? Check out https://developers.line.biz/ja/docs/liff/getting-started/ 1657231722-pA2V6Kj0
+[![Image from Gyazo](https://i.gyazo.com/214a13aedfde10023a3ba08c360930b4.png)](https://gyazo.com/214a13aedfde10023a3ba08c360930b4)
 
+## LIFFアプリの設定を行う
 
-> ? Which package manager do you want to use? yarn
-`yarn`を選択します。（`npm`でもOKです）
+### LIFFアプリを登録する
 
-下記のように表示されればOKです。
+ここからは[LINE Developers](https://developers.line.biz/ja/)で作業を行います。
 
-```bash
-Done! Now run: 
+下記手順を参考にチャネルを作成します。
+チャネルタイプは`LINEログイン`を選択します。
 
-  cd my-app
-  yarn dev
+https://developers.line.biz/ja/docs/liff/getting-started/
+
+下記手順を参考に、さきほど作成したチャネルにLIFFアプリを追加します。
+
+https://developers.line.biz/ja/docs/liff/registering-liff-apps/#registering-liff-app
+
+設定する値はこちらの様にします。
+
+[![Image from Gyazo](https://i.gyazo.com/5feadeb79653d469f3cdd657f5a2156f.png)](https://gyazo.com/5feadeb79653d469f3cdd657f5a2156f)
+
+表示される`LIFF ID`、`LIFF URL`をコピーしておきます。
+
+[![Image from Gyazo](https://i.gyazo.com/01e157acb40a8fa27cca31f4948ca586.png)](https://gyazo.com/01e157acb40a8fa27cca31f4948ca586)
+
+### localhostの証明書を設定する
+
+ここからはフロントエンドのプロジェクトで作業を行います。
+
+こちらの記事を参考にさせていただき、`localhost-key.pem`と`localhost.pem`を生成します。
+
+https://dev.classmethod.jp/articles/https-localhost-for-liff-development/
+
+下記のように`localhost-key.pem`と`localhost.pem`が生成されればOKです。
+
+[![Image from Gyazo](https://i.gyazo.com/2d6a8db22e4db276a91b34cbe43bf403.png)](https://gyazo.com/2d6a8db22e4db276a91b34cbe43bf403)
+
+続いて`vite.config.ts`を下記の通り変更します。
+
+```diff typescript
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
++import fs from 'fs';
+
+// https://vitejs.dev/config/
+export default defineConfig({
+  plugins: [react()],
+  build: {
+    outDir: 'dist',
+  },
++  server: {
++    https: {
++      key: fs.readFileSync('./localhost-key.pem'),
++      cert: fs.readFileSync('./localhost.pem'),
++    },
++  },
+});
 ```
 
-## 動作確認する
-
-以下を実行し、ローカルで開発用サーバーを立ち上げます。
-
-```bash
-cd my-app
-yarn dev
-```
+開発用サーバーを再起動すると、URLが`https`始まりになります。
 
 ```log
-vite v2.9.12 dev server running at:
+vite v2.9.9 dev server running at:
 
-> Local: http://localhost:3000/
+> Local: https://localhost:3000/
 > Network: use `--host` to expose
 
-ready in 240ms.
+ready in 171ms.
 ```
 
-http://localhost:3000/ にアクセスして、下記のような画面が表示されればOKです。
+https://localhost:3000/ にアクセスして、バーコードが表示されればOKです。
 
-[![Image from Gyazo](https://i.gyazo.com/d028c91d37c16468f2c9b9c22226561e.png)](https://gyazo.com/d028c91d37c16468f2c9b9c22226561e)
+[![Image from Gyazo](https://i.gyazo.com/3f367695f3e825ac5d8fc520b380b241.png)](https://gyazo.com/3f367695f3e825ac5d8fc520b380b241)
 
-## ライブラリをインストールする
 
-ターミナルで下記を実行します。
+### 環境変数を設定する
 
-```bash
-yarn add @chakra-ui/react @emotion/react@^11 @emotion/styled@^11 framer-motion@^6 qrcode.react react-barcodes
-yarn add -D @line/liff-mock
+ここからはフロントエンドのプロジェクトで作業を行います。
+
+`.env`を下記の通り変更します。
+
+```diff
++VITE_LIFF_ID=1657231722-PwJ6Glrz
++VITE_LIFF_MOCK_MODE=false # true | false
++VITE_LIFF_REDIRECT_URI=https://localhost:3000
+VITE_LIFF_API_ENDPOINT=http://localhost:8000
+VITE_LIFF_CODE_TYPE=barcode # barcode | qrcode
 ```
 
-> Chakra UI v2を利用するとなぜかエラーが発生するので、v1を利用しています。
+### 動作確認する
 
-## 会員カードUIを作成する
+https://localhost:3000 にアクセスします。
 
-### `liff.d.ts`を作成する
+LINEへのログインが求められるので、ログインします。
 
-`my-app/src/liff.d.ts`を作成し、以下をコピペします。
+[![Image from Gyazo](https://i.gyazo.com/51642832b08702b19fd906a83832fe76.png)](https://gyazo.com/51642832b08702b19fd906a83832fe76)
 
-```typescript
-import { ExtendedInit, LiffMockApi } from '@line/liff-mock';
+Airtableの`MemberId`と同じ番号が表示されればOKです。
 
-declare module '@line/liff' {
-  interface Liff {
-    init: ExtendedInit;
-    $mock: LiffMockApi;
-  }
-}
-```
+[![Image from Gyazo](https://i.gyazo.com/dea23704de1b6bdc5cf28a8fd6ff94c5.png)](https://gyazo.com/dea23704de1b6bdc5cf28a8fd6ff94c5)
 
-### `App.tsx`を変更する
-
-`my-app/src/App.tsx`を開き、以下をコピペします。
-
-```typescript
-import { useEffect, useState } from "react";
-import liff from "@line/liff";
-import "./App.css";
-
-function App() {
-  const [message, setMessage] = useState("");
-  const [error, setError] = useState("");
-
-  useEffect(() => {
-    liff
-      .init({
-        liffId: import.meta.env.VITE_LIFF_ID
-      })
-      .then(() => {
-        setMessage("LIFF init succeeded.");
-      })
-      .catch((e: Error) => {
-        setMessage("LIFF init failed.");
-        setError(`${e}`);
-      });
-  });
-
-  return (
-    <ChakraProvider>
-      <Box>
-      </Box>
-    </ChakraProvider>
-  );
-}
-
-export default App;
-```
-
-## 動作確認する
-
-ターミナルで以下を実行します。
-
-```bash
-yarn dev
-```
-
-http://localhost:3000/ にアクセスして、下記のような画面が表示されればOKです。
-
-[![Image from Gyazo](https://i.gyazo.com/8c0445bcae717f2c3dbac403a96922bc.png)](https://gyazo.com/8c0445bcae717f2c3dbac403a96922bc)
-
-以上でフロントエンドの実装は終わりです。
-バックエンドの実装に進みましょう。 -->
+[![Image from Gyazo](https://i.gyazo.com/96481d73cc41af804b04b7b3432fb567.png)](https://gyazo.com/96481d73cc41af804b04b7b3432fb567)
