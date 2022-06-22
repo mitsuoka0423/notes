@@ -10,6 +10,8 @@ https://github.com/mitsuoka0423/laravel-line-menbers-card/tree/feature/barcode-b
 
 ## この章の完成イメージ
 
+`会員カード`とメッセージを送ると、会員カードの画像を表示します。
+
 [![Image from Gyazo](https://i.gyazo.com/78d8f4c0d45f66204d7b0052aa26d7ff.gif)](https://gyazo.com/78d8f4c0d45f66204d7b0052aa26d7ff)
 
 ## ライブラリをインストールする

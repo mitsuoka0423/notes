@@ -10,6 +10,8 @@ https://github.com/mitsuoka0423/laravel-line-menbers-card/tree/feature/echo-bot 
 
 ## この章の完成イメージ
 
+送ったメッセージをそのまま返すオウム返しを作っていきます。
+
 [![Image from Gyazo](https://i.gyazo.com/6e68f98011666e860b9524b82f8921b3.gif)](https://gyazo.com/6e68f98011666e860b9524b82f8921b3)
 
 ## Laravelプロジェクトを作成する
