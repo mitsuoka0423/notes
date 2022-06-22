@@ -4,7 +4,9 @@ title: "トークルームにバーコードを表示する"
 
 コードはこちらのリポジトリで公開しています。
 
-https://github.com/mitsuoka0423/laravel-line-menbers-card/tree/feature/barcode-bot (ブランチ:`feature/barcode-bot`)
+https://github.com/mitsuoka0423/laravel-line-menbers-card/tree/feature/barcode-bot
+
+ (ブランチ：`feature/barcode-bot`)
 
 > 途中で詰まってしまった方はこちらのコードを利用してください。
 
