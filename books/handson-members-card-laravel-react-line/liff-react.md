@@ -8,9 +8,9 @@ https://github.com/mitsuoka0423/line-members-card-react-frontend
 
 ## この章の完成イメージ
 
-会員カードをLINE内ブラウザで表示します。
+会員カードをブラウザで表示します。
 
-TODO
+[![Image from Gyazo](https://i.gyazo.com/903ecef196a9200c2af07fec34d187c0.gif)](https://gyazo.com/903ecef196a9200c2af07fec34d187c0)
 
 ## サンプルコードを動かしてみる
 
@@ -337,4 +337,4 @@ Airtableの`MemberId`と同じ番号が表示されればOKです。
 
 [![Image from Gyazo](https://i.gyazo.com/dea23704de1b6bdc5cf28a8fd6ff94c5.png)](https://gyazo.com/dea23704de1b6bdc5cf28a8fd6ff94c5)
 
-[![Image from Gyazo](https://i.gyazo.com/96481d73cc41af804b04b7b3432fb567.png)](https://gyazo.com/96481d73cc41af804b04b7b3432fb567)
+[![Image from Gyazo](https://i.gyazo.com/903ecef196a9200c2af07fec34d187c0.gif)](https://gyazo.com/903ecef196a9200c2af07fec34d187c0)
