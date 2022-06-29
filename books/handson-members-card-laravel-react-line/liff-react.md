@@ -235,8 +235,10 @@ VITE_LIFF_CODE_TYPE=barcode # barcode | qrcode
 
 http://localhost:3000/ にアクセスします。
 
-> バックエンド、フロントエンド両方の開発用サーバーを起動しておく必要があります。
-> ターミナルで`php artisan serve`および`yarn dev`を実行した状態にしてください。
+:::message
+バックエンド、フロントエンド両方の開発用サーバーを起動しておく必要があります。
+ターミナルで`php artisan serve`および`yarn dev`を実行した状態にしてください。
+:::
 
 下記のように、バーコードのIDがAPIから取得したものになっていればOKです。
 
