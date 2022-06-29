@@ -26,6 +26,10 @@ https://github.com/mitsuoka0423/line-members-card-react-frontend
 
 ### ライブラリをインストールする
 
+:::message
+ここからはVS Codeでの作業です。
+:::
+
 ターミナルでさきほど解凍したフォルダーに移動し、下記を実行します。
 
 ```bash
