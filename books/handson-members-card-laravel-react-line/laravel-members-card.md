@@ -274,7 +274,7 @@ $bot = new LINEBot($httpClient, ['channelSecret' => $_ENV['LINE_CHANNEL_SECRET']
 +                        $barcodeImage = Storage::get($barcodeFilePath);
 +                    }
 +
-+                    $imageUrl = Config::get('app.url') . '/' . $barcodeFilePath;
++                    $imageUrl = Config::get('app.url') . '/storage/' . $barcodeFilePath;
 +                    $imageMessageBuilder = new ImageMessageBuilder($imageUrl, $imageUrl);
 +                    return $bot->replyMessage($event->getReplyToken(), $imageMessageBuilder);
                 } else {
@@ -301,6 +301,11 @@ APP_DEBUG=true
 +APP_URL=https://769a571cb14e66.lhrtunnel.link
 (略)
 ```
+
+:::message
+設定するURLはご自身の環境のURLを設定してください。
+（上記のURLはサンプルですので、設定しても動きません）
+:::
 
 #### コマンド実行
 
