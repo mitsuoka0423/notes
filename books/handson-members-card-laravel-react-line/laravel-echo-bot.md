@@ -134,16 +134,23 @@ MIX_PUSHER_APP_CLUSTER="${PUSHER_APP_CLUSTER}"
 
 ローカルで開発用サーバーを起動し、LINEのイベントをフックできるようにlocalhost.runを利用して外部公開します。
 
-ターミナルで以下を実行します。
+ターミナルを2つ起動して、以下をそれぞれ実行します。
 
 ```bash
 php artisan serve
+```
+
+```bash
 ssh -R 80:localhost:8000 ssh.localhost.run
 ```
 
+実行イメージ
+
+[![Image from Gyazo](https://i.gyazo.com/e71263218699bc6895c682d1e168ffce.png)](https://gyazo.com/e71263218699bc6895c682d1e168ffce)
+
 最後に表示されるURLをコピーします。
 
-> 今回は`https://b7b3704c411571.lhrtunnel.link`ですね
+今回は`https://b7b3704c411571.lhrtunnel.link`ですね
 
 ```log
 (略)
@@ -151,6 +158,32 @@ ssh -R 80:localhost:8000 ssh.localhost.run
 
 b7b3704c411571.lhrtunnel.link tunneled with tls termination, https://b7b3704c411571.lhrtunnel.link
 ```
+
+:::details localhost.runでエラーが出る方は
+`ngork`を利用してみてください。
+
+ターミナルで以下を実行します。
+```bash
+npx ngrok http 8000
+```
+
+```
+ngrok by @inconshreveable                                                                                  (Ctrl+C to quit)
+                                                                                                                           
+Session Status                online                                                                                       
+Session Expires               1 hour, 59 minutes                                                                           
+Version                       2.3.40                                                                                       
+Region                        United States (us)                                                                           
+Web Interface                 http://127.0.0.1:4040                                                                        
+Forwarding                    http://3f61-2409-10-d320-1c00-c904-a56e-fc93-66fb.ngrok.io -> http://localhost:8000          
+Forwarding                    https://3f61-2409-10-d320-1c00-c904-a56e-fc93-66fb.ngrok.io -> http://localhost:8000         
+                                                                                                                           
+Connections                   ttl     opn     rt1     rt5     p50     p90                                                  
+                              0       0       0.00    0.00    0.00    0.00     
+```
+
+`Forwarding`の`https`で始まる方のURLを利用してください。
+:::
 
 ### LINE DevelopersでWebhook URLを設定する
 
