@@ -337,7 +337,7 @@ VITE_LIFF_CODE_TYPE=barcode # barcode | qrcode
 
 ### 動作確認する
 
-[LIFFアプリを登録する](#LIFFアプリを登録する)でコピーしたLIFF URLにアクセスします。
+[LIFFアプリを登録する](#liffアプリを登録する)でコピーしたLIFF URLにアクセスします。
 
 [![Image from Gyazo](https://i.gyazo.com/b250123461d3d200a9519063aa4c5dca.png)](https://gyazo.com/b250123461d3d200a9519063aa4c5dca)
 
