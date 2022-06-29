@@ -2,7 +2,7 @@
 title: "事前準備"
 ---
 
-### PHPのインストール
+## PHPのインストール
 
 下記手順を参考にPHPをインストールします。
 
@@ -44,7 +44,7 @@ composer -v
 Composer version 2.3.5 2022-04-13 16:43:00
 ```
 
-### Node.jsのインストール
+## Node.jsのインストール
 
 下記手順を参考にNode.jsをインストールします。
 
@@ -68,13 +68,15 @@ npm -v
 8.6.0
 ```
 
-### LINE Developersへログイン & 2つのキーを取得する
+## LINE Developersへログイン & 2つのキーを取得する
 
 下記手順を参考に`チャネルシークレット`・`チャネルアクセストークン`を取得します。
 
 https://zenn.dev/protoout/articles/16-line-bot-setup
 
 チャネルシークレットとチャネルアクセストークンは後で使いますので、コピーしておきます。
+
+## Airtable
 
 ### Airtableへログイン
 
@@ -130,14 +132,14 @@ https://airtable.com/account
 
 [![Image from Gyazo](https://i.gyazo.com/9972a23a9493da3bf29135da56894ea0.png)](https://gyazo.com/9972a23a9493da3bf29135da56894ea0)
 
-### (デプロイされる方のみ)Netlifyへログイン
+## (デプロイされる方のみ)Netlifyへログイン
 
 下記ページの右上にある`Log in`からログインします。
 （アカウントをお持ちでない方はサインアップしてください）
 
 https://www.netlify.com/
 
-### (デプロイされる方のみ)Herokuへログイン
+## (デプロイされる方のみ)Herokuへログイン
 
 下記ページの右上にある`ログイン`からログインします。
 （アカウントをお持ちでない方はサインアップしてください）
