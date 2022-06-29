@@ -104,7 +104,7 @@ https://www.airtable.com/
 | -- | -- |
 | `UserId` | `Single line text` |
 | `Name` | `Single line text` |
-| `Memberid` | `Single line text` |
+| `MemberId` | `Single line text` |
 
 下記の画像の通りになればOKです。
 
