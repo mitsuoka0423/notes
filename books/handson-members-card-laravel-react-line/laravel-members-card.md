@@ -18,6 +18,10 @@ https://github.com/mitsuoka0423/laravel-line-menbers-card/tree/feature/barcode-b
 
 ## ライブラリをインストールする
 
+:::message
+ここからはVS Codeでの作業です。
+:::
+
 以下のライブラリを利用します。
 
 - Airtableクライアントライブラリ（非公式）
@@ -211,7 +215,7 @@ use LINE\LINEBot\Event\MessageEvent\TextMessage;
 use LINE\LINEBot\HTTPClient\CurlHTTPClient;
 +use LINE\LINEBot\MessageBuilder\ImageMessageBuilder;
 use Tapp\Airtable\Facades\AirtableFacade;
-use Picqer\Barcode\BarcodeGeneratorPNG;
++use Picqer\Barcode\BarcodeGeneratorPNG;
 
 /*
 |--------------------------------------------------------------------------
