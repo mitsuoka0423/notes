@@ -18,6 +18,10 @@ https://github.com/mitsuoka0423/laravel-line-menbers-card/tree/feature/echo-bot
 
 ## Laravelプロジェクトを作成する
 
+:::message
+ここからは、VS Codeでの作業です。
+:::
+
 ターミナルで以下を実行します。
 
 ```bash

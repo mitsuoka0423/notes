@@ -38,7 +38,7 @@ composer require tapp/laravel-airtable picqer/php-barcode-generator
 
 ### (事前準備)Airtableの`base ID`と`API Key`を取得する
 
-[事前準備](./preparing) の Airtableへログイン 〜 AirtableのAPI Keyを取得 を実施し、`base ID`と`API Key`を取得しておきます。
+[事前準備](./preparing) の「Airtableへログイン 〜 AirtableのAPI Keyを取得」を実施し、`base ID`と`API Key`を取得しておきます。
 
 ### コードを変更する
 
