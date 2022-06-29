@@ -277,8 +277,8 @@ $bot = new LINEBot($httpClient, ['channelSecret' => $_ENV['LINE_CHANNEL_SECRET']
 +                    } else {
 +                        $barcodeImage = Storage::get($barcodeFilePath);
 +                    }
-+
-+                    $imageUrl = Config::get('app.url') . '/storage/' . $barcodeFilePath;
++    
++                    $imageUrl = Config::get('app.url') . '/storage/' . $barcodeFileName;
 +                    $imageMessageBuilder = new ImageMessageBuilder($imageUrl, $imageUrl);
 +                    return $bot->replyMessage($event->getReplyToken(), $imageMessageBuilder);
                 } else {
