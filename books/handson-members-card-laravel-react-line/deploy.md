@@ -2,7 +2,7 @@
 title: "デプロイ"
 ---
 
-## [WIP]バックエンドをHerokuにデプロイする
+## バックエンドをHerokuにデプロイする
 
 :::message alert
 現状、本コードをHerokuでビルドするとエラーが発生するため、
