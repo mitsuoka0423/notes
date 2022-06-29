@@ -1,91 +1,12 @@
 ---
-title: "[WIP]デプロイ"
+title: "デプロイ"
 ---
 
-## バックエンドをHerokuにデプロイする
+## [WIP]バックエンドをHerokuにデプロイする
 
-### Herokuでアプリを作成する
-
-:::message
-ここからは[Heroku](https://id.heroku.com/login)での作業です。
-:::
-
-[Heroku](https://id.heroku.com/login)にログインします
-
-`Create new app`をクリックします。
-
-[![Image from Gyazo](https://i.gyazo.com/e7baae6165d1bf68f0cd16b42225bf2f.png)](https://gyazo.com/e7baae6165d1bf68f0cd16b42225bf2f)
-
-`App name`を入力し、`Create app`をクリックします。
-
-[![Image from Gyazo](https://i.gyazo.com/ac3a683f4ec2cacbfd8534e3b33f02f3.png)](https://gyazo.com/ac3a683f4ec2cacbfd8534e3b33f02f3)
-
-アプリが作成されます。
-
-[![Image from Gyazo](https://i.gyazo.com/a1beff45a6d12cc365de852d15747a78.png)](https://gyazo.com/a1beff45a6d12cc365de852d15747a78)
-
-
-### Herokuで環境変数を設定する
-
-[![Image from Gyazo](https://i.gyazo.com/e0e3f2a839454b584ef78c39503ce565.png)](https://gyazo.com/e0e3f2a839454b584ef78c39503ce565)
-
-[![Image from Gyazo](https://i.gyazo.com/911c6ba1e3cf600f373fa91bbb3a1385.png)](https://gyazo.com/911c6ba1e3cf600f373fa91bbb3a1385)
-
-[![Image from Gyazo](https://i.gyazo.com/1f5a470cf7ad8052502778e8b29f6072.png)](https://gyazo.com/1f5a470cf7ad8052502778e8b29f6072)
-
-### Heroku CLIをインストールする
-
-:::message
-ここからはVS Codeでの作業です。
-:::
-
-ターミナルで以下を実行します。
-
-```bash
-brew tap heroku/brew && brew install heroku
-```
-
-### Herokuにデプロイする
-
-下記をターミナルで実行します。
-
-```bash
-heroku login
-```
-
-ログインを求められるので、`Log in`をクリックします。
-
-[![Image from Gyazo](https://i.gyazo.com/9a2cc906df02dd285e03cb10a6f41969.png)](https://gyazo.com/9a2cc906df02dd285e03cb10a6f41969)
-
-下記のように表示されればOKです。
-
-```log
- ›   Warning: heroku update available from 7.59.1 to 7.60.2.
-heroku: Press any key to open up the browser to login or q to exit: 
-Opening browser to https://cli-auth.heroku.com/auth/cli/browser/bc4d3ade-e0ec-45c7-9941-59a0875d0e05?requestor=SFMyNTY.g2gDbQAAAA0yMTcuMTc4LjUuMjE5bgYASEWFsIEBYgABUYA.h_Ks1G1rap_FBRXn5NDpxNzW-2J8apeLY6mGEsxPB4M
-Logging in... done
-Logged in as mono0423@gmail.com
-```
-
-下記をターミナルで実行します。
-
-```
-git init
-heroku git:remote -a members-card-20220629
-```
-
-:::message
-`members-card-20220629`は自身のアプリ名に置き換えてください。
-:::
-
-```bash
-git add .
-git commit -am "make it better"
-git push heroku main
-```
-
-:::message
-デフォルトブランチが`master`の方は、`git push heroku master`を実行してください。
+:::message alert
+現状、本コードをHerokuでビルドするとエラーが発生するため、
+バックエンドコードのHerokuデプロイはスキップします。
 :::
 
 ## フロントエンドをNetlifyにデプロイする
