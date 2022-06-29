@@ -248,7 +248,9 @@ http://localhost:3000/ にアクセスします。
 
 ### LIFFアプリを登録する
 
-ここからは[LINE Developers](https://developers.line.biz/ja/)で作業を行います。
+:::message
+ここからは、[LINE Developersコンソール](https://developers.line.biz/ja/)での作業です。
+:::
 
 下記手順を参考にチャネルを作成します。
 チャネルタイプは`LINEログイン`を選択します。
