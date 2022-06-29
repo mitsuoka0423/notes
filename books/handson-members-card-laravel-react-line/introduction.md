@@ -4,7 +4,7 @@ title: "イントロダクション"
 
 ### 完成イメージ
 
-TODO
+https://www.youtube.com/watch?v=nk042AqrRU0
 
 ### ライブコーディング動画URL
 
