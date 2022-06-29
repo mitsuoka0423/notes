@@ -20,6 +20,8 @@ title: "[WIP]デプロイ"
 
 [![Image from Gyazo](https://i.gyazo.com/ac3a683f4ec2cacbfd8534e3b33f02f3.png)](https://gyazo.com/ac3a683f4ec2cacbfd8534e3b33f02f3)
 
+アプリが作成されます。
+
 [![Image from Gyazo](https://i.gyazo.com/a1beff45a6d12cc365de852d15747a78.png)](https://gyazo.com/a1beff45a6d12cc365de852d15747a78)
 
 ### Heroku CLIをインストールする
