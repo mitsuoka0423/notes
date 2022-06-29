@@ -275,7 +275,7 @@ https://developers.line.biz/ja/docs/liff/registering-liff-apps/#registering-liff
 
 こちらの記事を参考にさせていただき、`localhost-key.pem`と`localhost.pem`を生成します。
 
-https://dev.classmethod.jp/articles/https-localhost-for-liff-development/
+https://dev.classmethod.jp/articles/vite-https-localhost/
 
 下記のように`localhost-key.pem`と`localhost.pem`が生成されればOKです。
 
