@@ -33,7 +33,9 @@ https://www.linebiz.com/jp/manual/OfficialAccountManager/rich-menus/
 
 ## リッチメニューを登録する
 
-リッチメニュー追加は[LINE Official Account Manager](https://manager.line.biz/)で作業します。
+:::message
+ここからは、[LINE Official Account Manager](https://manager.line.biz/)での作業です。
+:::
 
 - [LINE Official Account Manager](https://manager.line.biz/)を開く
 - リッチメニュー新規登録画面を開く
