@@ -12,6 +12,5 @@ chapters:
   - laravel-echo-bot
   - laravel-members-card
   - liff-react
-  - rich-menu
   - deploy
-
+  - rich-menu
