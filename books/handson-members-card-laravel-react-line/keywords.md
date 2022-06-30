@@ -15,6 +15,8 @@ http://laravel.jp/
 https://ja.reactjs.org/
 
 - ユーザインターフェース構築のための JavaScript ライブラリ
+- 宣言的View
+- コンポーネントを組み合わせてUIを構築する
 
 ## Airtable
 
@@ -27,7 +29,23 @@ https://www.airtable.com/
 
 ### Messaging API
 
+https://developers.line.biz/ja/services/messaging-api/
+
+- LINEでボットを作成することができる
+- 応答メッセージ・プッシュメッセージ
+- 他にも、さまざまなタイプのメッセージを送信できたり、リッチメニューを利用できり、様々な機能がある
+
+[![Image from Gyazo](https://i.gyazo.com/f40bffbbd112bf32826647328f6ffcc9.png)](https://gyazo.com/f40bffbbd112bf32826647328f6ffcc9)
+
 ### LIFF
+
+https://developers.line.biz/ja/docs/liff/overview/
+
+- LINEが提供するウェブアプリのプラットフォーム
+- LINEログイン＆LINEのトーク画面に下から出てくるブラウザ
 
 ### リッチメニュー
 
+https://www.linebiz.com/jp/manual/OfficialAccountManager/rich-menus/
+
+- LINEのトーク画面下部に固定で表示されるメニュー機能

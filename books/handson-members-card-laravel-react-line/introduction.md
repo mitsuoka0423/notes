@@ -2,9 +2,15 @@
 title: "イントロダクション"
 ---
 
-### 完成イメージ
+### 作成するLINE Botのイメージ
 
-リッチメニューをタップすると会員カードが表示するアプリを作成します。
+[![Image from Gyazo](https://i.gyazo.com/41c390c4bfe4e87263b2cbebdfc6c1bc.png)](https://gyazo.com/41c390c4bfe4e87263b2cbebdfc6c1bc)
+
+`会員カード`とメッセージを送信したら、会員カードバーコードを表示する。
+
+[![Image from Gyazo](https://i.gyazo.com/dde82898893fea6e9ae46212dc19bb47.gif)](https://gyazo.com/dde82898893fea6e9ae46212dc19bb47)
+
+リッチメニューをタップしたら、会員カードUIを表示する。
 
 [![Image from Gyazo](https://i.gyazo.com/7585cc1593670d12a2e66769f0800567.gif)](https://gyazo.com/7585cc1593670d12a2e66769f0800567)
 
