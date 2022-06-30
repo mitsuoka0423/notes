@@ -63,9 +63,33 @@ dist/assets/index.b7ab0c04.js   483.36 KiB / gzip: 144.86 KiB
 
 ```diff
 VITE_LIFF_ID=1657262868-P5XDwM10
-VITE_LIFF_MOCK_MODE=true # true | false
+VITE_LIFF_MOCK_MODE=false # true | false
 +VITE_LIFF_REDIRECT_URI=https://stellular-biscuit-5b1376.netlify.app/
-VITE_LIFF_API_ENDPOINT=http://localhost:8000
+VITE_LIFF_API_ENDPOINT=https://b7b3704c411571.lhrtunnel.link
 VITE_LIFF_CODE_TYPE=barcode # barcode | qrcode
 ```
+
+再び、
+
+- [ビルドする](#ビルドする)
+- [Netlify にデプロイする](#netlify-にデプロイする)
+
+を実施します。
+
+### LIFFアプリのエンドポイントURLを更新する
+
+:::message
+ここからは、[LINE Developersコンソール](https://developers.line.biz/ja/)での作業です。
+:::
+
+[LIFFアプリを登録する](https://zenn.dev/tmitsuoka0423/books/handson-members-card-laravel-react-line/viewer/liff-react#liff%E3%82%A2%E3%83%97%E3%83%AA%E3%82%92%E7%99%BB%E9%8C%B2%E3%81%99%E3%82%8B)で作成したLIFFアプリの`エンドポイントURL`をNetlifyのURLに変更します。
+
+[![Image from Gyazo](https://i.gyazo.com/1d0416794c351bc1c704feff77053fff.png)](https://gyazo.com/1d0416794c351bc1c704feff77053fff)
+
+更新できたら、LIFF URLにアクセスしましょう。
+
+バーコードが表示されればOKです！
+
+[![Image from Gyazo](https://i.gyazo.com/903ecef196a9200c2af07fec34d187c0.gif)](https://gyazo.com/903ecef196a9200c2af07fec34d187c0)
+
 

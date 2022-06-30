@@ -73,3 +73,12 @@ https://www.linebiz.com/jp/manual/OfficialAccountManager/rich-menus/
 
 [![Image from Gyazo](https://i.gyazo.com/7762e84376fc7c5e2a239bd233b28f94.gif)](https://gyazo.com/7762e84376fc7c5e2a239bd233b28f94)
 
+## リッチメニューにLIFF URLを設定する
+
+アクションを変更します。
+
+[![Image from Gyazo](https://i.gyazo.com/2392bb00c536d9660d556aab0518e0d7.png)](https://gyazo.com/2392bb00c536d9660d556aab0518e0d7)
+
+## 動作確認する
+
+[![Image from Gyazo](https://i.gyazo.com/7585cc1593670d12a2e66769f0800567.gif)](https://gyazo.com/7585cc1593670d12a2e66769f0800567)
