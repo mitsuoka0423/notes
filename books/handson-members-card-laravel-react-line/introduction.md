@@ -18,10 +18,6 @@ TODO: 後ほど更新します。
 
 [![Image from Gyazo](https://i.gyazo.com/25ab3c97aff9ac1835bf82e0dc35e997.jpg)](https://gyazo.com/25ab3c97aff9ac1835bf82e0dc35e997)
 
-[![Image from Gyazo](https://i.gyazo.com/5fc87f22afdd01e68ed37a65b9ab1023.png)](https://gyazo.com/5fc87f22afdd01e68ed37a65b9ab1023)
-
-↑フォローしてね！
-
 電子書籍サービスを開発するエンジニア。
 エンジニアではない人がモノづくり・制作を行い、現場を変えていく姿を見たいとの想いから「プロトアウトジム」立ち上げ。
 毎週もくもく会やセミナーなどのをイベントを開催している。プロトアウトスタジオ5期＆7期講師。LINE BOOT AWARDオムロン賞受賞。
