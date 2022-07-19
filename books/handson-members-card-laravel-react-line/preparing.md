@@ -2,6 +2,24 @@
 title: "事前準備"
 ---
 
+## Gitpodのログイン
+
+下記URLにアクセスし、`Dashboard`ボタンをクリックします。
+
+https://www.gitpod.io/
+
+[![Image from Gyazo](https://i.gyazo.com/ea8a859be2c316aa0cc0197cf17ec991.png)](https://gyazo.com/ea8a859be2c316aa0cc0197cf17ec991)
+
+`GitHub`、`GitLab`、`BitBucket`のいずれかでログインします。
+
+[![Image from Gyazo](https://i.gyazo.com/50aa1ba66952106b5df46dcca2440a01.png)](https://gyazo.com/50aa1ba66952106b5df46dcca2440a01)
+
+Workspaceが表示されればOKです。
+
+[![Image from Gyazo](https://i.gyazo.com/5f9ccc9c470b955d7e8db5563bb1aa8a.png)](https://gyazo.com/5f9ccc9c470b955d7e8db5563bb1aa8a)
+
+:::detail Gitpodを使わない方はこちらを実施してください
+
 ## PHPのインストール
 
 下記手順を参考にPHPをインストールします。
@@ -67,6 +85,8 @@ npm -v
 ```log
 8.6.0
 ```
+
+:::
 
 ## LINE Developersへログイン & 2つのキーを取得する
 
