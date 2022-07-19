@@ -18,7 +18,7 @@ Workspaceが表示されればOKです。
 
 [![Image from Gyazo](https://i.gyazo.com/5f9ccc9c470b955d7e8db5563bb1aa8a.png)](https://gyazo.com/5f9ccc9c470b955d7e8db5563bb1aa8a)
 
-:::detail Gitpodを使わない方はこちらを実施してください
+:::details Gitpodを使わずローカルで実行する場合はこちらを実施してください
 
 ## PHPのインストール
 
