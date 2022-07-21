@@ -2,7 +2,7 @@
 title: "事前準備"
 ---
 
-## Gitpodのログイン
+## Gitpodへログイン
 
 下記URLにアクセスし、`Dashboard`ボタンをクリックします。
 
