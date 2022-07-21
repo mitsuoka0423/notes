@@ -19,7 +19,7 @@ https://github.com/mitsuoka0423/laravel-line-menbers-card/tree/feature/barcode-b
 ## ライブラリをインストールする
 
 :::message
-ここからはVS Codeでの作業です。
+ここからはVS Code/Gitpodでの作業です。
 :::
 
 以下のライブラリを利用します。
@@ -98,6 +98,7 @@ Route::post('/webhook', function (Request $request) use ($bot) {
 
     collect($events)->each(function ($event) use ($bot) {
         if ($event instanceof TextMessage) {
+-          return $bot->replyText($event->getReplyToken(), $event->getText());
 +          if ($event->getText() === '会員カード') {
 +              // 会員登録済みか確認するため、Airtableからデータを取得する
 +              $member = Airtable::where('UserId', $event->getUserId())->get();
@@ -237,6 +238,7 @@ $bot = new LINEBot($httpClient, ['channelSecret' => $_ENV['LINE_CHANNEL_SECRET']
 
 +$barcodeGenerator = new BarcodeGeneratorPNG();
 
+-Route::post('/webhook', function (Request $request) use ($bot) {
 +Route::post('/webhook', function (Request $request) use ($bot, $barcodeGenerator) {
     Log::debug($request);
 
@@ -247,7 +249,7 @@ $bot = new LINEBot($httpClient, ['channelSecret' => $_ENV['LINE_CHANNEL_SECRET']
 
     $events = $bot->parseEventRequest($request->getContent(), $signature);
     Log::debug(['$events' => $events]);
-
+-    collect($events)->each(function ($event) use ($bot) {
 +    collect($events)->each(function ($event) use ($bot, $barcodeGenerator) {
         if ($event instanceof TextMessage) {
             if ($event instanceof TextMessage) {
