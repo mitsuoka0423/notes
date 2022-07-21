@@ -70,11 +70,21 @@ LINE Bot開発に下記のライブラリを利用します。
 
 https://github.com/line/line-bot-sdk-php
 
-ターミナルで以下を実行してインストールします。
+ターミナルを分割します。
+
+[![Image from Gyazo](https://i.gyazo.com/3378b84117d0998a4803692a9300d62a.png)](https://gyazo.com/3378b84117d0998a4803692a9300d62a)
+
+[![Image from Gyazo](https://i.gyazo.com/569b61c268179a38ecfe8e0612ba0737.png)](https://gyazo.com/569b61c268179a38ecfe8e0612ba0737)
+
+右側のターミナルで、以下を実行してインストールします。
 
 ```bash
 composer require linecorp/line-bot-sdk
 ```
+
+:::message
+左側のターミナルで実行しているコマンドは動かしたままにしてください。
+:::
 
 ## LINE Webhook用処理を作成する
 
@@ -155,60 +165,15 @@ MIX_PUSHER_APP_CLUSTER="${PUSHER_APP_CLUSTER}"
 
 ## 動作確認する
 
-### 開発用サーバーを起動する&外部公開する
+### 開発用サーバーにアクセスできるURLを取得する
 
-ローカルで開発用サーバーを起動し、LINEのイベントをフックできるようにlocalhost.runを利用して外部公開します。
+`サイドバー > Remote Explorer`を選択し、地球マークをクリックします。
 
-ターミナルを2つ起動して、以下をそれぞれ実行します。
+[![Image from Gyazo](https://i.gyazo.com/46e9efe74c1bb7b37d97f0ef30def60c.png)](https://gyazo.com/46e9efe74c1bb7b37d97f0ef30def60c)
 
-```bash
-php artisan serve
-```
+URLをコピーします。この後の手順で利用します。
 
-```bash
-ssh -R 80:localhost:8000 ssh.localhost.run
-```
-
-実行イメージ
-
-[![Image from Gyazo](https://i.gyazo.com/e71263218699bc6895c682d1e168ffce.png)](https://gyazo.com/e71263218699bc6895c682d1e168ffce)
-
-最後に表示されるURLをコピーします。
-
-今回は`https://b7b3704c411571.lhrtunnel.link`ですね
-
-```log
-(略)
-** your connection id is 2f47b9ae-7276-41a2-a0d7-5e267a003042, please mention it if you send me a message about an issue. **
-
-b7b3704c411571.lhrtunnel.link tunneled with tls termination, https://b7b3704c411571.lhrtunnel.link
-```
-
-:::details localhost.runでエラーが出る方は
-`ngork`を利用してみてください。
-
-ターミナルで以下を実行します。
-```bash
-npx ngrok http 8000
-```
-
-```
-ngrok by @inconshreveable                                                                                  (Ctrl+C to quit)
-                                                                                                                           
-Session Status                online                                                                                       
-Session Expires               1 hour, 59 minutes                                                                           
-Version                       2.3.40                                                                                       
-Region                        United States (us)                                                                           
-Web Interface                 http://127.0.0.1:4040                                                                        
-Forwarding                    http://3f61-2409-10-d320-1c00-c904-a56e-fc93-66fb.ngrok.io -> http://localhost:8000          
-Forwarding                    https://3f61-2409-10-d320-1c00-c904-a56e-fc93-66fb.ngrok.io -> http://localhost:8000         
-                                                                                                                           
-Connections                   ttl     opn     rt1     rt5     p50     p90                                                  
-                              0       0       0.00    0.00    0.00    0.00     
-```
-
-`Forwarding`の`https`で始まる方のURLを利用してください。
-:::
+[![Image from Gyazo](https://i.gyazo.com/564ae3c4d2292689e7565c553c40d5ee.png)](https://gyazo.com/564ae3c4d2292689e7565c553c40d5ee)
 
 ### LINE DevelopersでWebhook URLを設定する
 
@@ -223,19 +188,19 @@ LINE Developersコンソール > 作成したMessaging APIのチャネル > Mess
 
 [![Image from Gyazo](https://i.gyazo.com/77c6998967d5628366d3f570abfbb351.gif)](https://gyazo.com/77c6998967d5628366d3f570abfbb351)
 
-上記手順でコピーしたURL(`https://xxxxxxxxxxx.lhrtunnel.link`)の末尾に`/api/webhook`をつけます。
+上記手順でコピーしたURL(`https://xxxxxxxxxxx.gitpod.io`)の末尾に`/api/webhook`をつけます。
 
-> 今回は`https://b7b3704c411571.lhrtunnel.link/api/webhook`となります
+> 今回は`https://8000-mitsuoka042-laraveltemp-od6kvyaieml.ws-us54.gitpod.io/api/webhook`となります
 
 :::message alert
 `/api/webhook`を忘れないように気をつけてください。
 :::
 
-[![Image from Gyazo](https://i.gyazo.com/72fba354ec26794294469eec27b01826.png)](https://gyazo.com/72fba354ec26794294469eec27b01826)
+[![Image from Gyazo](https://i.gyazo.com/3176a84c5448b057adcbed0ad1222e1f.png)](https://gyazo.com/3176a84c5448b057adcbed0ad1222e1f)
 
 また、`Webhookの利用`をオンにします。
 
-[![Image from Gyazo](https://i.gyazo.com/f5cd7acb933681700ea5ae54f52c75b3.png)](https://gyazo.com/f5cd7acb933681700ea5ae54f52c75b3)
+[![Image from Gyazo](https://i.gyazo.com/baead4ed224699d7a7bdd490318d5ceb.png)](https://gyazo.com/baead4ed224699d7a7bdd490318d5ceb)
 
 ### 動作確認する
 
@@ -254,4 +219,20 @@ LINE Developersコンソール > 作成したMessaging APIのチャネル > Mess
 
 [![Image from Gyazo](https://i.gyazo.com/6e68f98011666e860b9524b82f8921b3.gif)](https://gyazo.com/6e68f98011666e860b9524b82f8921b3)
 
-次のステップで、会員バーコードを表示する処理を追加します。
+## 演習問題
+
+オウム返しまでできた方は下記の演習問題にもチャレンジしてみましょう。
+
+### LINE Botにキャラ付けしよう
+
+オウム返しするメッセージを工夫してLINE Botにキャラ付けしてみましょう。
+
+ナルト風
+
+[![Image from Gyazo](https://i.gyazo.com/9cba1213d22889319979593becd8e117.png)](https://gyazo.com/9cba1213d22889319979593becd8e117)
+
+仙人風
+
+[![Image from Gyazo](https://i.gyazo.com/31d1c23a8cdf7597f63de9ec6c2e1255.png)](https://gyazo.com/31d1c23a8cdf7597f63de9ec6c2e1255)
+
+## 次のステップへ
