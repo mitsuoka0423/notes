@@ -282,6 +282,8 @@ $bot = new LINEBot($httpClient, ['channelSecret' => $_ENV['LINE_CHANNEL_SECRET']
 +    
 +                    $imageUrl = Config::get('app.url') . '/storage/' . $barcodeFileName;
 +                    $imageMessageBuilder = new ImageMessageBuilder($imageUrl, $imageUrl);
+
+-                    return $bot->replyText($event->getReplyToken(), "会員IDは {$memberId} です！");
 +                    return $bot->replyMessage($event->getReplyToken(), $imageMessageBuilder);
                 } else {
                     return $bot->replyText($event->getReplyToken(), $event->getText());
