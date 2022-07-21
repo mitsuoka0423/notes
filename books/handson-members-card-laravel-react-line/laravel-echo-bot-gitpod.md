@@ -1,5 +1,5 @@
 ---
-title: "Laravelでオウム返しするLINE Botを作る(Gitpod利用)"
+title: "(Gitpod利用)Laravelでオウム返しするLINE Botを作る"
 ---
 
 コードはこちらのリポジトリで公開しています。
