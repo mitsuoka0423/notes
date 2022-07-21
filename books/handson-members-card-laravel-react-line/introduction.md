@@ -4,8 +4,6 @@ title: "イントロダクション"
 
 ### 作成するLINE Botのイメージ
 
-[![Image from Gyazo](https://i.gyazo.com/41c390c4bfe4e87263b2cbebdfc6c1bc.png)](https://gyazo.com/41c390c4bfe4e87263b2cbebdfc6c1bc)
-
 `会員カード`とメッセージを送信したら、会員カードバーコードを表示する。
 
 [![Image from Gyazo](https://i.gyazo.com/dde82898893fea6e9ae46212dc19bb47.gif)](https://gyazo.com/dde82898893fea6e9ae46212dc19bb47)
