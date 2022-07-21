@@ -141,18 +141,6 @@ URLをコピーします。この後の手順で利用します。
 
 [![Image from Gyazo](https://i.gyazo.com/b4c2a23f55ecf78e87e54dfd5cab0e1f.png)](https://gyazo.com/b4c2a23f55ecf78e87e54dfd5cab0e1f)
 
-### 動作確認する
-
-さきほどコピーしたURLにアクセスします。
-
-:::message
-バックエンド、フロントエンド両方の開発用サーバーを起動しておく必要があります。
-ターミナルで`php artisan serve`および`yarn dev`を実行した状態にしてください。
-:::
-
-下記のように、バーコードのIDがAPIから取得したものになっていればOKです。
-
-[![Image from Gyazo](https://i.gyazo.com/214a13aedfde10023a3ba08c360930b4.png)](https://gyazo.com/214a13aedfde10023a3ba08c360930b4)
 
 ## LIFFアプリの設定を行う
 
@@ -179,62 +167,10 @@ https://developers.line.biz/ja/docs/liff/registering-liff-apps/#registering-liff
 
 [![Image from Gyazo](https://i.gyazo.com/01e157acb40a8fa27cca31f4948ca586.png)](https://gyazo.com/01e157acb40a8fa27cca31f4948ca586)
 
-### localhostの証明書を設定する
-
-:::message
-ここからはVS Code（フロントエンドのプロジェクト）での作業です。
-:::
-
-こちらの記事を参考にさせていただき、`localhost-key.pem`と`localhost.pem`を生成します。
-
-https://dev.classmethod.jp/articles/vite-https-localhost/
-
-下記のように`localhost-key.pem`と`localhost.pem`が生成されればOKです。
-
-[![Image from Gyazo](https://i.gyazo.com/2d6a8db22e4db276a91b34cbe43bf403.png)](https://gyazo.com/2d6a8db22e4db276a91b34cbe43bf403)
-
-続いて`vite.config.ts`を下記の通り変更します。
-
-```diff typescript
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
-+import fs from 'fs';
-
-// https://vitejs.dev/config/
-export default defineConfig({
-  plugins: [react()],
-  build: {
-    outDir: 'dist',
-  },
-+  server: {
-+    https: {
-+      key: fs.readFileSync('./localhost-key.pem'),
-+      cert: fs.readFileSync('./localhost.pem'),
-+    },
-+  },
-});
-```
-
-開発用サーバーを再起動すると、URLが`https`始まりになります。
-
-```log
-vite v2.9.9 dev server running at:
-
-> Local: https://localhost:3000/
-> Network: use `--host` to expose
-
-ready in 171ms.
-```
-
-https://localhost:3000/ にアクセスして、バーコードが表示されればOKです。
-
-[![Image from Gyazo](https://i.gyazo.com/3f367695f3e825ac5d8fc520b380b241.png)](https://gyazo.com/3f367695f3e825ac5d8fc520b380b241)
-
-
 ### 環境変数を設定する
 
 :::message
-バックエンドのプロジェクトで作業を行います。
+バックエンドのGitpodで作業を行います。
 :::
 
 `.env`に`LINE_LOGIN_CHANNEL_ID`を追加します。
@@ -252,7 +188,7 @@ AIRTABLE_TYPECAST=false
 ```
 
 :::message
-フロントエンドのプロジェクトで作業を行います。
+フロントエンドのGitpodで作業を行います。
 :::
 
 `.env`を下記の通り変更します。
@@ -260,8 +196,8 @@ AIRTABLE_TYPECAST=false
 ```diff
 +VITE_LIFF_ID=1657231722-PwJ6Glrz
 +VITE_LIFF_MOCK_MODE=false # true | false
-+VITE_LIFF_REDIRECT_URI=https://localhost:3000
-VITE_LIFF_API_ENDPOINT=https://b7b3704c411571.lhrtunnel.link
++VITE_LIFF_REDIRECT_URI=フロントエンドのGitpodでコピーしたURL
+VITE_LIFF_API_ENDPOINT=バックエンドのGitpodでコピーしたURL
 VITE_LIFF_CODE_TYPE=barcode # barcode | qrcode
 ```
 
