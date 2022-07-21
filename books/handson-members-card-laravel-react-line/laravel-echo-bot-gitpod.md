@@ -31,8 +31,9 @@ https://github.com/mitsuoka0423/laravel-template
 
 :::details ログインを求められた方は
 
-ログインを求められた方はログインしてください。
-（手順：[Gitpodへログイン](https://zenn.dev/tmitsuoka0423/books/handson-members-card-laravel-react-line/viewer/preparing#gitpod%E3%81%AE%E3%83%AD%E3%82%B0%E3%82%A4%E3%83%B3)）
+下記を参考にログインしてください。
+
+[Gitpodへログイン](https://zenn.dev/tmitsuoka0423/books/handson-members-card-laravel-react-line/viewer/preparing#gitpod%E3%81%AE%E3%83%AD%E3%82%B0%E3%82%A4%E3%83%B3)
 
 [![Image from Gyazo](https://i.gyazo.com/493551a06334c2975b4f6be96e3b5c84.png)](https://gyazo.com/493551a06334c2975b4f6be96e3b5c84)
 :::
