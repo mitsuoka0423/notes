@@ -64,6 +64,16 @@ php artisan serve
 
 [![Image from Gyazo](https://i.gyazo.com/03691d8e49b043b4417ddfd567220841.png)](https://gyazo.com/03691d8e49b043b4417ddfd567220841)
 
+:::details No application encryption key has been specified. が発生する場合
+
+下記をターミナルで実行してください
+
+```bash
+php artisan key:generate
+```
+
+:::
+
 ## ライブラリをインストールする
 
 LINE Bot開発に下記のライブラリを利用します。
