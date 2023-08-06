@@ -66,7 +66,9 @@ Sovinnonでは、1と2の課題を解決するアプリの解決・軽減を目�
 
 Sovinnonの実態はWebアプリで、音声メモの部分は[ブラウザ標準のWeb Speech APIのSpeech Recognition](https://developer.mozilla.org/ja/docs/Web/API/Web_Speech_API)を利用しており、フロントエンドのフレームワークはReactを利用しました
 
-またユーザー専用のプロフィールやタイムラインを表示することを見据え、軽量で認証を導入できる[LINEログイン](https://developers.line.biz/ja/services/line-login/)を採用しました
+またユーザー専用のプロフィールやタイムラインを表示することを見据え、軽量でソーシャルログインを導入できる[LINEログイン](https://developers.line.biz/ja/services/line-login/)を採用しました
+
+> LINEログインの導入は開発終盤に思いついて差し込んだのですが、1時間ほどであっさり導入できました
 
 ## ハッカソンの結果は...
 
