@@ -89,7 +89,7 @@ Sovinnonの実態はWebアプリで、音声メモの部分は[ブラウザ標�
 実際に課題を抱えていて、アプリ使ってみてもいいよ〜という方がいらっしゃったら、ぜひ使って、良し悪しフィードバックを[@mitsuka0423](https://twitter.com/mitsuoka0423)にください！
 （DMでもなんでも大丈夫です）
 
-SovinnonのURLはこちら↓
+Sovinnonはこちら↓から無料で使えます
 https://mitsuoka0423.github.io/dementia-hackathon/
 
 
