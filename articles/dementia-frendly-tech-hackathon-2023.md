@@ -1,5 +1,5 @@
 ---
-title: "若年性アルツハイマーの方のためのメモをタイムラインで遡れるアプリ「Sovinnon」を作った"
+title: "若年性アルツハイマーの方のためにメモをタイムラインで遡れるアプリ「Sovinnon」を作った"
 emoji: "👨‍💻"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["JavaScript", "WebSpeechAPI", "LINE", "React", "認知症フレンドリーテック"]
