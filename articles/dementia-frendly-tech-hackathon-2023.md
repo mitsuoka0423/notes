@@ -9,7 +9,7 @@ published: true
 ## 認知症フレンドリーテックハッカソンに参戦してきました
 
 こんにちは！
-LINE API Expert の @mitsuoka0423 です
+LINE API Expert の [@mitsuoka0423](https://twitter.com/mitsuoka0423) です
 
 2023/08/05-06でオンライン/オフラインハイブリッド開催された認知症フレンドリーテックハッカソンに参戦してきました
 
