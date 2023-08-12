@@ -8,6 +8,9 @@ published: true
 
 ## 認知症フレンドリーテックハッカソンに参戦してきました
 
+こんにちは！
+LINE API Expert の @mitsuoka0423 です
+
 2023/08/05-06でオンライン/オフラインハイブリッド開催された認知症フレンドリーテックハッカソンに参戦してきました
 
 https://dementia-friendly-tech.connpass.com/event/282971/
