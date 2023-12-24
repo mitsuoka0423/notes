@@ -7,6 +7,11 @@ published: true
 ---
 
 
+:::message
+本記事は [LINE DC Advent Calendar 2023](https://qiita.com/advent-calendar/2023/lineapi) 3日目の記事です
+:::
+
+
 ## はじめに
 
 LINE Bot に決済機能を組み込みたかったので、 Stripe を利用して実現する方法をメモします
