@@ -3,7 +3,7 @@ title: "Stripe Checkout の metadata に LINE User ID を渡すメモ"
 emoji: "💰"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["stripe", "line", "messagingapi", "make"]
-published: false
+published: true
 ---
 
 
