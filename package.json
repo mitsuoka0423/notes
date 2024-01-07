@@ -20,5 +20,12 @@
   "homepage": "https://github.com/tmitsuoka0423/zenn#readme",
   "dependencies": {
     "zenn-cli": "^0.1.66"
+  },
+  "devDependencies": {
+    "textlint": "^13.4.1",
+    "textlint-rule-no-todo": "^2.0.1",
+    "textlint-rule-preset-ja-spacing": "^2.3.0",
+    "textlint-rule-preset-ja-technical-writing": "^10.0.1",
+    "textlint-rule-spellcheck-tech-word": "^5.0.0"
   }
 }
