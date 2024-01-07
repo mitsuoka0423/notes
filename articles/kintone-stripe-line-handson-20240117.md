@@ -14,7 +14,7 @@ published: true
 
 https://linedevelopercommunity.connpass.com/event/305413/
 
-### 他手順へのリンク
+## 他手順へのリンク
 
 - TODO: アンケート
 - TODO: kintone
@@ -32,34 +32,38 @@ TODO
 TODO
 
 
-## このパートの完成イメージ
+## LINE Botハンズオン
 
-### シナリオ
+### 完成イメージ
+
+#### シナリオ
 
 ![image](https://i.imgur.com/zeWTUDa.png)
 
-### LINE Bot
+#### LINE Bot
 
 [![Image from Gyazo](https://i.gyazo.com/94e5bda2678dcf5bbc7a0154eeac8b07.gif)](https://gyazo.com/94e5bda2678dcf5bbc7a0154eeac8b07)
 
-
-## 事前準備
+### 事前準備
 
 本資料の内容を進めるためには下記の作業が必要です。
 
-### LINE
-  - チャネルアクセストークンの取得（後の手順で利用）
-### Make
-  - ログイン
+#### LINE
+
+- チャネルアクセストークンの取得（後の手順で利用）
+
+#### Make
+
+- ログイン
 
 
-## Makeでシナリオを作成する
+### Makeでシナリオを作成する
 
-### 前提
+#### 前提
 
 - [Make](https://www.Make.com/en/login) で操作
 
-### イメージ
+#### イメージ
 
 ![image](https://i.imgur.com/A4lnHbh.png)
 
@@ -67,9 +71,9 @@ TODO
 
 ![image](https://i.imgur.com/71Jv9GF.png)
 
-## `LINE`モジュールの`Watch Events`を追加 & 設定する
+### `LINE`モジュールの`Watch Events`を追加 & 設定する
 
-### イメージ
+#### イメージ
 
 ![image](https://i.imgur.com/0KuGxkQ.png)
 
@@ -91,14 +95,14 @@ TODO
 
 > くるくるしてればOK
 
-## 作成したチャネルにWebhook URLを設定する
+### 作成したチャネルにWebhook URLを設定する
 
-### 前提
+#### 前提
 
 - [LINE Developesコンソール](https://developers.line.biz/console/)で操作
   - ログインがまだの方は、ログインしておいてください
 
-### イメージ
+#### イメージ
 
 ![image](https://i.imgur.com/6gLYAwO.png)
 
@@ -109,13 +113,13 @@ TODO
 ![image](https://i.imgur.com/02lLRRA.png)
 
 
-## `LINE`モジュールの`Send a Reply Message`を追加 & 設定する
+### `LINE`モジュールの`Send a Reply Message`を追加 & 設定する
 
-### 前提
+#### 前提
 
 - Make で操作
 
-### イメージ
+#### イメージ
 
 ![image](https://i.imgur.com/yShsjBh.png)
 
@@ -131,21 +135,35 @@ TODO
 
 > くるくるしてればOK
 
-## LINEにメッセージを送る
+### LINEにメッセージを送る
 
-### イメージ
+#### イメージ
 
 ![image](https://i.imgur.com/sxa02C3.png)
 
 > 送った文字がそのまま返ってくればOK
 
-### 友達追加時にアンケートリンクを送る
+### LINEのUser IDを確認する
 
-TODO（桑原さんの資料へのリンクにするか）
+#### イメージ
+
+![image](https://i.imgur.com/5TPbPX6.png)
 
 ### 購入リンクを返信する
 
-TODO
+#### イメージ
+
+![image](https://i.imgur.com/oPJrTHI.png)
+
+![image](https://i.imgur.com/cVslXPH.png)
+
+![image](https://i.imgur.com/4eQw6CE.png)
+
+> 後の手順で決済用 URL を発行し、埋め込みます
+
+### 友達追加時にアンケートリンクを送る
+
+TODO（桑原さんの資料へのリンク or 資料を埋め込む）
 
 
 ## 他手順へのリンク
