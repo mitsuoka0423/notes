@@ -3,7 +3,7 @@ title: "LINEパート - [kintone+Stripe+LINE]をノーコードで組み合わ�
 emoji: "💬"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["stripe", "kintone", "line", "messagingapi", "Make"]
-publication_name: linedc
+publication_name: line_dc
 published: true
 ---
 
