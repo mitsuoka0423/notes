@@ -18,18 +18,23 @@ https://linedevelopercommunity.connpass.com/event/305413/
 
 https://qiita.com/hideokamoto/private/061c4402096c047fc483?fbclid=IwAR0k6GvsVu_h4snY_hnGZdqK83kckEjSXxntsNLhz9I6TIzmKgNI37YfdqE
 
-- TODO: kintone
-
 
 ## 利用するサービスの説明
 
 ### LINE (Messaging API)
 
-TODO
+https://line.me/ja/
+
+- 国内月間アクティブユーザー：9,600 万人
+- 友達登録するだけでアプリを利用してもらうことができる
+- Messaging API を活用して、 LINE Bot を制作できる
 
 ### Make
 
-TODO
+https://www.make.com/en∏
+
+- 様々なサービスを繋いでアプリを開発できるノーコードツール
+- モジュールをつないで、シナリオを作成する
 
 
 ## LINE Botハンズオン
@@ -182,8 +187,6 @@ https://qiita.com/cog1t0/private/1b5f1b1f8f1d2c0add43?fbclid=IwAR1Ss_7TWz_2nK6z7
 ## 他手順へのリンク
 
 https://qiita.com/hideokamoto/private/061c4402096c047fc483?fbclid=IwAR0k6GvsVu_h4snY_hnGZdqK83kckEjSXxntsNLhz9I6TIzmKgNI37YfdqE
-
-- TODO: kintone
 
 ## LINE Developer Community では様々なイベントを開催しています
 
