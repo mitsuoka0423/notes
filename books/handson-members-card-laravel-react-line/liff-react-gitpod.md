@@ -7,7 +7,7 @@ title: "(Gitpod)LINE LIFF + Reactで会員カードUIを作成する"
 https://github.com/mitsuoka0423/line-members-card-react-frontend
 
 :::message
-この章では、フロントエンド用のGitpodワークスペースが追加され、バックエンドと合わせて2つのワークスペースを利用します。
+この章では、フロントエンド用の Gitpod ワークスペースが追加され、バックエンドと合わせて 2 つのワークスペースを利用します。
 どちらのワークスペースで作業をしているかを確認しながら作業しましょう。
 
 資料では、`フロントエンドのGitpod`、`バックエンドのGitpod`と呼びます。
@@ -22,14 +22,14 @@ https://github.com/mitsuoka0423/line-members-card-react-frontend
 ## サンプルコードを動かしてみる
 
 下記にアクセスし、`Open in Gitpod`を選択します。
-フロントエンドのGitpodワークスペースが作成されます。
+フロントエンドの Gitpod ワークスペースが作成されます。
 
 https://github.com/mitsuoka0423/line-members-card-react-frontend
 
 [![Image from Gyazo](https://i.gyazo.com/99f3644cfcef37740928fea9e1dc90bb.png)](https://gyazo.com/99f3644cfcef37740928fea9e1dc90bb)
 
 自動でライブラリのインストールとサーバー起動が行われます。
-ターミナルが下記ような表示になっていればOKです。
+ターミナルが下記ような表示になっていれば OK です。
 
 [![Image from Gyazo](https://i.gyazo.com/c4a3c28619e35d6cb7a94cebc82f581e.png)](https://gyazo.com/c4a3c28619e35d6cb7a94cebc82f581e)
 
@@ -41,19 +41,19 @@ https://github.com/mitsuoka0423/line-members-card-react-frontend
 
 [![Image from Gyazo](https://i.gyazo.com/b4c2a23f55ecf78e87e54dfd5cab0e1f.png)](https://gyazo.com/b4c2a23f55ecf78e87e54dfd5cab0e1f)
 
-下記のような画面が表示されればOKです。
+下記のような画面が表示されれば OK です。
 
 [![Image from Gyazo](https://i.gyazo.com/2a0b8df06c5a372d2f3aa258920803e8.png)](https://gyazo.com/2a0b8df06c5a372d2f3aa258920803e8)
 
 ## Airtableから会員IDを取得する
 
-- バックエンドに会員情報取得APIを用意します。
-- フロントエンドからAPIを叩いて会員情報を取得し、フロントエンドでバーコードを生成します。
+- バックエンドに会員情報取得 API を用意します。
+- フロントエンドから API を叩いて会員情報を取得し、フロントエンドでバーコードを生成します。
 
 ### バックエンドの変更
 
 :::message
-ここからはバックエンドのGitpodでの作業です。
+ここからはバックエンドの Gitpod での作業です。
 :::
 
 `routes/api.php`の一番下に、以下のコードを追加します。
@@ -116,17 +116,17 @@ use Illuminate\Http\Request;
 
 [![Image from Gyazo](https://i.gyazo.com/46e9efe74c1bb7b37d97f0ef30def60c.png)](https://gyazo.com/46e9efe74c1bb7b37d97f0ef30def60c)
 
-URLをコピーします。この後の手順で利用します。
+URL をコピーします。この後の手順で利用します。
 
 [![Image from Gyazo](https://i.gyazo.com/564ae3c4d2292689e7565c553c40d5ee.png)](https://gyazo.com/564ae3c4d2292689e7565c553c40d5ee)
 
 ### フロントエンドの変更
 
 :::message
-ここからはフロントエンドのGitpodでの作業です。
+ここからはフロントエンドの Gitpod での作業です。
 :::
 
-`.env`の`VITE_LIFF_API_ENDPOINT`に、さきほどコピーしたURLを貼り付けます。
+`.env`の`VITE_LIFF_API_ENDPOINT`に、さきほどコピーした URL を貼り付けます。
 
 ```diff
 VITE_LIFF_ID=LIFF_ID_HERE
@@ -136,8 +136,8 @@ VITE_LIFF_REDIRECT_URI=
 VITE_LIFF_CODE_TYPE=barcode # barcode | qrcode
 ```
 
-フロントエンドのGitpodで、`サイドバー > Remote Explorer`を選択し、地球マークをクリックします。
-URLをコピーします。この後の手順で利用します。
+フロントエンドの Gitpod で、`サイドバー > Remote Explorer`を選択し、地球マークをクリックします。
+URL をコピーします。この後の手順で利用します。
 
 [![Image from Gyazo](https://i.gyazo.com/b4c2a23f55ecf78e87e54dfd5cab0e1f.png)](https://gyazo.com/b4c2a23f55ecf78e87e54dfd5cab0e1f)
 
@@ -155,7 +155,7 @@ URLをコピーします。この後の手順で利用します。
 
 https://developers.line.biz/ja/docs/liff/getting-started/
 
-下記手順を参考に、さきほど作成したチャネルにLIFFアプリを追加します。
+下記手順を参考に、さきほど作成したチャネルに LIFF アプリを追加します。
 
 https://developers.line.biz/ja/docs/liff/registering-liff-apps/#registering-liff-app
 
@@ -170,7 +170,7 @@ https://developers.line.biz/ja/docs/liff/registering-liff-apps/#registering-liff
 ### 環境変数を設定する
 
 :::message
-バックエンドのGitpodで作業を行います。
+バックエンドの Gitpod で作業を行います。
 :::
 
 `.env`に`LINE_LOGIN_CHANNEL_ID`を追加します。
@@ -188,7 +188,7 @@ AIRTABLE_TYPECAST=false
 ```
 
 :::message
-フロントエンドのGitpodで作業を行います。
+フロントエンドの Gitpod で作業を行います。
 :::
 
 `.env`を下記の通り変更します。
@@ -203,15 +203,15 @@ VITE_LIFF_CODE_TYPE=barcode # barcode | qrcode
 
 ### 動作確認する
 
-[LIFFアプリを登録する](#liffアプリを登録する)でコピーしたLIFF URLにアクセスします。
+[LIFFアプリを登録する](#liffアプリを登録する)でコピーした LIFF URL にアクセスします。
 
 [![Image from Gyazo](https://i.gyazo.com/b250123461d3d200a9519063aa4c5dca.png)](https://gyazo.com/b250123461d3d200a9519063aa4c5dca)
 
-LINEへのログインが求められるので、ログインします。
+LINE へのログインが求められるので、ログインします。
 
 [![Image from Gyazo](https://i.gyazo.com/51642832b08702b19fd906a83832fe76.png)](https://gyazo.com/51642832b08702b19fd906a83832fe76)
 
-Airtableの`MemberId`と同じ番号が表示されればOKです。
+Airtable の`MemberId`と同じ番号が表示されれば OK です。
 
 [![Image from Gyazo](https://i.gyazo.com/903ecef196a9200c2af07fec34d187c0.gif)](https://gyazo.com/903ecef196a9200c2af07fec34d187c0)
 

@@ -19,7 +19,7 @@ https://github.com/mitsuoka0423/laravel-line-menbers-card/tree/feature/echo-bot
 ## Laravelプロジェクトを作成する
 
 :::message
-ここからはVS Codeでの作業です。
+ここからは VS Code での作業です。
 :::
 
 ターミナルで以下を実行します。
@@ -39,7 +39,7 @@ php artisan serve
 Starting Laravel development server: http://127.0.0.1:8000
 ```
 
-このような画面が表示されればOKです。
+このような画面が表示されれば OK です。
 
 [![Image from Gyazo](https://i.gyazo.com/03691d8e49b043b4417ddfd567220841.png)](https://gyazo.com/03691d8e49b043b4417ddfd567220841)
 
@@ -57,7 +57,7 @@ composer require linecorp/line-bot-sdk
 
 ## LINE Webhook用処理を作成する
 
-LINEのイベントをフックしたときに実行される処理を書いていきます。
+LINE のイベントをフックしたときに実行される処理を書いていきます。
 
 `routes/api.php`を以下の通り変更します。
 
@@ -136,9 +136,9 @@ MIX_PUSHER_APP_CLUSTER="${PUSHER_APP_CLUSTER}"
 
 ### 開発用サーバーを起動する&外部公開する
 
-ローカルで開発用サーバーを起動し、LINEのイベントをフックできるようにlocalhost.runを利用して外部公開します。
+ローカルで開発用サーバーを起動し、LINE のイベントをフックできるように localhost.run を利用して外部公開します。
 
-ターミナルを2つ起動して、以下をそれぞれ実行します。
+ターミナルを 2 つ起動して、以下をそれぞれ実行します。
 
 ```bash
 php artisan serve
@@ -152,7 +152,7 @@ ssh -R 80:localhost:8000 ssh.localhost.run
 
 [![Image from Gyazo](https://i.gyazo.com/e71263218699bc6895c682d1e168ffce.png)](https://gyazo.com/e71263218699bc6895c682d1e168ffce)
 
-最後に表示されるURLをコピーします。
+最後に表示される URL をコピーします。
 
 今回は`https://b7b3704c411571.lhrtunnel.link`ですね
 
@@ -163,7 +163,7 @@ ssh -R 80:localhost:8000 ssh.localhost.run
 b7b3704c411571.lhrtunnel.link tunneled with tls termination, https://b7b3704c411571.lhrtunnel.link
 ```
 
-:::details localhost.runでエラーが出る方は
+:::details localhost.run でエラーが出る方は
 `ngork`を利用してみてください。
 
 ターミナルで以下を実行します。
@@ -186,7 +186,7 @@ Connections                   ttl     opn     rt1     rt5     p50     p90
                               0       0       0.00    0.00    0.00    0.00     
 ```
 
-`Forwarding`の`https`で始まる方のURLを利用してください。
+`Forwarding`の`https`で始まる方の URL を利用してください。
 :::
 
 ### LINE DevelopersでWebhook URLを設定する
@@ -195,14 +195,14 @@ Connections                   ttl     opn     rt1     rt5     p50     p90
 ここからは、[LINE Developersコンソール](https://developers.line.biz/ja/)での作業です。
 :::
 
-Messaging APIのチャネル設定画面から`Webhook URL`を設定します。
+Messaging API のチャネル設定画面から`Webhook URL`を設定します。
 
 場所はこちらです。
-LINE Developersコンソール > 作成したMessaging APIのチャネル > Messaging API設定タブ > Webhook設定
+LINE Developers コンソール > 作成した Messaging API のチャネル > Messaging API 設定タブ > Webhook 設定
 
 [![Image from Gyazo](https://i.gyazo.com/77c6998967d5628366d3f570abfbb351.gif)](https://gyazo.com/77c6998967d5628366d3f570abfbb351)
 
-上記手順でコピーしたURL(`https://xxxxxxxxxxx.lhrtunnel.link`)の末尾に`/api/webhook`をつけます。
+上記手順でコピーした URL(`https://xxxxxxxxxxx.lhrtunnel.link`)の末尾に`/api/webhook`をつけます。
 
 > 今回は`https://b7b3704c411571.lhrtunnel.link/api/webhook`となります
 
@@ -222,13 +222,13 @@ LINE Developersコンソール > 作成したMessaging APIのチャネル > Mess
 
 [![Image from Gyazo](https://i.gyazo.com/12c8af4110591477ed26166bfcea455f.png)](https://gyazo.com/12c8af4110591477ed26166bfcea455f)
 
-`成功`と表示されればOKです。
+`成功`と表示されれば OK です。
 
 [![Image from Gyazo](https://i.gyazo.com/96d7dbe23fe2044405dd5d1df173339b.png)](https://gyazo.com/96d7dbe23fe2044405dd5d1df173339b)
 
 ### LINEで話しかけてみる
 
-作ったLINE Botと友達になり、メッセージを送ってみましょう。
+作った LINE Bot と友達になり、メッセージを送ってみましょう。
 そのまま返却されるようになりました！
 
 [![Image from Gyazo](https://i.gyazo.com/6e68f98011666e860b9524b82f8921b3.gif)](https://gyazo.com/6e68f98011666e860b9524b82f8921b3)

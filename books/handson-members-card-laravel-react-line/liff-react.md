@@ -20,14 +20,14 @@ https://github.com/mitsuoka0423/line-members-card-react-frontend
 
 https://github.com/mitsuoka0423/line-members-card-react-frontend
 
-コードをzipでダウンロードして解凍します。（クローンでもOKです）
+コードを zip でダウンロードして解凍します（クローンでも OK です）
 
 [![Image from Gyazo](https://i.gyazo.com/fabb3b1b77c007f07b0afe8585bbc4d7.png)](https://gyazo.com/fabb3b1b77c007f07b0afe8585bbc4d7)
 
 ### ライブラリをインストールする
 
 :::message
-ここからはVS Codeでの作業です。
+ここからは VS Code での作業です。
 :::
 
 ターミナルでさきほど解凍したフォルダーに移動し、下記を実行します。
@@ -36,7 +36,7 @@ https://github.com/mitsuoka0423/line-members-card-react-frontend
 yarn
 ```
 
-以下のように表示されればOKです。
+以下のように表示されれば OK です。
 
 ```log
 ✨  Done in 3.66s.
@@ -50,7 +50,7 @@ yarn
 cp .env.sample .env
 ```
 
-`.env`ファイルの中身は変更なしでOKです。
+`.env`ファイルの中身は変更なしで OK です。
 
 ### 動作確認する
 
@@ -71,17 +71,17 @@ vite v2.9.9 dev server running at:
 ready in 225ms.
 ```
 
-http://localhost:3000/ にアクセスして、下記のような画面が表示されればOKです。
+http://localhost:3000/ にアクセスして、下記のような画面が表示されれば OK です。
 
 [![Image from Gyazo](https://i.gyazo.com/2a0b8df06c5a372d2f3aa258920803e8.png)](https://gyazo.com/2a0b8df06c5a372d2f3aa258920803e8)
 
 ## Airtableから会員IDを取得する
 
-フロントエンドからAPIを叩いて、会員IDを取得し、フロントエンドでバーコードを生成します。
+フロントエンドから API を叩いて、会員 ID を取得し、フロントエンドでバーコードを生成します。
 
 ### バックエンドの変更
 
-ここからはLaravelのコードを変更します。
+ここからは Laravel のコードを変更します。
 
 `routes/api.php`の一番下に、以下のコードを追加します。
 
@@ -122,7 +122,7 @@ Route::get('/members/{idToken}', function ($idToken) use ($bot) {
 });
 ```
 
-:::details api.phpの全量はこちら
+:::details api.php の全量はこちら
 ```diff php
 <?php
 
@@ -270,7 +270,7 @@ http://localhost:3000/ にアクセスします。
 ターミナルで`php artisan serve`および`yarn dev`を実行した状態にしてください。
 :::
 
-下記のように、バーコードのIDがAPIから取得したものになっていればOKです。
+下記のように、バーコードの ID が API から取得したものになっていれば OK です。
 
 [![Image from Gyazo](https://i.gyazo.com/214a13aedfde10023a3ba08c360930b4.png)](https://gyazo.com/214a13aedfde10023a3ba08c360930b4)
 
@@ -287,7 +287,7 @@ http://localhost:3000/ にアクセスします。
 
 https://developers.line.biz/ja/docs/liff/getting-started/
 
-下記手順を参考に、さきほど作成したチャネルにLIFFアプリを追加します。
+下記手順を参考に、さきほど作成したチャネルに LIFF アプリを追加します。
 
 https://developers.line.biz/ja/docs/liff/registering-liff-apps/#registering-liff-app
 
@@ -302,14 +302,14 @@ https://developers.line.biz/ja/docs/liff/registering-liff-apps/#registering-liff
 ### localhostの証明書を設定する
 
 :::message
-ここからはVS Code（フロントエンドのプロジェクト）での作業です。
+ここからは VS Code（フロントエンドのプロジェクト）での作業です。
 :::
 
 こちらの記事を参考にさせていただき、`localhost-key.pem`と`localhost.pem`を生成します。
 
 https://dev.classmethod.jp/articles/vite-https-localhost/
 
-下記のように`localhost-key.pem`と`localhost.pem`が生成されればOKです。
+下記のように`localhost-key.pem`と`localhost.pem`が生成されれば OK です。
 
 [![Image from Gyazo](https://i.gyazo.com/2d6a8db22e4db276a91b34cbe43bf403.png)](https://gyazo.com/2d6a8db22e4db276a91b34cbe43bf403)
 
@@ -335,7 +335,7 @@ export default defineConfig({
 });
 ```
 
-開発用サーバーを再起動すると、URLが`https`始まりになります。
+開発用サーバーを再起動すると、URL が`https`始まりになります。
 
 ```log
 vite v2.9.9 dev server running at:
@@ -346,7 +346,7 @@ vite v2.9.9 dev server running at:
 ready in 171ms.
 ```
 
-https://localhost:3000/ にアクセスして、バーコードが表示されればOKです。
+https://localhost:3000/ にアクセスして、バーコードが表示されれば OK です。
 
 [![Image from Gyazo](https://i.gyazo.com/3f367695f3e825ac5d8fc520b380b241.png)](https://gyazo.com/3f367695f3e825ac5d8fc520b380b241)
 
@@ -387,15 +387,15 @@ VITE_LIFF_CODE_TYPE=barcode # barcode | qrcode
 
 ### 動作確認する
 
-[LIFFアプリを登録する](#liffアプリを登録する)でコピーしたLIFF URLにアクセスします。
+[LIFFアプリを登録する](#liffアプリを登録する)でコピーした LIFF URL にアクセスします。
 
 [![Image from Gyazo](https://i.gyazo.com/b250123461d3d200a9519063aa4c5dca.png)](https://gyazo.com/b250123461d3d200a9519063aa4c5dca)
 
-LINEへのログインが求められるので、ログインします。
+LINE へのログインが求められるので、ログインします。
 
 [![Image from Gyazo](https://i.gyazo.com/51642832b08702b19fd906a83832fe76.png)](https://gyazo.com/51642832b08702b19fd906a83832fe76)
 
-Airtableの`MemberId`と同じ番号が表示されればOKです。
+Airtable の`MemberId`と同じ番号が表示されれば OK です。
 
 [![Image from Gyazo](https://i.gyazo.com/903ecef196a9200c2af07fec34d187c0.gif)](https://gyazo.com/903ecef196a9200c2af07fec34d187c0)
 

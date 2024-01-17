@@ -4,7 +4,7 @@ title: "画像分析AI(顔検出)と組み合わせよう"
 
 # 2.1.この章のゴール
 
-- LINE BotとAzure Face APIを組み合わせて、顔検出Botを作成する
+- LINE Bot と Azure Face API を組み合わせて、顔検出 Bot を作成する
 
 ## 2.1.1.完成イメージ
 
@@ -24,17 +24,17 @@ title: "画像分析AI(顔検出)と組み合わせよう"
 
 ざっくり説明します。
 
-- Microsoftが提供しているクラウドサービスのこと
-- 200以上のサービスが提供されている
+- Microsoft が提供しているクラウドサービスのこと
+- 200 以上のサービスが提供されている
 - AI・機械学習系のサービスも充実している
 
-今日はAzureのサービスの内、AIを提供しているサービスである`Cognitive Service`の`Face API`を利用します。
+今日は Azure のサービスの内、AI を提供しているサービスである`Cognitive Service`の`Face API`を利用します。
 
 ## 2.2.2.Face APIの紹介
 
 > 公式ドキュメントはこちら：https://azure.microsoft.com/ja-jp/services/cognitive-services/face/
 
-`Face API`には大きく分けて3つの機能が提供されています。
+`Face API`には大きく分けて 3 つの機能が提供されています。
 
 - 顔検出
 - 顔認証
@@ -65,9 +65,9 @@ title: "画像分析AI(顔検出)と組み合わせよう"
 
 ## 2.2.3.ここまでのまとめ
 
-- Azureとは、Microsoftが提供しているクラウドサービスのこと。
-- AzureのAI・機械学習系のサービスの1つとして、**顔検出AI**が提供されている。
-- 顔検出AIは**API**として提供されているので、簡単にプロダクトに組み込める。
+- Azure とは、Microsoft が提供しているクラウドサービスのこと。
+- Azure の AI・機械学習系のサービスの 1 つとして、**顔検出AI**が提供されている。
+- 顔検出 AI は**API**として提供されているので、簡単にプロダクトに組み込める。
 
 # 2.3.手を動かすタイム
 
@@ -77,14 +77,14 @@ title: "画像分析AI(顔検出)と組み合わせよう"
 
 ### 2.3.1.1.Azureポータルにログインする
 
-Azureポータルを開きます。  
+Azure ポータルを開きます。  
 https://portal.azure.com/
 
-ログインし、以下のようなページが表示されればOKです。
+ログインし、以下のようなページが表示されれば OK です。
 
 ![https://i.gyazo.com/9c41bc6e713573818c8a2086a6e204be.png](https://i.gyazo.com/9c41bc6e713573818c8a2086a6e204be.png)
 
-Face APIのリソースを作成します。
+Face API のリソースを作成します。
 
 ![https://i.gyazo.com/506f1466fe43354518e43cc5a3bd24fa.png](https://i.gyazo.com/506f1466fe43354518e43cc5a3bd24fa.png)
 
@@ -134,16 +134,16 @@ Face APIのリソースを作成します。
 
 ### 2.3.2.1.コードにFace APIのキー・エンドポイントを記入する
 
-Gitpodのタブを開きます。
+Gitpod のタブを開きます。
 
 > Gitpodを一度閉じてしまった人は、[ここ](https://gitpod.io/#https://github.com/tmitsuoka0423/line-bot-azure-face-api-face-detection-handson)をクリックして再度開きましょう。  
 > その際、LINE Developerコンソールから、`チャネルシークレット`と`チャネルアクセストークン`を再びコピーしてくる必要があります。
 
-24行目あたりにある、`faceKey`・`faceEndPoint`にそれぞれ、先程コピーした`キー1`・`エンドポイント`をペーストします。
+24 行目あたりにある、`faceKey`・`faceEndPoint`にそれぞれ、先程コピーした`キー1`・`エンドポイント`をペーストします。
 
 ![https://i.gyazo.com/80f298f713ff96a00375a670ce6e6b5d.png](https://i.gyazo.com/80f298f713ff96a00375a670ce6e6b5d.png)
 
-こんな感じになればOKです。
+こんな感じになれば OK です。
 
 > `キー1`・`エンドポイント`の内容は人によって変わるので注意。
 
@@ -151,7 +151,7 @@ Gitpodのタブを開きます。
 
 ### 2.3.2.2.Expressを再起動する
 
-ターミナルをクリックし、`Ctrl + C`を押して、Expressを一度停止させます。
+ターミナルをクリックし、`Ctrl + C`を押して、Express を一度停止させます。
 
 ![https://i.gyazo.com/8357e06087a090b6d7eba35bc7b52b09.png](https://i.gyazo.com/8357e06087a090b6d7eba35bc7b52b09.png)
 
@@ -163,20 +163,20 @@ Gitpodのタブを開きます。
 
 ![https://i.gyazo.com/0cd665b2856038452f724002cad15e24.png](https://i.gyazo.com/0cd665b2856038452f724002cad15e24.png)
 
-Expressが起動していることを確認します。
+Express が起動していることを確認します。
 
 ![https://i.gyazo.com/b50a862bf882e03edcf0fe5501d1e676.png](https://i.gyazo.com/b50a862bf882e03edcf0fe5501d1e676.png)
 
-以上で、顔検出Botの設定は終わりです。
+以上で、顔検出 Bot の設定は終わりです。
 
 ## 2.3.3.顔検出Botを動かしてみよう
 
-Botに人の顔が写っている写真を送信してみましょう。  
-起きている/寝ているが判定されて返ってきます。（精度は少し低いです。）
+Bot に人の顔が写っている写真を送信してみましょう。  
+起きている/寝ているが判定されて返ってきます（精度は少し低いです）。
 
 [![Image from Gyazo](https://i.gyazo.com/9b7a5bff129e46b7c3da41d050f902a6.gif)](https://gyazo.com/9b7a5bff129e46b7c3da41d050f902a6)
 
-以上で顔検出Botの作成はおしまいです！
+以上で顔検出 Bot の作成はおしまいです！
 
 ## 2.3.4.(オプション)ウインク判定を入れてみよう
 
@@ -184,5 +184,5 @@ Botに人の顔が写っている写真を送信してみましょう。
 
 # 2.4.まとめ
 
-- Azureが提供しているAI・機械学習系サービスであるFace APIを利用するため、Azure上でリソースを作成しました。
-- LINE BotとFace API組み合わせて、送った写真の顔検出、目の開き具合から起きてる/寝てる判定を行うBotを作成しました。
+- Azure が提供している AI・機械学習系サービスである Face API を利用するため、Azure 上でリソースを作成しました。
+- LINE Bot と Face API 組み合わせて、送った写真の顔検出、目の開き具合から起きてる/寝てる判定を行う Bot を作成しました。

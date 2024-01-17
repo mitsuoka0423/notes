@@ -4,7 +4,7 @@ title: "事前準備"
 
 ## Gitpodへログイン
 
-下記URLにアクセスし、`Dashboard`ボタンをクリックします。
+下記 URL にアクセスし、`Dashboard`ボタンをクリックします。
 
 https://www.gitpod.io/
 
@@ -14,15 +14,15 @@ https://www.gitpod.io/
 
 [![Image from Gyazo](https://i.gyazo.com/50aa1ba66952106b5df46dcca2440a01.png)](https://gyazo.com/50aa1ba66952106b5df46dcca2440a01)
 
-Workspaceが表示されればOKです。
+Workspace が表示されれば OK です。
 
 [![Image from Gyazo](https://i.gyazo.com/5f9ccc9c470b955d7e8db5563bb1aa8a.png)](https://gyazo.com/5f9ccc9c470b955d7e8db5563bb1aa8a)
 
-:::details Gitpodを使わずローカルで実行する場合はこちらを実施してください
+:::details Gitpod を使わずローカルで実行する場合はこちらを実施してください
 
 ## PHPのインストール
 
-下記手順を参考にPHPをインストールします。
+下記手順を参考に PHP をインストールします。
 
 https://www.php.net/manual/ja/install.php
 
@@ -34,7 +34,7 @@ https://www.php.net/manual/ja/install.php
 >
 > https://www.php.net/manual/ja/install.windows.php
 
-コマンドプロンプトやターミナルで下記のコマンドを実行し、バージョンが表示されればOKです。
+コマンドプロンプトやターミナルで下記のコマンドを実行し、バージョンが表示されれば OK です。
 
 ```bash
 php -v
@@ -64,11 +64,11 @@ Composer version 2.3.5 2022-04-13 16:43:00
 
 ## Node.jsのインストール
 
-下記手順を参考にNode.jsをインストールします。
+下記手順を参考に Node.js をインストールします。
 
 https://zenn.dev/protoout/articles/17-how-to-nodejs-install
 
-コマンドプロンプトやターミナルで下記のコマンドを実行し、バージョンが表示されればOKです。
+コマンドプロンプトやターミナルで下記のコマンドを実行し、バージョンが表示されれば OK です。
 
 ```bash
 node -v
@@ -105,7 +105,7 @@ https://zenn.dev/protoout/articles/16-line-bot-setup
 
 https://www.airtable.com/
 
-ログイン後にこのような画面が表示されればOKです。
+ログイン後にこのような画面が表示されれば OK です。
 
 [![Image from Gyazo](https://i.gyazo.com/fec2236bbacd86c9eb74eb16018da6b7.png)](https://gyazo.com/fec2236bbacd86c9eb74eb16018da6b7)
 
@@ -128,23 +128,23 @@ https://www.airtable.com/
 | `Name` | `Single line text` |
 | `MemberId` | `Single line text` |
 
-下記の画像の通りになればOKです。
+下記の画像の通りになれば OK です。
 
 [![Image from Gyazo](https://i.gyazo.com/f1c442d1699f43ac605083a1e1e7f46d.png)](https://gyazo.com/f1c442d1699f43ac605083a1e1e7f46d)
 
 ### Airtableのbase IDを取得
 
-`Members Card`ベースのURLの`app***********`をコピーしておきます。
+`Members Card`ベースの URL の`app***********`をコピーしておきます。
 
 [![Image from Gyazo](https://i.gyazo.com/f01a5de2812822c57ecb922639ae7eb3.png)](https://gyazo.com/f01a5de2812822c57ecb922639ae7eb3)
 
 ### AirtableのAPI Keyを取得
 
-下記URLにアクセスします。
+下記 URL にアクセスします。
 
 https://airtable.com/account
 
-`Generate API Key`をクリックし、API Keyを生成します。
+`Generate API Key`をクリックし、API Key を生成します。
 
 [![Image from Gyazo](https://i.gyazo.com/25f2b5395ed36143aa2ad2bb5dfb1c41.png)](https://gyazo.com/25f2b5395ed36143aa2ad2bb5dfb1c41)
 

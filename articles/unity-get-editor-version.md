@@ -8,13 +8,13 @@ published: true
 
 ## はじめに
 
-Unityで、他の人が作成したプロジェクトを実行する際は、エディターバージョンを合わせる必要があります。
+Unity で、他の人が作成したプロジェクトを実行する際は、エディターバージョンを合わせる必要があります。
 
 本記事では、任意のエディターバージョンをインストールする手順をメモします。
 
 ## 手順
 
-Unity Hubを開く
+Unity Hub を開く
 
 [![Image from Gyazo](https://i.gyazo.com/029467dd2cf6876cc65dc7b94e31ebc3.png)](https://gyazo.com/029467dd2cf6876cc65dc7b94e31ebc3)
 
@@ -42,4 +42,4 @@ Unity Hubを開く
 
 [![Image from Gyazo](https://i.gyazo.com/5a7d1949787b58d7dab725e9f8ece951.png)](https://gyazo.com/5a7d1949787b58d7dab725e9f8ece951)
 
-すると、Unity Hubが起動し、インストールが始まります。
+すると、Unity Hub が起動し、インストールが始まります。

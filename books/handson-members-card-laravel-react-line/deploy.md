@@ -5,8 +5,8 @@ title: "デプロイ"
 ## バックエンドをHerokuにデプロイする
 
 :::message alert
-現状、本コードをHerokuでビルドするとエラーが発生するため、
-バックエンドコードのHerokuデプロイはスキップします。
+現状、本コードを Heroku でビルドするとエラーが発生するため、
+バックエンドコードの Heroku デプロイはスキップします。
 :::
 
 ## フロントエンドをNetlifyにデプロイする
@@ -14,7 +14,7 @@ title: "デプロイ"
 ### ビルドする
 
 :::message
-ここからはVS Codeでの作業です。
+ここからは VS Code での作業です。
 :::
 
 下記を実行してビルドします。
@@ -23,7 +23,7 @@ title: "デプロイ"
 yarn build
 ```
 
-下記のように表示されて、`dist`フォルダーにファイルが生成されていればOKです。
+下記のように表示されて、`dist`フォルダーにファイルが生成されていれば OK です。
 
 ```log
 yarn run v1.22.17
@@ -59,7 +59,7 @@ dist/assets/index.b7ab0c04.js   483.36 KiB / gzip: 144.86 KiB
 
 ### 発行されたURLをフロントエンドの環境変数に追加する
 
-`.env`にさきほどコピーしたNetlifyのURLを`VITE_LIFF_REDIRECT_URI`に設定します。
+`.env`にさきほどコピーした Netlify の URL を`VITE_LIFF_REDIRECT_URI`に設定します。
 
 ```diff
 VITE_LIFF_ID=1657262868-P5XDwM10
@@ -82,13 +82,13 @@ VITE_LIFF_CODE_TYPE=barcode # barcode | qrcode
 ここからは、[LINE Developersコンソール](https://developers.line.biz/ja/)での作業です。
 :::
 
-[LIFFアプリを登録する](https://zenn.dev/tmitsuoka0423/books/handson-members-card-laravel-react-line/viewer/liff-react#liff%E3%82%A2%E3%83%97%E3%83%AA%E3%82%92%E7%99%BB%E9%8C%B2%E3%81%99%E3%82%8B)で作成したLIFFアプリの`エンドポイントURL`をNetlifyのURLに変更します。
+[LIFFアプリを登録する](https://zenn.dev/tmitsuoka0423/books/handson-members-card-laravel-react-line/viewer/liff-react#liff%E3%82%A2%E3%83%97%E3%83%AA%E3%82%92%E7%99%BB%E9%8C%B2%E3%81%99%E3%82%8B)で作成した LIFF アプリの`エンドポイントURL`を Netlify の URL に変更します。
 
 [![Image from Gyazo](https://i.gyazo.com/1d0416794c351bc1c704feff77053fff.png)](https://gyazo.com/1d0416794c351bc1c704feff77053fff)
 
-更新できたら、LIFF URLにアクセスしましょう。
+更新できたら、LIFF URL にアクセスしましょう。
 
-バーコードが表示されればOKです！
+バーコードが表示されれば OK です！
 
 [![Image from Gyazo](https://i.gyazo.com/903ecef196a9200c2af07fec34d187c0.gif)](https://gyazo.com/903ecef196a9200c2af07fec34d187c0)
 

@@ -10,7 +10,7 @@ published: false
 
 最近水耕栽培を始めたのですが、たまにオートサイフォンが動作しなかったり、ポンプが止まったりして、根腐れしてしまうかもしれないので、水位を監視するシステムを作ろうと思います。
 
-今回は、M5 ATOM Matrixに水位センサーをつないで、データをIoT Centralに送信してみます。
+今回は、M5 ATOM Matrix に水位センサーをつないで、データを IoT Central に送信してみます。
 
 ## 今回使うもの
 
@@ -23,7 +23,7 @@ published: false
 
 ## デバイスのセットアップ
 
-こちらの記事を参考にM5 ATOM Matrixに
+こちらの記事を参考に M5 ATOM Matrix に
 
 https://qiita.com/yukimatsu/items/52c6b8435cc81d1c9dfa
 

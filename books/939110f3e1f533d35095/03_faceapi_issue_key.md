@@ -2,20 +2,20 @@
 title: "(補足資料)Face APIのキーとエンドポイントを発行する"
 ---
 
-Face APIは登録した人しか使えないため、キーとなる情報を発行する必要があります。
+Face API は登録した人しか使えないため、キーとなる情報を発行する必要があります。
 以下のその手順を記載します。
 
 # Azureポータルにログインする
 
-Azureポータルを開きます。
+Azure ポータルを開きます。
 
 https://portal.azure.com/
 
-ログインし、以下のようなページが表示されればOKです。
+ログインし、以下のようなページが表示されれば OK です。
 
 ![https://i.gyazo.com/9c41bc6e713573818c8a2086a6e204be.png](https://i.gyazo.com/9c41bc6e713573818c8a2086a6e204be.png)
 
-Face APIのリソースを作成します。
+Face API のリソースを作成します。
 
 ![https://i.gyazo.com/506f1466fe43354518e43cc5a3bd24fa.png](https://i.gyazo.com/506f1466fe43354518e43cc5a3bd24fa.png)
 
@@ -61,4 +61,4 @@ Face APIのリソースを作成します。
 
 ![https://i.gyazo.com/199c26da328160a466584e4f420b3f69.png](https://i.gyazo.com/199c26da328160a466584e4f420b3f69.png)
 
-これでキーとエンドポイントを発行することができました。
+これでキーとエンドポイントを発行できました。

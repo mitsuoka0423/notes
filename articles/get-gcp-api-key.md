@@ -8,8 +8,8 @@ published: true
 
 ## はじめに
 
-本記事は、[Google Cloud API](https://cloud.google.com/apis/docs/overview?hl=ja)を利用する際に使用するAPI Keyの発行方法について記載します。
-例として、Google Cloud Vision APIを利用するケースについて紹介します。
+本記事は、[Google Cloud API](https://cloud.google.com/apis/docs/overview?hl=ja)を利用する際に使用する API Key の発行方法について記載します。
+例として、Google Cloud Vision API を利用するケースについて紹介します。
 
 公式ドキュメントはこちらを参考にしました。
 
@@ -19,7 +19,7 @@ https://cloud.google.com/vision/docs/before-you-begin?hl=ja
 
 ### Google Cloud Platformにログインする
 
-こちらからログインします。お持ちのGoogleアカウントでログインしましょう。
+こちらからログインします。お持ちの Google アカウントでログインしましょう。
 
 https://cloud.google.com/?hl=ja
 
@@ -34,7 +34,7 @@ https://cloud.google.com/?hl=ja
 > クレジットカードの登録を求められますが、登録後90日は300ドル相当のクレジットが提供される＆トライアル期間が終了した場合も自動で課金されることはないとのことです。(2022/04/03時点)
 > ![](https://i.gyazo.com/48ea9a36a06b585b234912697c2c50ae.png)
 
-下記のような画面になればOKです。
+下記のような画面になれば OK です。
 
 ![](https://i.gyazo.com/90cac42bd9b4d6b81f3f8a3cba1ee13a.png)
 
@@ -63,7 +63,7 @@ https://cloud.google.com/?hl=ja
 
 ### APIを有効にする
 
-利用するAPIを有効にします。今回はCloud Vision APIを有効にする手順を紹介しますが、他のAPIでも同様です。
+利用する API を有効にします。今回は Cloud Vision API を有効にする手順を紹介しますが、他の API でも同様です。
 
 `有効なAPIとサービス`を開く
 
@@ -77,13 +77,13 @@ https://cloud.google.com/?hl=ja
 
 ![](https://i.gyazo.com/c613836594f1b5603a9f52612f9b016d.png)
 
-Cloud Vision APIを有効にする
+Cloud Vision API を有効にする
 
 ![](https://i.gyazo.com/12dd241dacce15fe079b4ad9b9e150db.png)
 
 ![](https://i.gyazo.com/607f469a4a1182180d5bdb13cce1b9be.png)
 
-この画面になればOKです
+この画面になれば OK です
 
 ![](https://i.gyazo.com/81bb40d022b12090b8788e690a64fba4.png)
 
@@ -99,7 +99,7 @@ Cloud Vision APIを有効にする
 
 ![](https://i.gyazo.com/cfdfc48bb5b26c5bd249b25b200917aa.png)
 
-API Keyが発行されるので、こちらをコピーして利用しましょう。
+API Key が発行されるので、こちらをコピーして利用しましょう。
 
 > API Keyは外部に公開しないでください。
 > 悪用されて高額な請求につながる可能性があるので、扱いには注意しましょう。
@@ -108,9 +108,9 @@ API Keyが発行されるので、こちらをコピーして利用しましょ�
 
 ## （参考）Make（Integormat）のGoogle Cloud Visionモジュール設定
 
-MakeのGoogle Cloud Visionモジュールに設定してみます。
+Make の Google Cloud Vision モジュールに設定してみます。
 
-`connection`の`Add`をクリックし、`API Key`にさきほどコピーしたAPI Keyを貼り付けます。
+`connection`の`Add`をクリックし、`API Key`にさきほどコピーした API Key を貼り付けます。
 
 ![](https://i.gyazo.com/8acf487a9de0ea71a0ada10931a87c2a.png)
 
@@ -118,5 +118,5 @@ MakeのGoogle Cloud Visionモジュールに設定してみます。
 
 ## まとめ
 
-Google Cloud APIのAPI Keyの発行方法について紹介しました。
-いろいろなAPIがあるので使ってみましょう。
+Google Cloud API の API Key の発行方法について紹介しました。
+いろいろな API があるので使ってみましょう。

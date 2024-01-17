@@ -8,7 +8,7 @@ published: true
 
 ## はじめに
 
-このシリーズでは、PHPフレームワークの一つである`Laravel`を使ったLINE Botの作り方を説明します。
+このシリーズでは、PHP フレームワークの 1 つである`Laravel`を使った LINE Bot の作り方を説明します。
 
 ### 完成イメージ
 
@@ -19,7 +19,7 @@ https://twitter.com/mitsuoka0423/status/1522222293958934531?s=20&t=Acf2XNzs3MQMT
 - [Laravelで超シンプルにLINE Botを作る（開発準備編）](./laravel-line-helloworld-01)
 - [Laravelで超シンプルにLINE Botを作る（Webhookエンドポイント作成編）](./laravel-line-helloworld-02)
 - [Laravelで超シンプルにLINE Botを作る（ngrokインストール編）](./laravel-line-helloworld-03)
-- Laravelで超シンプルにLINE Botを作る（Messaging API編）
+- Laravel で超シンプルに LINE Bot を作る（Messaging API 編）
 
 ### ドキュメント
 
@@ -47,7 +47,7 @@ Docker version 20.10.14, build a224086
 
 ## LINE Messaging API SDK for PHP をインストールする
 
-公式SDKが提供されていますので、こちらをインストールします。
+公式 SDK が提供されていますので、こちらをインストールします。
 
 https://github.com/line/line-bot-sdk-php
 
@@ -57,7 +57,7 @@ https://github.com/line/line-bot-sdk-php
 docker compose exec laravel.test composer require linecorp/line-bot-sdk
 ```
 
-以下のように表示されればOKです。
+以下のように表示されれば OK です。
 
 ```log
 Info from https://repo.packagist.org: #StandWithUkraine
@@ -121,7 +121,7 @@ https://zenn.dev/protoout/articles/16-line-bot-setup
 
 ## 動作確認する
 
-LINE DevelopersのWebhook URLに設定するためのURLをngrokを利用して発行します。
+LINE Developers の Webhook URL に設定するための URL を ngrok を利用して発行します。
 
 ### 事前準備
 
@@ -135,7 +135,7 @@ LINE DevelopersのWebhook URLに設定するためのURLをngrokを利用して�
 $ ngrok http 80
 ```
 
-`Forwarding`に表示されるURLをコピーしておきます。
+`Forwarding`に表示される URL をコピーしておきます。
 
 ```log
 Session Status                online                                                                         
@@ -152,7 +152,7 @@ Connections                   ttl     opn     rt1     rt5     p50     p90
 
 ### LINE DevelopersコンソールでWebhook URLを設定する
 
-上記でコピーした`Forwarding`に表示されるURLを、LINE Developersコンソールの`Webhook URL`に設定します。
+上記でコピーした`Forwarding`に表示される URL を、LINE Developers コンソールの`Webhook URL`に設定します。
 
 > `ngrok http 80`を実行するごとにURLが変わるので注意してください。
 > URLの末尾に`/api/webhook`を追加してください。
@@ -160,7 +160,7 @@ Connections                   ttl     opn     rt1     rt5     p50     p90
 [![Image from Gyazo](https://i.gyazo.com/20d3bd89290b676b0ceb9d328061473f.png)](https://gyazo.com/20d3bd89290b676b0ceb9d328061473f)
 
 `検証`をクリックします。
-`成功`と表示されればOKです。
+`成功`と表示されれば OK です。
 
 > エラーになった場合は、以下を見直しましょう
 > - ngrokで発行されたURLが古いものになっていないか
@@ -168,7 +168,7 @@ Connections                   ttl     opn     rt1     rt5     p50     p90
 
 [![Image from Gyazo](https://i.gyazo.com/329731a8134a257ab773389f0c8d08e6.png)](https://gyazo.com/329731a8134a257ab773389f0c8d08e6)
 
-`Webhookの利用`をONにします。
+`Webhookの利用`を ON にします。
 
 [![Image from Gyazo](https://i.gyazo.com/c1ea5a57919a80d157533882e5b4df8f.png)](https://gyazo.com/c1ea5a57919a80d157533882e5b4df8f)
 
@@ -180,7 +180,7 @@ Connections                   ttl     opn     rt1     rt5     p50     p90
 
 ### LINEで友達登録して、話しかけてみる
 
-LINE Developersコンソールの`Messaging API設定`タブにQRコードがあるので、読み取って友達になりましょう。
+LINE Developers コンソールの`Messaging API設定`タブに QR コードがあるので、読み取って友達になりましょう。
 
 [![Image from Gyazo](https://i.gyazo.com/ba88c870bc0c3eaa188f7557014fbff3.png)](https://gyazo.com/ba88c870bc0c3eaa188f7557014fbff3)
 
@@ -190,10 +190,10 @@ https://twitter.com/mitsuoka0423/status/1522206629441454081?s=20&t=jOlnpNyU1tLay
 
 ## おわりに
 
-Laravelで超シンプルにオウム返しするLINE Botを作成しました。
-Messaging APIを使ってもっと色んなことができるので、そちらの解説記事も追加していこうと思います。
+Laravel で超シンプルにオウム返しする LINE Bot を作成しました。
+Messaging API を使ってもっと色んなことができるので、そちらの解説記事も追加していこうと思います。
 
 - [Laravelで超シンプルにLINE Botを作る（開発準備編）](./laravel-line-helloworld-01)
 - [Laravelで超シンプルにLINE Botを作る（Webhookエンドポイント作成編）](./laravel-line-helloworld-02)
 - [Laravelで超シンプルにLINE Botを作る（ngrokインストール編）](./laravel-line-helloworld-03)
-- Laravelで超シンプルにLINE Botを作る（Messaging API編）
+- Laravel で超シンプルに LINE Bot を作る（Messaging API 編）

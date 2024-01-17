@@ -19,16 +19,16 @@ https://github.com/mitsuoka0423/laravel-line-menbers-card/tree/feature/barcode-b
 ## ライブラリをインストールする
 
 :::message
-ここからはVS Code/Gitpodでの作業です。
+ここからは VS Code/Gitpod での作業です。
 :::
 
 以下のライブラリを利用します。
 
-- Airtableクライアントライブラリ（非公式）
+- Airtable クライアントライブラリ（非公式）
 
 https://github.com/TappNetwork/laravel-airtable
 
-- PHPでバーコード画像を生成するライブラリ
+- PHP でバーコード画像を生成するライブラリ
 
 https://github.com/picqer/php-barcode-generator
 
@@ -42,11 +42,11 @@ composer require tapp/laravel-airtable picqer/php-barcode-generator
 
 ### (事前準備)Airtableの`base ID`と`API Key`を取得する
 
-[事前準備](./preparing) の「Airtableへログイン 〜 AirtableのAPI Keyを取得」を実施し、`base ID`と`API Key`を取得しておきます。
+[事前準備](./preparing) の「Airtable へログイン 〜 Airtable の API Key を取得」を実施し、`base ID`と`API Key`を取得しておきます。
 
 ### コードを変更する
 
-以下の3ファイルを変更します。
+以下の 3 ファイルを変更します。
 
 - `routes/api.php`
 - `config/airtable.php`
@@ -169,7 +169,7 @@ php artisan vendor:publish --provider="Tapp\Airtable\AirtableServiceProvider"
 
 #### `.env`
 
-`.env`を開き、一番下にAirtableの変数を追加します。
+`.env`を開き、一番下に Airtable の変数を追加します。
 
 ```diff
 LINE_CHANNEL_ACCESS_TOKEN=xxxxxxxxxxxxxxxxxxxxxxx
@@ -183,20 +183,20 @@ LINE_CHANNEL_SECRET=xxxxxxxxxxxxxxxxx
 
 ### 動作確認
 
-ここまで変更して、LINEで`会員カード`とメッセージを送ると以下のようになります。
+ここまで変更して、LINE で`会員カード`とメッセージを送ると以下のようになります。
 
-- LINEに会員IDが表示される
-- Airtableにレコードが追加される
+- LINE に会員 ID が表示される
+- Airtable にレコードが追加される
 
 [![Image from Gyazo](https://i.gyazo.com/dde82898893fea6e9ae46212dc19bb47.gif)](https://gyazo.com/dde82898893fea6e9ae46212dc19bb47)
 
-続いて、会員IDをもとにバーコードを表示するよう変更します。
+続いて、会員 ID をもとにバーコードを表示するよう変更します。
 
 ## 会員IDからバーコードを生成する
 
 ### コードを変更する
 
-以下の2ファイルを変更します。
+以下の 2 ファイルを変更します。
 
 - `routes/api.php`
 - `.env`
@@ -298,7 +298,7 @@ $bot = new LINEBot($httpClient, ['channelSecret' => $_ENV['LINE_CHANNEL_SECRET']
 
 #### `.env`
 
-`.env`の`APP_URL`を[Laravelでオウム返しするLINE Botを作る](./laravel-echo-bot)で発行したURLに書き換えます。
+`.env`の`APP_URL`を[Laravelでオウム返しするLINE Botを作る](./laravel-echo-bot)で発行した URL に書き換えます。
 
 ```diff
 APP_NAME=Laravel
@@ -311,8 +311,8 @@ APP_DEBUG=true
 ```
 
 :::message
-設定するURLはご自身の環境のURLを設定してください。
-（上記のURLはサンプルですので、設定しても動きません）
+設定する URL はご自身の環境の URL を設定してください。
+（上記の URL はサンプルですので、設定しても動きません）。
 :::
 
 #### コマンド実行
@@ -325,6 +325,6 @@ php artisan storage:link
 
 ### 動作確認する
 
-ここまで変更して、LINEで`会員カード`とメッセージを送るとバーコードが表示されるようになります！
+ここまで変更して、LINE で`会員カード`とメッセージを送るとバーコードが表示されるようになります！
 
 [![Image from Gyazo](https://i.gyazo.com/78d8f4c0d45f66204d7b0052aa26d7ff.gif)](https://gyazo.com/78d8f4c0d45f66204d7b0052aa26d7ff)

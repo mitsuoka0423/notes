@@ -11,7 +11,7 @@ published: true
 https://zenn.dev/tmitsuoka0423/articles/laravel-line-helloworld
 
 の続きです。
-前回作成したLINE Botを改修して、`フォローイベント`（友達登録時/ブロック解除時に発生するイベント）に応答できるように変更します。
+前回作成した LINE Bot を改修して、`フォローイベント`（友達登録時/ブロック解除時に発生するイベント）に応答できるように変更します。
 
 少しハマったので、後半で説明します。
 
@@ -104,12 +104,12 @@ Route::post('/webhook', function (Request $request) use ($bot) {
 ```
 
 - フォローイベントのときの条件分岐を追加。
-- 友達登録されたら〇〇したい、みたいな処理はこの中に書けばOK。
+- 友達登録されたら〇〇したい、みたいな処理はこの中に書けば OK。
 
 ## 署名検証で少しハマったメモ
 
 [line-bot-sdk-php/Route.php at master · line/line-bot-sdk-php](https://github.com/line/line-bot-sdk-php/blob/master/examples/EchoBot/src/LINEBot/EchoBot/Route.php#L44)
-を参考に実装してたら少しハマったのでメモ。（ハマった原因は僕です）
+を参考に実装してたら少しハマったのでメモ（ハマった原因は僕です）
 
 最初、サンプルを参考にこんなコードを書いていました。
 
@@ -128,7 +128,7 @@ Route::post('/webhook', function (Request $request) use ($bot) {
 [2022-06-04 02:33:11] local.ERROR: Invalid signature has given {"exception":"[object] (LINE\\LINEBot\\Exception\\InvalidSignatureException(code: 0): Invalid signature has given at /Users/mitsu/ghq/github.com/mitsuoka0423/laravel-line-members-card/backend/vendor/linecorp/line-bot-sdk/src/LINEBot/Event/Parser/EventRequestParser.php:71)
 ```
 
-原因は、`$signature[0]`の`[0]`で、Laravelでは不要でした。
+原因は、`$signature[0]`の`[0]`で、Laravel では不要でした。
 
 > 公式のサンプルが利用している[Slim Framework - Slim Framework](https://www.slimframework.com/)では必要なようです。
 

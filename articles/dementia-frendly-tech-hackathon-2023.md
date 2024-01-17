@@ -11,7 +11,7 @@ published: true
 こんにちは！
 LINE API Expert の [@mitsuoka0423](https://twitter.com/mitsuoka0423) です
 
-2023/08/05-06でオンライン/オフラインハイブリッド開催された認知症フレンドリーテックハッカソンに参戦してきました
+2023/08/05-06 でオンライン/オフラインハイブリッド開催された認知症フレンドリーテックハッカソンに参戦してきました
 
 https://dementia-friendly-tech.connpass.com/event/282971/
 
@@ -19,7 +19,7 @@ https://dementia-friendly-tech.connpass.com/event/282971/
 
 ## 若年性アルツハイマーの方のためのメモをタイムラインで遡れるアプリ「Sovinnon」
 
-ハッカソンのテーマが「認知症フレンドリーxテクノロジー」でしたので、
+ハッカソンのテーマが「認知症フレンドリーx テクノロジー」でしたので、
 私達のチームでは、若年性アルツハイマーの方のためのヘルプマークデジタル化アプリ
 「Sovinnon（ソビノン）」を作りました
 
@@ -35,7 +35,7 @@ https://github.com/mitsuoka0423/dementia-hackathon
 
 ### 若年性アルツハイマーの方の抱える課題
 
-下記2点に着目してプロダクトを検討しました
+下記 2 点に着目してプロダクトを検討しました
 
 1. ぱっと見ても、健常者と見分けがつかない
   - 男性が女性に道を聞くと、ナンパと勘違いされることがあるとのこと
@@ -45,14 +45,14 @@ https://github.com/mitsuoka0423/dementia-hackathon
 
 ### 当事者はどうしているのか
 
-1の課題については、ヒアリングしたところ[ヘルプマーク](https://www.fukushi.metro.tokyo.lg.jp/shougai/shougai_shisaku/helpmark.html)をよく利用しているとのことでした
+1 の課題については、ヒアリングしたところ[ヘルプマーク](https://www.fukushi.metro.tokyo.lg.jp/shougai/shougai_shisaku/helpmark.html)をよく利用しているとのことでした
 
-2については、メモや写真に残して、あとで思い出せるようにしているとのことでした
+2 については、メモや写真に残して、あとで思い出せるようにしているとのことでした
 ただメモを残すのが大変だったり、大量のメモや写真の中から必要な情報を見つけるのが大変という課題もあるようです
 
 ### 「Sovinnon」の解決策
 
-Sovinnonでは、1と2の課題を解決するアプリの解決・軽減を目指し、以下の機能を実装しました
+Sovinnon では、1 と 2 の課題を解決するアプリの解決・軽減を目指し、以下の機能を実装しました
 
 | ヘルプマーク表示 | プロフィール表示 | 音声メモ・写真のタイムライン表示 |
 | -- | -- | -- | 
@@ -67,7 +67,7 @@ Sovinnonでは、1と2の課題を解決するアプリの解決・軽減を目�
 
 [![Image from Gyazo](https://i.gyazo.com/20ce4af48fb1b64c6840e571a45b7c95.png)](https://gyazo.com/20ce4af48fb1b64c6840e571a45b7c95)
 
-Sovinnonの実態はWebアプリで、音声メモの部分は[ブラウザ標準のWeb Speech APIのSpeech Recognition](https://developer.mozilla.org/ja/docs/Web/API/Web_Speech_API)を利用しており、フロントエンドのフレームワークはReactを利用しました
+Sovinnon の実態は Web アプリで、音声メモの部分は[ブラウザ標準のWeb Speech APIのSpeech Recognition](https://developer.mozilla.org/ja/docs/Web/API/Web_Speech_API)を利用しており、フロントエンドのフレームワークは React を利用しました
 
 またユーザー専用のプロフィールやタイムラインを表示することを見据え、軽量でソーシャルログインを導入できる[LINEログイン](https://developers.line.biz/ja/services/line-login/)を採用しました
 
@@ -81,7 +81,7 @@ Sovinnonの実態はWebアプリで、音声メモの部分は[ブラウザ標�
 
 - アナログに紙とペンでメモを残すようにする方法があるなかで、デジタルにしたことで得られる明確なメリットが見えない
 - 大量の紙と写真の中から必要な情報を探すのが大変なので、「情報を探す」部分に工夫があると良かった
-  - 検索するにしても検索ワードを思い出す「想起」が難しいのでそこのサポートもあると良い
+  - 検索するにしても検索 Word を思い出す「想起」が難しいのでそこのサポートもあると良い
 
 というフィードバックをいただきました
 今後のアプリの改善で取り込んで行きたいと思います
@@ -92,9 +92,9 @@ Sovinnonの実態はWebアプリで、音声メモの部分は[ブラウザ標�
 そのためこのアプリの良いところ・改善点がわかっていません
 
 実際に課題を抱えていて、アプリ使ってみてもいいよ〜という方がいらっしゃったら、ぜひ使って、良し悪しフィードバックを[@mitsuka0423](https://twitter.com/mitsuoka0423)にください！
-（DMでもなんでも大丈夫です）
+（DM でもなんでも大丈夫です）
 
-Sovinnonはこちら↓から無料で使えます
+Sovinnon はこちら↓から無料で使えます
 https://mitsuoka0423.github.io/dementia-hackathon/
 
 

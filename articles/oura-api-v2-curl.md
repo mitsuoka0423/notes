@@ -8,27 +8,27 @@ published: true
 
 ## はじめに
 
-昨日Oura Ring Gen3が届きました。
+昨日 Oura Ring Gen3 が届きました。
 
 https://twitter.com/mitsuoka0423/status/1512748389498503173?s=20&t=iGk02lptPdq4yctcSlXX6g
 
-ドキュメントを見ていると、APIがあったので触ってみようと思います。
-今回は2022年1月に公開されたV2を触っていきます。
+ドキュメントを見ていると、API があったので触ってみようと思います。
+今回は 2022 年 1 月に公開された V2 を触っていきます。
 
 ## ドキュメント
 
 https://cloud.ouraring.com/v2/docs
 
-今回は2022年1月に公開されたV2を触っていきます。
+今回は 2022 年 1 月に公開された V2 を触っていきます。
 
-V2では、以下のデータも取得できるようになっているようです。
+V2 では、以下のデータも取得できるようになっているようです。
 
 - 心拍数
 - セッション
 - タグ
 - ワークアウト
 
-また、V1のときに取得できた以下のデータは今後公開予定とのことです。
+また、V1 のときに取得できた以下のデータは今後公開予定とのことです。
 
 - コンディション
 - 睡眠
@@ -70,7 +70,7 @@ curl -i -X GET \
 }
 ```
 
-### Daily Activityを取得してみる
+### Daily アクティビティを取得してみる
 
 > `3LGP...`の部分は`アクセストークンを取得する章`の手順で取得したアクセストークンに置き換えてください。
 
@@ -133,16 +133,16 @@ curl -i -X GET \
 
 ## まとめ
 
-curlでOura API V2を叩いてみました。
+curl で Oura API V2 を叩いてみました。
 アクセストークンも簡単に発行できる＆ドキュメントも整理されており、開発者に優しいですね。
 
 ## （余談）APIエンドポイントが2種類ある...？
 
-ドキュメントを眺めていると、APIエンドポイントのドメインが2種類ありました。
+ドキュメントを眺めていると、API エンドポイントのドメインが 2 種類ありました。
 
 [![Image from Gyazo](https://i.gyazo.com/d9a3f6f4ffba54c2bcf3d55def0979e2.png)](https://gyazo.com/d9a3f6f4ffba54c2bcf3d55def0979e2)
 
-試しに`https://cloud.ouraring.com/v2/usercollection/daily_activity`を叩いてみましたが、404が返ってきました。
+試しに`https://cloud.ouraring.com/v2/usercollection/daily_activity`を叩いてみましたが、404 が返ってきました。
 
 ```bash
 curl -i -X GET \

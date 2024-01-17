@@ -42,12 +42,12 @@ https://docs.microsoft.com/ja-jp/azure/iot-hub/iot-hub-python-python-file-upload
   - そのまま
 - 場所
   - 一番近い場所を選びましょう。今回は東日本を選択。
-- TLSの最小バージョン
+- TLS の最小バージョン
   - そのまま
 
 ![](https://i.gyazo.com/a3088cba9cf9dd7ff7385d81a33466b2.png)
 
-入力できたら、左下のOKボタンをクリック。
+入力できたら、左下の OK ボタンをクリック。
 
 続いてコンテナの作成。
 
@@ -71,7 +71,7 @@ https://docs.microsoft.com/ja-jp/azure/iot-hub/iot-hub-python-python-file-upload
 
 # Azure IoT Python SDKのインストール
 
-pipを使ってインストールします。
+pip を使ってインストールします。
 
 ```bash
 pip install azure-iot-device
@@ -82,7 +82,7 @@ pip install azure.storage.blob
 
 https://docs.microsoft.com/ja-jp/azure/iot-hub/iot-hub-python-python-file-upload#upload-a-file-from-a-device-app
 
-公式ドキュメントのコードをそのままコピペしました。
+公式ドキュメントのコードをそのままコピー&ペーストしました。
 
 全量はこちら。
 
@@ -179,7 +179,7 @@ if __name__ == "__main__":
     #loop.close()
 ```
 
-- `[Device Connection String]`をIoT Hubデバイスの接続文字列に置き換える
+- `[Device Connection String]`を IoT Hub デバイスの接続文字列に置き換える
 - `[Full path to local file]`を画像ファイルのフルパスに置き換える
 
 > IoT Hubデバイスの接続文字列の取得方法
@@ -189,7 +189,7 @@ if __name__ == "__main__":
 
 # 実行
 
-Python3系で実行してください。
+Python3 系で実行してください。
 
 ```bash
 python3 FileUpload.py
@@ -218,5 +218,5 @@ Upload succeeded. Result is:
 
 # おわりに
 
-Blob Storageにファイルをアップロードする際、IoT Hubを経由してアップロードすることができました。
+Blob Storage にファイルをアップロードする際、IoT Hub を経由してアップロードできました。
 公式のサンプルをそのまま動かすことができたので、特につまづくことなく最後まで進めることができました。

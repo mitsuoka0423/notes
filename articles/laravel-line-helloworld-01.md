@@ -8,7 +8,7 @@ published: true
 
 ## はじめに
 
-このシリーズでは、PHPフレームワークの一つである`Laravel`を使ったLINE Botの作り方を説明します。
+このシリーズでは、PHP フレームワークの 1 つである`Laravel`を使った LINE Bot の作り方を説明します。
 
 ### 完成イメージ
 
@@ -16,7 +16,7 @@ https://twitter.com/mitsuoka0423/status/1522222293958934531?s=20&t=Acf2XNzs3MQMT
 
 ### 目次
 
-- Laravelで超シンプルにLINE Botを作る（開発準備編）
+- Laravel で超シンプルに LINE Bot を作る（開発準備編）
 - [Laravelで超シンプルにLINE Botを作る（Webhookエンドポイント作成編）](./laravel-line-helloworld-02)
 - [Laravelで超シンプルにLINE Botを作る（ngrokインストール編）](./laravel-line-helloworld-03)
 - [Laravelで超シンプルにLINE Botを作る（Messaging API編）](./laravel-line-helloworld-04)
@@ -47,7 +47,7 @@ Docker version 20.10.14, build a224086
 
 ## Laravelプロジェクトをスタートする
 
-今回はローカルにはインストールせず、Dockerを利用してLaravelプロジェクトを実行する方法でやっていきます。
+今回はローカルにはインストールせず、Docker を利用して Laravel プロジェクトを実行する方法でやっていきます。
 
 ドキュメントはこちらを参照しています。
 
@@ -58,11 +58,11 @@ https://readouble.com/laravel/9.x/ja/installation.html
 
 ### Docker Desktopをインストール
 
-こちらからDocker Desktopをインストールしましょう。
+こちらから Docker Desktop をインストールしましょう。
 
 https://www.docker.com/products/docker-desktop/
 
-`docker -v`と`docker compose version`をターミナルで実行し、バージョンが表示されればOKです。
+`docker -v`と`docker compose version`をターミナルで実行し、バージョンが表示されれば OK です。
 
 ```bash
 $ docker -v
@@ -78,7 +78,7 @@ Docker Compose version v2.4.1
 
 ### Laravelプロジェクトを作成する
 
-今回はデスクトップにLaravelプロジェクトを作成します。
+今回はデスクトップに Laravel プロジェクトを作成します。
 以下のコマンドをターミナルで実行します。
 
 ```bash
@@ -133,15 +133,15 @@ example-app-laravel.test-1  | [Fri Apr 29 00:19:15 2022] PHP 8.1.5 Development S
 
 ### 起動を確認する
 
-http://0.0.0.0:80/ にアクセスして、画面が表示されればOKです。
+http://0.0.0.0:80/ にアクセスして、画面が表示されれば OK です。
 
 [![Image from Gyazo](https://i.gyazo.com/4d882a96dbd2ab1d25e4c77d3e7e1c85.png)](https://gyazo.com/4d882a96dbd2ab1d25e4c77d3e7e1c85)
 
 ## おわりに
 
-次回の記事で、LINE Bot用のWebhookエンドポイントを実装していきます。
+次回の記事で、LINE Bot 用の Webhook エンドポイントを実装していきます。
 
-- Laravelで超シンプルにLINE Botを作る（開発準備編）
+- Laravel で超シンプルに LINE Bot を作る（開発準備編）
 - [Laravelで超シンプルにLINE Botを作る（Webhookエンドポイント作成編）](./laravel-line-helloworld-02)
 - [Laravelで超シンプルにLINE Botを作る（ngrokインストール編）](./laravel-line-helloworld-03)
 - [Laravelで超シンプルにLINE Botを作る（Messaging API編）](./laravel-line-helloworld-04)

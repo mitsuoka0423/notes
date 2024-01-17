@@ -19,9 +19,9 @@ https://github.com/mitsuoka0423/laravel-line-menbers-card/tree/feature/echo-bot
 ## Gitpodでワークスペースを作成する
 
 本ハンズオンでは、エディターと実行環境がついている`Gitpod`を利用してハンズオンを進めていきます。
-最初にGitpodの準備を行います。
+最初に Gitpod の準備を行います。
 
-下記URLを開きます。
+下記 URL を開きます。
 
 https://github.com/mitsuoka0423/laravel-template
 
@@ -38,7 +38,7 @@ https://github.com/mitsuoka0423/laravel-template
 [![Image from Gyazo](https://i.gyazo.com/493551a06334c2975b4f6be96e3b5c84.png)](https://gyazo.com/493551a06334c2975b4f6be96e3b5c84)
 :::
 
-下記のようなエディターが表示されればOKです。
+下記のようなエディターが表示されれば OK です。
 
 [![Image from Gyazo](https://i.gyazo.com/64f51e87814e5e28ab0eedc2145cac48.png)](https://gyazo.com/64f51e87814e5e28ab0eedc2145cac48)
 
@@ -60,7 +60,7 @@ php artisan serve
 
 [![Image from Gyazo](https://i.gyazo.com/46e9efe74c1bb7b37d97f0ef30def60c.png)](https://gyazo.com/46e9efe74c1bb7b37d97f0ef30def60c)
 
-このような画面が表示されればOKです。
+このような画面が表示されれば OK です。
 
 [![Image from Gyazo](https://i.gyazo.com/03691d8e49b043b4417ddfd567220841.png)](https://gyazo.com/03691d8e49b043b4417ddfd567220841)
 
@@ -76,7 +76,7 @@ php artisan key:generate
 
 ## ライブラリをインストールする
 
-LINE Bot開発に下記のライブラリを利用します。
+LINE Bot 開発に下記のライブラリを利用します。
 
 https://github.com/line/line-bot-sdk-php
 
@@ -98,7 +98,7 @@ composer require linecorp/line-bot-sdk
 
 ## LINE Webhook用処理を作成する
 
-LINEのイベントをフックしたときに実行される処理を書いていきます。
+LINE のイベントをフックしたときに実行される処理を書いていきます。
 
 `routes/api.php`を以下の通り変更します。
 
@@ -181,7 +181,7 @@ MIX_PUSHER_APP_CLUSTER="${PUSHER_APP_CLUSTER}"
 
 [![Image from Gyazo](https://i.gyazo.com/46e9efe74c1bb7b37d97f0ef30def60c.png)](https://gyazo.com/46e9efe74c1bb7b37d97f0ef30def60c)
 
-URLをコピーします。この後の手順で利用します。
+URL をコピーします。この後の手順で利用します。
 
 [![Image from Gyazo](https://i.gyazo.com/564ae3c4d2292689e7565c553c40d5ee.png)](https://gyazo.com/564ae3c4d2292689e7565c553c40d5ee)
 
@@ -191,14 +191,14 @@ URLをコピーします。この後の手順で利用します。
 ここからは、[LINE Developersコンソール](https://developers.line.biz/ja/)での作業です。
 :::
 
-Messaging APIのチャネル設定画面から`Webhook URL`を設定します。
+Messaging API のチャネル設定画面から`Webhook URL`を設定します。
 
 場所はこちらです。
-LINE Developersコンソール > 作成したMessaging APIのチャネル > Messaging API設定タブ > Webhook設定
+LINE Developers コンソール > 作成した Messaging API のチャネル > Messaging API 設定タブ > Webhook 設定
 
 [![Image from Gyazo](https://i.gyazo.com/77c6998967d5628366d3f570abfbb351.gif)](https://gyazo.com/77c6998967d5628366d3f570abfbb351)
 
-上記手順でコピーしたURL(`https://xxxxxxxxxxx.gitpod.io`)の末尾に`/api/webhook`をつけます。
+上記手順でコピーした URL(`https://xxxxxxxxxxx.gitpod.io`)の末尾に`/api/webhook`をつけます。
 
 > 今回は`https://8000-mitsuoka042-laraveltemp-od6kvyaieml.ws-us54.gitpod.io/api/webhook`となります
 
@@ -218,13 +218,13 @@ LINE Developersコンソール > 作成したMessaging APIのチャネル > Mess
 
 [![Image from Gyazo](https://i.gyazo.com/12c8af4110591477ed26166bfcea455f.png)](https://gyazo.com/12c8af4110591477ed26166bfcea455f)
 
-`成功`と表示されればOKです。
+`成功`と表示されれば OK です。
 
 [![Image from Gyazo](https://i.gyazo.com/96d7dbe23fe2044405dd5d1df173339b.png)](https://gyazo.com/96d7dbe23fe2044405dd5d1df173339b)
 
 ### LINEで話しかけてみる
 
-作ったLINE Botと友達になり、メッセージを送ってみましょう。
+作った LINE Bot と友達になり、メッセージを送ってみましょう。
 そのまま返却されるようになりました！
 
 [![Image from Gyazo](https://i.gyazo.com/6e68f98011666e860b9524b82f8921b3.gif)](https://gyazo.com/6e68f98011666e860b9524b82f8921b3)
@@ -235,7 +235,7 @@ LINE Developersコンソール > 作成したMessaging APIのチャネル > Mess
 
 ### LINE Botにキャラ付けしよう
 
-オウム返しするメッセージを工夫してLINE Botにキャラ付けしてみましょう。
+オウム返しするメッセージを工夫して LINE Bot にキャラ付けしてみましょう。
 
 ナルト風
 

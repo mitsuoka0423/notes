@@ -8,7 +8,7 @@ published: true
 
 ## はじめに
 
-AWS S3に保存した動画を、Unityで再生する手順をメモします。
+AWS S3 に保存した動画を、Unity で再生する手順をメモします。
 
 ## 完成イメージ
 
@@ -16,7 +16,7 @@ https://twitter.com/mitsuoka0423/status/1525853893401247744?s=20&t=Qmi9CXcFaBecG
 
 ## Unityプロジェクトを作成する
 
-Unity Hubを利用して、新規プロジェクトを作成する。
+Unity Hub を利用して、新規プロジェクトを作成する。
 
 - `新しいプロジェクト > 3D`を選択
 - 任意の`エディターバージョン`を選択（今回は`2020.3.26f1`を利用）
@@ -46,7 +46,7 @@ Unity Hubを利用して、新規プロジェクトを作成する。
 
 [![Image from Gyazo](https://i.gyazo.com/585d4b12dd58b69c9d9d82245cbbb964.png)](https://gyazo.com/585d4b12dd58b69c9d9d82245cbbb964)
 
-HierarchyにVideo Playerが追加される。
+Hierarchy に Video Player が追加される。
 
 [![Image from Gyazo](https://i.gyazo.com/ed01ac16459c1302185602d0711393c3.png)](https://gyazo.com/ed01ac16459c1302185602d0711393c3)
 
@@ -57,7 +57,7 @@ HierarchyにVideo Playerが追加される。
 [![Image from Gyazo](https://i.gyazo.com/56cdd6e28a4b46e5aa26cc5606e4168b.png)](https://gyazo.com/56cdd6e28a4b46e5aa26cc5606e4168b)
 
 コードの中身はこちら。
-`video.url`の値は、再生する動画のURLに置き換える。
+`video.url`の値は、再生する動画の URL に置き換える。
 
 ```cs
 using System.Collections;
@@ -89,6 +89,6 @@ public class VideoDownloader : MonoBehaviour
 
 ## 動作確認
 
-動いたb
+動いた b
 
 https://twitter.com/mitsuoka0423/status/1525853893401247744?s=20&t=Qmi9CXcFaBecG0HQj4c8EQ?conversation=none

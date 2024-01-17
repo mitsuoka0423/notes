@@ -8,19 +8,19 @@ published: true
 
 # 要約
 
-- `sudo apt install nodejs`でインストールできるNode.jsはバージョンが少し古い
+- `sudo apt install nodejs`でインストールできる Node.js はバージョンが少し古い
 - ラズパイで動作するバイナリが公式で提供されているので、そちらを利用する
 - ダウンロード～パスの設定までの手順をメモ
 
 # はじめに
 
-ラズパイでNode.jsを最も簡単にインストールする方法は`apt install`を利用することだと思います。
+ラズパイで Node.js を最も簡単にインストールする方法は`apt install`を利用することだと思います。
 
 ```bash
 $ sudo apt install nodejs npm
 ```
 
-ですが、インストールされるNode.jsのバージョンは`v10.24.0`で少し古いです。(2021/09/13時点)
+ですが、インストールされる Node.js のバージョンは`v10.24.0`で少し古いです。(2021/09/13 時点)
 
 [公式サイト](https://gyazo.com/c676aae41dc2411e22a7242a9d4e941d)にラズパイで動作するバイナリが公開されているので、そちらを利用する手順をまとめます。
 
@@ -41,7 +41,7 @@ $ cd ~
 $ wget https://nodejs.org/dist/v14.17.6/node-v14.17.6-linux-armv7l.tar.xz
 ```
 
-URLは、その時のLTSのものを公式サイトで確認してください。
+URL は、その時の LTS のものを公式サイトで確認してください。
 
 https://nodejs.org/ja/download/
 
@@ -65,7 +65,7 @@ $ tar Jxvf node-v14.17.6-linux-armv7l.tar.xz
 $ ~/node-v14.17.6-linux-armv7l/bin/node -v
 ```
 
-LTSと同じバージョンが表示されればOKです。
+LTS と同じバージョンが表示されれば OK です。
 
 ```bash
 v14.17.6
@@ -103,4 +103,4 @@ $ which npm
 /home/pi/node-v14.17.6-linux-armv7l/bin/npm
 ```
 
-無事Node.jsを利用する準備ができました。
+無事 Node.js を利用する準備ができました。

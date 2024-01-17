@@ -8,7 +8,7 @@ published: true
 
 ## はじめに
 
-このシリーズでは、PHPフレームワークの一つである`Laravel`を使ったLINE Botの作り方を説明します。
+このシリーズでは、PHP フレームワークの 1 つである`Laravel`を使った LINE Bot の作り方を説明します。
 
 ### 完成イメージ
 
@@ -18,7 +18,7 @@ https://twitter.com/mitsuoka0423/status/1522222293958934531?s=20&t=Acf2XNzs3MQMT
 
 - [Laravelで超シンプルにLINE Botを作る（開発準備編）](./laravel-line-helloworld-01)
 - [Laravelで超シンプルにLINE Botを作る（Webhookエンドポイント作成編）](./laravel-line-helloworld-02)
-- Laravelで超シンプルにLINE Botを作る（ngrokインストール編）
+- Laravel で超シンプルに LINE Bot を作る（ngrok インストール編）
 - [Laravelで超シンプルにLINE Botを作る（Messaging API編）](./laravel-line-helloworld-04)
 
 ### ドキュメント
@@ -55,7 +55,7 @@ https://ngrok.com/
 
 [![Image from Gyazo](https://i.gyazo.com/0ce5fabdca02498ba1e3e05b8d5f7024.png)](https://gyazo.com/0ce5fabdca02498ba1e3e05b8d5f7024)
 
-`3. Fire it up`に書いてあるコマンドを実行し、以下のような表示になればOKです。
+`3. Fire it up`に書いてあるコマンドを実行し、以下のような表示になれば OK です。
 
 ```bash
 $ ngrok http 80
@@ -74,13 +74,13 @@ Connections                   ttl     opn     rt1     rt5     p50     p90
                               0       0       0.00    0.00    0.00    0.00   
 ```
 
-以上でngrokの設定は終わりです。
+以上で ngrok の設定は終わりです。
 
 ## おわりに
 
-次回の記事で、Messaging APIを利用してオウム返しするLINE Botを作成します。
+次回の記事で、Messaging API を利用してオウム返しする LINE Bot を作成します。
 
 - [Laravelで超シンプルにLINE Botを作る（開発準備編）](./laravel-line-helloworld-01)
 - [Laravelで超シンプルにLINE Botを作る（Webhookエンドポイント作成編）](./laravel-line-helloworld-02)
-- Laravelで超シンプルにLINE Botを作る（ngrokインストール編）
+- Laravel で超シンプルに LINE Bot を作る（ngrok インストール編）
 - [Laravelで超シンプルにLINE Botを作る（Messaging API編）](./laravel-line-helloworld-04)

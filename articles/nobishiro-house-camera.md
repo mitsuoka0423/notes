@@ -6,12 +6,12 @@ topics: ["azure", "cognitiveservices", "faceapi", "顔認識", "マスク"]
 published: true
 ---
 
-この記事は[Azureのカレンダー | Advent Calendar 2021 - Qiita](https://qiita.com/advent-calendar/2021/azure)の25日目の記事です。
+この記事は[Azureのカレンダー | Advent Calendar 2021 - Qiita](https://qiita.com/advent-calendar/2021/azure)の 25 日目の記事です。
 
 ## はじめに
 
 こんにちは。[@mitsuoka0423](https://twitter.com/mitsuoka0423)です。
-Face APIの新機能として、今年の2月に`Recognition04モデル`が公開され、マスク付きの顔識別の性能が上がっているとのことだったので試してみました。
+Face API の新機能として、今年の 2 月に`Recognition04モデル`が公開され、マスク付きの顔識別の性能が上がっているとのことだったので試してみました。
 
 https://docs.microsoft.com/ja-jp/azure/cognitive-services/face/releasenotes#new-face-api-recognition-model
 
@@ -19,10 +19,10 @@ https://docs.microsoft.com/ja-jp/azure/cognitive-services/face/releasenotes#new-
 
 ### 学習方法
 
-Azure Face APIのPerson Groupを利用し、スマホで正面から撮影した画像を5枚ずつ学習させました。
-学習させた人数は2人です。
+Azure Face API の Person Group を利用し、スマホで正面から撮影した画像を 5 枚ずつ学習させました。
+学習させた人数は 2 人です。
 
-利用したAPIと学習手順は以下のスクラップに記載しています。
+利用した API と学習手順は以下のスクラップに記載しています。
 https://zenn.dev/tmitsuoka0423/scraps/f5edb42f285c24
 
 ### 学習に用いた画像
@@ -37,7 +37,7 @@ https://zenn.dev/tmitsuoka0423/scraps/f5edb42f285c24
 学習させた画像とは別に、マスクを着用した状態の画像を撮影し推論しました。
 
 結果に含まれる候補者と信頼度は、[Face APIのレスポンス](https://westus.dev.cognitive.microsoft.com/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395239#:~:text=%22candidates%22%3A%20%5B%0A%20%20%20%20%20%20%20%20%20%20%20%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22personId%22%3A%20%2225985303%2Dc537%2D4467%2Db41d%2Dbdb45cd95ca1%22%2C%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%22confidence%22%3A%200.92%0A%20%20%20%20%20%20%20%20%20%20%20%20%7D)に含まれる`candidates.personId`と`candidates.confidence`に対応しています。
-信頼度は、1に近いほど候補者である確率が高いです。
+信頼度は、1 に近いほど候補者である確率が高いです。
 
 ### 静止した状態で撮影した画像の推論結果
 
@@ -64,16 +64,16 @@ https://zenn.dev/tmitsuoka0423/scraps/f5edb42f285c24
 
 ## 結果まとめ
 
-- 今回試した画像では、2人の識別を間違えることはなかった。
-  - 歩いている状態を撮影した多少ブレがある画像でも2人の識別は可能であった。
+- 今回試した画像では、2 人の識別を間違えることはなかった。
+  - 歩いている状態を撮影した多少ブレがある画像でも 2 人の識別は可能であった。
   - 静止している状態を撮影した画像と比べると、信頼度は下がる。
   - 候補者なしになるケースもあった
-- 信頼度は高くても0.8ほど。
-  - 照明やブレが入ると、識別できなかったり、信頼度が0.5程度まで低くなる。
+- 信頼度は高くても 0.8 ほど。
+  - 照明やブレが入ると、識別できなかったり、信頼度が 0.5 程度まで低くなる。
 - マスクの色や形は結果に大きく影響しない。
 
 ## 感想
 
-1人5枚の画像だけの学習で、マスクを付けた顔写真の識別ができた。すごい。
+1 人 5 枚の画像だけの学習で、マスクを付けた顔写真の識別ができた。すごい。
 顔の半分以上が隠れているため、さすがに信頼度は低くなる。
-しかし、2人のうちのどちらかを誤って識別することはなく、実用的なレベルであると感じた。
+しかし、2 人のうちのどちらかを誤って識別することはなく、実用的なレベルであると感じた。

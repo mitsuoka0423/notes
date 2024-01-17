@@ -8,7 +8,7 @@ published: true
 
 ## はじめに
 
-Blob Storageに保存してある顔写真を取得してFace APIで顔検出するコードをTypeScriptで書いています。
+Blob Storage に保存してある顔写真を取得して Face API で顔検出するコードを TypeScript で書いています。
 型周りで少し苦戦したので、解決方法をメモしておきます。
 
 ## コード
@@ -27,7 +27,7 @@ context.log(faceList);
 ## ポイント
 
 - `downloadBlockBlobResponse.readableStreamBody as NodeJS.ReadableStream`
-  - 型をキャスト(Node.js上で実行される場合は、`undefined`にならない)
+  - 型をキャスト(Node.js 上で実行される場合は、`undefined`にならない)
 - `() => {
     return downloadBlockBlobResponse.readableStreamBody as NodeJS.ReadableStream;
   }`

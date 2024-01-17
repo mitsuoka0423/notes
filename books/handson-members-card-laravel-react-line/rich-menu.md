@@ -27,7 +27,7 @@ https://www.linebiz.com/jp/manual/OfficialAccountManager/rich-menus/
 [![Image from Gyazo](https://i.gyazo.com/1ad627828ed2de9527a27ac831d2f5a6.jpg)](https://gyazo.com/1ad627828ed2de9527a27ac831d2f5a6)
 
 :::message
-リッチメニューで使える画像は1MBまでです。
+リッチメニューで使える画像は 1MB までです。
 サイズが大きい場合は、 https://squoosh.app/ などのサービスを利用して画像を圧縮しましょう。
 :::
 
@@ -63,7 +63,7 @@ https://www.linebiz.com/jp/manual/OfficialAccountManager/rich-menus/
 
 [![Image from Gyazo](https://i.gyazo.com/3509c4f81727079ddbd227ff5851cd79.png)](https://gyazo.com/3509c4f81727079ddbd227ff5851cd79)
 
-保存して、このように表示されればOKです。
+保存して、このように表示されれば OK です。
 
 [![Image from Gyazo](https://i.gyazo.com/5e17b2c40f419c0ef54e5eeb0a6589c9.png)](https://gyazo.com/5e17b2c40f419c0ef54e5eeb0a6589c9)
 

@@ -10,7 +10,7 @@ published: false
 
 https://github.com/justadudewhohacks/face-api.js/
 
-Node.jsでも利用できるとのことなので試してみます。
+Node.js でも利用できるとのことなので試してみます。
 
 https://github.com/justadudewhohacks/face-api.js/#face-api.js-for-nodejs
 
@@ -37,7 +37,7 @@ $ npm i face-api.js canvas @tensorflow/tfjs-node
 
 ## コードを書く
 
-公式のexamplesがそのまま動くのですが、わかりやすいように
+公式の examples がそのまま動くのですが、わかりやすいように
 
 - TypeScript -> JavaScript
 - ファイルパスの整理

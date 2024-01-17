@@ -6,24 +6,24 @@ topics: ["gitpod", "vscode", "editor"]
 published: true
 ---
 
-# はじめに
+# はじめに
 
-いつもハンズオンイベントでGitpodを利用しているのですが、今日起動するとシンタックスハイライトがついておらず白黒でした。
+いつもハンズオンイベントで Gitpod を利用しているのですが、今日起動するとシンタックスハイライトがついておらず白黒でした。
 
 [![Image from Gyazo](https://i.gyazo.com/17377a6003b415332a111597290a0b81.png)](https://gyazo.com/17377a6003b415332a111597290a0b81)
 
-ツイートしたところ中の人から回答をもらえました。
+ツイートしたところ中の人から回答をもらえました。
 
 https://twitter.com/akosyakov/status/1441415507748458498?s=20
 
-どうやらDefault IDEのLatestバージョンはアーリーリリースなので拡張機能のロードに失敗することがあるとのことで、Stableを使ってくれとのことでした。
+どうやら Default IDE の Latest バージョンはアーリーリリースなので拡張機能のロードに失敗することがあるとのことで、Stable を使ってくれとのことでした。
 
-GitpodのDefault IDEのバージョンを変更するのが少しわかりにくいところにあったので手順をメモします。
+Gitpod の Default IDE のバージョンを変更するのが少しわかりにくいところにあったので手順をメモします。
 
 # GitpodのDefault IDEのバージョンを変更する
 
 以下の手順で変更できます。
-GitpodのWebサイトからアクセスするのがミソです。
+Gitpod の Web サイトからアクセスするのがミソです。
 
 ## GitpodのWebサイトを開く
 
@@ -36,13 +36,13 @@ https://www.gitpod.io/
 - `Preferences`
 - `Default IDE`
 
-から変更することができます。
+から変更できます。
 
 [![Image from Gyazo](https://i.gyazo.com/5c38ec6342261d9eeab9545be13e17e7.gif)](https://gyazo.com/5c38ec6342261d9eeab9545be13e17e7)
 
 # まとめ
 
-Gitpodが不調な場合は、LatestになっていないStableバージョンを利用しましょう
+Gitpod が不調な場合は、Latest になっていない Stable バージョンを利用しましょう
 無事に色がつきました。
 
 [![Image from Gyazo](https://i.gyazo.com/7600c2354f31f073a8618e391ce53171.png)](https://gyazo.com/7600c2354f31f073a8618e391ce53171)

@@ -8,7 +8,9 @@
     "book": "zenn new:book",
     "docker": "npm run docker:build && npm run docker:run",
     "docker:build": "docker build -t zenn .",
-    "docker:run": "docker run --interactive --tty --detach zenn /bin/bash"
+    "docker:run": "docker run --interactive --tty --detach zenn /bin/bash",
+    "lint": "textlint ./articles ./books",
+    "lint:fix": "textlint --fix ./articles ./books"
   },
   "repository": {
     "type": "git",

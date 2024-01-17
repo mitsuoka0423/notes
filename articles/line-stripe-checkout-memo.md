@@ -8,7 +8,7 @@ published: true
 
 
 :::message
-本記事は [LINE DC Advent Calendar 2023](https://qiita.com/advent-calendar/2023/lineapi) 3日目の記事です
+本記事は [LINE DC Advent Calendar 2023](https://qiita.com/advent-calendar/2023/lineapi) 3 日目の記事です
 :::
 
 
@@ -61,7 +61,7 @@ https://checkout.stripe.com/c/pay/cs_test_a1Fo7Oj3MR4p2YPZAgE6L5zuZyn346F20XJSSh
 ![image](https://i.imgur.com/T9U8Y4L.png)
 
 このまま決済します
-すると、 Stripe の管理画面で metadata に含めた情報を確認することができます
+すると、 Stripe の管理画面で metadata に含めた情報を確認できます
 
 ![image](https://i.imgur.com/c3GC3nr.png)
 
@@ -78,7 +78,7 @@ https://make.com/
 
 ### HTTP モジュールの設定
 
-上記で説明した Stripe の Create Checkout Session を実行するよう設定します
+上記で説明した Stripe の Create Checkout セッションを実行するよう設定します
 
 ![image](https://i.imgur.com/waEttVM.png)
 
@@ -87,7 +87,7 @@ https://make.com/
 ポイントをかいつまんで説明します
 
 - `success_url`
-  - 決済が成功したあとに移動するURL
+  - 決済が成功したあとに移動する URL
   - 今回は LINE のトークルームに返したかったので、LINE URL スキームを利用しています
   - ドキュメント： https://developers.line.biz/ja/docs/line-login/using-line-url-scheme/#opening-chat-screen
 - `metadata[lineId]`
@@ -95,7 +95,7 @@ https://make.com/
 
 ### LINE (Send a Reply Message) モジュールの設定
 
-Create Checkout Session のレスポンスの `url` から決済画面を開くことができるので、
+Create Checkout セッションのレスポンスの `url` から決済画面を開くことができるので、
 メッセージに `url` を入れます
 
 ![image](https://i.imgur.com/UloBmVJ.png)

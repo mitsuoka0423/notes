@@ -8,7 +8,7 @@ published: true
 
 ## はじめに
 
-PHPフレームワークの1つである`Laravel`を使って、LINE Botを超シンプルに作ります。
+PHP フレームワークの 1 つである`Laravel`を使って、LINE Bot を超シンプルに作ります。
 
 ### 完成イメージ
 
@@ -28,20 +28,20 @@ BuildVersion:   21D62
 
 ## 開発準備
 
-Laravelの実行に必要な開発環境を準備します。
+Laravel の実行に必要な開発環境を準備します。
 
 > 以下の手順はmacOSを前提にしています。
 > Windowsを利用している方は、適宜コマンドや手順を読み替えて実施してください。
 
 ### PHPをインストールする
 
-こちらの手順通りPHPをインストールします。
+こちらの手順通り PHP をインストールします。
 
 https://www.php.net/manual/ja/install.macosx.packages.php
 
 > Homebrewを利用するので、インストールされていない方は先にインストールしてください。
 
-ターミナルで`php -v` `composer -v`を実行して、バージョンが表示されればOKです。
+ターミナルで`php -v` `composer -v`を実行して、バージョンが表示されれば OK です。
 
 ```bash
 $ php -v
@@ -66,7 +66,7 @@ Composer version 2.3.5 2022-04-13 16:43:00
 
 ### Laravelプロジェクトをスタートする
 
-Laravelプロジェクトを始める方法はいくつかありますが、今回は公式ドキュメントで紹介されている`composerでのインストール`でやってみます。
+Laravel プロジェクトを始める方法はいくつかありますが、今回は公式ドキュメントで紹介されている`composerでのインストール`でやってみます。
 
 https://readouble.com/laravel/9.x/ja/installation.html
 
@@ -89,7 +89,7 @@ Starting Laravel development server: http://127.0.0.1:8000
 ```
 
 開発サーバーを立ち上げたら http://localhost:8000 にアクセスします。
-以下のようなページが表示されればOKです。
+以下のようなページが表示されれば OK です。
 
 > サーバーを停止するときはターミナル上で`Cntl + C`を入力します。
 
@@ -97,19 +97,19 @@ Starting Laravel development server: http://127.0.0.1:8000
 
 ### LINE Messaging API SDKをインストールする
 
-PHPでMessaging APIを利用したLINE Botを開発するため、公式でSDKが提供されています。
+PHP で Messaging API を利用した LINE Bot を開発するため、公式で SDK が提供されています。
 
 https://developers.line.biz/ja/docs/messaging-api/line-bot-sdk/
 
 https://github.com/line/line-bot-sdk-php
 
-こちらのSDKを利用するために、下記をターミナルで実行します。
+こちらの SDK を利用するために、下記をターミナルで実行します。
 
 ```bash
 $ composer require linecorp/line-bot-sdk
 ```
 
-`composer.json`に`"linecorp/line-bot-sdk": "バージョン"`が追加されればOKです。
+`composer.json`に`"linecorp/line-bot-sdk": "バージョン"`が追加されれば OK です。
 
 ```diff json
     "require": {
@@ -130,7 +130,7 @@ https://zenn.dev/protoout/articles/16-line-bot-setup
 
 ## コーディング
 
-本記事では、超シンプルにLINE Botを実装するため、`Routes`に直接ロジックを記述します。
+本記事では、超シンプルに LINE Bot を実装するため、`Routes`に直接ロジックを記述します。
 
 ### オウム返しするコードを書く
 
@@ -176,13 +176,13 @@ MIX_PUSHER_APP_CLUSTER="${PUSHER_APP_CLUSTER}"
 
 ### 動作確認する
 
-ターミナルで下記を実行します。（実行済みの方はそのままでOKです）
+ターミナルで下記を実行します（実行済みの方はそのままで OK です）
 
 ```bash
 $ php artisan serve
 ```
 
-curlでリクエストして、`ok!`と返ってくればOKです。
+curl でリクエストして、`ok!`と返ってくれば OK です。
 
 ```bash
 $ curl -X POST "http://localhost:8000/api/webhook"
@@ -207,8 +207,8 @@ https://localhost.run/
 $ ssh -R 80:localhost:8000 ssh.localhost.run
 ```
 
-下の方にURLが表示されるのでコピーしておきます。
-今回は`https://89e61725c1df04.lhrtunnel.link`でした。実行するごとに新しいURLが発行されます。
+下の方に URL が表示されるのでコピーしておきます。
+今回は`https://89e61725c1df04.lhrtunnel.link`でした。実行するごとに新しい URL が発行されます。
 
 ```
 ===============================================================================
@@ -224,15 +224,15 @@ https://localhost.run/docs/
 
 ### LINE DevelopersコンソールでWebhookの設定を行う
 
-2ステップです。
+2 ステップです。
 
-1. LINE Developersコンソールで`Webhook URL`を設定する
-2. `Webhookの利用`をONにする
+1. LINE Developers コンソールで`Webhook URL`を設定する
+2. `Webhookの利用`を ON にする
 
 #### LINE Developersコンソールで`Webhook URL`を設定する
 
-[LINE公式アカウントを作成する](#LINE公式アカウントを作成する)の章で作成したLINE公式アカウントの
-`Messaging API設定 > Webhook URL設定`に[localhost.runを利用してトンネリングする](#localhost.runを利用してトンネリングする)でコピーしたURLを貼り付けます。
+[LINE公式アカウントを作成する](#LINE公式アカウントを作成する)の章で作成した LINE 公式アカウントの
+`Messaging API設定 > Webhook URL設定`に[localhost.runを利用してトンネリングする](#localhost.runを利用してトンネリングする)でコピーした URL を貼り付けます。
 
 末尾に`/api/webhook`をつけます。
 末尾に`/api/webhook`をつけます。
@@ -251,11 +251,11 @@ https://localhost.run/docs/
 
 `検証`ボタンをクリックします。
 
-`成功`と表示されればOKです。
+`成功`と表示されれば OK です。
 
 [![Image from Gyazo](https://i.gyazo.com/9de1b079ba6dc66708cee918b1aa2d63.png)](https://gyazo.com/9de1b079ba6dc66708cee918b1aa2d63)
 
-では、実際にLINEで話しかけてみましょう！
+では、実際に LINE で話しかけてみましょう！
 
 こんな感じで、話しかけた内容がそのまま返ってきます。
 
@@ -263,10 +263,10 @@ https://twitter.com/mitsuoka0423/status/1522222293958934531?s=20&t=Acf2XNzs3MQMT
 
 ## まとめ
 
-LaravelでLINE Botを超シンプルに作りました。
-途中、ややこしい手順がありますが、LINE Bot最初の一歩の記事になれば幸いです。
+Laravel で LINE Bot を超シンプルに作りました。
+途中、ややこしい手順がありますが、LINE Bot 最初の一歩の記事になれば幸いです。
 
-うまく行かない、不明点があるなどの場合は、TwitterでDMください。
+うまく行かない、不明点があるなどの場合は、Twitter で DM ください。
 よかったらフォローもお願いします。
 
 https://twitter.com/mitsuoka0423

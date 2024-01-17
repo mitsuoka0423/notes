@@ -18,14 +18,14 @@ title: "オウム返しBotを作ろう"
 
 最近では、チャットボットやツイートボットなど`Bot`と名前が付いているものがあります。
 
-LINE Botも上記のBotの仲間で、プログラムが自動で返信してくれるLINEアカウントのことを指します。
-LINEアプリとプログラムの連携には、LINEが提供している`Messaging API`を利用します。
+LINE Bot も上記の Bot の仲間で、プログラムが自動で返信してくれる LINE アカウントのことを指します。
+LINE アプリとプログラムの連携には、LINE が提供している`Messaging API`を利用します。
 
 ### 有名なLINE Bot
 
 #### ユーザーから操作可能なタイプ
 
-- JR東日本 Chat Bot（[https://info.jreast-chat.com/](https://info.jreast-chat.com/)）
+- JR 東日本 Chat Bot（[https://info.jreast-chat.com/](https://info.jreast-chat.com/)）
 - ヤマト運輸（[https://www.kuronekoyamato.co.jp/ytc/campaign/renkei/LINE/](https://www.kuronekoyamato.co.jp/ytc/campaign/renkei/LINE/)）
 
 #### 広告プッシュタイプ
@@ -33,7 +33,7 @@ LINEアプリとプログラムの連携には、LINEが提供している`Messa
 - ユニクロ・GU（[http://official-blog.line.me/ja/archives/28533966.html](http://official-blog.line.me/ja/archives/28533966.html)）
 - 楽天（[http://official-blog.line.me/ja/archives/24736939.html](http://official-blog.line.me/ja/archives/24736939.html)）
 
-また最近、LINE Botのユースケースが発表されました。LINE Botを作る際に参考にしてみると良いと思います。
+また最近、LINE Bot のユースケースが発表されました。LINE Bot を作る際に参考にしてみると良いと思います。
 
 https://lineapiusecase.com/ja/top.html
 
@@ -41,32 +41,32 @@ https://lineapiusecase.com/ja/top.html
 
 #### 一般的なメリット
 
-- ユーザーに利用してもらうときにアプリのインストールが不要。（友達登録だけでOK！簡単！）
-- ユーザーへのプッシュ通知を簡単に送ることができる。（量が多いとお金がかかる）
+- ユーザーに利用してもらうときにアプリのインストールが不要（友達登録だけで OK！　簡単！）
+- ユーザーへのプッシュ通知を簡単に送ることができる（量が多いとお金がかかる）
 
 #### プロトタイピング観点でのメリット
 
-- LINEのチャット画面を利用するのでUIを最初から考える必要がなく、プロトタイプの価値の創造に注力できる。
-  - 必要に応じて、凝ったUIも実現できる。（[FlexMessage](https://developers.line.biz/ja/docs/messaging-api/using-flex-messages/)や[LIFF](https://developers.line.biz/ja/docs/liff/overview/)を利用）
-- Node.jsのSDKが公式に用意されており、UIからサーバーまでをJavaScriptで書くことで、最小限の学習で作ることができる。
+- LINE のチャット画面を利用するので UI を最初から考える必要がなく、プロトタイプの価値の創造に注力できる。
+  - 必要に応じて、凝った UI も実現できる（[FlexMessage](https://developers.line.biz/ja/docs/messaging-api/using-flex-messages/)や[LIFF](https://developers.line.biz/ja/docs/liff/overview/)を利用）
+- Node.js の SDK が公式に用意されており、UI からサーバーまでを JavaScript で書くことで、最小限の学習で作ることができる。
 
 ## システム概要図
 
-本ハンズオンでの登場人物は以下の3つです。  
+本ハンズオンでの登場人物は以下の 3 つです。  
 主に、サーバーの部分のプログラムを編集していきます。
 
 [![Image from Gyazo](https://i.gyazo.com/1ceade2f10b784b68f3bed71efcf83e3.png)](https://i.gyazo.com/1ceade2f10b784b68f3bed71efcf83e3)
 
 ### オウム返しBotのシステム概要図
 
-`オウム返しBotを作ろう`では、LINEアプリから送信した文字列をサーバーで受け取り、LINEアプリにそのまま返すオウム返しBotを作成します。
+`オウム返しBotを作ろう`では、LINE アプリから送信した文字列をサーバーで受け取り、LINE アプリにそのまま返すオウム返し Bot を作成します。
 
 [![Image from Gyazo](https://i.gyazo.com/ef380d63c53fba3e41b79216fb7f0070.png)](https://i.gyazo.com/ef380d63c53fba3e41b79216fb7f0070)
 
 ### 画像分析AI+LINE Botのシステム概要図
 
-`画像分析AIと組み合わせよう`では、LINEアプリから送信した画像をAzure Face APIに送信し、顔の画像分析を行います。  
-その結果をサーバーで変換して、LINEアプリに結果を表示します。
+`画像分析AIと組み合わせよう`では、LINE アプリから送信した画像を Azure Face API に送信し、顔の画像分析を行います。  
+その結果をサーバーで変換して、LINE アプリに結果を表示します。
 
 [![Image from Gyazo](https://i.gyazo.com/c1c3f0924ddb6a5ec989de33a1fda3ca.png)](https://gyazo.com/c1c3f0924ddb6a5ec989de33a1fda3ca)
 # 手を動かすタイム
@@ -75,9 +75,9 @@ https://lineapiusecase.com/ja/top.html
 
 ## LINE Botを登録しよう
 
-LINE DevelopersからLINE Botを登録できます。
+LINE Developers から LINE Bot を登録できます。
 
-LINE Developersを開き、ログインします。
+LINE Developers を開き、ログインします。
 https://developers.line.biz/ja/
 
 > ※LINE Developersはハンズオン中に何度も利用するので、開きっぱなしにしておきましょう。
@@ -90,11 +90,11 @@ https://developers.line.biz/ja/
 
 [![Image from Gyazo](https://i.gyazo.com/ef306d3ca442a7a8df95cce418778b57.png)](https://i.gyazo.com/ef306d3ca442a7a8df95cce418778b57)
 
-プロバイダー名を入力し、`作成`をクリックします。（名前は好きなものでOKです。）
+プロバイダー名を入力し、`作成`をクリックします（名前は好きなもので OK です）。
 
 [![Image from Gyazo](https://i.gyazo.com/718446885e86eb2f547379fb63fbbd59.png)](https://i.gyazo.com/718446885e86eb2f547379fb63fbbd59)
 
-Messaging APIを作成します。
+Messaging API を作成します。
 
 [![Image from Gyazo](https://i.gyazo.com/ca20e71a634a089a5ce80aeda3dd065a.png)](https://i.gyazo.com/ca20e71a634a089a5ce80aeda3dd065a)
 
@@ -120,7 +120,7 @@ Messaging APIを作成します。
 
 [![Image from Gyazo](https://i.gyazo.com/331c4e70599ed34ffb735ea0c9b5a772.png)](https://i.gyazo.com/331c4e70599ed34ffb735ea0c9b5a772)
 
-QRコードをLINEアプリで読み取り、友達登録しましょう。
+QR コードを LINE アプリで読み取り、友達登録しましょう。
 
 [![Image from Gyazo](https://i.gyazo.com/a59294c0b4135a4bfb2a3f40fc5d6f9b.png)](https://i.gyazo.com/a59294c0b4135a4bfb2a3f40fc5d6f9b)
 
@@ -128,16 +128,16 @@ QRコードをLINEアプリで読み取り、友達登録しましょう。
 
 ## Gitpodを開こう
 
-Gitpodはオンライン利用できるエディタです。
+Gitpod はオンライン利用できるエディタです。
 
 > `Note`
 > GitHubのリポジトリのコードをVSCodeライクなエディタで手軽に編集・実行することができます。
 > 月50時間まで無料で利用することができます。
 
-以下のURLを開きましょう。  
+以下の URL を開きましょう。  
 https://gitpod.io/#https://github.com/tmitsuoka0423/line-bot-azure-face-api-face-verification-handson
 
-GitHubアカウントでログインします。
+GitHub アカウントでログインします。
 
 [![Image from Gyazo](https://i.gyazo.com/14aca92f43ed9cfa88f3484178124d0d.png)](https://i.gyazo.com/14aca92f43ed9cfa88f3484178124d0d)
 
@@ -157,23 +157,23 @@ GitHubアカウントでログインします。
 - エディター
 - ターミナル
 
-の3エリアに分割されています。ハンズオンではこれらの名前で呼ぶので覚えておきましょう。
+の 3 エリアに分割されています。ハンズオンではこれらの名前で呼ぶので覚えておきましょう。
 
 [![Image from Gyazo](https://i.gyazo.com/56daffaac5af416d1908f7c002510aad.png)](https://gyazo.com/56daffaac5af416d1908f7c002510aad)
 
-Gitpodの準備はこれでOKです。  
-続いてオウム返しBotを動かす準備を進めていきましょう！
+Gitpod の準備はこれで OK です。  
+続いてオウム返し Bot を動かす準備を進めていきましょう！
 
 ## コードを編集しよう
 
-Gitpod上でコードを編集しましょう。  
-LINE Botの設定を追記する必要があるので編集していきます。
+Gitpod 上でコードを編集しましょう。  
+LINE Bot の設定を追記する必要があるので編集していきます。
 
 サイドバーから`index.js`を開き、`チャネルシークレット`・`チャネルアクセストークン`の設定箇所までスクロールします。
 
 [![Image from Gyazo](https://i.gyazo.com/54036709b6af66f45ac166a2862b4345.png)](https://i.gyazo.com/54036709b6af66f45ac166a2862b4345)
 
-`チャネルシークレット`・`チャネルアクセストークン`は[LINE Developers](https://developers.line.biz/ja/)のサイトから取得することができます。
+`チャネルシークレット`・`チャネルアクセストークン`は[LINE Developers](https://developers.line.biz/ja/)のサイトから取得できます。
 
 先程作成したチャネルを開き、`Basic settings`タブ・`Messaging API`タブからそれぞれ、`チャネルシークレット`・`チャネルアクセストークン`をコピーしてきます。
 
@@ -202,16 +202,16 @@ LINE Botの設定を追記する必要があるので編集していきます。
 
 [![Image from Gyazo](https://i.gyazo.com/4fc6b6d4917879ba10e28f129e7d2cd4.png)](https://i.gyazo.com/4fc6b6d4917879ba10e28f129e7d2cd4)
 
-新しいタブが開くので、そのページのURLをコピーし、Botチャネルの`Webhook URL`にペーストします。
+新しいタブが開くので、そのページの URL をコピーし、Bot チャネルの`Webhook URL`にペーストします。
 
 [![Image from Gyazo](https://i.gyazo.com/afa573e55291365780c8ee43b88682b6.png)](https://i.gyazo.com/afa573e55291365780c8ee43b88682b6)
 
-`User webhook`を忘れずにONにしましょう。
+`User webhook`を忘れずに ON にしましょう。
 
 [![Image from Gyazo](https://i.gyazo.com/7f768ed71a0a23c0e2814a5afc20ca45.png)](https://gyazo.com/7f768ed71a0a23c0e2814a5afc20ca45)
 
 接続確認します。  
-`Verify`をクリックして、`Success`と表示されればOKです。
+`Verify`をクリックして、`Success`と表示されれば OK です。
 
 [![Image from Gyazo](https://i.gyazo.com/a8a87743e1d9b02fdd7b1936070d13c0.png)](https://i.gyazo.com/a8a87743e1d9b02fdd7b1936070d13c0)
 
@@ -219,10 +219,10 @@ LINE Botの設定を追記する必要があるので編集していきます。
 
 ## (オプション)自動応答メッセージをオフにしよう
 
-LINE Botはデフォルトでは、`あいさつメッセージ`と`応答メッセージ`がオンになっています。  
+LINE Bot はデフォルトでは、`あいさつメッセージ`と`応答メッセージ`がオンになっています。  
 この設定を変更しましょう。
 
-Messaging API設定タブ > 応答メッセージ > `編集`をクリックし、LINE公式アカウント設定画面を開きます。
+Messaging API 設定タブ > 応答メッセージ > `編集`をクリックし、LINE 公式アカウント設定画面を開きます。
 
 [![Image from Gyazo](https://i.gyazo.com/b9ba1653be88c67ff0661251c545ba8f.png)](https://i.gyazo.com/b9ba1653be88c67ff0661251c545ba8f)
 
@@ -234,11 +234,11 @@ Messaging API設定タブ > 応答メッセージ > `編集`をクリックし�
 
 ## 動作確認しよう
 
-Botに適当な文字を送ってみましょう。
+Bot に適当な文字を送ってみましょう。
 
 [![Image from Gyazo](https://i.gyazo.com/94e5bda2678dcf5bbc7a0154eeac8b07.gif)](https://gyazo.com/94e5bda2678dcf5bbc7a0154eeac8b07)
 
-オウム返しBotの作成は以上で完了です！  
+オウム返し Bot の作成は以上で完了です！  
 
 ## (応用)オウム2倍返しBOTを作ってみよう
 
@@ -253,18 +253,18 @@ Botに適当な文字を送ってみましょう。
 
 ## (応用)オウム返しBotにキャラ付けしよう
 
-NARUTO風
+NARUTO 風
 
 [![Image from Gyazo](https://i.gyazo.com/ed3c6c6db6dc37f429d698aa1c6b41de.png)](https://i.gyazo.com/ed3c6c6db6dc37f429d698aa1c6b41de)
 
 # まとめ
 
-- LINE DevelopersからLINE Botのチャンネルを作成し、友達登録しました。
-- LINEアプリ⇔Expressサーバーでオウム返しBotを作成しました。
+- LINE Developers から LINE Bot のチャンネルを作成し、友達登録しました。
+- LINE アプリ⇔Express サーバーでオウム返し Bot を作成しました。
 
 [![Image from Gyazo](https://i.gyazo.com/ef380d63c53fba3e41b79216fb7f0070.png)](https://i.gyazo.com/ef380d63c53fba3e41b79216fb7f0070)
 
-次はAIのサービスの一つである`Face API`と組み合わせていきます。
+次は AI のサービスの 1 つである`Face API`と組み合わせていきます。
 
 > `Note`  
 > 後で使うので、Gitpodのタブは**閉じない**ようにしましょう！
