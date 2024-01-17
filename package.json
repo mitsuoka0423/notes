@@ -5,7 +5,10 @@
   "main": "index.js",
   "scripts": {
     "article": "zenn new:article",
-    "book": "zenn new:book"
+    "book": "zenn new:book",
+    "docker": "npm run docker:build && npm run docker:run",
+    "docker:build": "docker build -t zenn .",
+    "docker:run": "docker run --interactive --tty --detach zenn /bin/bash"
   },
   "repository": {
     "type": "git",
@@ -18,14 +21,12 @@
     "url": "https://github.com/tmitsuoka0423/zenn/issues"
   },
   "homepage": "https://github.com/tmitsuoka0423/zenn#readme",
-  "dependencies": {
-    "zenn-cli": "^0.1.66"
-  },
   "devDependencies": {
     "textlint": "^13.4.1",
     "textlint-rule-no-todo": "^2.0.1",
     "textlint-rule-preset-ja-spacing": "^2.3.0",
     "textlint-rule-preset-ja-technical-writing": "^10.0.1",
-    "textlint-rule-spellcheck-tech-word": "^5.0.0"
+    "textlint-rule-spellcheck-tech-word": "^5.0.0",
+    "zenn-cli": "^0.1.150"
   }
 }
