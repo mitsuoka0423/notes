@@ -3,7 +3,7 @@ title: "LINEパート - [kintone+Stripe+LINE]をノーコードで組み合わ�
 emoji: "💬"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["stripe", "kintone", "line", "messagingapi", "Make"]
-# publication_name: line_dc
+publication_name: line_dc
 published: true
 ---
 
@@ -16,9 +16,9 @@ https://linedevelopercommunity.connpass.com/event/305413/
 
 ## 他手順へのリンク
 
-- TODO: アンケート
+https://qiita.com/hideokamoto/private/061c4402096c047fc483?fbclid=IwAR0k6GvsVu_h4snY_hnGZdqK83kckEjSXxntsNLhz9I6TIzmKgNI37YfdqE
+
 - TODO: kintone
-- TODO: Stripe
 
 
 ## 利用するサービスの説明
@@ -33,6 +33,16 @@ TODO
 
 
 ## LINE Botハンズオン
+
+### 事前準備
+
+#### LINE 公式アカウントを作成 & チャネルアクセストークンを取得する
+
+- TODO: URL
+
+#### Make にログインする
+
+- TODO: URL
 
 ### 完成イメージ
 
@@ -163,11 +173,12 @@ TODO
 
 ### 友達追加時にアンケートリンクを送る
 
-TODO（桑原さんの資料へのリンク or 資料を埋め込む）
+下記の資料をご覧ください。
 
+https://qiita.com/cog1t0/private/1b5f1b1f8f1d2c0add43?fbclid=IwAR1Ss_7TWz_2nK6z7lPqhXbltow0hi9xPD0tkssYiNe8c8jxjw-xtsLkZn8
 
 ## 他手順へのリンク
 
-- TODO: アンケート
+https://qiita.com/hideokamoto/private/061c4402096c047fc483?fbclid=IwAR0k6GvsVu_h4snY_hnGZdqK83kckEjSXxntsNLhz9I6TIzmKgNI37YfdqE
+
 - TODO: kintone
-- TODO: Stripe
