@@ -10,7 +10,8 @@
     "docker:build": "docker build -t zenn .",
     "docker:run": "docker run --interactive --tty --detach zenn /bin/bash",
     "lint": "textlint ./articles ./books",
-    "lint:fix": "textlint --fix ./articles ./books"
+    "lint:fix": "textlint --fix ./articles ./books",
+    "zenn:preview": "zenn preview --port 18000"
   },
   "repository": {
     "type": "git",
@@ -30,7 +31,7 @@
     "textlint-rule-preset-ja-spacing": "^2.3.0",
     "textlint-rule-preset-ja-technical-writing": "^10.0.1",
     "textlint-rule-spellcheck-tech-word": "^5.0.0",
-    "zenn-cli": "^0.1.150"
+    "zenn-cli": "^0.1.151"
   },
   "lint-staged": {
     "*.md": [
