@@ -6,7 +6,16 @@
         "space": "always"
       }
     },
-    "preset-ja-technical-writing": true,
+    "preset-ja-technical-writing": {
+      "ja-no-mixed-period": {
+        "allowPeriodMarks": [
+          ":"
+        ]
+      },
+      "no-exclamation-question-mark": {
+        "allowHalfWidthExclamation": true
+      }
+    },
     "spellcheck-tech-word": true
   }
 }
