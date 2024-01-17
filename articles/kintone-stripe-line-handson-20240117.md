@@ -14,9 +14,12 @@ published: true
 
 https://linedevelopercommunity.connpass.com/event/305413/
 
+
 ## 他手順へのリンク
 
-https://qiita.com/hideokamoto/private/061c4402096c047fc483?fbclid=IwAR0k6GvsVu_h4snY_hnGZdqK83kckEjSXxntsNLhz9I6TIzmKgNI37YfdqE
+https://qiita.com/hideokamoto/items/061c4402096c047fc483
+
+https://qiita.com/RyBB/items/c2ad4170e8acf0501803
 
 
 ## 利用するサービスの説明
@@ -184,9 +187,13 @@ Make はこのあとの手順でも利用するので、タブで開きっぱな
 
 https://qiita.com/cog1t0/private/1b5f1b1f8f1d2c0add43?fbclid=IwAR1Ss_7TWz_2nK6z7lPqhXbltow0hi9xPD0tkssYiNe8c8jxjw-xtsLkZn8
 
+
 ## 他手順へのリンク
 
-https://qiita.com/hideokamoto/private/061c4402096c047fc483?fbclid=IwAR0k6GvsVu_h4snY_hnGZdqK83kckEjSXxntsNLhz9I6TIzmKgNI37YfdqE
+https://qiita.com/hideokamoto/items/061c4402096c047fc483
+
+https://qiita.com/RyBB/items/c2ad4170e8acf0501803
+
 
 ## LINE Developer Community では様々なイベントを開催しています
 
