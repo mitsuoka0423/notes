@@ -34,16 +34,6 @@ TODO
 
 ## LINE Botハンズオン
 
-### 事前準備
-
-#### LINE 公式アカウントを作成 & チャネルアクセストークンを取得する
-
-- TODO: URL
-
-#### Make にログインする
-
-- TODO: URL
-
 ### 完成イメージ
 
 #### シナリオ
@@ -60,12 +50,20 @@ TODO
 
 #### LINE
 
-- チャネルアクセストークンの取得（後の手順で利用）
+https://zenn.dev/protoout/articles/16-line-bot-setup
+
+以下が終わっていれば OK です。
+
+- [ ] LINE 公式アカウントが作成され、友達追加されていること
+- [ ] チャネルアクセストークンが発行されていること
 
 #### Make
 
-- ログイン
+https://zenn.dev/protoout/articles/12-integromat-signup
 
+以下が終わっていれば OK です。
+
+- [ ] Make にログインできていること
 
 ### Makeでシナリオを作成する
 
@@ -73,7 +71,7 @@ TODO
 
 - [Make](https://www.Make.com/en/login) で操作
 
-#### イメージ
+#### 操作イメージ
 
 ![image](https://i.imgur.com/A4lnHbh.png)
 
@@ -83,7 +81,7 @@ TODO
 
 ### `LINE`モジュールの`Watch Events`を追加 & 設定する
 
-#### イメージ
+#### 操作イメージ
 
 ![image](https://i.imgur.com/0KuGxkQ.png)
 
@@ -112,7 +110,11 @@ TODO
 - [LINE Developesコンソール](https://developers.line.biz/console/)で操作
   - ログインがまだの方は、ログインしておいてください
 
-#### イメージ
+:::message
+Make はこのあとの手順でも利用するので、タブで開きっぱなしにしておいてください。
+:::
+
+#### 操作イメージ
 
 ![image](https://i.imgur.com/6gLYAwO.png)
 
@@ -129,7 +131,7 @@ TODO
 
 - Make で操作
 
-#### イメージ
+#### 操作イメージ
 
 ![image](https://i.imgur.com/yShsjBh.png)
 
@@ -145,23 +147,23 @@ TODO
 
 > くるくるしてればOK
 
-### LINEにメッセージを送る
+### LINE にメッセージを送る
 
-#### イメージ
+#### 操作イメージ
 
 ![image](https://i.imgur.com/sxa02C3.png)
 
 > 送った文字がそのまま返ってくればOK
 
-### LINEのUser IDを確認する
+### LINE の User ID を確認する
 
-#### イメージ
+#### 操作イメージ
 
 ![image](https://i.imgur.com/5TPbPX6.png)
 
 ### 購入リンクを返信する
 
-#### イメージ
+#### 操作イメージ
 
 ![image](https://i.imgur.com/oPJrTHI.png)
 
@@ -182,3 +184,15 @@ https://qiita.com/cog1t0/private/1b5f1b1f8f1d2c0add43?fbclid=IwAR1Ss_7TWz_2nK6z7
 https://qiita.com/hideokamoto/private/061c4402096c047fc483?fbclid=IwAR0k6GvsVu_h4snY_hnGZdqK83kckEjSXxntsNLhz9I6TIzmKgNI37YfdqE
 
 - TODO: kintone
+
+## LINE Developer Community では様々なイベントを開催しています
+
+ビジネスに活用できるような内容から、作ってみた系の LT イベントまで幅広く実施しています。
+
+イベント参加は connpass から申し込み可能です。
+
+https://linedevelopercommunity.connpass.com/
+
+YouTube でイベントのアーカイブ動画を公開しています。
+
+https://www.youtube.com/channel/UCZkYYwmvSA6y7WWLxM5x9IA
