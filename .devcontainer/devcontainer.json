@@ -1,0 +1,32 @@
+{
+  "name": "zenn dev container",
+  // "build": {
+  //   "dockerfile": "Dockerfile",
+  //   // [Optional] You can use build args to set options. e.g. 'VARIANT' below affects the image in the Dockerfile
+  //   "args": {
+  //     "VARIANT": "buster"
+  //   }
+  // },
+  "dockerComposeFile": [
+    "../docker-compose.yml"
+  ],
+  "service": "zenn-dev-container",
+  "workspaceFolder": "/workspace",
+  "customizations": {
+    "vscode": {
+      "extensions": [],
+      "settings": {}
+    }
+  },
+  "forwardPorts": [
+    18000
+  ],
+  "mounts": [
+    {
+      "type": "volume",
+      "source": "devcontainer-sample_venv",
+      "target": "${containerWorkspaceFolder}/.venv"
+    }
+  ],
+  "remoteUser": "root"
+}

@@ -1,0 +1,18 @@
+version: "3"
+
+services:
+  zenn-dev-container:
+    image: mcr.microsoft.com/vscode/devcontainers/javascript-node:0-14
+    ports:
+      - 18000:8000
+    # コンテナを起動させ続ける
+    tty: true
+    # working_dirディレクトリ下にホストのディレクトリをマウントします
+    working_dir: /workspace
+    volumes:
+      # node_modulesディレクトリはホスト側に渡さないようにDockerのvolume内に格納します
+      - node-modules:/workspace/node_modules
+      - .:/workspace:cached
+
+volumes:
+  node-modules:

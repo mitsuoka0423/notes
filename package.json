@@ -11,7 +11,7 @@
     "docker:run": "docker run --interactive --tty --detach zenn /bin/bash",
     "lint": "textlint ./articles ./books",
     "lint:fix": "textlint --fix ./articles ./books",
-    "zenn:preview": "zenn preview --port 18000"
+    "zenn:preview": "zenn preview --port 8000"
   },
   "repository": {
     "type": "git",
