@@ -1,0 +1,87 @@
+---
+title: "LINEパート - [kintone+Stripe+LINE]をノーコードで組み合わせて無人店舗を実現！"
+emoji: "💬"
+type: "tech" # tech: 技術記事 / idea: アイデア
+topics: ["stripe", "kintone", "line", "messagingapi", "Make"]
+publication_name: line_dc
+published: true
+---
+
+
+## はじめに
+
+本資料は下記イベントの説明用資料です。
+
+https://linedevelopercommunity.connpass.com/event/305413/
+
+
+## 他手順へのリンク
+
+https://qiita.com/hideokamoto/items/061c4402096c047fc483
+
+https://qiita.com/RyBB/items/c2ad4170e8acf0501803
+
+
+## 利用するサービスの説明
+
+### LINE (Messaging API)
+
+https://line.me/ja/
+
+- 国内月間アクティブユーザー：9,600 万人
+- 友達登録するだけでアプリを利用してもらうことができる
+- Messaging API を活用して、 LINE Bot を制作できる
+
+### Make
+
+https://www.make.com/en∏
+
+- 様々なサービスを繋いでアプリを開発できるノーコードツール
+- モジュールをつないで、シナリオを作成する
+
+
+$include="../parts/line/echo-bot.md"
+
+### LINE の User ID を確認する
+
+#### 操作イメージ
+
+![image](https://i.imgur.com/5TPbPX6.png)
+
+### 購入リンクを返信する
+
+#### 操作イメージ
+
+![image](https://i.imgur.com/oPJrTHI.png)
+
+![image](https://i.imgur.com/cVslXPH.png)
+
+![image](https://i.imgur.com/4eQw6CE.png)
+
+> 後の手順で決済用 URL を発行して埋め込みます
+
+### 友達追加時にアンケートリンクを送る
+
+下記の資料をご覧ください。
+
+https://qiita.com/cog1t0/private/1b5f1b1f8f1d2c0add43?fbclid=IwAR1Ss_7TWz_2nK6z7lPqhXbltow0hi9xPD0tkssYiNe8c8jxjw-xtsLkZn8
+
+
+## 他手順へのリンク
+
+https://qiita.com/hideokamoto/items/061c4402096c047fc483
+
+https://qiita.com/RyBB/items/c2ad4170e8acf0501803
+
+
+## LINE Developer Community では様々なイベントを開催しています
+
+ビジネスに活用できるような内容から、作ってみた系の LT イベントまで幅広く実施しています。
+
+イベント参加は connpass から申し込み可能です。
+
+https://linedevelopercommunity.connpass.com/
+
+YouTube でイベントのアーカイブ動画を公開しています。
+
+https://www.youtube.com/channel/UCZkYYwmvSA6y7WWLxM5x9IA
