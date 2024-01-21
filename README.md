@@ -33,3 +33,10 @@ graph
   articles -->|MarkdownCat| parts
   books -->|MarkdownCat| parts
 ```
+
+
+## ライセンス
+
+ソースコードは MIT ライセンスです。
+画像や文章などのコンテンツは CC BY 4.0 ライセンスです。
+詳細は [LICENSE](./LICENSE) を確認してください。
