@@ -89,6 +89,6 @@ public class VideoDownloader : MonoBehaviour
 
 ## 動作確認
 
-動いた b
+動いた !
 
 https://twitter.com/mitsuoka0423/status/1525853893401247744?s=20&t=Qmi9CXcFaBecG0HQj4c8EQ?conversation=none

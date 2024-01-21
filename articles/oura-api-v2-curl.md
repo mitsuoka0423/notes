@@ -12,7 +12,7 @@ published: true
 
 https://twitter.com/mitsuoka0423/status/1512748389498503173?s=20&t=iGk02lptPdq4yctcSlXX6g
 
-ドキュメントを見ていると、API があったので触ってみようと思います。
+ドキュメントを見ていると、API があったので触ってみます。
 今回は 2022 年 1 月に公開された V2 を触っていきます。
 
 ## ドキュメント

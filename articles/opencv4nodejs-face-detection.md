@@ -8,7 +8,7 @@ published: true
 
 # はじめに
 
-画像処理で有名な`OpenCV`の npm ライブラリ`opencv4nodejs`を使って、画像ファイルの顔検出を行ってみます。
+画像処理で有名な`OpenCV`の npm ライブラリ`opencv4nodejs`を使って、画像ファイルの「顔検出」を行ってみます。
 
 https://opencv.org/
 

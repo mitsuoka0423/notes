@@ -12,7 +12,7 @@ published: true
 
 https://twitter.com/mitsuoka0423/status/1512748389498503173?s=20&t=iGk02lptPdq4yctcSlXX6g
 
-前回は curl を使って API を叩いたので、今回は Node.js から API を叩いていこうと思います。
+前回は curl を使って API を叩いたので、今回は Node.js から API を叩いていきます。
 npm を探してみましたが V2 のクライアントライブラリはまだないようだったので、axios を使っていきます。
 
 curl で叩いたときの記事はこちら。
