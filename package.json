@@ -1,8 +1,32 @@
 {
-  "name": "zenn",
-  "version": "1.0.0",
+  "author": "Takahiro Mitsuoka <tmitsuoka0423@gmail.com>",
+  "bugs": {
+    "url": "https://github.com/tmitsuoka0423/zenn/issues"
+  },
   "description": "",
+  "devDependencies": {
+    "lint-staged": "^15.2.0",
+    "textlint": "^13.4.1",
+    "textlint-rule-no-todo": "^2.0.1",
+    "textlint-rule-preset-ja-spacing": "^2.3.0",
+    "textlint-rule-preset-ja-technical-writing": "^10.0.1",
+    "textlint-rule-spellcheck-tech-word": "^5.0.0",
+    "zenn-cli": "^0.1.151"
+  },
+  "homepage": "https://github.com/tmitsuoka0423/zenn#readme",
+  "keywords": [],
+  "license": "MIT",
+  "lint-staged": {
+    "*.md": [
+      "npm run lint:fix"
+    ]
+  },
   "main": "index.js",
+  "name": "zenn",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tmitsuoka0423/zenn.git"
+  },
   "scripts": {
     "article": "zenn new:article",
     "book": "zenn new:book",
@@ -13,29 +37,5 @@
     "lint:fix": "textlint --fix ./articles ./books",
     "zenn:preview": "zenn preview --port 8000"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/tmitsuoka0423/zenn.git"
-  },
-  "keywords": [],
-  "author": "Takahiro Mitsuoka <tmitsuoka0423@gmail.com>",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/tmitsuoka0423/zenn/issues"
-  },
-  "homepage": "https://github.com/tmitsuoka0423/zenn#readme",
-  "devDependencies": {
-    "lint-staged": "^15.2.0",
-    "textlint": "^13.4.1",
-    "textlint-rule-no-todo": "^2.0.1",
-    "textlint-rule-preset-ja-spacing": "^2.3.0",
-    "textlint-rule-preset-ja-technical-writing": "^10.0.1",
-    "textlint-rule-spellcheck-tech-word": "^5.0.0",
-    "zenn-cli": "^0.1.151"
-  },
-  "lint-staged": {
-    "*.md": [
-      "npm run lint:fix"
-    ]
-  }
+  "version": "1.0.0"
 }
