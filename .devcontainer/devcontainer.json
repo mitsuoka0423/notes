@@ -6,6 +6,7 @@
         "Gruntfuggly.todo-tree",
         "ionutvmi.path-autocomplete",
         "ms-azuretools.vscode-docker",
+        "ms-edgedevtools.vscode-edge-devtools",
         "oderwat.indent-rainbow",
         "poyonshot.markdowncat",
         "richie5um2.vscode-sort-json",
@@ -18,9 +19,6 @@
   },
   "dockerComposeFile": [
     "../docker-compose.yml"
-  ],
-  "forwardPorts": [
-    8000
   ],
   "mounts": [
     {
