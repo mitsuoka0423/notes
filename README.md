@@ -1,4 +1,9 @@
-# Zenn Contents
+# Articles
 
-* [📘 How to use](https://zenn.dev/zenn/articles/zenn-cli-guide)
-* [📘 Markdown guide](https://zenn.dev/zenn/articles/markdown-guide)
+## 依存関係
+
+```mermaid
+graph
+  articles -->|MarkdownCat| parts
+  books -->|MarkdownCat| parts
+```
