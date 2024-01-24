@@ -3,7 +3,9 @@
 
 ## 拡張機能
 
-アカウント作成説明など説明記事を再利用するために利用しています。
+### MarkdownCat
+
+記事を再利用するために利用しています。
 
 https://marketplace.visualstudio.com/items?itemName=poyonshot.markdowncat
 
