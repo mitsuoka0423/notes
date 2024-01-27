@@ -12,26 +12,18 @@ https://marketplace.visualstudio.com/items?itemName=poyonshot.markdowncat
 
 ## 依存関係
 
-### 現状
-
 ```mermaid
 graph
-  articles -->|MarkdownCat| parts
-  books -->|MarkdownCat| parts
-```
-
-### 理想像
-
-```mermaid
-graph
-  qiita
+  subgraph qiita
+    public
+  end
   subgraph zenn
     articles
     books
   end
   parts
 
-  qiita -->|MarkdownCat| parts
+  public -->|MarkdownCat| parts
   articles -->|MarkdownCat| parts
   books -->|MarkdownCat| parts
 ```
