@@ -2,7 +2,7 @@ version: "3"
 
 services:
   zenn-dev-container:
-    image: mcr.microsoft.com/vscode/devcontainers/javascript-node:0-14
+    image: node
     ports:
       - 18000:8000
     # コンテナを起動させ続ける

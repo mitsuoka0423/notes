@@ -5,6 +5,7 @@
   },
   "description": "",
   "devDependencies": {
+    "@qiita/qiita-cli": "^1.3.1",
     "lint-staged": "^15.2.0",
     "textlint": "^13.4.1",
     "textlint-rule-no-todo": "^2.0.1",
@@ -21,20 +22,17 @@
       "npm run lint:fix"
     ]
   },
-  "main": "index.js",
   "name": "zenn",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/tmitsuoka0423/zenn.git"
   },
   "scripts": {
-    "article": "zenn new:article",
-    "book": "zenn new:book",
-    "docker": "npm run docker:build && npm run docker:run",
-    "docker:build": "docker build -t zenn .",
-    "docker:run": "docker run --interactive --tty --detach zenn /bin/bash",
     "lint": "textlint ./articles ./books",
     "lint:fix": "textlint --fix ./articles ./books",
+    "qiita:preview": "qiita preview",
+    "zenn:article": "zenn new:article",
+    "zenn:book": "zenn new:book",
     "zenn:preview": "zenn preview --port 8000"
   },
   "version": "1.0.0"
