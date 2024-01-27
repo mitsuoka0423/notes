@@ -7,7 +7,7 @@ tags:
   - IntelliJ
   - JetBrains
 private: false
-updated_at: '2020-07-30T15:40:59+09:00'
+updated_at: '2024-01-28T07:52:27+09:00'
 id: 3eeb3eda18ff5617bacb
 organization_url_name: null
 slide: false
@@ -15,7 +15,7 @@ ignorePublish: false
 ---
 ## はじめに
 
-PHPStormのバージョン管理のヘルパー機能である、`Shelf`の使い方メモです。
+PHPStorm のバージョン管理のヘルパー機能である、`Shelf`の使い方メモです。
 
 詳細は公式ドキュメントを参照してください。
   → [Gitを使用して複数の機能を同時に処理する](https://pleiades.io/help/phpstorm/work-on-several-features-simultaneously.html)
@@ -46,7 +46,7 @@ drwx------@ 14 mitsuoka-takahiro  staff  448  7 29 21:16 ../
 drwxr-xr-x   9 mitsuoka-takahiro  staff  288  7 29 21:19 .git/
 ```
 
-.gitフォルダがあればOK。
+.Git フォルダがあれば OK。
 
 ## PHPStormでGitツールウィンドウを表示する
 
@@ -61,13 +61,13 @@ drwxr-xr-x   9 mitsuoka-takahiro  staff  288  7 29 21:19 .git/
 
 ## Shelfで並行開発を楽に管理する
 
-Shelfは`git stash`と似た機能で、ブランチをクリーンにすることができます。
+Shelf は`git stash`と似た機能で、ブランチをクリーンにできます。
 変更リストとの親和性が高く、合わせて使うことで開発中のファイルをより便利に管理できます。
 
 ### 準備
 
-新しいファイルを3つ追加し、ステージングします。
-ステージングするのは、バージョン管理対象ファイルでないとLocal Changesに表示されなからです。
+新しいファイルを 3 つ追加し、ステージングします。
+ステージングするのは、バージョン管理対象ファイルでないと Local Changes に表示されなからです。
 
 ```zsh
 % echo hello > a1.txt
@@ -76,7 +76,7 @@ Shelfは`git stash`と似た機能で、ブランチをクリーンにするこ�
 % git add .
 ```
 
-Gitツールウィンドウはこのようになっていると思います。
+Git ツールウィンドウはこのようになっていると思います。
 
 <img width="600" src="https://github.com/tmitsuoka0423/qiita/raw/master/phpstorm-shelf/pic3.png">
 
@@ -86,7 +86,7 @@ Shelfは`git stash`と似た機能で、ブランチをクリーンにするこ�
 
 ### ファイルをShelfにしまう
 
-Gitツールウィンドウで`b2.txt`を右クリックし、`Shelf Changes`を選択します。
+Git ツールウィンドウで`b2.txt`を右クリックし、`Shelf Changes`を選択します。
 
 <img src="https://github.com/tmitsuoka0423/qiita/raw/master/phpstorm-shelf/pic5.png">
 
@@ -94,8 +94,8 @@ Gitツールウィンドウで`b2.txt`を右クリックし、`Shelf Changes`を
 
 <img src="https://github.com/tmitsuoka0423/qiita/raw/master/phpstorm-shelf/pic6.png">
 
-これでShelfに`b2.txt`をしまうことができました。
-Gitツールウィンドウに`Shelf`タブが表示され、内容を確認することができます。
+これで Shelf に`b2.txt`をしまうことができました。
+Git ツールウィンドウに`Shelf`タブが表示され、内容を確認できます。
 
 <img src="https://github.com/tmitsuoka0423/qiita/raw/master/phpstorm-shelf/pic7.png">
 
@@ -132,15 +132,15 @@ Changes to be committed:
 
 ### 変更リストをShelfにしまう
 
-ファイルだけでなく、既に作成している変更リストをShelfにしまうこともできます。
-対象の変更リストを右クリック、`Shelve Changes`を選択することで、Shelfに格納されます。
+ファイルだけでなく、既に作成している変更リストを Shelf にしまうこともできます。
+対象の変更リストを右クリック、`Shelve Changes`を選択することで、Shelf に格納されます。
 
 <img src="https://github.com/tmitsuoka0423/qiita/raw/master/phpstorm-shelf/pic12.png">
 
 ## まとめ
 
-Shelfを使うことで、変更リストと親和性の高い`git stash`に似た機能を利用することができる。
-Shelfにしまったファイルは、ワークツリーから削除されるので、作業ブランチをクリーンに保つことができる。
+Shelf を使うことで、変更リストと親和性の高い`git stash`に似た機能を利用できる。
+Shelf にしまったファイルは、ワークツリーから削除されるので、作業ブランチをクリーンに保つことができる。
 
 ## PHPStormの使い方シリーズ
 

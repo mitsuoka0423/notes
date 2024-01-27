@@ -7,17 +7,17 @@ tags:
   - SleepTech
   - レゴテクニック
 private: false
-updated_at: '2019-12-31T15:42:07+09:00'
+updated_at: '2024-01-28T07:52:28+09:00'
 id: ab3c7efb96e21bef5a3d
 organization_url_name: null
 slide: false
 ignorePublish: false
 ---
-プロトアウトスタジオアドベントカレンダー1発目の記事です！
+プロトアウトスタジオアドベントカレンダー1 発目の記事です！
 
 ## はじめに
 
-最近また一段と寒くなりましたね～。最低気温4℃まで行きましたか。
+最近また一段と寒くなりましたね～。最低気温 4℃まで行きましたか。
 ![image.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/90087/b8f21463-8614-d83a-edda-a7ab745ae057.png)
 
 布団だけでは寒いので電気毛布をつけ始めました。
@@ -27,21 +27,21 @@ ignorePublish: false
 
 ## 用意するもの
 
-- 電気毛布 2,000円くらい
+- 電気毛布 2,000 円くらい
     - https://www.amazon.co.jp/gp/product/B0145YK65U/ref=ppx_yo_dt_b_asin_image_o05_s00?ie=UTF8&psc=1
 ![image.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/90087/c255e8bc-09d8-a52c-7a6d-8216477a19aa.png)
 
-- obniz Board 4,500円くらい
+- obniz Board 4,500 円くらい
     - https://obniz.io/ja/products#obnizBoard
 
 ![image.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/90087/96a8b95c-390e-2eed-5cee-183656f4661d.png)
 
-- GeekServo 1つ500円くらい
+- GeekServo 1 つ 500 円くらい
     - https://www.amazon.co.jp/gp/product/B07WDJVWKQ/ref=ppx_yo_dt_b_asin_image_o01_s00?ie=UTF8&psc=1
 
 ![image.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/90087/6c1952ac-8f80-91f8-2f35-ed2ccd9a55f4.png)
 
-- LEGO テクニックパーツ類 合計500円くらい
+- LEGO テクニックパーツ類合計 500 円くらい
     - https://item.rakuten.co.jp/brickers/6112-001/
     - https://item.rakuten.co.jp/brickers/3743-001/
     - https://item.rakuten.co.jp/brickers/3647-194/
@@ -49,7 +49,7 @@ ignorePublish: false
 ![image.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/90087/a656ade5-9516-6150-98f0-c1986ba31fec.png)
 
 
-合計7,500円くらいでした。
+合計 7,500 円くらいでした。
 
 ## 組み立て
 
@@ -63,7 +63,7 @@ ignorePublish: false
 
 ### STEP2. パーツを加工する
 
-電気毛布のコントローラにくっつけるため、LEGOを少し削ります。
+電気毛布のコントローラにくっつけるため、LEGO を少し削ります。
 今回買ったパーツは加工しやすく、ニッパーとヤスリでできました。
 
 ![image.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/90087/fffe4a66-6668-6cd7-25f3-08e7083ce4cc.png)
@@ -76,14 +76,14 @@ ignorePublish: false
 
 ### STEP3. ケースに固定する
 
-その辺にあったプラスチックの板に固定していきます。（何かのフタ…？
+その辺にあったプラスチックの板に固定していきます（何かのフタ…？
 ![image.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/90087/bacfa54c-4305-15c0-11a3-8ed925407219.png)
 
-GeekServo用の穴をあける。ちょっと割れてしまいました
+GeekServo 用の穴をあける。ちょっと割れてしまいました
 
 ![image.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/90087/110d251c-0182-c6ed-69df-07316ae98093.png)
 
-GeekServoをはめる
+GeekServo をはめる
 
 ![image.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/90087/7ed37172-9954-bc56-4964-441ca9872e8c.png)
 
@@ -100,11 +100,11 @@ GeekServoをはめる
 
 ## obnizからモーターを動かしてみる
 
-今回はobnizの[JSパーツライブラリの画面](https://obniz.io/ja/sdk/parts/DCMotor/README.md)上から簡単に動かします。
+今回は obniz の[JSパーツライブラリの画面](https://obniz.io/ja/sdk/parts/DCMotor/README.md)上から簡単に動かします。
 
 ### GeekServoとobnizを接続
 
-GeekServoの赤ケーブルを0ピン、黒ケーブルを1ピンにつなぎます。
+GeekServo の赤ケーブルを 0 ピン、黒ケーブルを 1 ピンにつなぎます。
 ![image.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/90087/3855e7d9-53ad-c748-7e0b-84fa1302866b.png)
 
 ### JSパーツライブラリから動かす

@@ -7,7 +7,7 @@ tags:
   - IntelliJ
   - JetBrains
 private: false
-updated_at: '2020-07-30T15:40:59+09:00'
+updated_at: '2024-01-28T07:52:27+09:00'
 id: 3eeb3eda18ff5617bacb
 organization_url_name: null
 slide: false

@@ -5,7 +5,7 @@ tags:
   - Vue.js
   - Electron
 private: false
-updated_at: '2019-12-23T08:40:02+09:00'
+updated_at: '2024-01-28T07:52:27+09:00'
 id: cbe15eacd6ef871f3fa3
 organization_url_name: null
 slide: false

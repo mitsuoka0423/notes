@@ -7,7 +7,7 @@ tags:
   - linebot
   - Clova
 private: false
-updated_at: '2018-12-09T13:54:00+09:00'
+updated_at: '2024-01-28T07:52:28+09:00'
 id: a72c94bee0c5acdfe1a3
 organization_url_name: null
 slide: false

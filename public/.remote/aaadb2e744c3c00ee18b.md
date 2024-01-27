@@ -5,7 +5,7 @@ tags:
   - AzureIoTHub
   - AzureIoTCentral
 private: false
-updated_at: '2021-02-09T22:08:06+09:00'
+updated_at: '2024-01-28T07:52:28+09:00'
 id: aaadb2e744c3c00ee18b
 organization_url_name: null
 slide: false
@@ -16,7 +16,7 @@ ignorePublish: false
 公式ドキュメント：[クイック スタート:IoT Central アプリケーションにシミュレートされたデバイスを追加する(https://docs.microsoft.com/ja-jp/azure/iot-central/core/quick-create-simulated-device)](https://docs.microsoft.com/ja-jp/azure/iot-central/core/quick-create-simulated-device)
 の手順を実施した際のメモです。
 
-実際のデバイスは用意せず、仮想のデバイスを追加することができるシミュレートという機能があるので、それを利用します。
+実際のデバイスは用意せず、仮想のデバイスを追加できるシミュレートという機能があるので、それを利用します。
 数秒おきに乱数で生成したデータをテレメトリとして送信してくれます。
 デバイスの準備が追いついていないときに便利ですね。
 
@@ -26,12 +26,12 @@ ignorePublish: false
 
 <a href="https://gyazo.com/7ed4967280984a85f3c1c0d85aa82f89"><img src="https://i.gyazo.com/7ed4967280984a85f3c1c0d85aa82f89.png" alt="Image from Gyazo" width="1118"/></a>
 `ESP32-Azure IoT Kit`を選択します。
-（`Ctrl + F`で検索すると見つけられます。）
+（`Ctrl + F`で検索すると見つけられます）。
 
 <a href="https://gyazo.com/f179bfdb217ee2383d3358ee0376c746"><img src="https://i.gyazo.com/f179bfdb217ee2383d3358ee0376c746.png" alt="Image from Gyazo" width="1118"/></a>
 
 <a href="https://gyazo.com/91181735524af75e1dcd6cdb2424d57f"><img src="https://i.gyazo.com/91181735524af75e1dcd6cdb2424d57f.png" alt="Image from Gyazo" width="1118"/></a>
-こんな画面になればOK。
+こんな画面になれば OK。
 
 ## クラウドプロパティを追加する
 
@@ -61,15 +61,15 @@ ignorePublish: false
 
 <a href="https://gyazo.com/bd3794d09361230b06da7ae8656368ff"><img src="https://i.gyazo.com/bd3794d09361230b06da7ae8656368ff.png" alt="Image from Gyazo" width="1124"/></a>
 `このデバイスをシミュレートしますか？`は`はい`を選択します。
-シミュレートをONにすると、実際のデバイスを用意しなくても、乱数で生成したデータを数秒おきに送信してくれるため、クラウド側の開発を進めることができます。
+シミュレートを ON にすると、実際のデバイスを用意しなくても、乱数で生成したデータを数秒おきに送信してくれるため、クラウド側の開発を進めることができます。
 
 <a href="https://gyazo.com/9824b6f4c1cf91c4c0353d1de54de6ec"><img src="https://i.gyazo.com/9824b6f4c1cf91c4c0353d1de54de6ec.png" alt="Image from Gyazo" width="1124"/></a>
 
 <a href="https://gyazo.com/5ec0559b07fe2e25f89cde227c488935"><img src="https://i.gyazo.com/5ec0559b07fe2e25f89cde227c488935.png" alt="Image from Gyazo" width="1124"/></a>
-デバイスごとにダッシュボードが作成され、デバイスから送信されたデータを確認することができます。
+デバイスごとにダッシュボードが作成され、デバイスから送信されたデータを確認できます。
 
 <a href="https://gyazo.com/3b270b0d1a4e563c19788784e89afda2"><img src="https://i.gyazo.com/3b270b0d1a4e563c19788784e89afda2.png" alt="Image from Gyazo" width="1600"/></a>
-生データタブで、送信されたデータのリストを確認することができます。
+生データタブで、送信されたデータのリストを確認できます。
 
 ## ハマったところ
 

@@ -6,7 +6,7 @@ tags:
   - Deno
   - denodeploy
 private: false
-updated_at: '2021-03-30T18:17:02+09:00'
+updated_at: '2024-01-28T07:52:27+09:00'
 id: 2f8392a3ed3e4ffefdfa
 organization_url_name: null
 slide: false

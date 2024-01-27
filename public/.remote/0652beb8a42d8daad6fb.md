@@ -7,7 +7,7 @@ tags:
   - IoT
   - obniz
 private: false
-updated_at: '2020-04-15T09:21:19+09:00'
+updated_at: '2024-01-28T07:52:27+09:00'
 id: 0652beb8a42d8daad6fb
 organization_url_name: null
 slide: false
@@ -17,7 +17,7 @@ ignorePublish: false
 
 こんにちは。電気毛布エンジニアの[@tmitsuoka0423](https://twitter.com/tmitsuoka0423)です。
 
-昨日書いた「[obniz+赤外線LEDでリモコンコンセント(OCR-05W)を動かす](https://qiita.com/tmisuoka0423/items/ac84514454857d157c60)」では、obnizのパーツライブラリページ上で動作確認しましたが、今回はTypeScriptで実装していきます。
+昨日書いた「[obniz+赤外線LEDでリモコンコンセント(OCR-05W)を動かす](https://qiita.com/tmisuoka0423/items/ac84514454857d157c60)」では、obniz のパーツライブラリページ上で動作確認しましたが、今回は TypeScript で実装していきます。
 ソースコードは[https://github.com/tmitsuoka0423/obniz-ocr-05w](https://github.com/tmitsuoka0423/obniz-ocr-05w)で公開しています。
 
 ## 今回使うもの
@@ -37,7 +37,7 @@ ignorePublish: false
 ## リモコンの赤外線信号を解析する
 
 まずは、赤外線センサーを使ってリモコンの信号を受信するプログラムを作成します。
-（確認してないですが、このプログラムを使ってOCR-05W以外のリモコンの信号も受信できると思います。）
+（確認してないですが、このプログラムを使って OCR-05W 以外のリモコンの信号も受信できると思います）。
 
 ```typescript:receive.ts
 import Obniz from 'obniz';
@@ -93,9 +93,9 @@ obniz.onconnect = async () => {
 
 ## まとめ
 
-obniz＋TypeScriptでリモコンコンセントの操作ができるようになりました。
+obniz＋TypeScript でリモコンコンセントの操作ができるようになりました。
 
-JavaScriptで書くのと比べて、TypeScriptだとプロパティ名の補完が効くようになるのでオススメです。
-gndとかvccとかピン名を調べる手間がなくなります。
+JavaScript で書くのと比べて、TypeScript だとプロパティ名の補完が効くようになるのでオススメです。
+gnd とか vcc とかピン名を調べる手間がなくなります。
 
-次回はAWSにデプロイしていきます。
+次回は AWS にデプロイしていきます。

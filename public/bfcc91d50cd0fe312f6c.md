@@ -6,7 +6,7 @@ tags:
   - AzureIoTHub
   - AzureIoT
 private: false
-updated_at: '2022-02-23T21:23:02+09:00'
+updated_at: '2024-01-28T07:56:52+09:00'
 id: bfcc91d50cd0fe312f6c
 organization_url_name: null
 slide: false

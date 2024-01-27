@@ -6,7 +6,7 @@ tags:
   - Deno
   - denodeploy
 private: false
-updated_at: '2021-03-30T18:17:02+09:00'
+updated_at: '2024-01-28T07:52:27+09:00'
 id: 2f8392a3ed3e4ffefdfa
 organization_url_name: null
 slide: false
@@ -22,7 +22,7 @@ https://deno.com/deploy
 
 <a href="https://gyazo.com/136f12a439a981fe65b92ebd5ece4221"><img src="https://i.gyazo.com/136f12a439a981fe65b92ebd5ece4221.png" alt="Image from Gyazo" width="969"/></a>
 
-GitHubアカウントのログイン＆連携が求められるので許可します。
+GitHub アカウントのログイン＆連携が求められるので許可します。
 
 ## プロジェクトを作成する
 
@@ -38,23 +38,23 @@ GitHubアカウントのログイン＆連携が求められるので許可し�
 <a href="https://gyazo.com/9da07457f5fb0af1d13378940a56949d"><img src="https://i.gyazo.com/9da07457f5fb0af1d13378940a56949d.png" alt="Image from Gyazo" width="969"/></a>
 
 本記事では、公式のサンプルアプリを登録してみます。
-公式のリポジトリをForkします。
+公式のリポジトリを Fork します。
 
 <a href="https://gyazo.com/f947cd67818185aacaf2b7774e2505f2"><img src="https://i.gyazo.com/f947cd67818185aacaf2b7774e2505f2.png" alt="Image from Gyazo" width="969"/></a>
 
 <a href="https://gyazo.com/de6fb403a360b9d47450633797d15d80"><img src="https://i.gyazo.com/de6fb403a360b9d47450633797d15d80.png" alt="Image from Gyazo" width="969"/></a>
 
-Forkしたリポジトリにある
+Fork したリポジトリにある
 
 <a href="https://gyazo.com/debcecc869894fbb7cccae654f76d9c4"><img src="https://i.gyazo.com/debcecc869894fbb7cccae654f76d9c4.png" alt="Image from Gyazo" width="969"/></a>
 
 <a href="https://gyazo.com/674ff65529d7ad3c89650255769ca6fb"><img src="https://i.gyazo.com/674ff65529d7ad3c89650255769ca6fb.png" alt="Image from Gyazo" width="969"/></a>
 
 デプロイ対象のリポジトリのみにアクセス可能にします。
-（全リポジトリにアクセス可能にしたい場合は、`All repositories`でもOK）
+（全リポジトリにアクセス可能にしたい場合は、`All repositories`でも OK）
 
 <a href="https://gyazo.com/ebb705d83635634f0eee4cb9f339b0fc"><img src="https://i.gyazo.com/ebb705d83635634f0eee4cb9f339b0fc.png" alt="Image from Gyazo" width="969"/></a>
-Deno Deployとリポジトリがリンクされました。
+Deno Deploy とリポジトリがリンクされました。
 <a href="https://gyazo.com/097eb6bdf91b25cb4d4343000af91835"><img src="https://i.gyazo.com/097eb6bdf91b25cb4d4343000af91835.png" alt="Image from Gyazo" width="969"/></a>
 
 ## デプロイしたアプリにアクセスしてみる
@@ -68,7 +68,7 @@ Deno Deployとリポジトリがリンクされました。
 
 ## まとめ
 
-Deno Deployにサンプルアプリをデプロイする手順を説明しました。
-アプリをDenoで書いておけば、非常に簡単にデプロイすることができます。
+Deno Deploy にサンプルアプリをデプロイする手順を説明しました。
+アプリを Deno で書いておけば、非常に簡単にデプロイできます。
 
-[POSTも受け取れる](https://github.com/denoland/deploy_examples/blob/main/post_request/mod.js)のでWebhookエンドポイントとして動かすのも良いですね。
+[POSTも受け取れる](https://github.com/denoland/deploy_examples/blob/main/post_request/mod.js)ので Webhook エンドポイントとして動かすのも良いですね。

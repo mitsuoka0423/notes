@@ -7,7 +7,7 @@ tags:
   - IoT
   - obniz
 private: false
-updated_at: '2020-04-15T09:21:19+09:00'
+updated_at: '2024-01-28T07:52:27+09:00'
 id: 0652beb8a42d8daad6fb
 organization_url_name: null
 slide: false
