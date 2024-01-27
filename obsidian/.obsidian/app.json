@@ -1,3 +1,6 @@
 {
-  "showLineNumber": true
+  "showLineNumber": true,
+  "userIgnoreFilters": [
+    "templates/"
+  ]
 }
