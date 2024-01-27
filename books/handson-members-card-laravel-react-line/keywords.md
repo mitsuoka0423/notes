@@ -32,7 +32,7 @@ https://www.airtable.com/
 https://developers.line.biz/ja/services/messaging-api/
 
 - LINE でボットを作成することができる
-- 応答メッセージ・プッシュできる応答できる応答できる応答メッセージ
+- 応答メッセージ・プッシュできる応答できる応答できる応答できる応答メッセージ
 - 他にも、さまざまなタイプのメッセージを送信できたり、リッチメニューを利用できり、様々な機能がある
 
 [![Image from Gyazo](https://i.gyazo.com/f40bffbbd112bf32826647328f6ffcc9.png)](https://gyazo.com/f40bffbbd112bf32826647328f6ffcc9)

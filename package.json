@@ -28,8 +28,8 @@
     "url": "git+https://github.com/tmitsuoka0423/zenn.git"
   },
   "scripts": {
-    "lint": "textlint ./articles ./books",
-    "lint:fix": "textlint --fix ./articles ./books",
+    "lint": "textlint --dry-run .",
+    "lint:fix": "textlint --fix .",
     "qiita:preview": "qiita preview",
     "zenn:article": "zenn new:article",
     "zenn:book": "zenn new:book",

@@ -13,16 +13,16 @@ organization_url_name: null
 slide: false
 ignorePublish: false
 ---
-この投稿は[LINEBot&Clova Advent Calendar 2018](https://qiita.com/advent-calendar/2018/linebot)の7日目の投稿です。
+この投稿は[LINEBot&Clova Advent Calendar 2018](https://qiita.com/advent-calendar/2018/linebot)の 7 日目の投稿です。
 
 # はじめに
-LINEの音声メッセージ入力で録音した音声をClovaで非同期に再生できると、
+LINE の音声メッセージ入力で録音した音声を Clova で非同期に再生できると、
 いろいろとコミュニケーションの幅が広がるのではないかと思い、サンプルアプリを作成しました。
-LINEが提供している[Messaging API](https://developers.line.biz/ja/docs/messaging-api/)と[CEK](https://clova-developers.line.biz/guide/)を使用して簡単に実現できたので、その解説を行います。
+LINE が提供している[Messaging API](https://developers.line.biz/ja/docs/messaging-api/)と[CEK](https://clova-developers.line.biz/guide/)を使用して簡単に実現できたので、その解説を行います。
 
 
 # 想定環境と作るもののイメージ
-学校がおわり、家でお留守番している子供にがClovaに話しかけると、親があらかじめ録音しておいた伝言を再生します。
+学校がおわり、家でお留守番している子供にが Clova に話しかけると、親があらかじめ録音しておいた伝言を再生します。
 ![グループ化 7.png](https://qiita-image-store.s3.amazonaws.com/0/90087/84f6101d-444a-14b4-2ed7-08b726feae0c.png)
 
 # 構成要素
@@ -40,12 +40,12 @@ LINEが提供している[Messaging API](https://developers.line.biz/ja/docs/mes
 ![グループ化 6.png](https://qiita-image-store.s3.amazonaws.com/0/90087/3c15a56d-4b8a-c4e4-4a30-4c606ff3a9e2.png)
 
 - 音声メッセージ登録処理：
-    - Messaging APIの[コンテンツを取得する](https://developers.line.biz/ja/reference/messaging-api/#anchor-fcc6cd7ad966ea05230c564c2be362df80c0739d)を参考に、音声メッセージをm4aとして取得。
-    - 取得した音声メッセージをS3に格納する。
-    - DynamoDBにS3のURLをLINE IDと紐づけて格納する。
+    - Messaging API の[コンテンツを取得する](https://developers.line.biz/ja/reference/messaging-api/#anchor-fcc6cd7ad966ea05230c564c2be362df80c0739d)を参考に、音声メッセージを m4a として取得。
+    - 取得した音声メッセージを S3 に格納する。
+    - DynamoDB に S3 の URL を LINE ID と紐づけて格納する。
 - 音声メッセージ取得処理：
-    - LINE IDをもとに、DynamoDBからS3に格納されている音声メッセージファイルのURLを取得。
-    - CEKの[オーディオコンテンツの再生を指示する](https://clova-developers.line.biz/guide/CEK/Guides/Build_Custom_Extension.md#DirectClientToPlayAudio)を参考に、音声を再生する。
+    - LINE ID をもとに、DynamoDB から S3 に格納されている音声メッセージファイルの URL を取得。
+    - CEK の[オーディオコンテンツの再生を指示する](https://clova-developers.line.biz/guide/CEK/Guides/Build_Custom_Extension.md#DirectClientToPlayAudio)を参考に、音声を再生する。
 
  
 # サンプルコード
@@ -124,7 +124,7 @@ const clovaSkillHandler = clova.Client.configureSkill()
 ```
 
 # まとめ
-Messaging APIとCEKを利用し、非同期な音声メッセージの再生を簡単に実現することができました。
-Clovaスキル作成方法の記事もどんどん増えてきているので、みなさんもスキル作成にチャレンジしてみてはいかがでしょうか。  
+Messaging API と CEK を利用し、非同期な音声メッセージの再生を簡単に実現できました。
+Clova スキル作成方法の記事もどんどん増えてきているので、みなさんもスキル作成にチャレンジしてみてはいかがでしょうか。  
 明日の記事は[@vui_rie](https://qiita.com/vui_rie)さんの「[LINE Clova＆BOTと生きた2018年
 ](https://note.mu/r9i9e/n/n5adc171a0bac)」です！

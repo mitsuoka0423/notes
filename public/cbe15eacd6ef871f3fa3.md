@@ -14,16 +14,16 @@ ignorePublish: false
 ## はじめに
 
 前回、[Auth0を使ってプライベートなマークダウンエディタを作る（クライアントサイド編）](https://qiita.com/tmisuo0423/items/9d55cfdb9bee7eef0b81)で、ブラウザで動作するマークダウンエディタのプロトタイプを作成しました。
-本記事では、Electronを使ってデスクトップアプリ化しようと思います。
+本記事では、Electron を使ってデスクトップアプリ化しようと思います。
 
 ## システム構成図
 
-本記事では、前回記事で作成したクライアントをElectronを使ってデスクトップアプリにしていきます。
+本記事では、前回記事で作成したクライアントを Electron を使ってデスクトップアプリにしていきます。
 ![part.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/90087/9ab04179-939c-4a65-9fd0-3f199e291bbf.png)
 
 ## Vue.jsプロジェクトをElectron化する
 
-Vue.jsのプロジェクトは**2コマンド**実行するだけでElectron化できます。
+Vue.js のプロジェクトは**2コマンド**実行するだけで Electron 化できます。
 
 ### 前準備：Vue.jsプロジェクトを作成する
 
@@ -32,7 +32,7 @@ Vue.jsのプロジェクトは**2コマンド**実行するだけでElectron化�
 
 ### Electronのコマンドを実行する
 
-`vue-cliプラグイン`の`electron-builder`を使うことでElectron化できます。
+`vue-cliプラグイン`の`electron-builder`を使うことで Electron 化できます。
 詳細はこちら→https://nklayman.github.io/vue-cli-plugin-electron-builder/
 
 以下のコマンドを実行します。
@@ -42,7 +42,7 @@ $ npm i -g @vue/cli
 $ vue add electron-builder
 ```
 
-途中で、使用するElectronのバージョンを聞かれるので、最新の`6.0.0`を選択します。
+途中で、使用する Electron のバージョンを聞かれるので、最新の`6.0.0`を選択します。
 
 ```
 $ npm i -g @vue/cli
@@ -76,7 +76,7 @@ found 7 moderate severity vulnerabilities
 ```
 
 少し待つと、コマンドが成功するはずです。
-`electron-builder`によって、以下4ファイルが追加・更新されたようなので、バージョン管理している場合は忘れずにコミット・プッシュしておきましょう。
+`electron-builder`によって、以下 4 ファイルが追加・更新されたようなので、バージョン管理している場合は忘れずにコミット・プッシュしておきましょう。
 
   - src/background.js
   - .gitignore
@@ -114,16 +114,16 @@ npm WARN lifecycle The node binary used for scripts is C:\Program Files (x86)\No
 するとこんな画面が出てきます。
 ![image.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/90087/d24b0475-257e-d0e2-c746-7227268c12cb.png)
 
-開発者ツールが表示されているので、×ボタンで閉じるとWebと同じ見た目になりました。
+開発者ツールが表示されているので、×ボタンで閉じると Web と同じ見た目になりました。
 ![image.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/90087/e1fbb0db-cd16-943f-7497-756e828fb9c8.png)
 
-Auth0を使ったGoogleログインもでき、マークダウンエディタの機能も壊れることなくそのままデスクトップアプリとして動かすことができました。
+Auth0 を使った Google ログインもでき、マークダウンエディタの機能も壊れることなくそのままデスクトップアプリとして動かすことができました。
 ![2019-12-14_16h01_31.gif](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/90087/e22e826e-3126-8598-152c-fa338754f3d7.gif)
 
 ## まとめ
 
-Vue.jsで作成したWebアプリは、vue-cliプラグインの`electron-builder`の力を借りることで、**2コマンド**だけでデスクトップアプリにすることができました。（うち1つはvue-cliのインストールだったので、vue-cliがインストールされていれば、**1コマンド**のみですね）
+Vue.js で作成した Web アプリは、vue-cli プラグインの`electron-builder`の力を借りることで、**2コマンド**だけでデスクトップアプリにできました（うち 1 つは vue-cli のインストールだったので、vue-cli がインストールされていれば、**1コマンド**のみですね）
 
-デスクトップアプリとして動かした場合でも、Webで動いていた機能が壊れることなく動いたのは驚きました。（Electronの内部ではChromiumが使われているとのことなので、当たり前っちゃ当たり前ですが）
+デスクトップアプリとして動かした場合でも、Web で動いていた機能が壊れることなく動いたのは驚きました（Electron の内部では Chromium が使われているとのことなので、当たり前っちゃ当たり前ですが）
 
-最近はPWAを使ってもデスクトップアプリっぽく見せることができるよう([Windows 10 1803の新機能「PWA」とは？PWAのUWPアプリ化を試してみる](https://codezine.jp/article/detail/10837))ですので、そちらも試していきたいと思います。
+最近は PWA を使ってもデスクトップアプリっぽく見せることができるよう([Windows 10 1803の新機能「PWA」とは？PWAのUWPアプリ化を試してみる](https://codezine.jp/article/detail/10837))ですので、そちらも試していきたいと思います。

@@ -14,22 +14,22 @@ ignorePublish: false
 ---
 ## はじめに
 
-HTTP POSTでAzure IoT Hubにメッセージを送信するメモです。
+HTTP POST で Azure IoT Hub にメッセージを送信するメモです。
 <a href="https://gyazo.com/edba20c81dc5255370fb7b5e8f6275b4"><img src="https://i.gyazo.com/edba20c81dc5255370fb7b5e8f6275b4.gif" alt="Image from Gyazo" width="1280"/></a>
-Node.js & MQTTのメモは[Node.jsでAzure IoT Hubにテレメトリを送信するサンプルコードを動かすメモ](https://qiita.com/tmitsuoka0423/items/bbc5ea0f462752e31c1f)にまとめています。
+Node.js & MQTT のメモは[Node.jsでAzure IoT Hubにテレメトリを送信するサンプルコードを動かすメモ](https://qiita.com/tmitsuoka0423/items/bbc5ea0f462752e31c1f)にまとめています。
 
 公式ドキュメントはこちら：[IoT Hub REST](https://docs.microsoft.com/ja-jp/rest/api/iothub/)。
 ~~欲しい情報が全然見つからなかった~~ので、下記の記事も参考にさせていただきました。
 - [Azure IoT Hubを生MQTTS(mosquitto)やHTTP RESTで使う方法](https://qiita.com/ma2shita/items/032370350cba282d35ff#http-rest) (@ma2shita さん)
 - [HTTP REST APIでAzure IoT Hubにメッセージを送信する (C#)](https://www.sukerou.com/2018/11/http-rest-apiazure-iot-hub-c201811.html#toc_headline_4)
 
-(2021/02/11追記)
+(2021/02/11 追記)
 リファレンス見つかりました。
 →[デバイスからメッセージを送信する(https://docs.microsoft.com/ja-jp/rest/api/iothub/device/senddeviceevent)](https://docs.microsoft.com/ja-jp/rest/api/iothub/device/senddeviceevent)
 
 ## 準備
 
-- [手順](https://docs.microsoft.com/ja-jp/azure/iot-hub/quickstart-send-telemetry-node#create-an-iot-hub)を参考に、IoT Hubをデプロイする。（スケールは`F1`を選択。）
+- [手順](https://docs.microsoft.com/ja-jp/azure/iot-hub/quickstart-send-telemetry-node#create-an-iot-hub)を参考に、IoT Hub をデプロイする（スケールは`F1`を選択）。
 
 ## HTTP POSTでメッセージを送信する
 
@@ -51,15 +51,15 @@ Node.js & MQTTのメモは[Node.jsでAzure IoT Hubにテレメトリを送信す
 
 ### HTTPヘッダーにSASトークンを設定する
 
-[IoT Hub へのアクセスの制御](https://docs.microsoft.com/ja-jp/azure/iot-hub/iot-hub-devguide-security)にSASトークンの発行方法が書いてあります。
-今回は、Azure CLIを使用してみます。
+[IoT Hub へのアクセスの制御](https://docs.microsoft.com/ja-jp/azure/iot-hub/iot-hub-devguide-security)に SAS トークンの発行方法が書いてあります。
+今回は、Azure CLI を使用してみます。
 
 #### Azure CLIのインストール
 
-[Azure Command-Line Interface (CLI) documentation](https://docs.microsoft.com/ja-jp/cli/azure/?view=azure-cli-latest)から、Azure CLIをインストールします。
+[Azure Command-Line Interface (CLI) documentation](https://docs.microsoft.com/ja-jp/cli/azure/?view=azure-cli-latest)から、Azure CLI をインストールします。
 
 インストールできたらターミナルで`az`コマンドを実行してみましょう。
-以下のように表示されればOKです。
+以下のように表示されれば OK です。
 
 ```bash
 $az
@@ -86,7 +86,7 @@ You can change your telemetry settings with `az configure`.
 (略)
 ```
 
-忘れずに、Azure CLIでもログインしておきます。
+忘れずに、Azure CLI でもログインしておきます。
 
 ```bash
 $ az login
@@ -106,7 +106,7 @@ $ az iot hub generate-sas-token --hub-name {IOT_HUB_NAME}
 $ az iot hub generate-sas-token --hub-name azure-iot-m5atom-lite-sample
 ```
 
-実行すると、SASトークンが発行されました。
+実行すると、SAS トークンが発行されました。
 
 ```bash
 {
@@ -114,11 +114,11 @@ $ az iot hub generate-sas-token --hub-name azure-iot-m5atom-lite-sample
 }
 ```
 
-こちらをHTTPヘッダーの`Authorization`に設定します。
+こちらを HTTP ヘッダーの`Authorization`に設定します。
 
 ### POSTする
 
-CURLではこんな感じのリクエストになります。
+CURL ではこんな感じのリクエストになります。
 
 ```
 curl -i -X POST \
@@ -129,14 +129,14 @@ curl -i -X POST \
 ```
 
 動作確認します。
-[前記事](https://qiita.com/tmitsuoka0423/items/bbc5ea0f462752e31c1f#%E9%80%81%E4%BF%A1%E3%81%97%E3%81%9F%E3%83%87%E3%83%BC%E3%82%BF%E3%82%92%E5%8F%97%E4%BF%A1%E3%81%99%E3%82%8B)で作成したNode.jsの受信プログラムを動かしておき、きちんと受信できるか確認します。
+[前記事](https://qiita.com/tmitsuoka0423/items/bbc5ea0f462752e31c1f#%E9%80%81%E4%BF%A1%E3%81%97%E3%81%9F%E3%83%87%E3%83%BC%E3%82%BF%E3%82%92%E5%8F%97%E4%BF%A1%E3%81%99%E3%82%8B)で作成した Node.js の受信プログラムを動かしておき、きちんと受信できるか確認します。
 
 <a href="https://gyazo.com/edba20c81dc5255370fb7b5e8f6275b4"><img src="https://i.gyazo.com/edba20c81dc5255370fb7b5e8f6275b4.gif" alt="Image from Gyazo" width="1280"/></a>
 メッセージを送信するごとに受信できてますね。
 
 ## まとめ
 
-Azure IoT HubにHTTP POSTでメッセージを送ることができました。
+Azure IoT Hub に HTTP POST でメッセージを送ることができました。
 公式ドキュメントが読み解きにくくてちょっと迷いました。
 
-メッセージを送る方法として、MQTTとHTTP POSTはメリットデメリットがありそうですが、よく検討して使っていこうと思います。
+メッセージを送る方法として、MQTT と HTTP POST はメリットデメリットがありそうですが、よく検討して使っていこうと思います。
