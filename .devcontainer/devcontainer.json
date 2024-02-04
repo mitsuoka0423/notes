@@ -20,13 +20,6 @@
   "dockerComposeFile": [
     "../docker-compose.yml"
   ],
-  "mounts": [
-    {
-      "source": "devcontainer-sample_venv",
-      "target": "${containerWorkspaceFolder}/.venv",
-      "type": "volume"
-    }
-  ],
   "name": "zenn dev container",
   "remoteUser": "root",
   "service": "zenn-dev-container",
