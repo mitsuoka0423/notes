@@ -12,7 +12,7 @@
     "textlint-rule-preset-ja-spacing": "^2.3.0",
     "textlint-rule-preset-ja-technical-writing": "^10.0.1",
     "textlint-rule-spellcheck-tech-word": "^5.0.0",
-    "zenn-cli": "^0.1.151"
+    "zenn-cli": "^0.1.152"
   },
   "homepage": "https://github.com/tmitsuoka0423/zenn#readme",
   "keywords": [],

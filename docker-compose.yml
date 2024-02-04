@@ -3,8 +3,6 @@ version: "3"
 services:
   zenn-dev-container:
     image: node
-    ports:
-      - 18000:8000
     # コンテナを起動させ続ける
     tty: true
     # working_dirディレクトリ下にホストのディレクトリをマウントします
