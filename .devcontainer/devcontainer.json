@@ -21,7 +21,7 @@
     "../docker-compose.yml"
   ],
   "name": "zenn dev container",
-  "postStartCommand": "npm ci && npm run zenn:preview & npm run qiita:preview",
+  "postStartCommand": "npm ci && npm run zenn:preview",
   "remoteUser": "root",
   "service": "zenn-dev-container",
   "workspaceFolder": "/workspace"
