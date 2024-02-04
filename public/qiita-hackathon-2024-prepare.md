@@ -5,6 +5,7 @@ tags:
   - Node.js
   - OpenAI
   - Gemini
+  - ハッカソン
 private: false
 updated_at: '2024-02-04T19:57:44+09:00'
 id: 8fa4df81b38c370ccea0
