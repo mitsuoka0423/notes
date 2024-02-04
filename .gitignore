@@ -1,3 +1,4 @@
 node_modules
 .history
 *.tmp
+.DS_Store
