@@ -1,0 +1,24 @@
+---
+title: Replicate にサインインする & API キーを発行する
+tags:
+  - 'replicate'
+  - 'AI'
+  - '機械学習'
+  - 'API'
+private: false
+updated_at: ''
+id: null
+organization_url_name: null
+slide: false
+ignorePublish: false
+---
+
+## はじめに
+
+この記事では、 Replicate の利用を開始するための準備手順を説明します。
+
+
+$include="../parts/replicate/about.md"
+
+
+$include="../parts/replicate/registration.md"
