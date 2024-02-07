@@ -10,6 +10,7 @@
 
 - GitHub アカウント作成
   - 参考：[Creating an account on GitHub](https://docs.github.com/ja/get-started/start-your-journey/creating-an-account-on-github)
+- クレジットカード
 
 ### Replicate にサインインする
 
