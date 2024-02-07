@@ -30,6 +30,7 @@
   "scripts": {
     "lint": "textlint --dry-run .",
     "lint:fix": "textlint --fix .",
+    "qiita:article": "qiita new",
     "qiita:preview": "qiita preview",
     "qiita:publish": "qiita publish",
     "zenn:article": "zenn new:article",
