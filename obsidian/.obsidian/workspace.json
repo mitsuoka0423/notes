@@ -4,18 +4,59 @@
     "type": "split",
     "children": [
       {
-        "id": "219cb677721bfb9f",
+        "id": "44b2e2d3658da1c3",
         "type": "tabs",
         "children": [
           {
-            "id": "befc2cb526295c94",
+            "id": "1cb37d5307558950",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "機械学習モデル.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "1eb17f47241b340b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "image-tagger.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "7b3ef5723e97d6a6",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "high-resolution-controlnet-tile.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "5e9c8d1cc620e5e9",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Diffusers ControlNet.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -81,6 +122,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "image-tagger.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +139,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "image-tagger.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +161,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "image-tagger.md"
+              }
             }
           }
         ]
@@ -138,8 +183,25 @@
       "command-palette:コマンドパレットを開く": false
     }
   },
-  "active": "befc2cb526295c94",
+  "active": "1eb17f47241b340b",
   "lastOpenFiles": [
+    "機械学習モデル.md",
+    "image-tagger.md",
+    "Code Llama.md",
+    "dynami-crafter-576x1024.md",
+    "InstantID.md",
+    "high-resolution-controlnet-tile.md",
+    "Diffusers ControlNet.md",
+    "Pasted image 20240212160155.png",
+    "Pasted image 20240212160147.png",
+    "ComfyUI workflow.md",
+    "ComfyUI.md",
+    "state-of-the-art.md",
+    "一般教養.md",
+    "liberal arts.md",
+    "art.md",
+    "liberal.md",
+    "zsxkib",
     "EXIF.md",
     "TIFF.md",
     "sharp.md",
@@ -152,20 +214,6 @@
     "Discord.md",
     "うっかり.md",
     "Pipedream.md",
-    "ノーコードツール.md",
-    "Glide.md",
-    "無題のファイル.md",
-    "人間のタイプ.md",
-    "Cloud Functions.md",
-    "Firebase.md",
-    "TestFlight アプリ.md",
-    "TestFlight.md",
-    "Flutter.md",
-    "Node.js.md",
-    "もくまっちスクリプト.md",
-    "もくまっち（ Glide ）.md",
-    "もくまっち（ Flutter ）.md",
-    "Web アプリ.md",
     "無題のファイル.canvas",
     "templates"
   ]
