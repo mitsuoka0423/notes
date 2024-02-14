@@ -1,21 +1,21 @@
 ---
 title: 話題のAIをノーコードで触ろう！LINE Botをつくるハンズオンワークショップ
 tags:
-  - 機械学習
-  - Make
-  - AI
   - replicate
-  - LINEmessagingAPI
+  - 機械学習
+  - AI
+  - make
+  - LINEMessagingAPI
 private: false
-updated_at: '2024-02-14T19:53:03+09:00'
-id: f1c487a604b46fb8e487
+updated_at: ''
+id: null
 organization_url_name: protoout-studio
 slide: false
 ignorePublish: false
 ---
 
 
-## 1. はじめに
+## はじめに
 
 <!-- ../parts/me/introdaction-light.md -->
 こんにちは。 [@mitsuoka0423](https://twitter.com/mitsuoka0423) です。
@@ -25,7 +25,7 @@ ignorePublish: false
 AI (機械学習) をノーコードで組み合わせた LINE Bot を制作する方法をお伝えします。
 
 
-## 2. ハンズオンの完成イメージ
+## ハンズオンの完成イメージ
 
 https://youtube.com/shorts/SUHaTeXwE4A?feature=share
 
@@ -34,21 +34,21 @@ https://youtube.com/shorts/SUHaTeXwE4A?feature=share
 > ![image](https://i.imgur.com/rZpd2oQ.png)
 
 
-## 3. 事前準備
+## 事前準備
 
 ハンズオンでは以下の準備が必要となりますので準備をお願いします。
 
 - [LINE公式アカウントの作成 / LINE Botの初め方](https://zenn.dev/protoout/articles/16-line-bot-setup)
 - [Replicate にサインインする & API キーを発行する](https://qiita.com/mitsuoka0423/items/5b72830c2fb52c4a2b6c)
 - [Make（旧: Integromat）のアカウント登録](https://zenn.dev/protoout/articles/12-integromat-signup)
-
+- [imgBBにサインインする](https://zenn.dev/protoout/articles/74-imgbb-setup)
 
 <!-- TODO: 作成 -->
 <!-- $include="../parts/line/about.md" -->
 
 
 <!-- ../parts/replicate/about.md -->
-## 4. Replicate とは？
+## Replicate とは？
 
 [![image](https://i.imgur.com/R4kKcAZ.png)](https://replicate.com/)
 
@@ -60,7 +60,7 @@ https://replicate.com/
 
 ![image](https://i.imgur.com/u1c4mhk.png)
 
-### 4.1. 価格
+### 価格
 
 [Replicate](https://replicate.com/) を利用するのにかかる金額はマシンのスペックと実行時間によって決まります
 
@@ -83,24 +83,24 @@ https://replicate.com/pricing
 https://replicate.com/stability-ai/stable-video-diffusion?input=http
 
 
-## 5. オウム返しする LINE Bot を作成する
+## オウム返しする LINE Bot を作成する
 
 <!-- ../parts/line/echo-bot.md -->
-### 5.1. 完成イメージ
+### 完成イメージ
 
-#### 5.1.1. シナリオ
+#### シナリオ
 
 ![image](https://i.imgur.com/zeWTUDa.png)
 
-#### 5.1.2. LINE Bot
+#### LINE Bot
 
 [![Image from Gyazo](https://i.gyazo.com/94e5bda2678dcf5bbc7a0154eeac8b07.gif)](https://gyazo.com/94e5bda2678dcf5bbc7a0154eeac8b07)
 
-### 5.2. 事前準備
+### 事前準備
 
 本資料の内容を進めるためには下記の作業が必要です。
 
-#### 5.2.1. LINE
+#### LINE
 
 https://zenn.dev/protoout/articles/16-line-bot-setup
 
@@ -109,7 +109,7 @@ https://zenn.dev/protoout/articles/16-line-bot-setup
 - [ ] LINE 公式アカウントが作成され、友達追加されていること
 - [ ] チャネルアクセストークンが発行されていること
 
-#### 5.2.2. Make
+#### Make
 
 https://zenn.dev/protoout/articles/12-integromat-signup
 
@@ -117,13 +117,13 @@ https://zenn.dev/protoout/articles/12-integromat-signup
 
 - [ ] Make にログインできていること
 
-### 5.3. Makeでシナリオを作成する
+### Makeでシナリオを作成する
 
-#### 5.3.1. 前提
+#### 前提
 
 - [Make](https://www.Make.com/en/login) で操作
 
-#### 5.3.2. 操作イメージ
+#### 操作イメージ
 
 ![image](https://i.imgur.com/A4lnHbh.png)
 
@@ -131,9 +131,9 @@ https://zenn.dev/protoout/articles/12-integromat-signup
 
 ![image](https://i.imgur.com/71Jv9GF.png)
 
-### 5.4. `LINE`モジュールの`Watch Events`を追加 & 設定する
+### `LINE`モジュールの`Watch Events`を追加 & 設定する
 
-#### 5.4.1. 操作イメージ
+#### 操作イメージ
 
 ![image](https://i.imgur.com/0KuGxkQ.png)
 
@@ -155,9 +155,9 @@ https://zenn.dev/protoout/articles/12-integromat-signup
 
 > くるくるしてればOK
 
-### 5.5. 作成したチャネルにWebhook URLを設定する
+### 作成したチャネルにWebhook URLを設定する
 
-#### 5.5.1. 前提
+#### 前提
 
 - [LINE Developesコンソール](https://developers.line.biz/console/)で操作
   - ログインがまだの方は、ログインしておいてください
@@ -166,7 +166,7 @@ https://zenn.dev/protoout/articles/12-integromat-signup
 Make はこのあとの手順でも利用するので、タブで開きっぱなしにしておいてください。
 :::
 
-#### 5.5.2. 操作イメージ
+#### 操作イメージ
 
 ![image](https://i.imgur.com/6gLYAwO.png)
 
@@ -177,13 +177,13 @@ Make はこのあとの手順でも利用するので、タブで開きっぱな
 ![image](https://i.imgur.com/02lLRRA.png)
 
 
-### 5.6. `LINE`モジュールの`Send a Reply Message`を追加 & 設定する
+### `LINE`モジュールの`Send a Reply Message`を追加 & 設定する
 
-#### 5.6.1. 前提
+#### 前提
 
 - Make で操作
 
-#### 5.6.2. 操作イメージ
+#### 操作イメージ
 
 ![image](https://i.imgur.com/yShsjBh.png)
 
@@ -199,9 +199,9 @@ Make はこのあとの手順でも利用するので、タブで開きっぱな
 
 > くるくるしてればOK
 
-### 5.7. LINE にメッセージを送る
+### LINE にメッセージを送る
 
-#### 5.7.1. 操作イメージ
+#### 操作イメージ
 
 ![image](https://i.imgur.com/sxa02C3.png)
 
@@ -209,12 +209,12 @@ Make はこのあとの手順でも利用するので、タブで開きっぱな
 
 
 
-## 6. 演習1. LINE Bot に好きなキャラの口癖をつけてみよう
+## 演習1. LINE Bot に好きなキャラの口癖をつけてみよう
 
 - [口癖 (くちぐせ)とは【ピクシブ百科事典】](https://dic.pixiv.net/a/%E5%8F%A3%E7%99%96)
 
 
-## 7. 演習2. 好きな API と組み合わせて、オリジナルの LINE Bot を作成しよう
+## 演習2. 好きな API と組み合わせて、オリジナルの LINE Bot を作成しよう
 
 > ヒント： API を利用する際は `HTTP` モジュールを利用します。
 >
@@ -224,40 +224,40 @@ Make はこのあとの手順でも利用するので、タブで開きっぱな
 - API は他にもたくさんありますので、「気になるワード + API」で検索してみましょう
 
 
-## 8. LINE Bot に Replicate を組み合わせる
+## LINE Bot に Replicate を組み合わせる
 
 <!-- ../parts/line/replicate.md -->
-### 8.1. 完成イメージ
+### 完成イメージ
 
-#### 8.1.1. シナリオ
+#### シナリオ
 
 ![image](https://i.imgur.com/3iuDfZ5.png)
 
-#### 8.1.2. LINE Bot
+#### LINE Bot
 
 ![image](https://i.imgur.com/liwV55h.jpg)
 
 
-### 8.2. 事前準備
+### 事前準備
 
-#### 8.2.1. LINE
+#### LINE
 
 - [ ] オウム返しする Bot が作成されていること
 
-#### 8.2.2. Replicate
+#### Replicate
 
 https://qiita.com/mitsuoka0423/items/5b72830c2fb52c4a2b6c
 
 - [ ] API キーがコピーされてすぐ利用できる状態になっていること
 
 
-### 8.3. `LINE` モジュールの `Download a Message Attachment` を設定する
+### `LINE` モジュールの `Download a Message Attachment` を設定する
 
-#### 8.3.1. 前提
+#### 前提
 
 - [Make](https://www.Make.com/en/login) で操作
 
-#### 8.3.2. 操作イメージ
+#### 操作イメージ
 
 ![image](https://i.imgur.com/Pl7oW1s.png)
 
@@ -276,13 +276,13 @@ https://qiita.com/mitsuoka0423/items/5b72830c2fb52c4a2b6c
 ![image](https://i.imgur.com/iiQ0Tsa.png)
 
 
-### 8.4. `ImgBB` モジュールの `Upload a Photo` を設定する
+### `ImgBB` モジュールの `Upload a Photo` を設定する
 
-#### 8.4.1. 前提
+#### 前提
 
 - [Make](https://www.Make.com/en/login) で操作
 
-#### 8.4.2. 操作イメージ
+#### 操作イメージ
 
 ![image](https://i.imgur.com/FAmVPem.png)
 
@@ -295,34 +295,21 @@ https://qiita.com/mitsuoka0423/items/5b72830c2fb52c4a2b6c
 ![image](https://i.imgur.com/OStHOx6.png)
 
 
-### 8.5. `HTTP` モジュールの `Make a request` を設定する
+### `HTTP` モジュール `Make a request` を設定する
 
-#### 8.5.1. 前提
-
-- [Make](https://www.Make.com/en/login) で操作
-
-#### 8.5.2. 操作イメージ
-
-![image](https://i.imgur.com/aBCFYCp.png)
-
-![image](https://i.imgur.com/6JDXGln.png)
-
-![image](https://i.imgur.com/NeCyWlB.png)
-
-
-### 8.6. `HTTP` モジュール `Make a request` を設定する
-
-#### 8.6.1. 前提
+#### 前提
 
 - [Make](https://www.Make.com/en/login) で操作
 
-#### 8.6.2. 操作イメージ
+#### 操作イメージ
 
 ![image](https://i.imgur.com/cNjLIgj.png)
 
 ![image](https://i.imgur.com/Ug1zsOJ.png)
 
 ![image](https://i.imgur.com/pht4udg.png)
+
+> 右側の画面の URL: https://replicate.com/stability-ai/stable-video-diffusion?input=http
 
 > Replicate の API を叩く
 > 対応する項目をコピペする（不要なスペースに注意）
@@ -336,20 +323,20 @@ https://qiita.com/mitsuoka0423/items/5b72830c2fb52c4a2b6c
 ![image](https://i.imgur.com/3iuDfZ5.png)
 
 
-### 8.7. `LINE` モジュール `Send a Reply Message` を設定する
+### `LINE` モジュール `Send a Reply Message` を設定する
 
-#### 8.7.1. 前提
+#### 前提
 
 - [Make](https://www.Make.com/en/login) で操作
 
-#### 8.7.2. 操作イメージ
+#### 操作イメージ
 
 ![image](https://i.imgur.com/NszMCCc.png)
 
 ![image](https://i.imgur.com/3iuDfZ5.png)
 
 
-### 8.8. 動作確認
+### 動作確認
 
 生成された動画は Replicate のダッシュボードで確認できます
 
@@ -357,9 +344,9 @@ https://qiita.com/mitsuoka0423/items/5b72830c2fb52c4a2b6c
 
 
 
-## 9. ミニハッカソン
+## ミニハッカソン
 
-### 9.1. テーマ：使って楽しいモデルを探して、オリジナルの AI x LINE Bot を作成しよう
+### テーマ：使って楽しいモデルを探して、オリジナルの AI x LINE Bot を作成しよう
 
 Replicate ではたくさんのモデルが利用可能です。
 使って楽しいモデルを探して、自分だけの AI LINE Bot を作りましょう。
@@ -379,28 +366,28 @@ https://replicate.com/explore
 ![image](https://i.imgur.com/ifA3FNn.png)
 
 
-## 10. （オプション）Replicate の推論結果を LINE Bot で表示する
+## （オプション）Replicate の推論結果を LINE Bot で表示する
 
 > こちらはハンズオンの説明対象外となります。
 > 資料を見てチャレンジしましょう。
 
 <!-- ../parts/line/replicate-webhook.md -->
 
-### 10.1. 完成イメージ
+### 完成イメージ
 
-#### 10.1.1. シナリオ
+#### シナリオ
 
 ![image](https://i.imgur.com/bOjD9OH.png)
 
 > シナリオが 2 つになります。
 
-### 10.2. スプレッドシートを作成する
+### スプレッドシートを作成する
 
-#### 10.2.1. 前提
+#### 前提
 
 - [スプレッドシート](https://docs.google.com/spreadsheets/u/0/) で操作
 
-#### 10.2.2. 操作イメージ
+#### 操作イメージ
 
 ![image](https://i.imgur.com/nUT6yP1.png)
 
@@ -412,13 +399,13 @@ https://replicate.com/explore
 > となっていれば OK
 
 
-### 10.3. `Google Sheets` モジュールの `Add a Row` を設定する
+### `Google Sheets` モジュールの `Add a Row` を設定する
 
-#### 10.3.1. 前提
+#### 前提
 
 - [Make](https://www.Make.com/en/login) で操作
 
-#### 10.3.2. 操作イメージ
+#### 操作イメージ
 
 ![image](https://i.imgur.com/fe5XFqF.png)
 
@@ -439,39 +426,39 @@ https://replicate.com/explore
 ![image](https://i.imgur.com/aiBX5Qz.png)
 
 
-### 10.4. 新しいシナリオを作成する
+### 新しいシナリオを作成する
 
-#### 10.4.1. 前提
+#### 前提
 
 - [Make](https://www.Make.com/en/login) で操作
 
-#### 10.4.2. 操作イメージ
+#### 操作イメージ
 
 ![image](https://i.imgur.com/X81Dttj.png)
 
 ![image](https://i.imgur.com/0oMMz8f.png)
 
 
-### 10.5. `Webhooks` モジュールの `Custom webhook` を設定する
+### `Webhooks` モジュールの `Custom webhook` を設定する
 
-#### 10.5.1. 前提
+#### 前提
 
 - 新しく作成したシナリオを変更
 
-#### 10.5.2. 操作イメージ
+#### 操作イメージ
 
 ![image](https://i.imgur.com/qdMeMy9.png)
 
 > Webhook URL をコピーできていれば OK
 
 
-### 10.6. `HTTP` モジュールの `Make a request` を変更する
+### `HTTP` モジュールの `Make a request` を変更する
 
-#### 10.6.1. 前提
+#### 前提
 
 - **最初に作ったシナリオを変更**
 
-#### 10.6.2. 操作イメージ
+#### 操作イメージ
 
 ![image](https://i.imgur.com/bXd1MoE.png)
 
@@ -506,13 +493,13 @@ https://replicate.com/explore
 > `SCHEDULING` が `ON` になっていれば OK
 
 
-### 10.7. `Google Sheets` モジュールの `Search Rows` を設定する
+### `Google Sheets` モジュールの `Search Rows` を設定する
 
-#### 10.7.1. 前提
+#### 前提
 
 - 新しく作成したシナリオを変更
 
-#### 10.7.2. 操作イメージ
+#### 操作イメージ
 
 ![image](https://i.imgur.com/RxvUHPM.png)
 
@@ -521,13 +508,13 @@ https://replicate.com/explore
 ![image](https://i.imgur.com/MNVNrum.png)
 
 
-### 10.8. `LINE` モジュールの `Send a Push Message` を設定する
+### `LINE` モジュールの `Send a Push Message` を設定する
 
-#### 10.8.1. 前提
+#### 前提
 
 - 新しく作成したシナリオを変更
 
-#### 10.8.2. 操作イメージ
+#### 操作イメージ
 
 ![image](https://i.imgur.com/ROleNk8.png)
 

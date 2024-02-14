@@ -66,21 +66,6 @@ https://qiita.com/mitsuoka0423/items/5b72830c2fb52c4a2b6c
 ![image](https://i.imgur.com/OStHOx6.png)
 
 
-### `HTTP` モジュールの `Make a request` を設定する
-
-#### 前提
-
-- [Make](https://www.Make.com/en/login) で操作
-
-#### 操作イメージ
-
-![image](https://i.imgur.com/aBCFYCp.png)
-
-![image](https://i.imgur.com/6JDXGln.png)
-
-![image](https://i.imgur.com/NeCyWlB.png)
-
-
 ### `HTTP` モジュール `Make a request` を設定する
 
 #### 前提
@@ -94,6 +79,8 @@ https://qiita.com/mitsuoka0423/items/5b72830c2fb52c4a2b6c
 ![image](https://i.imgur.com/Ug1zsOJ.png)
 
 ![image](https://i.imgur.com/pht4udg.png)
+
+> 右側の画面の URL: https://replicate.com/stability-ai/stable-video-diffusion?input=http
 
 > Replicate の API を叩く
 > 対応する項目をコピペする（不要なスペースに注意）
