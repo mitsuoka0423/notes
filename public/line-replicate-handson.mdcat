@@ -1,0 +1,108 @@
+---
+title: 話題のAIをノーコードで触ろう！LINE Botをつくるハンズオンワークショップ
+tags:
+  - replicate
+  - 機械学習
+  - AI
+  - make
+  - LINEMessagingAPI
+private: false
+updated_at: ''
+id: null
+organization_url_name: protoout-studio
+slide: false
+ignorePublish: false
+---
+
+
+## はじめに
+
+$include="../parts/me/introdaction-light.md"
+
+この資料では [Replicate](https://replicate.com/) というサービスを利用して、
+AI (機械学習) をノーコードで組み合わせた LINE Bot を制作する方法をお伝えします。
+
+
+## ハンズオンの完成イメージ
+
+https://youtube.com/shorts/SUHaTeXwE4A?feature=share
+
+> こちらの QR コードから LINE で友達登録すると実際に試すことができます
+>
+> ![image](https://i.imgur.com/rZpd2oQ.png)
+
+
+## 事前準備
+
+ハンズオンでは以下の準備が必要となりますので準備をお願いします。
+
+- [LINE公式アカウントの作成 / LINE Botの初め方](https://zenn.dev/protoout/articles/16-line-bot-setup)
+- [Replicate にサインインする & API キーを発行する](https://qiita.com/mitsuoka0423/items/5b72830c2fb52c4a2b6c)
+- [Make（旧: Integromat）のアカウント登録](https://zenn.dev/protoout/articles/12-integromat-signup)
+
+
+<!-- TODO: 作成 -->
+<!-- $include="../parts/line/about.md" -->
+
+
+$include="../parts/replicate/about.md"
+
+今回のハンズオンで利用するモデル
+
+https://replicate.com/stability-ai/stable-video-diffusion?input=http
+
+
+## オウム返しする LINE Bot を作成する
+
+$include="../parts/line/echo-bot.md"
+
+
+## 演習1. LINE Bot に好きなキャラの口癖をつけてみよう
+
+- [口癖 (くちぐせ)とは【ピクシブ百科事典】](https://dic.pixiv.net/a/%E5%8F%A3%E7%99%96)
+
+
+## 演習2. 好きな API と組み合わせて、オリジナルの LINE Bot を作成しよう
+
+> ヒント： API を利用する際は `HTTP` モジュールを利用します。
+>
+> ![image](https://i.imgur.com/ZWT4wyh.png)
+
+- 公開API一覧: [public-apis](https://github.com/public-apis/public-apis)
+- API は他にもたくさんありますので、「気になるワード + API」で検索してみましょう
+
+
+## LINE Bot に Replicate を組み合わせる
+
+$include="../parts/line/replicate.md"
+
+
+## ミニハッカソン
+
+### テーマ：使って楽しいモデルを探して、オリジナルの AI x LINE Bot を作成しよう
+
+Replicate ではたくさんのモデルが利用可能です。
+使って楽しいモデルを探して、自分だけの AI LINE Bot を作りましょう。
+
+最後に数名発表していただく予定です。
+
+> 作業途中でも全然 OK です。
+> 
+> - どういうモデルを探したのか
+> - どういうことをやろうとしたのか
+>
+> を教えて下さい。
+
+
+https://replicate.com/explore
+
+![image](https://i.imgur.com/ifA3FNn.png)
+
+
+## （オプション）Replicate の推論結果を LINE Bot で表示する
+
+> こちらはハンズオンの説明対象外となります。
+> 資料を見てチャレンジしましょう。
+
+$include="../parts/line/replicate-webhook.md"
+

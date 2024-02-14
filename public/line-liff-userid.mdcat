@@ -1,0 +1,40 @@
+---
+title: Google Apps Scriptの doGet / doPost のログを確認できるようにするメモ
+tags:
+  - 'googleappsscript'
+  - 'gas'
+  - 'googlecloudplatform'
+  - 'gcp'
+private: false
+updated_at: ''
+id: null
+organization_url_name: null
+slide: false
+ignorePublish: false
+---
+
+## はじめに
+
+$include="../parts/me/introdaction-light.md"
+
+私は LINE Bot を開発するときに Google Apps Script (GAS) の `doPost` をよく利用します。
+`doPost` は Web アプリとしてデプロイするため、ログが GAS のコンソールには表示されません。
+
+Google Cloud Platform (GCP) と連携させることでログを確認できるようになるので、設定手順をメモします。
+
+## GCP
+
+### プロジェクトを作成し、プロジェクト番号を取得する
+
+### OAuth 同意画面を設定する
+
+## GAS
+
+### GCP のプロジェクト番号を設定する
+
+## 実際の動作
+
+
+## おわりに
+
+これでデバッグが捗ります。
