@@ -20,12 +20,48 @@
             }
           },
           {
-            "id": "1eb17f47241b340b",
+            "id": "cc6b7180a5c3a797",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "image-tagger.md",
+                "file": "info.plist.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "a405933498dff5f9",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "ControlNet.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "399b403ff277dceb",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "reference-only.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "c975b3fe32325302",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Pipedream.md",
                 "mode": "source",
                 "source": false
               }
@@ -56,7 +92,7 @@
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -122,7 +158,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "image-tagger.md",
+                "file": "reference-only.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -139,7 +175,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "image-tagger.md",
+                "file": "reference-only.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -162,7 +198,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "image-tagger.md"
+                "file": "reference-only.md"
               }
             }
           }
@@ -170,30 +206,41 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
+      "graph:グラフビューを開く": false,
       "templates:テンプレートを挿入": false,
       "switcher:クイックスイッチャーを開く": false,
-      "graph:グラフビューを開く": false,
       "canvas:新規キャンバスを作成": false,
       "daily-notes:今日のデイリーノートを開く": false,
       "command-palette:コマンドパレットを開く": false
     }
   },
-  "active": "1eb17f47241b340b",
+  "active": "399b403ff277dceb",
   "lastOpenFiles": [
+    "ControlNet.md",
+    "Diffusers ControlNet.md",
+    "high-resolution-controlnet-tile.md",
+    "Pipedream.md",
+    "Pasted image 20240214081623.png",
+    "Pasted image 20240212160155.png",
+    "Pasted image 20240212160147.png",
+    "reference-only.md",
+    "CADisableMinimumFrameDurationOnPhone.md",
+    "info.plist.md",
+    "iOS アプリ.md",
+    "輸出コンプライアンス.md",
+    "ITSAppUsesNonExemptEncryption.md",
+    "ハッカソン.md",
+    "機械学習&AI.md",
     "機械学習モデル.md",
+    "TestFlight.md",
     "image-tagger.md",
     "Code Llama.md",
     "dynami-crafter-576x1024.md",
     "InstantID.md",
-    "high-resolution-controlnet-tile.md",
-    "Diffusers ControlNet.md",
-    "Pasted image 20240212160155.png",
-    "Pasted image 20240212160147.png",
     "ComfyUI workflow.md",
     "ComfyUI.md",
     "state-of-the-art.md",
@@ -202,18 +249,6 @@
     "art.md",
     "liberal.md",
     "zsxkib",
-    "EXIF.md",
-    "TIFF.md",
-    "sharp.md",
-    "スマホアプリ.md",
-    "App Store.md",
-    "App Store Connect.md",
-    "もくまっち.md",
-    "Cloud Tasks.md",
-    "Interactions Endpoint URL.md",
-    "Discord.md",
-    "うっかり.md",
-    "Pipedream.md",
     "無題のファイル.canvas",
     "templates"
   ]
