@@ -204,9 +204,11 @@
   },
   "active": "8cb954dde032c65c",
   "lastOpenFiles": [
+    "Apple Developer.md",
+    "Apple Developer Program.md",
+    "App ID.md",
     "Wildcard App ID.md",
     "Explicit App ID.md",
-    "App ID.md",
     "Provisioning Profile.md",
     "プロビジョニングプロファイル.md",
     "Certificate.md",
@@ -231,8 +233,6 @@
     "Pasted image 20240212160155.png",
     "Pasted image 20240212160147.png",
     "CADisableMinimumFrameDurationOnPhone.md",
-    "iOS アプリ.md",
-    "輸出コンプライアンス.md",
     "zsxkib",
     "無題のファイル.canvas",
     "templates"
