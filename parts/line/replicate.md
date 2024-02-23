@@ -82,8 +82,10 @@ https://qiita.com/mitsuoka0423/items/5b72830c2fb52c4a2b6c
 
 > 右側の画面の URL: https://replicate.com/stability-ai/stable-video-diffusion?input=http
 
-> Replicate の API を叩く
 > 対応する項目をコピペする（不要なスペースに注意）
+
+> `Headers > Item 1 > Value` は `Token ` を頭に付ける必要があるので注意
+> 例： `Token r8_*******************`
 
 ![image](https://i.imgur.com/R7XPfkg.png)
 
