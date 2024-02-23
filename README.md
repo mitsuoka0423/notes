@@ -1,6 +1,15 @@
 # Articles
 
 
+## ディレクトリ
+
+- `articles` ： zenn の記事
+- `books` ： zenn の本
+- `public` ： Qiita の記事
+- `obsidian` ： Obsidian のメモ
+- `parts` ： `articles` / `books` / `public` から参照される共通の記事
+
+
 ## 拡張機能
 
 ### MarkdownCat
