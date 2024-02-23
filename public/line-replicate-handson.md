@@ -29,10 +29,6 @@ AI (機械学習) をノーコードで組み合わせた LINE Bot を制作す�
 
 https://youtube.com/shorts/SUHaTeXwE4A?feature=share
 
-> こちらの QR コードから LINE で友達登録すると実際に試すことができます
->
-> ![image](https://i.imgur.com/iCkGX9R.png)
-
 
 ## 3. 事前準備
 
