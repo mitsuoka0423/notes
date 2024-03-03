@@ -92,7 +92,7 @@
 
 > `webhook` と `webhook_events_filter` を追加する
 
-```diff json
+```diff_javascript
 {
     "version": "3f0457e4619daac51203dedb472816fd4af51f3149fa7a9e0b5ffcf1b8172438",
     "input": {
@@ -107,7 +107,7 @@
 +    },
 +    "webhook": "{{上の手順でコピーした Webhook URL を貼り付ける}}",
 +    "webhook_events_filter": ["completed"]
-  }
+}
 ```
 
 ![image](https://i.imgur.com/Loyy3J3.png)
