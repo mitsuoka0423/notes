@@ -505,6 +505,8 @@ https://replicate.com/explore
 
 ![image](https://i.imgur.com/MNVNrum.png)
 
+> `id` は `Webhooks` の `id` を選択
+
 
 ### 10.8. `LINE` モジュールの `Send a Push Message` を設定する
 
