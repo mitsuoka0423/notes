@@ -1,0 +1,115 @@
+{
+  "recentFiles": [
+    {
+      "basename": "Provisioning Profile （プロビジョニングプロファイル）",
+      "path": "Provisioning Profile （プロビジョニングプロファイル）.md"
+    },
+    {
+      "basename": "fastlane",
+      "path": "fastlane.md"
+    },
+    {
+      "basename": "Firebase App Distribution",
+      "path": "Firebase App Distribution.md"
+    },
+    {
+      "basename": "misc",
+      "path": "misc.md"
+    },
+    {
+      "basename": "Apple Distribution certificates （配布用証明書）",
+      "path": "Apple Distribution certificates （配布用証明書）.md"
+    },
+    {
+      "basename": "Apple Development certificates （開発用証明書）",
+      "path": "Apple Development certificates （開発用証明書）.md"
+    },
+    {
+      "basename": "WatchKit サービス証明書",
+      "path": "WatchKit サービス証明書.md"
+    },
+    {
+      "basename": "Certificate",
+      "path": "Certificate.md"
+    },
+    {
+      "basename": "VoIP サービス証明書",
+      "path": "VoIP サービス証明書.md"
+    },
+    {
+      "basename": "アプリライセンス配布用証明書",
+      "path": "アプリライセンス配布用証明書.md"
+    },
+    {
+      "basename": "memo",
+      "path": "templates/memo.md"
+    },
+    {
+      "basename": "エンタープライズ配布用証明書",
+      "path": "エンタープライズ配布用証明書.md"
+    },
+    {
+      "basename": "Developer ID 証明書",
+      "path": "Developer ID 証明書.md"
+    },
+    {
+      "basename": "クラウド管理対象証明書",
+      "path": "クラウド管理対象証明書.md"
+    },
+    {
+      "basename": "無題のファイル 2",
+      "path": "無題のファイル 2.md"
+    },
+    {
+      "basename": "reference-only",
+      "path": "reference-only.md"
+    },
+    {
+      "basename": "state-of-the-art",
+      "path": "state-of-the-art.md"
+    },
+    {
+      "basename": "Document",
+      "path": "Document.md"
+    },
+    {
+      "basename": "Discord",
+      "path": "Discord.md"
+    },
+    {
+      "basename": "ComfyUI workflow",
+      "path": "ComfyUI workflow.md"
+    },
+    {
+      "basename": "ComfyUI",
+      "path": "ComfyUI.md"
+    },
+    {
+      "basename": "Cloud Functions",
+      "path": "Cloud Functions.md"
+    },
+    {
+      "basename": "Apple Developer",
+      "path": "Apple Developer.md"
+    },
+    {
+      "basename": "App Store",
+      "path": "App Store.md"
+    },
+    {
+      "basename": "Android アプリ",
+      "path": "Android アプリ.md"
+    },
+    {
+      "basename": "plugin-typescript",
+      "path": "@rollup/plugin-typescript.md"
+    },
+    {
+      "basename": "Apple Developer Program",
+      "path": "Apple Developer Program.md"
+    }
+  ],
+  "omittedPaths": [],
+  "maxLength": null,
+  "openType": "tab"
+}

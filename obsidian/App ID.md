@@ -2,7 +2,7 @@
 - [[iOS アプリ]] を識別するための文字列
 
 ## 詳細
-- [[Provisioning Profile]] 内に含まれる
+- [[Provisioning Profile （プロビジョニングプロファイル）]] 内に含まれる
 - 下記 2 種類がある
 	- [[Explicit App ID]] ：アプリと 1:1 で紐づく
 	- [[Wildcard App ID]] ：アプリと 1:n で紐づく
