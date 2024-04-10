@@ -6,6 +6,7 @@
 
 ## 公式ドキュメント
 - https://flutter.dev/
+- [[Flavor]]
 
 ## 関連リンク
 

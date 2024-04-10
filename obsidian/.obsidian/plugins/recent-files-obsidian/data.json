@@ -1,6 +1,98 @@
 {
   "recentFiles": [
     {
+      "basename": "httpie",
+      "path": "httpie.md"
+    },
+    {
+      "basename": "lsof",
+      "path": "lsof.md"
+    },
+    {
+      "basename": "App signing key",
+      "path": "App signing key.md"
+    },
+    {
+      "basename": "Play App Signing",
+      "path": "Play App Signing.md"
+    },
+    {
+      "basename": "Upload key",
+      "path": "Upload key.md"
+    },
+    {
+      "basename": "Android アプリ",
+      "path": "Android アプリ.md"
+    },
+    {
+      "basename": "Android App Bundle",
+      "path": "Android App Bundle.md"
+    },
+    {
+      "basename": "Keystore",
+      "path": "Keystore.md"
+    },
+    {
+      "basename": "Flutter",
+      "path": "Flutter.md"
+    },
+    {
+      "basename": "事業主貸",
+      "path": "事業主貸.md"
+    },
+    {
+      "basename": "事業主借",
+      "path": "事業主借.md"
+    },
+    {
+      "basename": "消耗品",
+      "path": "消耗品.md"
+    },
+    {
+      "basename": "売上高",
+      "path": "売上高.md"
+    },
+    {
+      "basename": "円貨決済",
+      "path": "円貨決済.md"
+    },
+    {
+      "basename": "外貨決済",
+      "path": "外貨決済.md"
+    },
+    {
+      "basename": "iOS Distribution certificates",
+      "path": "iOS Distribution certificates.md"
+    },
+    {
+      "basename": "勘定科目",
+      "path": "勘定科目.md"
+    },
+    {
+      "basename": "工具器具備品",
+      "path": "工具器具備品.md"
+    },
+    {
+      "basename": "売上",
+      "path": "売上.md"
+    },
+    {
+      "basename": "確定申告",
+      "path": "確定申告.md"
+    },
+    {
+      "basename": "売掛金",
+      "path": "売掛金.md"
+    },
+    {
+      "basename": "Apple Distribution certificates （配布用証明書）",
+      "path": "Apple Distribution certificates （配布用証明書）.md"
+    },
+    {
+      "basename": "Certificate",
+      "path": "Certificate.md"
+    },
+    {
       "basename": "Provisioning Profile （プロビジョニングプロファイル）",
       "path": "Provisioning Profile （プロビジョニングプロファイル）.md"
     },
@@ -17,20 +109,12 @@
       "path": "misc.md"
     },
     {
-      "basename": "Apple Distribution certificates （配布用証明書）",
-      "path": "Apple Distribution certificates （配布用証明書）.md"
-    },
-    {
       "basename": "Apple Development certificates （開発用証明書）",
       "path": "Apple Development certificates （開発用証明書）.md"
     },
     {
       "basename": "WatchKit サービス証明書",
       "path": "WatchKit サービス証明書.md"
-    },
-    {
-      "basename": "Certificate",
-      "path": "Certificate.md"
     },
     {
       "basename": "VoIP サービス証明書",
@@ -91,10 +175,6 @@
     {
       "basename": "App Store",
       "path": "App Store.md"
-    },
-    {
-      "basename": "Android アプリ",
-      "path": "Android アプリ.md"
     },
     {
       "basename": "plugin-typescript",

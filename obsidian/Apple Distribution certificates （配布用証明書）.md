@@ -6,6 +6,9 @@
 - チームが所有し、作成できるのは 1 つのチームにつき 1 種類の配布用証明書のみ
 - 配布用証明書を作成できるのは [[Account Holder]] または [[Admin]] のみ
 	- 個人として登録しているデベロッパは [[Account Holder]] の役割が割り当てられている
+- 下記 2 種類がある
+	- [[Apple Distribution certificates （配布用証明書）]]
+	- [[iOS Distribution certificates]] 
 
 ## 公式ドキュメント
 - [証明書タイプ - リファレンス - アカウント - ヘルプ - Apple Developer](https://developer.apple.com/jp/help/account/reference/certificate-types/)
