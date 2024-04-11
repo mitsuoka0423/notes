@@ -17,7 +17,7 @@ ignorePublish: false
 
 ## 1. はじめに
 
-<!-- ../parts/me/introdaction-light.md -->
+<!-- ../parts/me/introduction-light.md -->
 こんにちは。 [@mitsuoka0423](https://twitter.com/mitsuoka0423) です。
 
 

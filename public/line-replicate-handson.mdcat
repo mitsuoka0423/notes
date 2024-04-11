@@ -17,7 +17,7 @@ ignorePublish: false
 
 ## はじめに
 
-$include="../parts/me/introdaction-light.md"
+$include="../parts/me/introduction-light.md"
 
 この資料では [Replicate](https://replicate.com/) というサービスを利用して、
 AI (機械学習) をノーコードで組み合わせた LINE Bot を制作する方法をお伝えします。

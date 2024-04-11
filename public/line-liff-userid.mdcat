@@ -15,7 +15,7 @@ ignorePublish: false
 
 ## はじめに
 
-$include="../parts/me/introdaction-light.md"
+$include="../parts/me/introduction-light.md"
 
 私は LINE Bot を開発するときに Google Apps Script (GAS) の `doPost` をよく利用します。
 `doPost` は Web アプリとしてデプロイするため、ログが GAS のコンソールには表示されません。
