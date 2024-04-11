@@ -3,7 +3,7 @@ title: 【ハンズオン資料】Laravel x Claude 3 × LINE ハンズオン！�
 emoji: "💬"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: ["PHP", "Laravel", "LINE", "Claude", "名刺"]
-published: false
+published: true
 ---
 
 ## はじめに
@@ -55,8 +55,6 @@ TODO: イベント後に動画を追加します。
 ### LINE Bot
 
 <!-- ../parts/line/introduction.md -->
-### LINE Bot
-
 #### 企業での事例
 
 - JR 東日本 Chat Bot（[https://info.jreast-chat.com/](https://info.jreast-chat.com/)）

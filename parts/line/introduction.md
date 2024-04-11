@@ -1,5 +1,3 @@
-### LINE Bot
-
 #### 企業での事例
 
 - JR 東日本 Chat Bot（[https://info.jreast-chat.com/](https://info.jreast-chat.com/)）
