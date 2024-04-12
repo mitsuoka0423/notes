@@ -209,13 +209,27 @@ public function up(): void
 
 ## 4. ハンズオン
 
-### 4.1. ソースコード取得
+### 4.1. LINE 公式アカウント & Messaging API チャネル
+
+https://developers.line.biz/ja/docs/messaging-api/getting-started/
+
+- 作った LINE 公式アカウントと友達になります。
+- チャネルシークレットをコピーします。
+- チャネルアクセストークンをコピーします。
+
+### 4.2. Claude API キー取得
+
+https://support.anthropic.com/ja/articles/8114521-claude-api%E3%81%AB%E3%82%A2%E3%82%AF%E3%82%BB%E3%82%B9%E3%81%99%E3%82%8B%E3%81%AB%E3%81%AF%E3%81%A9%E3%81%86%E3%81%99%E3%82%8C%E3%81%B0%E3%81%84%E3%81%84%E3%81%A7%E3%81%99%E3%81%8B
+
+- Claude API キーをコピーします。
+
+### 4.3. ソースコード取得
 
 下記リポジトリのコードを clone します。
 
 https://github.com/mitsuoka0423/laravel-line-handson-2024
 
-### 4.2. コンテナ起動
+### 4.4. コンテナ起動
 
 ターミナルで `make` を実行します。
 
@@ -223,7 +237,7 @@ https://github.com/mitsuoka0423/laravel-line-handson-2024
 
 `laravel.test-1` が起動していることを確認します。
 
-### 4.3. devtunnel でグローバルに公開する
+### 4.5. devtunnel でグローバルに公開する
 
 ターミナルで `make tunnel` を実行します。
 
@@ -240,12 +254,12 @@ Ready to accept connections for tunnel: *****-*****-*****
 
 `Connect via browser` に表示される URL をコピーしておきます。
 
-### 4.4. Webhook URL を設定
+### 4.6. Webhook URL を設定
 
 1. [LINE Developers](https://developers.line.biz/ja/) を開いて、作成した Messaging API チャネルを開きます。
 2. Messaging API 設定 > Webhook 設定 > Webhook URL に上記でコピーした URL を貼り付けます。
 
-### 4.5. 環境変数設定
+### 4.7. 環境変数設定
 
 `.env` ファイルが生成されるので、下記の値を設定します。
 
@@ -256,11 +270,10 @@ Ready to accept connections for tunnel: *****-*****-*****
 |LINE_CHANNEL_ACCESS_TOKEN|`*****`|[LINE Developers](https://developers.line.biz/ja/) > Messaging API 設定 > チャネルアクセストークン|
 |CLAUDE_API_KEY|`sk-*****`|[Anthropic Console > API Keys](https://console.anthropic.com/settings/keys) から発行する|
 
-### 4.6. 動作確認
+### 4.8. 動作確認
 
 1. 名刺の写真を撮って、 LINE Bot に送ります。
 2. 「名刺一覧」と LINE Bot に送ります。
-
 
 ## 5. 演習問題
 
