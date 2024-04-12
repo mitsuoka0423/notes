@@ -6,7 +6,7 @@ topics: ["PHP", "Laravel", "LINE", "Claude", "名刺"]
 published: true
 ---
 
-## はじめに
+## 1. はじめに
 
 <!-- ../parts/me/introduction-light.md -->
 こんにちは。 [@mitsuoka0423](https://twitter.com/mitsuoka0423) です。
@@ -16,7 +16,7 @@ published: true
 
 https://linedevelopercommunity.connpass.com/event/313579/
 
-### LINE DC BOT AWARDS 2024
+### 1.1. LINE DC BOT AWARDS 2024
 
 最優秀賞 100 万円の LINE Bot のコンテストが開催されます。
 
@@ -24,23 +24,23 @@ https://lineapiusecase.com/ja/community/linedc-award-2024.html
 
 応募締め切りは 5/7 （火）です！
 
-### イベント動画
+### 1.2. イベント動画
 
 TODO: イベント後に動画を追加します。
 
 
-### ハンズオンの完成イメージ
+### 1.3. ハンズオンの完成イメージ
 
 ![](https://p.ipic.vip/j8zga4.png)
 
-### インストール
+### 1.4. インストール
 
 下記を利用するのでインストールしておいてください。
 
 - [Docker Desktop](https://www.docker.com/ja-jp/products/docker-desktop/)
 - [devtunnel](https://learn.microsoft.com/ja-jp/azure/developer/dev-tunnels/get-started?tabs=macos)
 
-### 事前準備
+### 1.5. 事前準備
 
 コンテナの起動に時間がかかるため、先に準備を進めておきます。
 
@@ -50,23 +50,23 @@ TODO: イベント後に動画を追加します。
 `composer install` やコンテナイメージのダウンロードが始まれば OK です。
 （ 10 分くらいかかります）
 
-## インプット
+## 2. インプット
 
-### LINE Bot
+### 2.1. LINE Bot
 
 <!-- ../parts/line/introduction.md -->
-#### 企業での事例
+#### 2.1.1. 企業での事例
 
 - JR 東日本 Chat Bot（[https://info.jreast-chat.com/](https://info.jreast-chat.com/)）
 - ヤマト運輸（[https://www.kuronekoyamato.co.jp/ytc/campaign/renkei/LINE/](https://www.kuronekoyamato.co.jp/ytc/campaign/renkei/LINE/)）
 - ユニクロ・GU（[http://official-blog.line.me/ja/archives/28533966.html](http://official-blog.line.me/ja/archives/28533966.html)）
 - 楽天（[http://official-blog.line.me/ja/archives/24736939.html](http://official-blog.line.me/ja/archives/24736939.html)）など
 
-#### 行政での事例
+#### 2.1.2. 行政での事例
 
 https://linecorp.com/ja/csr/activity/government
 
-### LINE Bot の仕組み
+### 2.2. LINE Bot の仕組み
 
 LINE Bot は、ユーザーが LINE 公式アカウントに対して送信したメッセージに対し、
 Messaging API を介してメッセージや画像などをリプライすることで実装されます。
@@ -75,19 +75,19 @@ Messaging API を介してメッセージや画像などをリプライするこ
 
 https://developers.line.biz/ja/docs/messaging-api/overview/
 
-### Messaging API
+### 2.3. Messaging API
 
 大きく分けて 2 種類の機能があります。
 
 - 応答メッセージ
 - プッシュメッセージ
 
-#### 応答メッセージ
+#### 2.3.1. 応答メッセージ
 
 - ユーザーが LINE 公式アカウントに対して送信したメッセージに返信できる
 - 無料で利用できる
 
-#### プッシュメッセージ
+#### 2.3.2. プッシュメッセージ
 
 - 任意のタイミングでユーザーに送信できるメッセージ
 - ユーザーに通知したいとき利用される
@@ -96,7 +96,7 @@ https://developers.line.biz/ja/docs/messaging-api/overview/
 
 
 
-### Claude 3 API
+### 2.4. Claude 3 API
 
 https://www.anthropic.com/api
 
@@ -113,18 +113,18 @@ API リファレンスはこちら。
 
 https://docs.anthropic.com/claude/reference/getting-started-with-the-api
 
-### Laravel
+### 2.5. Laravel
 
 https://laravel.com/docs/11.x
 
-## システム
+## 3. システム
 
-### バージョン
+### 3.1. バージョン
 
 - PHP 8.2
 - Laravel 11.0
 
-### システム構成
+### 3.2. システム構成
 
 ```mermaid
 graph RL
@@ -149,7 +149,7 @@ graph RL
   サーバー --> LINEアプリ
 ```
 
-### クラス構成
+### 3.3. クラス構成
 
 ```mermaid
 graph LR
@@ -177,7 +177,7 @@ graph LR
   Controller -->|MessagingAPI| LINEサーバー
 ```
 
-### テーブル定義（マイグレーション）
+### 3.4. テーブル定義（マイグレーション）
 
 ```php
 public function up(): void
@@ -197,7 +197,7 @@ public function up(): void
 }
 ```
 
-### ユースケース
+### 3.5. ユースケース
 
 - 名刺登録
   - `BusinessCardResistrationUseCase`
@@ -207,9 +207,15 @@ public function up(): void
   - `BusinessCardDetailViewUseCase`
 
 
-## ハンズオン
+## 4. ハンズオン
 
-### コンテナ起動
+### 4.1. ソースコード取得
+
+下記リポジトリのコードを clone します。
+
+https://github.com/mitsuoka0423/laravel-line-handson-2024
+
+### 4.2. コンテナ起動
 
 ターミナルで `make` を実行します。
 
@@ -217,7 +223,7 @@ public function up(): void
 
 `laravel.test-1` が起動していることを確認します。
 
-### devtunnel でグローバルに公開する
+### 4.3. devtunnel でグローバルに公開する
 
 ターミナルで `make tunnel` を実行します。
 
@@ -234,12 +240,12 @@ Ready to accept connections for tunnel: *****-*****-*****
 
 `Connect via browser` に表示される URL をコピーしておきます。
 
-### Webhook URL を設定
+### 4.4. Webhook URL を設定
 
 1. [LINE Developers](https://developers.line.biz/ja/) を開いて、作成した Messaging API チャネルを開きます。
 2. Messaging API 設定 > Webhook 設定 > Webhook URL に上記でコピーした URL を貼り付けます。
 
-### 環境変数設定
+### 4.5. 環境変数設定
 
 `.env` ファイルが生成されるので、下記の値を設定します。
 
@@ -250,18 +256,20 @@ Ready to accept connections for tunnel: *****-*****-*****
 |LINE_CHANNEL_ACCESS_TOKEN|`*****`|[LINE Developers](https://developers.line.biz/ja/) > Messaging API 設定 > チャネルアクセストークン|
 |CLAUDE_API_KEY|`sk-*****`|[Anthropic Console > API Keys](https://console.anthropic.com/settings/keys) から発行する|
 
-### 動作確認
+### 4.6. 動作確認
 
 1. 名刺の写真を撮って、 LINE Bot に送ります。
 2. 「名刺一覧」と LINE Bot に送ります。
 
 
-## 演習問題
+## 5. 演習問題
 
 1. 「名刺を見る」ユースケースを実装してみましょう。
-2. 自分が欲しい機能を実装してみましょう。
+2. 他の Webhook イベントを利用して機能を実装してみましょう。
+   - [Webhookイベントのタイプ](https://developers.line.biz/ja/docs/messaging-api/receiving-messages/#webhook-event-types)
+3. 自分が欲しい機能を実装してみましょう。
 
-## おわりに
+## 6. おわりに
 
 LINE DC BOT AWARD への応募お待ちしております！
 

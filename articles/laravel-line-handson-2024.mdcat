@@ -168,6 +168,12 @@ public function up(): void
 
 ## ハンズオン
 
+### ソースコード取得
+
+下記リポジトリのコードを clone します。
+
+https://github.com/mitsuoka0423/laravel-line-handson-2024
+
 ### コンテナ起動
 
 ターミナルで `make` を実行します。
@@ -218,7 +224,9 @@ Ready to accept connections for tunnel: *****-*****-*****
 ## 演習問題
 
 1. 「名刺を見る」ユースケースを実装してみましょう。
-2. 自分が欲しい機能を実装してみましょう。
+2. 他の Webhook イベントを利用して機能を実装してみましょう。
+   - [Webhookイベントのタイプ](https://developers.line.biz/ja/docs/messaging-api/receiving-messages/#webhook-event-types)
+3. 自分が欲しい機能を実装してみましょう。
 
 ## おわりに
 
