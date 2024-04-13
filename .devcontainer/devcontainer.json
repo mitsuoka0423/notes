@@ -14,7 +14,15 @@
         "yzhang.markdown-all-in-one",
         "zenn.zenn-preview"
       ],
-      "settings": {}
+      "settings": {
+          "textlint.autoFixOnSave": true,
+          "textlint.configPath": "/workspace/.textlintrc.json",
+          "textlint.languages": [
+            ".md",
+            ".mdcat"
+          ],
+          "textlint.nodePath": "/usr/local/bin/node"
+      }
     }
   },
   "dockerComposeFile": [
