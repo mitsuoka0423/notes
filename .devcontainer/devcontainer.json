@@ -15,8 +15,11 @@
         "zenn.zenn-preview"
       ],
       "settings": {
+          "editor.formatOnSave": true,
+          "editor.formatOnPaste": true,
           "textlint.autoFixOnSave": true,
           "textlint.configPath": "/workspace/.textlintrc.json",
+          "textlint.ignorePath": "/workspace/devcontainer",
           "textlint.languages": [
             ".md",
             ".mdcat"
