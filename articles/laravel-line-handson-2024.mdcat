@@ -24,8 +24,8 @@ https://lineapiusecase.com/ja/community/linedc-award-2024.html
 
 ### イベント動画
 
-TODO: イベント後に動画を追加します。
-
+https://www.youtube.com/watch?v=dESQs0EacBw&pp=ygUGbGluZWRj
+（本番はうまくいかなかったので、わかりにくいですm）
 
 ### ハンズオンの完成イメージ
 
@@ -46,7 +46,10 @@ TODO: イベント後に動画を追加します。
 1. ターミナルでプロジェクトを開き、 `make` を実行します。
 
 `composer install` やコンテナイメージのダウンロードが始まれば OK です。
-（ 10 分くらいかかります）
+
+初回のみファイルを作るかどうか聞かれるので YES を選びます。（そのまま Enter ）
+
+![](https://p.ipic.vip/0v074f.jpg)
 
 ## インプット
 
