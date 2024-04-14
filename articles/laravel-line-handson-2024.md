@@ -26,8 +26,8 @@ https://lineapiusecase.com/ja/community/linedc-award-2024.html
 
 ### 1.2. イベント動画
 
-TODO: イベント後に動画を追加します。
-
+https://www.youtube.com/watch?v=dESQs0EacBw&pp=ygUGbGluZWRj
+（本番はうまくいかなかったので、わかりにくいですm）
 
 ### 1.3. ハンズオンの完成イメージ
 
