@@ -3,7 +3,7 @@
   "rules": {
     "preset-ja-spacing": {
       "ja-space-between-half-and-full-width": {
-        "space": "always"
+        "space": "never"
       }
     },
     "preset-ja-technical-writing": {
@@ -17,6 +17,11 @@
         "allowHalfWidthExclamation": true
       }
     },
-    "spellcheck-tech-word": true
+    "spellcheck-tech-word": true,
+    "prh": {
+      "rulePaths": [
+        "./prh.yml"
+      ]
+    }
   }
 }

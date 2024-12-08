@@ -1,0 +1,8 @@
+version: 1
+rules:
+  - expected: DMMブックス
+    patterns: DMM ブックス
+    prh: サービス名なのでスペースは入れない
+  - expected: DMM
+    patterns: Dmm
+    prh:  DMMは大文字
