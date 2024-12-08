@@ -8,20 +8,20 @@ published: true
 
 ## はじめに
 
-> この記事は、[〇〇アドベントカレンダー]()n日目の記事です
+> この記事は、[LINEDC Advent Calendar 2024](https://qiita.com/advent-calendar/2024/linedc)の10日目の記事です。
 >
-> n日目の記事： [TBU]()
-> n日目の記事： [TBU]()
+> 9日目の記事： [TBU]()
+> 11日目の記事： [TBU]()
 
 こんにちは。
-DMM.comでDMMブックスの開発をしている[@mitsuoka0423](https://x.com/mitsuoka0423)です。
-プライベートでは、LINE Develoer CommunityでLINE API Expertとしても活動しています。
+DMM.comでDMMブックスを開発している[@mitsuoka0423](https://x.com/mitsuoka0423)です。
+プライベートでは、LINE Develoer Communityで[LINE API Expert](https://developers.line.biz/ja/community/api-experts/jp-takahiro-mitsuoka/)としても活動しています。
 
 2025年3月末でLINE Notifyがサービス終了することがアナウンスされました。
 
 https://notify-bot.line.me/closing-announce
 
-5年前に私が作ったline-notify-nodejsというnpmモジュールについて振り返ろうと思います。
+この記事では、5年前に私が作ったline-notify-nodejsというnpmモジュールについて振り返ろうと思います。
 
 
 ## line-notify-nodejs を作ったきっかけ
