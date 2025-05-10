@@ -13,7 +13,7 @@
     "textlint-rule-preset-ja-technical-writing": "^10.0.1",
     "textlint-rule-prh": "^6.0.0",
     "textlint-rule-spellcheck-tech-word": "^5.0.0",
-    "zenn-cli": "^0.1.158"
+    "zenn-cli": "^0.1.159"
   },
   "homepage": "https://github.com/tmitsuoka0423/zenn#readme",
   "keywords": [],
