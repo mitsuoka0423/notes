@@ -1,0 +1,15 @@
+{
+  "mcpServers": {
+    "playwright": {
+      "command": "npx",
+      "args": [
+        "@playwright/mcp@latest",
+        "--headless"
+      ],
+      "alwaysAllow": [
+        "browser_navigate",
+        "browser_install"
+      ]
+    }
+  }
+}
