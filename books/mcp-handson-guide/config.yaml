@@ -1,6 +1,6 @@
-title: "MCPハンズオン"
+title: "MCPサーバーの使い方"
 slug: "mcp-handson-guide"
-summary: "MCPハンズオンの資料です。この資料では、MCPの基本概念、クライアントとサーバーの使い方、そしてサーバーの探し方について解説します。"
+summary: "MCPサーバーの使い方ハンズオンの資料です。この資料では、MCPの基本概念、クライアントとサーバーの使い方、そしてサーバーの探し方について解説します。"
 price: 0
 published: true
 topics: ["MCP", "VSCode", "Cline", "AIエージェント"]
