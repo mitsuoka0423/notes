@@ -22,6 +22,7 @@ https://www.youtube.com/watch?v=J2JqKIUzRQQ&pp=0gcJCa0JAYcqIYzv
 
 - AIエージェントを作ってみたい方
 - Mastraに興味がある方
+- LINE Botに興味がある方
 
 ### 事前準備
 
@@ -109,7 +110,7 @@ graph
 
 を見ながら説明します。
 
-## `ライブバイブコーディング`
+## ライブバイブコーディング
 
 ### LINE Bot実装
 
