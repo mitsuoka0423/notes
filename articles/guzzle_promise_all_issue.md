@@ -18,7 +18,8 @@ https://blog.takekoshi.net/guzzle-async-client-serial/
 
 ## 事象が再現するコード
 
-最初に、参考記事で問題として指摘されている「リクエストごとに`new Client()`する」コードを見ていきます。このコードは、複数のリクエストを `Promise` の配列に格納し、`Utils::all($promises)->wait()` で一括して実行しようとしています。
+最初に、参考記事で問題として指摘されている「リクエストごとに`new Client()`する」コードを見ていきます。
+このコードは、複数のリクエストを `Promise` の配列に格納し、`Utils::all($promises)->wait()` で一括して実行しようとしています。
 
 ```php
 // リクエストごとに新しいClientを生成するパターン
@@ -38,7 +39,8 @@ measure_execution_time('New Client Each Request Execution', function () use ($lo
 ### 実行結果
 
 このコードを実行した際のログは以下の通りです。
-```
+
+```plaintext
 --- New Client Each Request Execution ---
 [2025-09-13T15:39:53.135P] [LOG] --- New Client Each Request Execution ---
 [2025-09-13T15:39:53.143P] [LOG] [before] Request: GET http://localhost:8000/?delay=0.25
@@ -74,9 +76,11 @@ measure_execution_time('New Client Each Request Execution', function () use ($lo
 [2025-09-13T15:40:06.936P] [LOG] Execution Time: 13.801441907883 seconds
 [2025-09-13T15:40:06.936P] [LOG] 想定処理時間: 13.75
 ```
+
 `[before]` のログは一気に出力されますが、`[after]` のログでは `Request` と `Response` が1つずつペアで順番に出力されています。これは、各リクエストの完了を待ってから次の処理に進んでいることを示しており、実質的に「直列実行」であることを示唆します。
 
-この直列実行は実行時間にも反映されています。並列処理であれば、最も遅延の大きいリクエスト（2.5秒）とほぼ同じ時間で完了するはずですが、実際の実行時間は約13.8秒です。これは各リクエストの遅延時間の合計（0.25 + 0.5 + ... + 2.5 = 13.75秒）とほぼ一致します。
+この直列実行は実行時間にも反映されています。並列処理であれば、最も遅延の大きいリクエスト（2.5秒）とほぼ同じ時間で完了するはずですが、実際の実行時間は約13.8秒です。
+これは各リクエストの遅延時間の合計（0.25 + 0.5 + ... + 2.5 = 13.75秒）とほぼ一致します。
 
 ## 提案されている対応策の検証
 
@@ -127,7 +131,8 @@ measure_execution_time('Parallel Execution', function () use ($client) {
 ### 実行結果
 
 シングルトンパターンで実行した結果は、以下の通りです。
-```
+
+```plaintext
 [2025-09-13T15:40:20.719P] [LOG] --- Parallel Execution ---
 [2025-09-13T15:40:20.720P] [LOG] [before] Request: GET http://localhost:8000/?delay=0.25
 [2025-09-13T15:40:20.720P] [LOG] [before] Request: GET http://localhost:8000/?delay=0.5
@@ -162,6 +167,7 @@ measure_execution_time('Parallel Execution', function () use ($client) {
 [2025-09-13T15:40:23.229P] [LOG] Execution Time: 2.5095121860504 seconds
 [2025-09-13T15:40:23.229P] [LOG] 想定処理時間: 2.5
 ```
+
 `[before]`のログが一気に出力された後、`[after]`のログも各リクエストの完了を待たずに、ほぼ同時に出力されています。
 
 実行時間は約2.5秒であり、これは最も遅延の大きいリクエスト（2.5秒）の完了時間とほぼ一致します。これらの結果から、すべてのリクエストが並列で処理され、全体の実行時間が最も時間のかかる単一のリクエスト時間に収まっていることが確認できます。
@@ -184,7 +190,8 @@ measure_execution_time('Sequential Execution', function () use ($client) {
 ### 実行結果
 
 このコードは期待通り直列で実行されます。
-```
+
+```plaintext
 [2025-09-13T15:40:06.937P] [LOG] --- Sequential Execution ---
 [2025-09-13T15:40:06.937P] [LOG] [before] Request: GET http://localhost:8000/?delay=0.25
 [2025-09-13T15:40:07.189P] [LOG] [after] Request: GET http://localhost:8000/?delay=0.25
