@@ -31,11 +31,13 @@ measure_execution_time('New Client Each Request Execution', function () use ($lo
         $stack = HandlerStack::create();
         $stack->push(LogMiddleware::create($logger));
         $client = new Client(['handler' => $stack]);
+
         $delay = $i * DELAY_COEFFICIENT;
-        $promises[] = $client->getAsync(TEST_SERVER_BASE_URL . "?delay={"
+        $promises[] = $client->getAsync(TEST_SERVER_BASE_URL . "?delay={$delay}");
     }
     Utils::all($promises)->wait();
 });
+$logger->log('想定処理時間: ' . expected_execution_time('sequential', NUM_OF_TRIALS, DELAY_COEFFICIENT));
 ```
 
 ### 実行結果
@@ -86,7 +88,7 @@ measure_execution_time('New Client Each Request Execution', function () use ($lo
 
 ## 提案されている対応策の検証
 
-次に、参考元の記事で示唆されている「`Client`をシングルトンで管理する」という方法を試します。
+次に、参考元の記事で示唆されている「単一の`Client`インスタンスを使う」方法を試します。
 
 まず、`Client`をシングルトンで提供する `HttpClient` クラスを用意します。
 
@@ -118,16 +120,17 @@ class HttpClient
 そして、この `HttpClient::getInstance()` を使ってリクエストを送信するコードがこちらです。
 
 ```php
-// シングルトンなClientで並列実行するパターン
+// 単一のClientを利用して並列実行するパターン
 $client = HttpClient::getInstance();
 measure_execution_time('Parallel Execution', function () use ($client) {
     $promises = [];
     for ($i = 1; $i <= NUM_OF_TRIALS; $i++) {
         $delay = $i * DELAY_COEFFICIENT;
-        $promises[] = $client->getAsync(TEST_SERVER_BASE_URL . "?delay={"
+        $promises[] = $client->getAsync(TEST_SERVER_BASE_URL . "?delay={$delay}");
     }
     Utils::all($promises)->wait();
 });
+$logger->log('想定処理時間: ' . expected_execution_time('parallel', NUM_OF_TRIALS, DELAY_COEFFICIENT));
 ```
 
 ### 実行結果
@@ -184,9 +187,10 @@ $client = HttpClient::getInstance();
 measure_execution_time('Sequential Execution', function () use ($client) {
     for ($i = 1; $i <= NUM_OF_TRIALS; $i++) {
         $delay = $i * DELAY_COEFFICIENT;
-        $client->getAsync(TEST_SERVER_BASE_URL . "?delay={"
+        $client->getAsync(TEST_SERVER_BASE_URL . "?delay={$delay}")->wait();
     }
 });
+$logger->log('想定処理時間: ' . expected_execution_time('sequential', NUM_OF_TRIALS, DELAY_COEFFICIENT));
 ```
 
 ### 実行結果
@@ -239,37 +243,11 @@ measure_execution_time('Sequential Execution', function () use ($client) {
 
 「リクエストごとに`new Client()`する」パターンは、「純粋な直列実行」とほぼ同じ実行時間になっています。
 
-## なぜ問題が起きたのか？
-
-では、なぜ `Client` をリクエストごとに生成すると並列実行されなくなってしまうのでしょうか。
-
-その鍵は、GuzzleHttpの内部で非同期処理を支えている **ハンドラ（Handler）** と **コネクションプール** の仕組みにあります。
-
-- **`new Client()` のたびに、新しいハンドラが作られる**: Guzzleの `Client` は、インスタンス化される際に内部でcURLなどを操作するためのハンドラを生成します。このハンドラが、実際のリクエスト実行やイベントループを管理する中心的な役割を担います。
-- **ハンドラは独立している**: リクエストごとに `new Client()` すると、その数だけ独立したハンドラが作られます。`Promise\all` は、**単一のハンドラのイベントループ上**で複数のリクエストを効率的にさばくための機能ですが、複数の独立したハンドラにまたがってリクエストを並列化することはできません。
-- **シングルトン化でハンドラを共有**: `Client` をシングルトンにすることで、アプリケーション全体でただ一つのハンドラが共有されます。そのため、`Promise\all` に渡されたすべてのPromiseが同じイベントループ上で管理され、効率的な並列実行が可能になります。
-
-端的に言えば、`Promise\all` の並列実行は、単一のハンドラが持つイベントループ上で複数のリクエストを管理することで実現されます。リクエストごとにハンドラを生成することは、この仕組みの恩恵を自ら放棄していることに他なりません。
-
 ## まとめ
 
-今回の追試により、GuzzleHttpで `Promise\all` を使って非同期リクエストを行う際には、`Client` インスタンスをシングルトンで管理することが、並列実行を実現する上で非常に重要であることが確認できました。
+今回の追試により、GuzzleHttpで `Promise\all` を使って並列リクエストを行う際には、単一の`Client` インスタンスを利用する必要があることを確認しました。
 
-参考元の記事で言及されていた通り、リクエストごとに `new Client()` すると、意図せず直列実行になってしまうようです。同様の現象に遭遇した際の参考になれば幸いです。
-
-- **原則として、`Client` インスタンスはアプリケーション全体で共有（シングルトン化）する。**
-- **リクエストごとに `new Client()` しない。**
-
-Laravelなどのフレームワークを利用している場合は、サービスコンテナに `Client` をシングルトンとして登録するのが一般的なベストプラクティスです。
-
-```php
-// AppServiceProvider.phpなど
-use GuzzleHttp\Client;
-
-$this->app->singleton(Client::class, function ($app) {
-    return new Client(['handler' => ...]);
-});
-```
+参考元の記事で言及されていた通り、リクエストごとに `new Client()` すると、意図せず直列実行になってしまうようです。
 
 ## ソースコード
 
