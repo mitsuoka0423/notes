@@ -10,21 +10,21 @@
         "oderwat.indent-rainbow",
         "poyonshot.markdowncat",
         "richie5um2.vscode-sort-json",
-        "taichi.vscode-textlint",
+        "3w36zj6.textlint",
         "yzhang.markdown-all-in-one",
         "zenn.zenn-preview"
       ],
       "settings": {
-          "editor.formatOnSave": true,
-          "editor.formatOnPaste": true,
-          "textlint.autoFixOnSave": true,
-          "textlint.configPath": "/workspace/.textlintrc.json",
-          "textlint.ignorePath": "/workspace/devcontainer",
-          "textlint.languages": [
-            ".md",
-            ".mdcat"
-          ],
-          "textlint.nodePath": "/usr/local/bin/node"
+        "editor.formatOnPaste": true,
+        "editor.formatOnSave": true,
+        "textlint.autoFixOnSave": true,
+        "textlint.configPath": "/workspace/.textlintrc.json",
+        "textlint.ignorePath": "/workspace/devcontainer",
+        "textlint.languages": [
+          ".md",
+          ".mdcat"
+        ],
+        "textlint.nodePath": "/usr/local/bin/node"
       }
     }
   },
@@ -32,7 +32,7 @@
     "../docker-compose.yml"
   ],
   "name": "zenn dev container",
-  "postStartCommand": "npm ci && npm run zenn:preview",
+  "postStartCommand": "npm i -g @google/gemini-cli && npm ci && npm run zenn:preview",
   "remoteUser": "root",
   "service": "zenn-dev-container",
   "workspaceFolder": "/workspace"
