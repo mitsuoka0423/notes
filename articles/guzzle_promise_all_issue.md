@@ -1,14 +1,16 @@
 ---
-title: "GuzzleHttpのPromiseAllが並列実行されない？Clientの複数生成が引き起こす罠を追試した"
-emoji: "🤔"
+title: "GuzzleHttpクライアントではPromise\allを使う際に同じClientを使わないと並列リクエストされない #PHP"
+emoji: "👻"
 type: "tech"
-topics: ["PHP", "Guzzle", "Promise", "Laravel"]
+topics: ["PHP", "Guzzle", "Promise"]
 published: false
 ---
 
 ## はじめに
 
-[GuzzleHttp](https://github.com/guzzle/guzzle) の非同期リクエストで `Promise\all` を使用した際、期待通りに並列実行されず、直列実行になってしまう事象について、以下の記事で言及されています。
+[GuzzleHttp](https://github.com/guzzle/guzzle) の非同期リクエストで `Promise\all` を使用した際、期待通りに並列実行されず、直列実行になってしまう事象に出会いました。
+
+以下の記事で言及されています。
 
 https://blog.takekoshi.net/guzzle-async-client-serial/
 
