@@ -1,5 +1,5 @@
 ---
-title: "GuzzleHttpクライアントではPromise\allを使う際に同じClientを使わないと並列リクエストされない #PHP"
+title: "GuzzleHttpクライアントではPromise\\allを使う際に同じClientを使わないと並列リクエストされない #PHP"
 emoji: "👻"
 type: "tech"
 topics: ["PHP", "Guzzle", "Promise"]
